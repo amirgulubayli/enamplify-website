@@ -1,0 +1,20 @@
+{
+  "name": "enamplify",
+  "version": "1.0.1",
+  "private": true,
+  "description": "The Enamplify website. AI education and advisory, thoughtfully presented.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test",
+    "assets:sync": "node scripts/sync-assets.mjs",
+    "publish:site": "bash scripts/publish.sh"
+  },
+  "license": "UNLICENSED"
+}

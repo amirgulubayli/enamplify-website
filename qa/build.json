@@ -1,0 +1,10 @@
+{
+  "builtAt": "2026-09-26T08:22:40.617Z",
+  "pages": 38,
+  "base": "http://localhost:3000",
+  "indexing": false,
+  "enquiryMode": "email",
+  "cssBytes": 55990,
+  "jsBytes": 10681,
+  "fontsBundled": false
+}

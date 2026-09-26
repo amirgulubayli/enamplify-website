@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "professional-services",
+    "name": "Professional services",
+    "title": "New capability. The same duty of care.",
+    "intro": "Practical AI education for firms whose work depends on judgement, quality and client trust.",
+    "problem": "Research, drafting and internal knowledge work can be useful places to explore AI. But a plausible answer is not enough when people rely on the result. The approach needs to fit the standards your firm already works to.",
+    "useCases": [
+      [
+        "Research & synthesis",
+        "Develop a repeatable way to prepare research briefs from approved sources, with source checking and clear limitations."
+      ],
+      [
+        "First drafts & review",
+        "Give people a useful starting structure while preserving professional judgement, review and authorship."
+      ],
+      [
+        "Internal knowledge",
+        "Explore how colleagues can find and use approved information without ignoring access or maintenance."
+      ]
+    ],
+    "boundary": "Professional review remains with your firm. We do not provide legal, accounting or regulated advice, and training does not certify a workflow as compliant.",
+    "service": "ai-training"
+  },
+  {
+    "slug": "sales-teams",
+    "name": "Sales & client teams",
+    "title": "Better prepared. More present.",
+    "intro": "Help client-facing teams use AI for the work around a conversation, without losing the human relationship.",
+    "problem": "Preparation, account context and follow-through can consume attention that belongs with the customer. The aim is not to automate trust. It is to help people arrive informed and leave with a clear next step.",
+    "useCases": [
+      [
+        "Account preparation",
+        "Build a grounded briefing using relevant, approved information rather than a generic summary."
+      ],
+      [
+        "Proposal preparation",
+        "Turn a clear brief and known requirements into a draft that still receives a person’s review."
+      ],
+      [
+        "Follow-through",
+        "Make ownership and next actions explicit after the conversation. Keep records useful and accurate."
+      ]
+    ],
+    "boundary": "No invented personalisation, fabricated familiarity or autonomous promises to customers. People remain accountable for the communication they send.",
+    "service": "workflow-design"
+  },
+  {
+    "slug": "operations",
+    "name": "Operations teams",
+    "title": "Less friction. More considered work.",
+    "intro": "Explore AI at the level where it has to earn its place: the actual workflow.",
+    "problem": "Operational work is rarely just the neat task in a demonstration. It includes checks, exceptions, workarounds and transfers between systems. Those are part of the design, not details to discover later.",
+    "useCases": [
+      [
+        "Recurring reporting",
+        "Define the sources, quality threshold and review needed to make a recurring summary useful."
+      ],
+      [
+        "Enquiry triage",
+        "Explore bounded categorisation and routing, with explicit exceptions and a clear owner."
+      ],
+      [
+        "Knowledge handoffs",
+        "Document the context and instructions another person needs to carry the work forward."
+      ]
+    ],
+    "boundary": "Start with a baseline and a bounded pilot. Production access, integrations, hosting and ongoing support require an explicit implementation scope.",
+    "service": "workflow-design"
+  },
+  {
+    "slug": "learning-and-development",
+    "name": "Learning & development",
+    "title": "Learning that stays with the team.",
+    "intro": "Role-specific AI education that connects a session to observable capability at work.",
+    "problem": "A full training room is not the same as a more capable team. Relevance, practice, feedback and follow-through need as much care as the presentation.",
+    "useCases": [
+      [
+        "A shared starting point",
+        "Understand differences in access, confidence and experience without ranking people with an artificial AI score."
+      ],
+      [
+        "Practice that matters",
+        "Use safely selected tasks and examples from the team’s context. Make time for people to try, question and revise."
+      ],
+      [
+        "A meaningful review",
+        "Agree what participants should be able to do afterwards, and review actual work alongside their feedback."
+      ]
+    ],
+    "boundary": "The programme is practical professional development, not an accredited qualification. Measures are agreed with the sponsor and used to improve learning, not surveil individuals.",
+    "service": "ai-training"
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "slug": "ai-pilot-acceptance-checklist",
+    "number": "01",
+    "name": "The AI Pilot Acceptance Checklist",
+    "short": "Before the pilot becomes the process.",
+    "description": "Six practical checks to make ownership, quality and the next decision explicit.",
+    "label": "DECISION WORKSHEET",
+    "time": "20–30 minutes",
+    "audience": "Pilot sponsors, operations leaders and project owners",
+    "intro": "A successful demonstration is not the same as a workflow your team can rely on. Use this worksheet to record the evidence, owners and open questions before deciding to expand. It is a decision aid, not a certification or a promise of return.",
+    "fields": [
+      "Workflow or pilot",
+      "Business owner",
+      "Current process",
+      "Scope and exclusions",
+      "Decision date"
+    ],
+    "checks": [
+      [
+        "A named owner",
+        "Who is accountable after the demonstration? Who can pause the workflow? Write down both the names and the responsibilities."
+      ],
+      [
+        "A measured baseline",
+        "What is the current task volume, completion time and correction effort? Separate measured inputs from assumptions."
+      ],
+      [
+        "A quality threshold",
+        "What makes an output usable? Include examples that should be accepted, rejected or escalated. Test difficult cases as well as the happy path."
+      ],
+      [
+        "Human review and exceptions",
+        "What must a person approve? How do exceptions reach them? How can the original process be restored?"
+      ],
+      [
+        "Access and maintenance",
+        "Which information is needed? Who can access it? Who maintains the sources and integration? Include your organisation’s security and privacy review where relevant."
+      ],
+      [
+        "A commercial decision",
+        "Compare observed benefits with software, implementation, review and maintenance costs. Agree what evidence means expand, revise or stop."
+      ]
+    ],
+    "closing": "Do not turn six unanswered questions into one reassuring score. Record the evidence for each, name the remaining owners, then make an explicit decision.",
+    "related": "workflow-design"
+  },
+  {
+    "slug": "ai-opportunity-canvas",
+    "number": "02",
+    "name": "The AI Opportunity Canvas",
+    "short": "Find the task worth improving.",
+    "description": "A one-workflow canvas for choosing a useful, bounded next step.",
+    "label": "WORKING CANVAS",
+    "time": "30 minutes",
+    "audience": "Leadership teams, internal champions and workflow owners",
+    "intro": "Start with the work, not the tool. This canvas helps you define a specific task, the people involved and the conditions a useful improvement would have to meet. It is designed to open a good discussion, not generate an automatic recommendation.",
+    "fields": [
+      "The task",
+      "The people involved",
+      "The process owner",
+      "The decision we need to make"
+    ],
+    "checks": [
+      [
+        "Define the actual task",
+        "Describe the task in one sentence. What starts it, what finishes it, and who uses the result?"
+      ],
+      [
+        "Find the friction",
+        "Where does time or attention go today? Include checking, copying, waiting, corrections and exceptions."
+      ],
+      [
+        "Map the information",
+        "What sources are needed? Are they accessible, current and approved for the intended use? Who owns them?"
+      ],
+      [
+        "Describe a useful result",
+        "What would improve, and how would you recognise it? Keep the outcome separate from the features of a possible tool."
+      ],
+      [
+        "Set the boundaries",
+        "Which decisions stay with a person? What must not be automated? Consider a simpler process or conventional automation too."
+      ],
+      [
+        "Choose a small next step",
+        "Name the owner, the test, the evidence required and the date for a decision. What would make you continue, revise or stop?"
+      ]
+    ],
+    "closing": "A useful opportunity has a real task, a responsible owner and a way to test the difference. It does not need to sound impressive.",
+    "related": "leadership-briefing"
+  },
+  {
+    "slug": "team-ai-readiness",
+    "number": "03",
+    "name": "The Team AI Readiness Guide",
+    "short": "A better starting conversation.",
+    "description": "Understand the team’s starting point without reducing people to an AI score.",
+    "label": "TEAM DISCUSSION GUIDE",
+    "time": "30–45 minutes",
+    "audience": "Team leaders, people teams and learning sponsors",
+    "intro": "Before choosing training, understand how your team works today. Use these prompts with the people involved. Look for differences in access, confidence and context, not a score that ranks employees.",
+    "fields": [
+      "Team or function",
+      "Sponsor",
+      "Tasks we want to improve",
+      "Tools currently permitted"
+    ],
+    "checks": [
+      [
+        "Shared understanding",
+        "Can the team explain where AI could help and where it could be wrong? Which questions are people hesitant to ask?"
+      ],
+      [
+        "Access and permissions",
+        "Do people know which tools they may use, with what information, and whom to ask when they are unsure?"
+      ],
+      [
+        "Relevant tasks",
+        "Which recurring tasks would make useful practice? Choose work that matters and can be discussed safely."
+      ],
+      [
+        "Quality and judgement",
+        "How is work checked today? Can people recognise an answer that is plausible but unsuitable for its purpose?"
+      ],
+      [
+        "Time and support",
+        "Is there room to practise between sessions? Who can help connect learning to everyday work?"
+      ],
+      [
+        "Evidence of progress",
+        "What should people be able to do afterwards? Choose a few observable tasks and agree how to review them fairly."
+      ]
+    ],
+    "closing": "Use the gaps to shape the programme, not to judge the people. A shared starting point makes the learning more relevant and the follow-through more realistic.",
+    "related": "ai-training"
+  }
+]

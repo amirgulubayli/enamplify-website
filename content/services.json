@@ -1,0 +1,326 @@
+[
+  {
+    "slug": "ai-training",
+    "name": "The Capability Programme",
+    "eyebrow": "01 / TEAM EDUCATION",
+    "short": "Build capability across your team.",
+    "headline": "Make AI a shared capability.",
+    "italic": "Not an individual workaround.",
+    "summary": "Practical, role-specific learning for teams that want to use AI with greater confidence, consistency and judgement.",
+    "intro": "Some people are experimenting. Others are not sure where to begin. The useful habits have not become shared habits. We bring the team together around the work they actually do, not a catalogue of tools.",
+    "format": [
+      "A six-week starting format",
+      "Live learning & applied practice",
+      "A playbook your team keeps"
+    ],
+    "fit": "For teams ready to move from individual experimentation to a considered, shared way of working.",
+    "outcomes": [
+      [
+        "Better briefing",
+        "Define the objective, context and quality standard before asking for an answer."
+      ],
+      [
+        "Sounder judgement",
+        "Check what matters. Know when to revise, reject or bring in a person."
+      ],
+      [
+        "Useful habits that travel",
+        "Document approaches another colleague can repeat without the original builder in the room."
+      ]
+    ],
+    "steps": [
+      [
+        "Understand the work",
+        "Choose relevant tasks, establish the starting point and agree what a useful result looks like.",
+        "A task map and a shared quality standard."
+      ],
+      [
+        "Brief with context",
+        "Practise supplying the objective, sources, constraints and examples that the task actually needs.",
+        "Role-specific briefing patterns."
+      ],
+      [
+        "Evaluate before using",
+        "Compare outputs against an agreed rubric. Include difficult cases, not just a convincing demonstration.",
+        "Worked examples and a practical review rubric."
+      ],
+      [
+        "Fit the workflow",
+        "Clarify handoffs, approvals, storage and exceptions. Decide where the human judgement belongs.",
+        "Two workflow cards for agreed task families."
+      ],
+      [
+        "Build the playbook",
+        "Turn useful experiments into clear, reusable instructions. Test whether someone else can follow them.",
+        "A concise team playbook."
+      ],
+      [
+        "Review and continue",
+        "Review the agreed evidence, record limitations and decide what happens over the next 30 days.",
+        "A sponsor review and a continuation plan."
+      ]
+    ],
+    "deliverables": [
+      "A preparation session with your sponsor",
+      "Exercises using approved or sanitised material",
+      "Live, guided practice on relevant tasks",
+      "Briefing patterns and a quality rubric",
+      "Workflow cards and a shared team playbook",
+      "A review of progress and sensible next steps"
+    ],
+    "scope": "The six-week format is our starting point, not a one-size-fits-all commitment. Cohort size, task families, session length and follow-up support are agreed in the written proposal. Bespoke software development is a separate scope.",
+    "faqs": [
+      [
+        "Do we need a technical background?",
+        "No. We focus on work, context and judgement rather than coding. We agree the starting level before the programme begins."
+      ],
+      [
+        "Is this tied to one AI tool?",
+        "No. The method is about tasks and evaluation. Practical exercises use the systems your organisation permits and the tools relevant to the work."
+      ],
+      [
+        "Can we use our own documents?",
+        "Where your organisation approves their use. We agree suitable material in advance and use sanitised or illustrative examples when confidential information should not leave your environment."
+      ],
+      [
+        "How will we know whether it helped?",
+        "We agree a baseline and a few useful measures before delivery. Those might include task quality, review effort, or whether people can repeat a method independently. Attendance alone is not the outcome."
+      ],
+      [
+        "Do you guarantee a percentage improvement?",
+        "No. We report what the evidence supports, including limitations. A credible review matters more than an impressive-looking number."
+      ]
+    ],
+    "cta": "Discuss your team",
+    "interest": "Team education",
+    "relatedArticle": "what-to-measure-after-ai-training",
+    "resource": "team-ai-readiness"
+  },
+  {
+    "slug": "leadership-briefing",
+    "name": "The Leadership Briefing",
+    "eyebrow": "02 / LEADERSHIP & DIRECTION",
+    "short": "Make a better next decision.",
+    "headline": "A clearer view of AI.",
+    "italic": "A considered next move.",
+    "summary": "A focused working session for leaders who need to decide where AI belongs, where it does not, and what a sensible first step looks like.",
+    "intro": "You do not need another presentation on how quickly everything is changing. You need the space to ask better questions about your business, separate genuine opportunity from distraction, and choose what deserves attention.",
+    "format": [
+      "Preparation around your context",
+      "A focused leadership session",
+      "A written decision memo"
+    ],
+    "fit": "For founders, partners and leadership teams deciding how to approach AI without mistaking activity for progress.",
+    "outcomes": [
+      [
+        "A shared starting point",
+        "A practical vocabulary for discussing capability, limitations and responsibility."
+      ],
+      [
+        "A useful shortlist",
+        "A small number of opportunities grounded in the work, not a wish list of impressive features."
+      ],
+      [
+        "A decision with an owner",
+        "A written next step, clear assumptions and a named person to take it forward."
+      ]
+    ],
+    "steps": [
+      [
+        "Set the context",
+        "Understand the organisation, its current use of AI, its constraints and the decisions waiting to be made.",
+        "A focused preparation brief."
+      ],
+      [
+        "Explore the work",
+        "Examine a few relevant applications and their limits. Separate the task from the technology around it.",
+        "A grounded opportunity shortlist."
+      ],
+      [
+        "Choose a next move",
+        "Test the assumptions, discuss trade-offs and agree what deserves a small, bounded next step.",
+        "A decision memo with ownership and open questions."
+      ]
+    ],
+    "deliverables": [
+      "A pre-session sponsor conversation",
+      "Examples selected for your context",
+      "A facilitated leadership working session",
+      "A prioritised opportunity shortlist",
+      "A concise written decision memo",
+      "Clear recommendations for what to investigate next"
+    ],
+    "scope": "Session length, participants and preparation are agreed before delivery. This is practical business and technical education, not legal advice, a compliance certification or a commitment to implement a system.",
+    "faqs": [
+      [
+        "Is this a keynote?",
+        "It is a working session, with room for questions and disagreement. We can shape a shorter talk separately, but the briefing is intended to support a decision."
+      ],
+      [
+        "Who should attend?",
+        "The people who understand the work and can make or sponsor a decision. A small cross-functional group is often more useful than an audience with no clear responsibility afterwards."
+      ],
+      [
+        "What happens after the session?",
+        "You receive a written record of the decisions, assumptions and next steps. Further training or implementation is a separate decision, not an automatic continuation."
+      ]
+    ],
+    "cta": "Discuss a briefing",
+    "interest": "Leadership briefing",
+    "relatedArticle": "when-not-to-automate",
+    "resource": "ai-opportunity-canvas"
+  },
+  {
+    "slug": "workflow-design",
+    "name": "The Workflow Design Sprint",
+    "eyebrow": "03 / PRACTICAL IMPLEMENTATION",
+    "short": "Connect an idea to the work.",
+    "headline": "A useful answer is only",
+    "italic": "part of the workflow.",
+    "summary": "A focused engagement to map, test and improve one AI-assisted workflow, with the people, information and handoffs considered together.",
+    "intro": "The demo works. The real task is more complicated. Information arrives in different forms, exceptions need judgement, and the answer still has to reach the next person. The sprint starts there.",
+    "format": [
+      "One clearly bounded workflow",
+      "A baseline and a practical test",
+      "A documented next decision"
+    ],
+    "fit": "For a team with a specific task to improve and someone accountable for the process after the demonstration.",
+    "outcomes": [
+      [
+        "A complete process map",
+        "Include the preparation, checking, rework and follow-through, not only the generated output."
+      ],
+      [
+        "A test with a purpose",
+        "Agree what the pilot needs to establish and what would make the idea worth continuing."
+      ],
+      [
+        "An honest handover",
+        "Document what works, what remains uncertain and who would own a live workflow."
+      ]
+    ],
+    "steps": [
+      [
+        "Map the real task",
+        "Follow the work from input to final use. Identify sources, permissions, review effort and exceptions.",
+        "A workflow map and measured starting point."
+      ],
+      [
+        "Design a bounded test",
+        "Choose the smallest useful scope. Agree success, revision and stop criteria before testing.",
+        "A test plan and acceptance criteria."
+      ],
+      [
+        "Test the difficult cases",
+        "Review outputs and handoffs with the people responsible for using them. Record what fails as carefully as what works.",
+        "An evidence log and design recommendations."
+      ],
+      [
+        "Decide and hand over",
+        "Choose whether to expand, revise or stop. Make ongoing ownership and remaining work explicit.",
+        "A handover document and next-step decision."
+      ]
+    ],
+    "deliverables": [
+      "A discovery session around one workflow",
+      "A map of inputs, reviews and handoffs",
+      "A defined pilot scope and exclusions",
+      "A practical evaluation approach",
+      "Documentation of the observed findings",
+      "Recommendations for implementation or a simpler alternative"
+    ],
+    "scope": "Integrations, production hosting, data migration, licences, maintenance and security approvals are included only when explicitly scoped. A prototype is not represented as a production deployment. We agree the boundaries before work begins.",
+    "faqs": [
+      [
+        "Do we have to know exactly what to build?",
+        "You need a meaningful task, not a finished technical specification. Discovery helps distinguish a useful problem from a solution looking for one."
+      ],
+      [
+        "Will you work with our existing systems?",
+        "We begin with your current workflow and constraints. Specific integrations depend on access, permissions and the agreed scope."
+      ],
+      [
+        "What happens if AI is not the best answer?",
+        "We will say so. A simpler process, better source information or conventional automation may be the more useful outcome."
+      ]
+    ],
+    "cta": "Discuss your workflow",
+    "interest": "Workflow design",
+    "relatedArticle": "the-handoff-gap",
+    "resource": "ai-pilot-acceptance-checklist"
+  },
+  {
+    "slug": "advisory",
+    "name": "The Advisory Partnership",
+    "eyebrow": "04 / CONTINUING GUIDANCE",
+    "short": "Keep progress connected.",
+    "headline": "Good judgement.",
+    "italic": "Beyond the first engagement.",
+    "summary": "Ongoing, founder-led advice for organisations that want a thoughtful partner as their use of AI develops.",
+    "intro": "The questions do not stop at the end of a programme. Priorities change, a pilot creates new decisions, and the team needs somewhere to bring the difficult cases. Advisory creates that space without pretending every problem needs a new project.",
+    "format": [
+      "A defined monthly allocation",
+      "Working sessions & reviews",
+      "Clear written recommendations"
+    ],
+    "fit": "For leaders and internal champions who need continuity, an independent perspective and someone to challenge assumptions constructively.",
+    "outcomes": [
+      [
+        "Keep priorities clear",
+        "Review what is useful now rather than chase every new tool or announcement."
+      ],
+      [
+        "Support your internal capability",
+        "Help the people who own the work make and explain better decisions."
+      ],
+      [
+        "Maintain continuity",
+        "Carry lessons from one initiative into the next, instead of starting from scratch each time."
+      ]
+    ],
+    "steps": [
+      [
+        "Agree the relationship",
+        "Set the priorities, working rhythm, review capacity and communication boundaries.",
+        "A written advisory scope."
+      ],
+      [
+        "Work through the decisions",
+        "Use scheduled sessions for specific questions, document reviews and practical trade-offs.",
+        "Recommendations tied to current work."
+      ],
+      [
+        "Review the direction",
+        "Look at what has changed and decide where the relationship is still useful.",
+        "A refreshed priority list and next steps."
+      ]
+    ],
+    "deliverables": [
+      "A clear monthly scope",
+      "Scheduled working sessions",
+      "Review of agreed documents or pilot findings",
+      "Written recommendations where useful",
+      "Support for a named internal champion",
+      "A regular review of priorities and fit"
+    ],
+    "scope": "Availability, response expectations, review allowance and implementation support are defined in the agreement. Advisory is not unlimited technical support or a substitute for your legal, security or specialist professional teams.",
+    "faqs": [
+      [
+        "Is there a minimum commitment?",
+        "We agree a sensible initial period around the decisions you need to make. The scope and review point are clear before you commit."
+      ],
+      [
+        "Can this follow a training programme?",
+        "Yes. It can support an internal champion and help the team continue applying what they learned. It can also be scoped independently."
+      ],
+      [
+        "Does advisory include development?",
+        "Not by default. Building, operating or supporting software is scoped separately, so responsibilities stay clear."
+      ]
+    ],
+    "cta": "Explore advisory",
+    "interest": "Ongoing advisory",
+    "relatedArticle": "beyond-the-ai-demo",
+    "resource": "ai-opportunity-canvas"
+  }
+]

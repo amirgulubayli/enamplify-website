@@ -1,0 +1,38 @@
+{
+  "version": "1.0.1",
+  "date": "2026-09-26",
+  "changes": [
+    "Removed decorative preheaders",
+    "Normal-case functional labels and metadata",
+    "Rewrote em dashes throughout website content and metadata",
+    "Updated printable field-guide labels and social card"
+  ],
+  "pages": 38,
+  "unitTests": {
+    "passed": 36,
+    "failed": 0
+  },
+  "browser": {
+    "renderCases": 152,
+    "renderPasses": 152,
+    "interactionCases": 6,
+    "interactionPasses": 6,
+    "httpCases": 39,
+    "httpPasses": 39
+  },
+  "style": {
+    "emDashCount": 0,
+    "preheaderCount": 0,
+    "forcedUppercaseRules": 0
+  },
+  "previewChecksPassed": 4,
+  "pdfPages": 6,
+  "remoteGitHubRepositoryCreated": false,
+  "vercelDeploymentCreated": false,
+  "publishingBlockers": [
+    "Connected GitHub tools do not expose repository creation; repository search returned no enamplify repository.",
+    "Vercel deploy_to_vercel returned Tool deploy_to_vercel not found.",
+    "No authenticated local CLI; outbound CLI hosts cannot be resolved from this execution environment."
+  ],
+  "externalAssetsVerified": false
+}

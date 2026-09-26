@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateEnquiry,processEnquiry} from '../api/enquiry.js';
+const now=1_800_000_000_000;
+const valid={name:'A Test',email:'test@example.com',organisation:'Example organisation',message:'We would like to discuss practical training for our team.',interest:'Team education',startedAt:now-10000,'cf-turnstile-response':'mock-token',website:''};
+const env={ENQUIRY_MODE:'server',RESEND_API_KEY:'test-not-a-key',CONTACT_FROM:'Sender <sender@example.com>',CONTACT_TO:'owner@example.com',CONTACT_ALLOWED_ORIGIN:'https://example.com',TURNSTILE_SECRET_KEY:'test-not-a-key'};
+const request=(body=valid)=>({method:'POST',headers:{origin:'https://example.com','content-type':'application/json'},body});
+test('valid enquiry passes server validation',()=>assert.ok(validateEnquiry(valid,now).data));
+for(const [name,value] of [['name',''],['email','invalid'],['message','short'],['website','spam'],['startedAt',now],['cf-turnstile-response','']])test(`rejects invalid ${name}`,()=>assert.ok(validateEnquiry({...valid,[name]:value},now).error));
+test('rejects email header injection',()=>assert.ok(validateEnquiry({...valid,email:'a@example.com\nBcc: evil@example.com'},now).error));
+test('rejects too long fields rather than silently sending',()=>assert.ok(validateEnquiry({...valid,message:'x'.repeat(4001)},now).error));
+test('does not send when unconfigured',async()=>{const r=await processEnquiry(request(),{env:{},now,fetcher:()=>assert.fail('unexpected network request')});assert.equal(r.status,503)});
+test('rejects a cross-origin request',async()=>{const r=await processEnquiry({...request(),headers:{origin:'https://bad.example','content-type':'application/json'}},{env,now});assert.equal(r.status,403)});
+test('rejects GET',async()=>assert.equal((await processEnquiry({...request(),method:'GET'},{env,now})).status,405));
+test('never trusts unsuccessful bot verification',async()=>{let calls=0;const r=await processEnquiry(request(),{env,now,fetcher:async()=>{calls++;return {ok:true,json:async()=>({success:false})}}});assert.equal(r.status,400);assert.equal(calls,1)});
+test('successful provider acceptance returns 202, no PII',async()=>{const calls=[];const r=await processEnquiry(request(),{env,now,fetcher:async(url,options)=>{calls.push({url,options});return {ok:true,json:async()=>calls.length===1?{success:true,action:'enquiry',hostname:'example.com'}:{id:'test-receipt'}}}});assert.equal(r.status,202);assert.deepEqual(r.body,{ok:true});assert.equal(calls.length,2);assert.equal(JSON.parse(calls[1].options.body).reply_to,valid.email);assert.match(calls[1].options.headers['Idempotency-Key'],/^enquiry-/)});
+test('no success on provider error',async()=>{let calls=0;const r=await processEnquiry(request(),{env,now,fetcher:async()=>{calls++;return {ok:calls===1,json:async()=>calls===1?{success:true,action:'enquiry',hostname:'example.com'}:{message:'failure'}}}});assert.equal(r.status,502);assert.equal(r.body.ok,undefined)});
+test('wrong verification hostname cannot send mail',async()=>{let calls=0;const r=await processEnquiry(request(),{env,now,fetcher:async()=>{calls++;return {ok:true,json:async()=>({success:true,action:'enquiry',hostname:'bad.example'})}}});assert.equal(r.status,400);assert.equal(calls,1)});

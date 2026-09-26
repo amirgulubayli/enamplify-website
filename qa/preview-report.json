@@ -1,0 +1,9 @@
+{
+  "passed": [
+    "Internal navigation works in the self-contained preview",
+    "Preview journal search works",
+    "Mobile preview viewport is 390px",
+    "PDF downloads are embedded in the standalone preview"
+  ],
+  "pageErrors": []
+}

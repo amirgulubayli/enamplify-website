@@ -1,0 +1,136 @@
+[
+  {
+    "slug": "pripitch",
+    "name": "pripitch",
+    "category": "Sales intelligence",
+    "title": "The work around a sales conversation.",
+    "summary": "Connecting preparation, live guidance and follow-through in an AI-assisted sales workflow.",
+    "type": "Founder project",
+    "art": "pripitch",
+    "url": "https://pripitch.com",
+    "externalLabel": "Explore pripitch",
+    "facts": [
+      [
+        "Context",
+        "Outbound sales"
+      ],
+      [
+        "Focus",
+        "Research, guidance & follow-through"
+      ],
+      [
+        "Perspective",
+        "The complete workflow"
+      ]
+    ],
+    "sections": [
+      [
+        "Start before the conversation",
+        "A sales conversation does not begin when someone picks up the phone. It begins with understanding who the conversation is with, why it is relevant and what is already known. pripitch brings that preparation into a product spanning research, live call guidance and follow-through."
+      ],
+      [
+        "The answer needs somewhere to go",
+        "The interesting question is not simply whether an AI system can generate a good briefing. It is whether the information is useful at the point of work, and whether anything valuable from the conversation reaches the person responsible for the next action. That makes the before, during and after part of one design problem."
+      ],
+      [
+        "The design question",
+        "Preparation, live guidance and follow-through are useful only when they belong to a connected workflow. Looking at a product this way puts the quality of the input and the next action alongside the quality of the answer."
+      ],
+      [
+        "What this means for your organisation",
+        "When you review an AI use case, map the two steps before the answer and the two steps after it. Ask who supplies the context, who acts on the result and what happens to an exception. The best improvement may sit on either side of the generated output."
+      ]
+    ],
+    "takeaway": "Design for the conversation and its consequences, not just the briefing.",
+    "related": "the-handoff-gap"
+  },
+  {
+    "slug": "grademy",
+    "name": "grademy",
+    "category": "Learning & retained context",
+    "title": "Learning that builds on what came before.",
+    "summary": "An AI tutoring product exploring continuity, feedback and a learner’s developing understanding.",
+    "type": "Founder project",
+    "art": "grademy",
+    "url": "https://www.grademy.work/",
+    "externalLabel": "Explore grademy",
+    "facts": [
+      [
+        "Context",
+        "AI-assisted learning"
+      ],
+      [
+        "Focus",
+        "Continuity & useful feedback"
+      ],
+      [
+        "Perspective",
+        "Capability, not just answers"
+      ]
+    ],
+    "sections": [
+      [
+        "More than the next answer",
+        "The public grademy proposition is a tutor that does not forget the learner. It puts continuity at the centre of the experience: learning should connect what someone is doing now with what came before, rather than begin again with every interaction."
+      ],
+      [
+        "The question behind the product",
+        "An answer can be correct without helping someone understand. The more useful design question is how a system can support a person’s progress: what context is relevant, what feedback helps, and how the next step connects to a real learning goal."
+      ],
+      [
+        "Why this matters for team education",
+        "The same distinction informs Enamplify’s approach. A good training session is not just a convincing explanation. People need a relevant task, a chance to practise, useful feedback and something they can repeat afterwards. Learning should leave capability behind."
+      ],
+      [
+        "A useful measure of progress",
+        "The useful question for a learning experience is what someone can do afterwards. Can they explain the reasoning, question an answer and attempt the task again? Those are more informative questions than whether an explanation sounded convincing in the moment."
+      ]
+    ],
+    "takeaway": "A useful learning system helps people develop, not only receive.",
+    "related": "what-to-measure-after-ai-training"
+  },
+  {
+    "slug": "rag-x",
+    "name": "RAG-X",
+    "category": "Business context",
+    "title": "Useful intelligence starts with context.",
+    "summary": "An AI-first CRM concept exploring how business information can support better questions and more relevant answers.",
+    "type": "Founder concept",
+    "art": "rag-x",
+    "url": null,
+    "facts": [
+      [
+        "Context",
+        "Business information & CRM"
+      ],
+      [
+        "Focus",
+        "Context-aware assistance"
+      ],
+      [
+        "Perspective",
+        "From concept to a useful question"
+      ]
+    ],
+    "sections": [
+      [
+        "A question about the business",
+        "RAG-X explored an AI-first CRM idea: an assistant that could use information about leads and the business when responding to questions. The aim was not simply to add a chat box. It was to connect the interface with context that would make an answer relevant."
+      ],
+      [
+        "A capable concept still needs a clear use",
+        "The founder reflection behind the project is straightforward: being technically interesting does not automatically make something useful to a buyer. A broad capability is not the same as a clearly defined job, an accountable user or a workable reason to change a process."
+      ],
+      [
+        "From a general system to a specific task",
+        "The more useful conversation starts with what an organisation needs to do. What question keeps coming up? Where does the information live? Who has permission to use it? What decision will the answer support? Those questions turn a broad concept into a testable scope."
+      ],
+      [
+        "Where the reflection stands",
+        "RAG-X is a reflection on the original founder concept, rather than an active product offer. Its enduring lesson is the need to connect a broad technical capability with a specific job someone needs to do."
+      ]
+    ],
+    "takeaway": "Context creates relevance. A specific task creates a reason to use it.",
+    "related": "better-briefs-better-ai-work"
+  }
+]

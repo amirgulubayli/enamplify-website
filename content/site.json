@@ -1,0 +1,34 @@
+{
+  "name": "Enamplify",
+  "descriptor": "AI education & advisory",
+  "tagline": "Human potential. Thoughtfully advanced.",
+  "description": "Practical AI education and advisory. We help organisations build the confidence, judgement and capability to use AI well.",
+  "email": "amirg@ragmedium.com",
+  "founder": "Amir Gulubayli",
+  "linkedin": "https://www.linkedin.com/in/amirgulubayli/",
+  "siteUrl": "https://enamplify.com",
+  "portrait": "https://ragmedium.com/images/amir-gulubayli.jpg",
+  "launchDate": "2026-09-26",
+  "nav": [
+    [
+      "Solutions",
+      "/solutions/"
+    ],
+    [
+      "Our approach",
+      "/approach/"
+    ],
+    [
+      "Selected work",
+      "/work/"
+    ],
+    [
+      "Perspectives",
+      "/perspectives/"
+    ],
+    [
+      "About",
+      "/about/"
+    ]
+  ]
+}

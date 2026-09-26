@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "beyond-the-ai-demo",
+    "category": "Implementation",
+    "title": "A working AI demo is not an operating workflow.",
+    "summary": "A useful answer does not settle ownership, review, access or what happens next.",
+    "art": "signal",
+    "resource": "ai-pilot-acceptance-checklist",
+    "readingTime": 3,
+    "date": "26 September 2026",
+    "isoDate": "2026-09-26",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "better-briefs-better-ai-work",
+    "category": "Working with AI",
+    "title": "Start with a better brief. Not a better prompt.",
+    "summary": "The most useful context is often the part nobody thought to write down.",
+    "art": "brief",
+    "resource": "ai-opportunity-canvas",
+    "readingTime": 3,
+    "date": "26 September 2026",
+    "isoDate": "2026-09-26",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "what-to-measure-after-ai-training",
+    "category": "Team capability",
+    "title": "What should change after AI training?",
+    "summary": "Attendance is easy to count. Capability takes a more thoughtful look.",
+    "art": "steps",
+    "resource": "team-ai-readiness",
+    "readingTime": 3,
+    "date": "26 September 2026",
+    "isoDate": "2026-09-26",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "automate-the-work-not-the-relationship",
+    "category": "Human judgement",
+    "title": "Automate the work. Not the relationship.",
+    "summary": "Better preparation should make communication more human, not less accountable.",
+    "art": "connection",
+    "resource": "ai-opportunity-canvas",
+    "readingTime": 3,
+    "date": "26 September 2026",
+    "isoDate": "2026-09-26",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "when-not-to-automate",
+    "category": "Leadership",
+    "title": "Good AI advice includes knowing when not to automate.",
+    "summary": "Sometimes the next useful move is a clearer process, not another system.",
+    "art": "balance",
+    "resource": "ai-opportunity-canvas",
+    "readingTime": 3,
+    "date": "26 September 2026",
+    "isoDate": "2026-09-26",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "the-handoff-gap",
+    "category": "Implementation",
+    "title": "The handoff gap.",
+    "summary": "What happens after the answer is generated deserves as much attention as the answer.",
+    "art": "handoff",
+    "resource": "ai-pilot-acceptance-checklist",
+    "readingTime": 3,
+    "date": "26 September 2026",
+    "isoDate": "2026-09-26",
+    "author": "Amir Gulubayli"
+  }
+]

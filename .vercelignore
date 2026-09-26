@@ -1,0 +1,9 @@
+.git
+qa
+docs
+planning
+node_modules
+.env*
+*.zip
+
+dist
