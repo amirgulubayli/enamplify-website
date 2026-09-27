@@ -72,7 +72,8 @@ test('house style: no em dashes, no preheaders, no uppercase', () => {
 });
 test('proof is an exhibit ledger on home and work, with no kicker lines above titles', async () => {
   const home = await read('/'), work = await read('/work/');
-  assert.ok(home.includes('Exhibit 5 · Track record') && work.includes('Exhibit 1 · Track record'));
-  assert.ok(!/class="(?:figures|delivered|recognition|numbered__n)"/.test(home + work));
+  assert.ok(home.includes('Exhibit 5 · Track record.') && work.includes('Exhibit 1 · Delivered.'));
+  assert.ok(!work.includes('Track record'), 'work does not repeat the home proof exhibit');
+  assert.ok(!/class="(?:figures|delivered|recognition|numbered__n|grid-list grid-list--four)"/.test(home + work));
   for (const [i, h] of all.entries()) assert.ok(!/<p class="card__meta">[^<]*<\/p>\s*<(?:h1|h2|h3)/.test(h), routes[i].url);
 });

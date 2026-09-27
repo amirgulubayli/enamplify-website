@@ -42,7 +42,7 @@ test('lineChart emits one polyline per series with pathLength for the reveal', (
   assert.ok(html.includes('role="img"'));
   assert.ok(html.includes('Maintained by your team: 0 at Month 1, 12 at Month 12'));
   assert.ok(html.includes('Maintained by Enamplify: 3 at Month 1, 1 at Month 12'));
-  assert.ok(html.includes('<ul class="legend" aria-hidden="true">'));
+  assert.ok(!html.includes('<ul class="legend"'));
 });
 test('lineChart requires at least two points per series', () => {
   assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'navy', values: [5]}]}), /at least 2/);
@@ -69,13 +69,16 @@ test('ledger scroll wrapper is a focusable, named region', () => {
   const html = ledger({caption: 'Track record', columns: ['Area'], rows: [['Recognition']]});
   assert.ok(html.startsWith('<div class="ledger-scroll" tabindex="0" role="region" aria-label="Track record">'));
 });
-test('lineChart legend uses line swatches ordered by final value, highest first', () => {
+test('lineChart labels line ends directly and keeps them apart', () => {
   const html = lineChart({xLabels: ['A', 'B'], max: 12, series: [
-    {label: 'Low end', tone: 'navy', values: [3, 1]},
-    {label: 'High end', tone: 'signal', values: [0, 12]}
+    {label: 'Maintained by Enamplify', short: 'Enamplify', tone: 'navy', values: [3, 1]},
+    {label: 'Maintained by your team', short: 'Your team', tone: 'signal', values: [0, 2]}
   ]});
-  const legendHtml = html.slice(html.indexOf('<ul class="legend"'));
-  assert.ok(legendHtml.indexOf('High end') < legendHtml.indexOf('Low end'));
-  assert.ok(legendHtml.includes('class="swatch swatch--line swatch--signal"'));
-  assert.ok(html.indexOf('mark-line--navy') < html.indexOf('mark-line--signal'), 'series drawing order is unchanged');
+  assert.ok(!html.includes('class="legend'));
+  const labels = [...html.matchAll(/<text class="line-label line-label--(\w+)" x="([\d.]+)" y="([\d.]+)" dominant-baseline="middle">([^<]+)<\/text>/g)];
+  assert.equal(labels.length, 2);
+  assert.deepEqual(labels.map(m => m[4]).sort(), ['Enamplify', 'Your team']);
+  assert.ok(Math.abs(Number(labels[0][3]) - Number(labels[1][3])) >= 14, 'end labels do not collide');
+  assert.ok(html.includes('viewBox="0 0 380 150" width="380" height="150"'));
+  assert.ok(html.includes('aria-label="Maintained by Enamplify: 3 at A, 1 at B; Maintained by your team: 0 at A, 2 at B"'));
 });

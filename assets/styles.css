@@ -87,9 +87,8 @@ main:focus{outline:none}
 
 /* Exhibits */
 .exhibit{border-top:2px solid var(--navy);padding-top:16px;min-width:0}
-.exhibit__cap{display:flex;flex-direction:column;gap:4px;margin-bottom:24px}
-.exhibit__label{font-size:.8125rem;font-weight:600;color:var(--muted);letter-spacing:.01em}
-.exhibit__title{font:600 1.1875rem/1.3 var(--display);color:var(--navy);text-wrap:balance}
+.exhibit__cap{display:block;margin-bottom:24px;font:400 1.1875rem/1.35 var(--display);color:var(--navy);text-wrap:pretty}
+.exhibit__label{font-weight:700}
 .exhibit__note{margin-top:20px;font-size:.9375rem}
 .exhibit__source{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);font-size:.8125rem;color:var(--muted)}
 .stack{width:100%;height:56px}
@@ -97,9 +96,8 @@ main:focus{outline:none}
 .mark--signal{fill:var(--signal)}
 .mark--rule{fill:var(--rule-strong)}
 .legend{display:grid;gap:8px;margin-top:20px}
-.legend li{display:grid;grid-template-columns:16px 1fr auto;gap:12px;align-items:center;font-size:.9375rem}
+.legend li{display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;font-size:.9375rem}
 .swatch{width:12px;height:12px}
-.swatch--line{width:16px;height:2.5px}
 .swatch--navy{background:var(--navy)}
 .swatch--signal{background:var(--signal)}
 .swatch--rule{background:var(--rule-strong)}
@@ -115,6 +113,9 @@ main:focus{outline:none}
 .mark-line{fill:none;stroke-width:2.5;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
 .mark-line--signal{stroke:var(--signal)}
 .mark-line--navy{stroke:var(--navy)}
+.line-label{font:600 12px var(--text)}
+.line-label--signal{fill:var(--signal)}
+.line-label--navy{fill:var(--navy)}
 .axis{display:flex;justify-content:space-between;margin-top:8px;font-size:.8125rem;color:var(--muted)}
 .ledger-scroll{overflow-x:auto}
 .ledger{width:100%;border-collapse:collapse;font-size:.875rem}
@@ -132,7 +133,10 @@ main:focus{outline:none}
 @media (min-width:900px){.numbered{grid-template-columns:repeat(3,1fr);gap:48px}}
 .marked{margin-top:56px;max-width:36ch;padding-top:20px;border-top:2px solid var(--navy);font:600 clamp(1.25rem,1rem + .8vw,1.625rem)/1.35 var(--display);color:var(--navy)}
 .outcomes{display:grid;gap:56px}
-@media (min-width:1000px){.outcomes{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,auto);gap:0 40px}.exhibit--outcome{display:grid;grid-row:span 4;grid-template-rows:subgrid}}
+@media (min-width:1000px){.outcomes{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}}
+.exhibit--outcome{display:flex;flex-direction:column}
+.exhibit--outcome .exhibit__note{margin-bottom:16px}
+.exhibit--outcome .exhibit__source{margin-top:auto}
 .exhibit--record{max-width:880px;margin-bottom:32px}
 .stages li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding-block:24px;border-top:1px solid var(--rule)}
 .stages li:last-child{border-bottom:1px solid var(--rule);margin-bottom:28px}
@@ -148,7 +152,7 @@ main:focus{outline:none}
 .ticks--large li{font:600 1.1875rem/1.35 var(--display);color:var(--navy)}
 .founder{display:grid;gap:40px;align-items:center}
 @media (min-width:900px){.founder{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:72px}}
-.portrait{position:relative;background:var(--wash);aspect-ratio:4/5;max-width:420px}
+.portrait{position:relative;background:var(--wash);aspect-ratio:4/5;max-width:304px}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .portrait figcaption{margin-top:12px;font-size:.8125rem;color:var(--muted)}
 .portrait.image-unavailable img{visibility:hidden}
@@ -169,8 +173,7 @@ main:focus{outline:none}
 .grid-list li{border-top:1px solid var(--rule-strong);padding-top:16px}
 .grid-list h3{margin-bottom:8px}
 @media (min-width:760px){.grid-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1100px){.grid-list{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-list--four{grid-template-columns:repeat(4,minmax(0,1fr))}}
-.grid-list+.small{margin-top:32px}
+@media (min-width:1100px){.grid-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .products{display:grid;gap:24px}
 .products li{border-top:2px solid var(--navy);padding-top:16px}
 .products h3{margin-bottom:8px}

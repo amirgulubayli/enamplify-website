@@ -2,10 +2,10 @@
   {
     "name": "amir-gulubayli.jpg",
     "status": "cropped",
-    "bytes": 20733,
-    "width": 240,
-    "height": 300,
-    "source": "Cropped from https://ragmedium.com/images/amir-gulubayli.jpg with PIL box (181, 45, 421, 345) on 2026-09-27; founder-supplied photo. Head-and-shoulders 4:5 crop excluding the parked cars; JPEG quality 90 with the provenance sentence embedded as a JPEG comment.",
+    "bytes": 33114,
+    "width": 304,
+    "height": 380,
+    "source": "Cropped from https://ragmedium.com/images/amir-gulubayli.jpg with PIL box (178, 15, 482, 395) on 2026-09-27; founder-supplied photo. Head-and-shoulders 4:5 crop keeping all the hair and excluding the parked cars (a few-pixel sliver of fence post remains at the left edge); JPEG quality 90 with the provenance sentence embedded as a JPEG comment. Displayed at no more than 304px wide so it is never upscaled.",
     "url": "https://ragmedium.com/images/amir-gulubayli.jpg"
   }
 ]

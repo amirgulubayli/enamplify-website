@@ -1,15 +1,12 @@
-import {esc, arrowNE, pageHead, closeBand} from '../components.mjs';
-import {trackRecord} from './shared.mjs';
+import {esc, arrowNE, pageHead, closeBand, exhibit} from '../components.mjs';
+import {ledger} from '../exhibits.mjs';
 
 export function work({work}) {
-  return `${pageHead({title: 'Systems we’ve built. Products we run.', lede: 'Before Enamplify, we built AI systems for clients under the RAG Medium name. The same people now help your team build its own.', crumbs: [['Work']]})}
-<section class="section wrap" aria-label="Track record">
-${trackRecord({n: 1, cls: 'exhibit--record'})}
-</section>
-<section class="section wrap" aria-labelledby="delivered-title">
-<h2 id="delivered-title" class="section__title">What we’ve delivered.</h2>
-<ul class="grid-list grid-list--four">${work.delivered.map(([t, p]) => `<li><h3>${esc(t)}</h3><p>${esc(p)}</p></li>`).join('')}</ul>
-<p class="small">Client names are withheld by default. References are available in conversation.</p>
+  return `${pageHead({title: 'Systems we’ve built. Products we run.', lede: 'Before Enamplify, we built AI systems for clients under the RAG Medium name, and won a Google hackathon with a $10,000 winning build. The same people now help your team build its own.', crumbs: [['Work']]})}
+<section class="section wrap" aria-label="Delivered systems">
+${exhibit({n: 1, topic: 'Delivered', title: 'Eight kinds of client system, shipped.', cls: 'exhibit--record',
+  chart: ledger({caption: 'Delivered client systems', columns: ['System', 'What it does'], rows: work.delivered}),
+  source: 'RAG Medium and Enamplify delivery record. Client names withheld; references available in conversation.'})}
 </section>
 <section class="section section--wash" aria-labelledby="products-title"><div class="wrap">
 <h2 id="products-title" class="section__title">Products we build and run.</h2>

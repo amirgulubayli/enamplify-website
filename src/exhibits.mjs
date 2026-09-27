@@ -1,7 +1,7 @@
 import {esc} from './components.mjs';
 
 const pct = n => `${Math.round(n)}%`;
-const legend = (items, {hidden = false, line = false} = {}) => `<ul class="legend"${hidden ? ' aria-hidden="true"' : ''}>${items.map(s => `<li><span class="swatch${line ? ' swatch--line' : ''} swatch--${esc(s.tone)}" aria-hidden="true"></span><span class="legend__label">${esc(s.label)}</span>${s.value === undefined ? '' : `<span class="legend__value">${pct(s.value)}</span>`}</li>`).join('')}</ul>`;
+const legend = items => `<ul class="legend">${items.map(s => `<li><span class="swatch swatch--${esc(s.tone)}" aria-hidden="true"></span><span class="legend__label">${esc(s.label)}</span>${s.value === undefined ? '' : `<span class="legend__value">${pct(s.value)}</span>`}</li>`).join('')}</ul>`;
 
 /** A single 100% horizontal bar. The legend carries the data for assistive technology. */
 export function stackedBar(segments) {
@@ -24,7 +24,7 @@ export function pairedBars({unit, max, rows}) {
   return `<div class="bars" role="img" aria-label="${esc(label)}">${rows.map(r => `<div class="bars__row" aria-hidden="true"><span class="bars__label">${esc(r.label)}</span><svg class="bars__track" viewBox="0 0 100 12" preserveAspectRatio="none" width="100" height="12"><rect class="bars__bg" x="0" y="0" width="100" height="12"/><rect class="mark mark--${esc(r.tone)}" x="0" y="0" width="${+(r.value / max * 100).toFixed(1)}" height="12"/></svg><span class="bars__value">${r.value} ${esc(unit)}</span></div>`).join('')}</div>`;
 }
 
-/** Hairline line chart; labels live in HTML so they never scale with the SVG. */
+/** Hairline line chart with direct end labels in a right-hand gutter; the full labels live in the aria-label. */
 export function lineChart({xLabels, series, max}) {
   const n = series[0].values.length;
   if (n < 2) throw new Error('lineChart needs at least 2 points per series');
@@ -34,13 +34,19 @@ export function lineChart({xLabels, series, max}) {
       if (v > max || v < 0) throw new Error(`lineChart values must be between 0 and ${max}`);
     }
   }
-  const W = 300, H = 150, P = 6;
-  const x = i => P + i * (W - 2 * P) / (n - 1);
+  const PW = 300, GUTTER = 80, W = PW + GUTTER, H = 150, P = 6, GAP = 14;
+  const x = i => P + i * (PW - 2 * P) / (n - 1);
   const y = v => H - P - v / max * (H - 2 * P);
-  const grid = [0, 0.5, 1].map(t => `<line class="gridline" x1="0" x2="${W}" y1="${y(max * t)}" y2="${y(max * t)}"/>`).join('');
+  const grid = [0, 0.5, 1].map(t => `<line class="gridline" x1="0" x2="${PW}" y1="${y(max * t)}" y2="${y(max * t)}"/>`).join('');
   const lines = series.map(s => `<polyline class="mark-line mark-line--${esc(s.tone)}" pathLength="1" points="${s.values.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ')}"/>`).join('');
+  // End labels, top to bottom, nudged apart so they never collide.
+  const ends = series.map(s => ({s, ly: y(s.values.at(-1))})).sort((a, b) => a.ly - b.ly);
+  for (let i = 1; i < ends.length; i++) if (ends[i].ly - ends[i - 1].ly < GAP) ends[i].ly = ends[i - 1].ly + GAP;
+  const overflow = ends.length ? Math.max(0, ends.at(-1).ly - (H - P)) : 0;
+  for (const e of ends) e.ly = Math.max(P, e.ly - overflow);
+  const labels = ends.map(({s, ly}) => `<text class="line-label line-label--${esc(s.tone)}" x="${x(n - 1) + 8}" y="${ly.toFixed(1)}" dominant-baseline="middle">${esc(s.short || s.label)}</text>`).join('');
   const label = series.map(s => `${s.label}: ${s.values[0]} at ${xLabels[0]}, ${s.values.at(-1)} at ${xLabels.at(-1)}`).join('; ');
-  return `<svg class="linechart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${grid}${lines}</svg><div class="axis" aria-hidden="true"><span>${esc(xLabels[0])}</span><span>${esc(xLabels.at(-1))}</span></div>${legend([...series].sort((a, b) => b.values.at(-1) - a.values.at(-1)).map(({label, tone}) => ({label, tone})), {hidden: true, line: true})}`;
+  return `<svg class="linechart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${grid}${lines}${labels}</svg><div class="axis" aria-hidden="true"><span>${esc(xLabels[0])}</span><span>${esc(xLabels.at(-1))}</span></div>`;
 }
 
 /** A small governance ledger: first cell of each row is its header. */
