@@ -28,7 +28,8 @@ export const portrait = (ctx, {caption = true, eager = false} = {}) => `<figure 
 /**
  * A graded city photograph from content/images.json. `id` names the entry in `ctx.images`; the
  * srcset lists every exported width, and width/height come from the largest file. Only first
- * viewport images pass `eager`, which also raises their fetch priority.
+ * viewport images pass `eager`, which also raises their fetch priority. The caption names the
+ * place; photographers are credited once, in the footer colophon (see `photoCredits`).
  */
 export function photo(id, ctx, {sizes, eager = false, cls = '', caption = true} = {}) {
   const img = ctx.images?.[id];
@@ -43,8 +44,19 @@ export function photo(id, ctx, {sizes, eager = false, cls = '', caption = true} 
   const loc = ctx.locale;
   const alt = img.alt[loc] ?? img.alt.en;
   const place = img.caption[loc] ?? img.caption.en;
-  const credit = fill(ctx.copy.common.photoCredit, {name: img.credit.name});
-  return `<figure class="photo${cls ? ` ${cls}` : ''}"><img src="${esc(src)}" srcset="${esc(srcset)}" sizes="${esc(sizes)}" width="${largest}" height="${height}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>${caption ? `<figcaption>${esc(place)} · ${esc(credit)}</figcaption>` : ''}</figure>`;
+  return `<figure class="photo${cls ? ` ${cls}` : ''}"><img src="${esc(src)}" srcset="${esc(srcset)}" sizes="${esc(sizes)}" width="${largest}" height="${height}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>${caption ? `<figcaption>${esc(place)}</figcaption>` : ''}</figure>`;
+}
+
+/** Ids of the city photographs a rendered page shows, in order of first appearance. */
+export const photosIn = html => [...new Set([...html.matchAll(/\/images\/city\/([a-z0-9-]+?)-\d+\.webp/g)].map(m => m[1]))];
+
+/** "Photography: A, B" with each photographer linked once, for the photos in `ids`. */
+export function photoCredits(ctx, ids = []) {
+  const people = new Map();
+  for (const id of ids) { const credit = ctx.images?.[id]?.credit; if (credit && !people.has(credit.name)) people.set(credit.name, credit.url); }
+  if (!people.size) return '';
+  const names = [...people].map(([name, url]) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`).join(', ');
+  return `<p class="colophon">${fill(esc(ctx.copy.common.photographyCredits), {names})}</p>`;
 }
 
 function navAttr(path, href) {
@@ -80,8 +92,8 @@ export function header(ctx, route) {
   return `<a class="skip-link" href="#main">${esc(c.skipLink)}</a><header class="site-header"><div class="wrap site-header__inner"><a class="wordmark" href="${L(ctx, '/')}" aria-label="${esc(c.homeLabel)}">Enamplify</a><nav class="site-nav" aria-label="${esc(c.mainNav)}">${links}</nav>${toggle}<a class="btn btn--quiet site-header__cta" href="${contact}"${bookAttr}>${esc(c.bookCall)}</a><button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="menu-label">${esc(c.menu)}</span></button></div><nav id="mobile-menu" class="mobile-menu" aria-label="${esc(c.mobileNav)}" inert hidden><div class="wrap">${links}<a href="${contact}"${bookAttr}>${esc(c.bookCall)}</a>${toggle}</div></nav></header><noscript><nav class="noscript-nav wrap" aria-label="${esc(c.noscriptNav)}">${links}<a href="${contact}">${esc(c.bookCall)}</a></nav></noscript>`;
 }
 
-export function footer(ctx) {
+export function footer(ctx, {photos = []} = {}) {
   const {site, copy: {common: c}} = ctx;
   const legal = ['privacy', 'cookies', 'terms', 'accessibility'].map(k => [c.legalLinks[k], L(ctx, `/${k}/`)]);
-  return `<footer class="site-footer"><div class="wrap"><div class="site-footer__top"><div class="site-footer__brand"><a class="wordmark" href="${L(ctx, '/')}">Enamplify</a><p>${esc(site.definition)}</p><p class="site-footer__cities">${site.cities.map(esc).join(' · ')}</p></div><nav aria-label="${esc(c.footerNav)}"><h2>${esc(c.footerPages)}</h2>${[...site.nav, [c.bookCall, '/contact/']].map(([t, h]) => `<a href="${esc(L(ctx, h))}">${esc(t)}</a>`).join('')}</nav><div><h2>${esc(c.footerContact)}</h2><a href="mailto:${esc(site.email)}">${esc(site.email)}</a><a href="${esc(site.linkedin)}" target="_blank" rel="noopener noreferrer">${esc(c.linkedin)} ${arrowNE}</a><a href="${L(ctx, '/feed.xml')}">${esc(c.feedLink)}</a></div></div><div class="site-footer__bottom"><p>© ${new Date().getFullYear()} Enamplify</p><nav aria-label="${esc(c.legalNav)}">${legal.map(([t, h]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('')}</nav></div></div></footer>`;
+  return `<footer class="site-footer"><div class="wrap"><div class="site-footer__top"><div class="site-footer__brand"><a class="wordmark" href="${L(ctx, '/')}">Enamplify</a><p>${esc(site.definition)}</p><p class="site-footer__cities">${site.cities.map(esc).join(' · ')}</p></div><nav aria-label="${esc(c.footerNav)}"><h2>${esc(c.footerPages)}</h2>${[...site.nav, [c.bookCall, '/contact/']].map(([t, h]) => `<a href="${esc(L(ctx, h))}">${esc(t)}</a>`).join('')}</nav><div><h2>${esc(c.footerContact)}</h2><a href="mailto:${esc(site.email)}">${esc(site.email)}</a><a href="${esc(site.linkedin)}" target="_blank" rel="noopener noreferrer">${esc(c.linkedin)} ${arrowNE}</a><a href="${L(ctx, '/feed.xml')}">${esc(c.feedLink)}</a></div></div><div class="site-footer__bottom"><p>© ${new Date().getFullYear()} Enamplify</p>${photoCredits(ctx, photos)}<nav aria-label="${esc(c.legalNav)}">${legal.map(([t, h]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('')}</nav></div></div></footer>`;
 }

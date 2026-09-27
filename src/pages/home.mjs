@@ -27,7 +27,7 @@ export function home(ctx) {
   const {site, articles, copy} = ctx;
   const c = copy.home;
   const L = ctx.href;
-  const diptych = {sizes: '(min-width: 1360px) 272px, (min-width: 1000px) 20vw, 46vw', eager: true};
+  const diptych = {sizes: '(min-width: 1536px) 360px, (min-width: 1000px) 23vw, 46vw', eager: true};
   return `<section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero__copy"><h1 id="hero-title">${esc(c.heroTitle)} <span class="h1-alt">${esc(c.heroTitleAlt)}</span></h1>
 <p class="lede">${esc(c.lede)}</p>

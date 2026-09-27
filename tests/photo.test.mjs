@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {photo} from '../src/components.mjs';
+import {photo, photosIn, photoCredits} from '../src/components.mjs';
 
 const read = rel => fs.readFile(new URL(`../content/${rel}`, import.meta.url), 'utf8').then(JSON.parse);
 const [copy, images] = await Promise.all([read('copy/en.json'), read('images.json')]);
 const ctx = {locale: 'en', copy, images};
-const az = {...ctx, locale: 'az', copy: {...copy, common: {...copy.common, photoCredit: 'Foto: {name}'}}};
+const az = {...ctx, locale: 'az', copy: {...copy, common: {...copy.common, photographyCredits: 'Fotoşəkillər: {names}'}}};
 const attr = (html, name) => html.match(new RegExp(`\\s${name}="([^"]*)"`))?.[1];
 
 test('photo lists every exported width in srcset, without assuming the widths', () => {
@@ -37,13 +37,29 @@ test('photo is lazy by default and eager with high fetch priority when asked', (
   assert.equal(attr(eager, 'fetchpriority'), 'high');
 });
 
-test('photo alt text and caption follow the locale, with the credit label from copy', () => {
+test('photo alt text and caption follow the locale; the caption names the place only', () => {
   const en = photo('hero-baku', ctx, {sizes: '30vw'});
   assert.equal(attr(en, 'alt'), images['hero-baku'].alt.en);
-  assert.ok(en.includes(`<figcaption>${images['hero-baku'].caption.en} · Photo: Zulfugar Karimov</figcaption>`));
+  assert.ok(en.includes(`<figcaption>${images['hero-baku'].caption.en}</figcaption>`));
+  assert.ok(!en.includes('Zulfugar'));
   const inAz = photo('hero-baku', az, {sizes: '30vw'});
   assert.equal(attr(inAz, 'alt'), images['hero-baku'].alt.az);
-  assert.ok(inAz.includes(`<figcaption>${images['hero-baku'].caption.az} · Foto: Zulfugar Karimov</figcaption>`));
+  assert.ok(inAz.includes(`<figcaption>${images['hero-baku'].caption.az}</figcaption>`));
+});
+
+test('photosIn finds each city photo a page shows, once, in order', () => {
+  const html = photo('hero-london', ctx, {sizes: '1px'}) + photo('band-work', ctx, {sizes: '1px'}) + photo('hero-london', ctx, {sizes: '1px'});
+  assert.deepEqual(photosIn(html), ['hero-london', 'band-work']);
+  assert.deepEqual(photosIn('<p>no photos</p>'), []);
+});
+
+test('photoCredits links each photographer once, in the locale, and is empty without photos', () => {
+  const html = photoCredits(ctx, ['hero-london', 'hero-baku', 'hero-london']);
+  const {credit: l} = images['hero-london'], {credit: b} = images['hero-baku'];
+  assert.equal(html, `<p class="colophon">Photography: <a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.name}</a>, <a href="${b.url}" target="_blank" rel="noopener noreferrer">${b.name}</a></p>`);
+  assert.ok(photoCredits(az, ['hero-baku']).startsWith('<p class="colophon">Fotoşəkillər: <a '));
+  assert.equal(photoCredits(ctx, []), '');
+  assert.equal(photoCredits(ctx, ['unknown']), '');
 });
 
 test('photo wraps a figure with the given class, and can drop the caption', () => {
@@ -57,7 +73,8 @@ test('photo escapes text and refuses unknown ids or missing sizes', () => {
   const tricky = {...ctx, images: {x: {files: {640: '/images/city/x.webp'}, width: 640, height: 800, alt: {en: 'A "quoted" <place>'}, caption: {en: 'Here & there'}, credit: {name: 'A & B'}}}};
   const html = photo('x', tricky, {sizes: '100vw'});
   assert.equal(attr(html, 'alt'), 'A &quot;quoted&quot; &lt;place&gt;');
-  assert.ok(html.includes('Here &amp; there · Photo: A &amp; B'));
+  assert.ok(html.includes('<figcaption>Here &amp; there</figcaption>'));
+  assert.ok(photoCredits(tricky, ['x']).includes('>A &amp; B</a>'));
   assert.throws(() => photo('nope', ctx, {sizes: '100vw'}), /Unknown image/);
   assert.throws(() => photo('hero-baku', ctx), /needs sizes/);
 });

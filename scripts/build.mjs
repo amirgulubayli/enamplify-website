@@ -44,8 +44,8 @@ export async function build() {
   await fs.writeFile(path.join(out, 'assets', jsName), js);
 
   for (const r of routes) {
-    const {site, copy} = contexts[r.locale];
-    const html = renderDocument({base, site, copy, route: r, cssName, jsName, indexable: isLive && r.index !== false, turnstileKey: enquiryMode === 'server' ? env.TURNSTILE_SITE_KEY : ''});
+    const {site, copy, images} = contexts[r.locale];
+    const html = renderDocument({base, site, copy, images, route: r, cssName, jsName, indexable: isLive && r.index !== false, turnstileKey: enquiryMode === 'server' ? env.TURNSTILE_SITE_KEY : ''});
     const dest = path.join(out, r.url, 'index.html');
     await fs.mkdir(path.dirname(dest), {recursive: true});
     await fs.writeFile(dest, html);

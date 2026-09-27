@@ -10,6 +10,8 @@ const routes = JSON.parse(await fs.readFile(path.join(root, 'qa/routes.json'), '
 const read = url => fs.readFile(path.join(root, 'dist', url, 'index.html'), 'utf8');
 const all = await Promise.all(routes.map(r => read(r.url)));
 const css = await fs.readFile(path.join(root, 'assets/styles.css'), 'utf8');
+const images = JSON.parse(await fs.readFile(path.join(root, 'content/images.json'), 'utf8'));
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const js = await fs.readFile(path.join(root, 'assets/site.js'), 'utf8');
 const ld = html => [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
 const types = html => ld(html).flatMap(d => d['@graph'].map(n => n['@type']));
@@ -132,6 +134,13 @@ test('city photographs: every src and srcset file exists; only the home hero dip
     if (home) assert.equal(city.filter(img => img.includes('fetchpriority="high"')).length, 2, routes[i].url);
     for (const key of ['approach', 'work', 'insights', 'contact']) if (routes[i].key === key) assert.ok(h.includes(`/images/city/band-${key}-`), routes[i].url);
     if (routes[i].key === 'about') assert.ok(h.includes('/images/city/about-london-') && h.includes('/images/city/about-baku-'), routes[i].url);
+    // Captions name the place; the footer colophon credits exactly the photographers shown.
+    const colophon = h.match(/<p class="colophon">([\s\S]*?)<\/p>/)?.[1] ?? '';
+    const shown = [...new Set(city.map(img => img.match(/\/images\/city\/([a-z0-9-]+?)-\d+\.webp/)[1]))];
+    assert.equal(!!colophon, shown.length > 0, routes[i].url);
+    for (const id of shown) assert.ok(colophon.includes(`rel="noopener noreferrer">${esc(images[id].credit.name)}</a>`), `${routes[i].url} credits ${id}`);
+    assert.equal((colophon.match(/<a /g) || []).length, new Set(shown.map(id => images[id].credit.name)).size, routes[i].url);
+    assert.ok(!/<figcaption>[^<]*(?:Photo|Foto)/.test(h), routes[i].url);
   }
   assert.ok(seen > 0);
 });

@@ -20,7 +20,7 @@
       "source": "https://unsplash.com/photos/a-large-building-with-columns-and-a-flag-on-top-b07tX5xgZ5U",
       "license": "Unsplash License"
     },
-    "provenance": "Photograph by Francais a Londres (https://unsplash.com/photos/a-large-building-with-columns-and-a-flag-on-top-b07tX5xgZ5U), Unsplash License. Cropped (source fractions l,t,r,b = 0.21, 0, 0.6092, 0.665) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+    "provenance": "Photograph by Francais a Londres (https://unsplash.com/photos/a-large-building-with-columns-and-a-flag-on-top-b07tX5xgZ5U), Unsplash License. Cropped (source fractions l,t,r,b = 0.21, 0, 0.6092, 0.665), white balance warmed by 0.07 and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
   },
   "hero-baku": {
     "files": {

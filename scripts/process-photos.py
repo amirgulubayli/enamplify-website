@@ -72,6 +72,9 @@ IMAGES = {
             "az": "London Sitisində, Bank qovşağında Kral Birjasının portiki; Korinf sütunları axşamın alçaq günəşi ilə işıqlanır",
         },
         "caption": {"en": "The Royal Exchange, London", "az": "Kral Birjası, London"},
+        # Warmed so it sits beside the golden Baku facade in the hero diptych:
+        # the cool blue sky otherwise reads as a different season.
+        "warm": 0.07,
     },
     "hero-baku": {
         "file": "baku-03.jpg", "aspect": "4:5",
@@ -161,7 +164,18 @@ def crop_box(size, frac, aspect):
     return (x0, y0, x1, y1)
 
 
-def grade(im):
+def warm(im, amount):
+    """White-balance shift toward warm light: red up, blue down, by `amount` (0.07 = 7%)."""
+    r, g, b = im.split()
+    r = r.point(lambda v: min(255, round(v * (1 + amount))))
+    g = g.point(lambda v: min(255, round(v * (1 + amount / 3))))
+    b = b.point(lambda v: round(v * (1 - amount)))
+    return Image.merge("RGB", (r, g, b))
+
+
+def grade(im, warmth=0.0):
+    if warmth:
+        im = warm(im, warmth)
     im = ImageEnhance.Color(im).enhance(SATURATION)
     im = ImageEnhance.Contrast(im).enhance(CONTRAST)
     lum = im.convert("L")
@@ -207,18 +221,27 @@ def main():
     ap.add_argument("source", nargs="?", type=Path, default=DEFAULT_SRC)
     ap.add_argument("--sheet", type=Path, help="write a JPEG review sheet here")
     ap.add_argument("--impeccable-sidecar", action="store_true")
+    ap.add_argument("--only", nargs="+", metavar="ID", help="re-process these ids; other entries in content/images.json are kept")
     opts = ap.parse_args()
     src, sheet, do_embed = opts.source, opts.sheet, opts.impeccable_sidecar
     manifest = {m["file"]: m for m in json.loads((src / "manifest.json").read_text(encoding="utf-8"))}
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     data, previews, embed_errors = {}, {}, {}
+    if opts.only:
+        unknown = set(opts.only) - set(IMAGES)
+        if unknown:
+            raise SystemExit(f"unknown ids: {', '.join(sorted(unknown))}")
+        data = json.loads(JSON_OUT.read_text(encoding="utf-8"))
     for id_, spec in IMAGES.items():
+        if opts.only and id_ not in opts.only:
+            continue
         meta = manifest[spec["file"]]
         orig = Image.open(src / spec["file"]).convert("RGB")
         box = crop_box(orig.size, spec["crop"], spec["aspect"])
         cropped = orig.crop(box)
-        graded = grade(cropped)
+        warmth = spec.get("warm", 0.0)
+        graded = grade(cropped, warmth)
         native = cropped.width
         widths = [w for w in WIDTHS[spec["aspect"]] if w <= native]
         # A crop narrower than the budget width would otherwise stop at 640;
@@ -227,7 +250,8 @@ def main():
             widths.append(native)
         files, largest = {}, None
         prov = (f"Photograph by {meta['photographer']} ({meta['pageUrl']}), {meta['license']}. "
-                f"Cropped (source fractions l,t,r,b = {', '.join(f'{v:g}' for v in spec['crop'])}) and colour-graded "
+                f"Cropped (source fractions l,t,r,b = {', '.join(f'{v:g}' for v in spec['crop'])})"
+                f"{f', white balance warmed by {warmth:g}' if warmth else ''} and colour-graded "
                 f"by scripts/process-photos.py for Enamplify; no generative model.")
         xmp = xmp_packet(meta, prov)
         budget_w, budget_kb = BUDGETS[spec["aspect"]]
@@ -269,7 +293,7 @@ def main():
     print(f"wrote {JSON_OUT.relative_to(ROOT)}")
     if embed_errors:
         print("embed-prompt failed for", len(embed_errors), "files; first error:", next(iter(embed_errors.values())))
-    if sheet:
+    if sheet and "hero-london" in previews:
         make_sheet(sheet, previews)
 
 

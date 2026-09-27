@@ -27,7 +27,7 @@
     "lineSummary": "{label}: {start}: {first}; {end}: {last}",
     "portraitAlt": "Amir Gulubayli, Enamplify-ın təsisçisi",
     "portraitCaption": "Amir Gulubayli, təsisçi",
-    "photoCredit": "Foto: {name}",
+    "photographyCredits": "Fotoşəkillər: {names}",
     "ogImageAlt": "Enamplify. Satın aldığınız deyil, komandanızın qurduğu Sİ.",
     "feedTitle": "Enamplify təhlilləri",
     "feedDescription": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik düşüncələr.",

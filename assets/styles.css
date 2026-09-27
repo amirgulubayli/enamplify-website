@@ -43,7 +43,8 @@ main:focus{outline:none}
 /* Header */
 .site-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
 .site-header__inner{display:flex;align-items:center;gap:32px;min-height:var(--head)}
-.wordmark{font:400 2rem/1 var(--display);letter-spacing:-.04em;color:var(--ink);text-decoration:none}
+.wordmark{font:400 2.125rem/1 var(--display);letter-spacing:-.03em;color:var(--ink);text-decoration:none;-webkit-text-stroke:.012em currentColor;padding-bottom:.08em}
+@media (min-width:1200px){.wordmark{font-size:2.5rem}}
 .site-nav{display:flex;gap:32px;margin-left:auto}
 .site-nav a{font-size:.875rem;color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
 .site-nav a:hover,.site-nav a[aria-current]{border-bottom-color:var(--wine);color:var(--wine)}
@@ -112,17 +113,20 @@ main:focus{outline:none}
 .pair img,.diptych img{aspect-ratio:4/5;object-fit:cover}
 
 /* Hero */
-.hero{display:grid;gap:48px;padding-block:40px var(--section);align-items:center}
+.hero{display:grid;gap:48px;padding-block:40px var(--section);align-items:start}
+.hero h1{font-size:clamp(2.625rem,1rem + 4vw,5rem)}
 :lang(az) h1{line-height:1.08}
-:lang(az) .hero h1{font-size:clamp(2.5rem,1.5rem + 4vw,4.75rem)}
+:lang(az) .hero h1{font-size:clamp(2.375rem,.75rem + 3.9vw,4.25rem)}
 .hero .h1-alt{display:block}
 .hero .lede{margin-top:32px}
 .note{margin-top:24px;font-size:.875rem;color:var(--muted)}
 .diptych{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
 .diptych .photo:nth-child(2){margin-top:32px}
 @media (min-width:1000px){
-  .hero{grid-template-columns:minmax(0,54fr) minmax(0,46fr);gap:56px;min-height:calc(100svh - var(--head));padding-block:48px 64px}
-  .diptych{gap:20px;padding-bottom:48px}
+  /* The copy keeps the page's left edge; the diptych runs wider, toward the viewport edge. */
+  .hero.wrap{max-width:none;padding-left:max(var(--gutter),(100% - 1264px) / 2);padding-right:max(var(--gutter),(100% - 1440px) / 2);grid-template-columns:minmax(0,47fr) minmax(0,53fr);gap:56px;padding-top:clamp(56px,6.5vw,96px)}
+  .hero__copy{padding-top:8px}
+  .diptych{gap:20px}
   .diptych .photo:nth-child(2){margin-top:48px;margin-bottom:-48px}
 }
 
@@ -289,10 +293,12 @@ input,select,textarea{width:100%;padding:13px 14px;font:400 1rem/1.4 var(--text)
 input:focus,select:focus,textarea:focus{outline:2px solid var(--wine);outline-offset:0;border-color:var(--wine)}
 ::placeholder{color:var(--muted)}
 [aria-invalid="true"]{border-color:var(--error)}
-.contact{display:grid;gap:56px;padding-block:40px var(--section)}
-.contact h1{max-width:13ch;margin-bottom:28px}
-.contact__intro h2{font-size:1.625rem;margin:48px 0 14px}
-.contact__intro .actions{margin-top:36px}
+.contact{display:grid;gap:56px;padding-block:32px var(--section)}
+.contact h1{max-width:13ch;margin-bottom:24px;font-size:clamp(2.625rem,1.5rem + 4vw,4.5rem)}
+.contact__intro h2{font-size:1.5rem;margin:36px 0 8px}
+.contact__intro .ticks li{padding-block:10px}
+.contact__intro .ticks li::before{top:17px}
+.contact__intro .actions{margin-top:28px}
 .contact__intro .small{margin-top:14px}
 .contact__form{background:var(--paper-light);border:1px solid var(--line);padding:clamp(24px,4vw,44px)}
 .contact__form h2{font-size:2rem;margin-bottom:28px}
@@ -322,8 +328,11 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--wine);outline-of
 .site-footer h2{font:500 .8125rem var(--text);letter-spacing:.02em;color:var(--muted);margin-bottom:14px}
 .site-footer nav a,.site-footer__top>div:last-child a{display:flex;align-items:center;gap:6px;padding:4px 0;text-decoration:none}
 .site-footer a:hover{color:var(--wine)}
-.site-footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.8125rem}
+.site-footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px;margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.8125rem}
 .site-footer__bottom nav{display:flex;flex-wrap:wrap;gap:20px}
+.colophon{flex:1 1 320px;text-wrap:pretty}
+.colophon a{color:inherit;text-decoration:underline;text-decoration-color:var(--line)}
+.colophon a:hover{color:var(--wine);text-decoration-color:currentColor}
 @media (min-width:900px){.site-footer__top{grid-template-columns:minmax(0,6fr) minmax(0,3fr) minmax(0,3fr)}}
 .not-found h1{max-width:16ch}
 .not-found .lede{margin-top:28px}
