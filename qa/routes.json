@@ -235,8 +235,8 @@
       "en": "/",
       "az": "/az/"
     },
-    "title": "Page not found",
-    "description": "This page has moved. Find your way back to Enamplify.",
+    "title": "Page not found · Səhifə tapılmadı",
+    "description": "This page has moved. Find your way back to Enamplify. Bu səhifənin ünvanı dəyişib. Ana səhifədən davam edin.",
     "index": false
   },
   {
@@ -247,8 +247,8 @@
       "en": "/",
       "az": "/az/"
     },
-    "title": "Enamplify · AI enablement for mid-sized teams",
-    "description": "AI your team builds, not AI you buy. We help mid-sized organisations make AI part of how their people work: more done, owned in-house, in control.",
+    "title": "Enamplify · Orta ölçülü komandalar üçün Sİ bacarığı",
+    "description": "Satın aldığınız deyil, komandanızın qurduğu Sİ. Orta ölçülü təşkilatlarda Sİ-ni əməkdaşların gündəlik işinə daxil edirik: daha çox iş, daxili bacarıq, nəzarət.",
     "index": true
   },
   {
@@ -259,8 +259,8 @@
       "en": "/approach/",
       "az": "/az/approach/"
     },
-    "title": "How AI enablement works: diagnose, prove, scale",
-    "description": "Start small, prove it, then scale. How Enamplify helps teams build their own AI workflows with review, governance and data kept where it belongs.",
+    "title": "Sİ bacarığı: diaqnostika, sübut, genişləndirmə",
+    "description": "Kiçikdən başlayın, sübut edin, sonra genişləndirin. Enamplify komandalara yoxlama, idarəetmə və məlumat nəzarəti ilə öz Sİ iş axınlarını qurmağa kömək edir.",
     "index": true
   },
   {
@@ -271,8 +271,8 @@
       "en": "/work/",
       "az": "/az/work/"
     },
-    "title": "AI systems we’ve built and products we run",
-    "description": "Delivered AI systems across clinical, finance, growth and operations, a Google hackathon win, and the AI products we build and run ourselves.",
+    "title": "Qurduğumuz Sİ sistemləri və idarə etdiyimiz məhsullar",
+    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş Sİ sistemləri, Google hakatonunda qələbə və özümüzün qurub idarə etdiyimiz Sİ məhsulları.",
     "index": true
   },
   {
@@ -283,8 +283,8 @@
       "en": "/about/",
       "az": "/az/about/"
     },
-    "title": "About Enamplify: founder-led, London and Baku",
-    "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.",
+    "title": "Enamplify haqqında: təsisçi şirkəti, London və Bakı",
+    "description": "Enamplify London və Bakıda fəaliyyət göstərən, təsisçinin rəhbərlik etdiyi Sİ bacarığı üzrə məsləhət şirkətidir. Amir Gulubayli və iş prinsiplərimiz.",
     "index": true
   },
   {
@@ -295,8 +295,8 @@
       "en": "/insights/",
       "az": "/az/insights/"
     },
-    "title": "Insights on AI adoption for operations leaders",
-    "description": "Practical essays and free field guides on AI adoption, pilots, measurement and governance for operations leaders.",
+    "title": "Əməliyyat rəhbərləri üçün Sİ-nin tətbiqinə dair təhlillər",
+    "description": "Əməliyyat rəhbərləri üçün Sİ-nin tətbiqi, pilot layihələr, ölçmə və idarəetmə haqqında praktik esselər və pulsuz bələdçilər.",
     "index": true
   },
   {
@@ -307,8 +307,8 @@
       "en": "/insights/beyond-the-ai-demo/",
       "az": "/az/insights/beyond-the-ai-demo/"
     },
-    "title": "A working AI demo is not an operating workflow.",
-    "description": "A useful answer does not settle ownership, review, access or what happens next.",
+    "title": "İşləyən Sİ demosu hələ işlək iş axını deyil.",
+    "description": "Faydalı cavab sahiblik, yoxlama, giriş və sonrakı addım məsələlərini həll etmir.",
     "index": true
   },
   {
@@ -319,8 +319,8 @@
       "en": "/insights/better-briefs-better-ai-work/",
       "az": "/az/insights/better-briefs-better-ai-work/"
     },
-    "title": "Start with a better brief. Not a better prompt.",
-    "description": "The most useful context is often the part nobody thought to write down.",
+    "title": "Daha yaxşı brifdən başlayın. Daha yaxşı promptdan yox.",
+    "description": "Ən faydalı kontekst çox vaxt heç kimin yazmağı ağlına gətirmədiyi hissədir.",
     "index": true
   },
   {
@@ -331,8 +331,8 @@
       "en": "/insights/what-to-measure-after-ai-training/",
       "az": "/az/insights/what-to-measure-after-ai-training/"
     },
-    "title": "What should change after AI training?",
-    "description": "Attendance is easy to count. Capability takes a more thoughtful look.",
+    "title": "Sİ təlimindən sonra nə dəyişməlidir?",
+    "description": "İştirakı saymaq asandır. Bacarığı qiymətləndirmək daha diqqətli baxış tələb edir.",
     "index": true
   },
   {
@@ -343,8 +343,8 @@
       "en": "/insights/automate-the-work-not-the-relationship/",
       "az": "/az/insights/automate-the-work-not-the-relationship/"
     },
-    "title": "Automate the work. Not the relationship.",
-    "description": "Better preparation should make communication more human, not less accountable.",
+    "title": "İşi avtomatlaşdırın. Münasibətləri yox.",
+    "description": "Daha yaxşı hazırlıq ünsiyyəti daha insani etməlidir, daha az məsuliyyətli yox.",
     "index": true
   },
   {
@@ -355,8 +355,8 @@
       "en": "/insights/when-not-to-automate/",
       "az": "/az/insights/when-not-to-automate/"
     },
-    "title": "Good AI advice includes knowing when not to automate.",
-    "description": "Sometimes the next useful move is a clearer process, not another system.",
+    "title": "Yaxşı Sİ məsləhəti nəyi avtomatlaşdırmamağı da bilir.",
+    "description": "Bəzən növbəti faydalı addım yeni sistem deyil, daha aydın prosesdir.",
     "index": true
   },
   {
@@ -367,8 +367,8 @@
       "en": "/insights/the-handoff-gap/",
       "az": "/az/insights/the-handoff-gap/"
     },
-    "title": "The handoff gap.",
-    "description": "What happens after the answer is generated deserves as much attention as the answer.",
+    "title": "Ötürmə boşluğu.",
+    "description": "Cavab yarandıqdan sonra baş verənlər cavabın özü qədər diqqətə layiqdir.",
     "index": true
   },
   {
@@ -379,8 +379,8 @@
       "en": "/insights/guides/ai-pilot-acceptance-checklist/",
       "az": "/az/insights/guides/ai-pilot-acceptance-checklist/"
     },
-    "title": "The AI Pilot Acceptance Checklist",
-    "description": "Six practical checks to make ownership, quality and the next decision explicit.",
+    "title": "Sİ pilot layihəsinin qəbul yoxlama siyahısı",
+    "description": "Sahibliyi, keyfiyyəti və növbəti qərarı aydınlaşdırmaq üçün altı praktik yoxlama.",
     "index": true
   },
   {
@@ -391,8 +391,8 @@
       "en": "/insights/guides/ai-opportunity-canvas/",
       "az": "/az/insights/guides/ai-opportunity-canvas/"
     },
-    "title": "The AI Opportunity Canvas",
-    "description": "A one-workflow canvas for choosing a useful, bounded next step.",
+    "title": "Sİ imkanları kanvası",
+    "description": "Faydalı və hüdudları bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
     "index": true
   },
   {
@@ -403,8 +403,8 @@
       "en": "/insights/guides/team-ai-readiness/",
       "az": "/az/insights/guides/team-ai-readiness/"
     },
-    "title": "The Team AI Readiness Guide",
-    "description": "Understand the team’s starting point without reducing people to an AI score.",
+    "title": "Komandanın Sİ-yə hazırlıq bələdçisi",
+    "description": "İnsanları Sİ balına endirmədən komandanın başlanğıc nöqtəsini anlayın.",
     "index": true
   },
   {
@@ -415,8 +415,8 @@
       "en": "/contact/",
       "az": "/az/contact/"
     },
-    "title": "Book a diagnostic call",
-    "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.",
+    "title": "Diaqnostik görüş təyin edin",
+    "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız və onun işi haqqında söhbət.",
     "index": true
   },
   {
@@ -427,8 +427,8 @@
       "en": "/privacy/",
       "az": "/az/privacy/"
     },
-    "title": "Privacy",
-    "description": "How the Enamplify website handles the information you share, in plain English.",
+    "title": "Məxfilik",
+    "description": "Enamplify veb saytı paylaşdığınız məlumatla necə davranır, sadə dillə.",
     "index": true
   },
   {
@@ -439,8 +439,8 @@
       "en": "/cookies/",
       "az": "/az/cookies/"
     },
-    "title": "Cookies",
-    "description": "Enamplify sets no advertising or analytics cookies. What the website stores, and what it does not.",
+    "title": "Kukilər",
+    "description": "Enamplify reklam və ya analitika kukiləri yerləşdirmir. Veb saytın nəyi saxladığı və nəyi saxlamadığı.",
     "index": true
   },
   {
@@ -451,8 +451,8 @@
       "en": "/terms/",
       "az": "/az/terms/"
     },
-    "title": "Terms",
-    "description": "The terms that apply to using the Enamplify website and its free field guides.",
+    "title": "Şərtlər",
+    "description": "Enamplify veb saytından və onun pulsuz praktik bələdçilərindən istifadəyə tətbiq olunan şərtlər.",
     "index": true
   },
   {
@@ -463,8 +463,8 @@
       "en": "/accessibility/",
       "az": "/az/accessibility/"
     },
-    "title": "Accessibility",
-    "description": "How the Enamplify website is built to be usable by as many people as possible, and how to report a problem.",
+    "title": "Əlçatanlıq",
+    "description": "Enamplify veb saytı mümkün qədər çox insanın istifadə edə bilməsi üçün necə qurulub və problem barədə necə xəbər vermək olar.",
     "index": true
   }
 ]

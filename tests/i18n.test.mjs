@@ -81,3 +81,69 @@ test('page modules carry no hard-coded English copy', async () => {
     for (const p of phrases) assert.ok(!src.includes(p), `${f} contains "${p}"`);
   }
 });
+
+// Azerbaijani translation: the dictionary mirrors English exactly and nothing is left untranslated.
+const readCopy = async code => JSON.parse(await fs.readFile(new URL(`../content/copy/${code}.json`, import.meta.url), 'utf8'));
+const enCopy = await readCopy('en');
+const azCopy = await readCopy('az');
+/** Flatten to {path: leaf}; arrays and objects both contribute their shape (keys and lengths). */
+const leaves = (v, at = '', out = {}) => {
+  if (v !== null && typeof v === 'object') { for (const [k, x] of Object.entries(v)) leaves(x, Array.isArray(v) ? `${at}[${k}]` : at ? `${at}.${k}` : k, out); }
+  else out[at] = v;
+  return out;
+};
+const enLeaves = leaves(enCopy);
+const azLeaves = leaves(azCopy);
+const placeholders = s => (String(s).match(/\{[a-zA-Z]+\}/g) || []).sort();
+// Values that are legitimately identical in both languages: stage numbers, a brand-only label, the print rule.
+const SAME_ALLOWED = new Set(['common.stages[0].n', 'common.stages[1].n', 'common.stages[2].n', 'home.ownedInHouse.usShort', 'client.printPlaceholder']);
+
+test('az copy has exactly the English keys, with the same array lengths', () => {
+  assert.deepEqual(Object.keys(azLeaves).sort(), Object.keys(enLeaves).sort());
+});
+
+test('az copy keeps every placeholder, and no value is empty or left in English', () => {
+  for (const [k, en] of Object.entries(enLeaves)) {
+    const azValue = azLeaves[k];
+    assert.equal(typeof azValue, 'string', k);
+    assert.ok(azValue.trim(), `${k} is empty`);
+    assert.deepEqual(placeholders(azValue), placeholders(en), `${k} placeholders`);
+    if (SAME_ALLOWED.has(k)) assert.equal(azValue, en, k);
+    else assert.notEqual(azValue, en, `${k} is untranslated`);
+  }
+});
+
+test('az content is complete: no English fallbacks anywhere', () => {
+  assert.deepEqual(az.missing, []);
+});
+
+test('az overlays replace arrays whole with the English lengths', async () => {
+  const read = async rel => JSON.parse(await fs.readFile(new URL(`../content/${rel}`, import.meta.url), 'utf8'));
+  const [enWork, azWork, enFaqs, azFaqs, enRes, azRes, enSite, azSite] = await Promise.all(['work.json', 'az/work.json', 'faqs.json', 'az/faqs.json', 'resources.json', 'az/resources.json', 'site.json', 'az/site.json'].map(read));
+  assert.equal(azWork.delivered.length, enWork.delivered.length);
+  assert.equal(azWork.products.length, enWork.products.length);
+  assert.equal(azFaqs.length, enFaqs.length);
+  assert.deepEqual(azSite.nav.map(([, h]) => h), enSite.nav.map(([, h]) => h), 'nav keeps base hrefs');
+  for (const g of enRes) {
+    const t = azRes.find(r => r.slug === g.slug);
+    assert.ok(t, g.slug);
+    assert.equal(t.fields.length, g.fields.length, `${g.slug} fields`);
+    assert.equal(t.checks.length, g.checks.length, `${g.slug} checks`);
+  }
+});
+
+test('az pages are in Azerbaijani, with unique titles and descriptions', () => {
+  for (const r of azRoutes) assert.match(r.html, /ə/, r.url);
+  const titles = azRoutes.map(r => r.title);
+  const descriptions = azRoutes.map(r => r.description);
+  assert.equal(new Set(titles).size, titles.length, 'titles unique');
+  assert.equal(new Set(descriptions).size, descriptions.length, 'descriptions unique');
+  const enTitles = new Set(enRoutes.map(r => r.title));
+  for (const t of titles) assert.ok(!enTitles.has(t), `"${t}" is an English title`);
+});
+
+test('the bilingual 404 title fits', () => {
+  const r = routeTable({...en, enquiryMode: 'email'}, {notFoundAlso: [az]}).find(x => x.notFound);
+  assert.ok(`${r.title} | Enamplify`.length <= 70, r.title);
+  assert.ok(r.description.length <= 160, r.description);
+});
