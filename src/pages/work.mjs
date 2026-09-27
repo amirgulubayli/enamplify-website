@@ -4,7 +4,7 @@ import {ledger} from '../exhibits.mjs';
 export function work(ctx) {
   const {work, copy} = ctx;
   const c = copy.work;
-  return `${pageHead({title: c.title, lede: c.lede, crumbs: [[copy.routes.work.crumb]]}, ctx)}
+  return `${pageHead({title: c.title, lede: c.lede, crumbs: [[copy.routes.work.crumb]], band: 'band-work'}, ctx)}
 <section class="section wrap" aria-label="${esc(c.deliveredLabel)}">
 ${exhibit({n: 1, topic: c.delivered.topic, title: c.delivered.title, cls: 'exhibit--record',
   chart: ledger({caption: c.delivered.caption, columns: c.delivered.columns, rows: work.delivered}),

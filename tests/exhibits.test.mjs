@@ -3,11 +3,11 @@ import assert from 'node:assert/strict';
 import {stackedBar, pairedBars, lineChart, ledger} from '../src/exhibits.mjs';
 
 const week = [
-  {label: 'Judgement and client work', value: 41, tone: 'navy'},
-  {label: 'Recurring reporting', value: 21, tone: 'signal'},
-  {label: 'Finding information', value: 16, tone: 'signal'},
-  {label: 'Handoffs and chasing', value: 13, tone: 'signal'},
-  {label: 'Other', value: 9, tone: 'rule'}
+  {label: 'Judgement and client work', value: 41, tone: 'ink'},
+  {label: 'Recurring reporting', value: 21, tone: 'wine'},
+  {label: 'Finding information', value: 16, tone: 'wine'},
+  {label: 'Handoffs and chasing', value: 13, tone: 'wine'},
+  {label: 'Other', value: 9, tone: 'stone'}
 ];
 
 test('stackedBar draws one mark per segment and a readable legend', () => {
@@ -18,7 +18,7 @@ test('stackedBar draws one mark per segment and a readable legend', () => {
   assert.ok(!html.includes('<ul class="legend" aria-hidden'));
 });
 test('stackedBar refuses segments that do not total 100', () => {
-  assert.throws(() => stackedBar([{label: 'A', value: 40, tone: 'navy'}]), /total 100/);
+  assert.throws(() => stackedBar([{label: 'A', value: 40, tone: 'ink'}]), /total 100/);
 });
 test('stackedBar does not shorten the last segment', () => {
   const html = stackedBar(week);
@@ -27,15 +27,15 @@ test('stackedBar does not shorten the last segment', () => {
   assert.equal(Number(last[1]) + Number(last[2]), 100);
 });
 test('pairedBars scales against max and labels values', () => {
-  const html = pairedBars({unit: 'hours', max: 16, rows: [{label: 'Before', value: 14, tone: 'rule'}, {label: 'After', value: 6, tone: 'signal'}]});
+  const html = pairedBars({unit: 'hours', max: 16, rows: [{label: 'Before', value: 14, tone: 'stone'}, {label: 'After', value: 6, tone: 'wine'}]});
   assert.ok(html.includes('width="87.5"'));
   assert.ok(html.includes('width="37.5"'));
   assert.ok(html.includes('aria-label="Before: 14 hours; After: 6 hours"'));
 });
 test('lineChart emits one polyline per series with pathLength for the reveal', () => {
   const html = lineChart({xLabels: ['Month 1', 'Month 12'], max: 12, series: [
-    {label: 'Maintained by your team', tone: 'signal', values: [0, 2, 5, 9, 12]},
-    {label: 'Maintained by Enamplify', tone: 'navy', values: [3, 4, 3, 2, 1]}
+    {label: 'Maintained by your team', tone: 'wine', values: [0, 2, 5, 9, 12]},
+    {label: 'Maintained by Enamplify', tone: 'ink', values: [3, 4, 3, 2, 1]}
   ]});
   assert.equal([...html.matchAll(/<polyline /g)].length, 2);
   assert.ok(html.includes('pathLength="1"'));
@@ -45,19 +45,19 @@ test('lineChart emits one polyline per series with pathLength for the reveal', (
   assert.ok(!html.includes('<ul class="legend"'));
 });
 test('lineChart requires at least two points per series', () => {
-  assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'navy', values: [5]}]}), /at least 2/);
+  assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'ink', values: [5]}]}), /at least 2/);
 });
 test('lineChart requires all series to share the same length', () => {
   assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [
-    {label: 'X', tone: 'navy', values: [0, 5]},
-    {label: 'Y', tone: 'signal', values: [0, 5, 10]}
+    {label: 'X', tone: 'ink', values: [0, 5]},
+    {label: 'Y', tone: 'wine', values: [0, 5, 10]}
   ]}), /same length/);
 });
 test('lineChart rejects values above max', () => {
-  assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'navy', values: [0, 11]}]}), /between 0 and/);
+  assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'ink', values: [0, 11]}]}), /between 0 and/);
 });
 test('lineChart rejects negative values', () => {
-  assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'navy', values: [-1, 5]}]}), /between 0 and/);
+  assert.throws(() => lineChart({xLabels: ['A', 'B'], max: 10, series: [{label: 'X', tone: 'ink', values: [-1, 5]}]}), /between 0 and/);
 });
 test('ledger uses row and column headers', () => {
   const html = ledger({caption: 'Example', columns: ['Workflow', 'Owner'], rows: [['Board report', 'Finance']]});
@@ -71,8 +71,8 @@ test('ledger scroll wrapper is a focusable, named region', () => {
 });
 test('lineChart labels line ends directly and keeps them apart', () => {
   const html = lineChart({xLabels: ['A', 'B'], max: 12, series: [
-    {label: 'Maintained by Enamplify', short: 'Enamplify', tone: 'navy', values: [3, 1]},
-    {label: 'Maintained by your team', short: 'Your team', tone: 'signal', values: [0, 2]}
+    {label: 'Maintained by Enamplify', short: 'Enamplify', tone: 'ink', values: [3, 1]},
+    {label: 'Maintained by your team', short: 'Your team', tone: 'wine', values: [0, 2]}
   ]});
   assert.ok(!html.includes('class="legend'));
   const labels = [...html.matchAll(/<text class="line-label line-label--(\w+)" x="([\d.]+)" y="([\d.]+)" dominant-baseline="middle">([^<]+)<\/text>/g)];

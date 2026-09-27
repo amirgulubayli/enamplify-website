@@ -115,6 +115,34 @@ test('performance budgets', () => {
     assert.ok(!/\sstyle="/.test(h), `${routes[i].url} has an inline style attribute`);
   }
 });
+test('city photographs: every src and srcset file exists; only the home hero diptych loads eagerly', async () => {
+  let seen = 0;
+  for (const [i, h] of all.entries()) {
+    const home = routes[i].key === 'home';
+    const city = (h.match(/<img[^>]*>/g) || []).filter(img => img.includes('/images/city/'));
+    for (const img of city) {
+      const files = [img.match(/\ssrc="([^"]+)"/)[1], ...img.match(/\ssrcset="([^"]+)"/)[1].split(',').map(s => s.trim().split(/\s+/)[0])];
+      for (const f of files) { assert.match(f, /^\/images\/city\/[a-z0-9-]+\.webp$/, f); assert.ok(await exists(f), `${routes[i].url}: missing ${f}`); seen++; }
+      assert.match(img, /\ssizes="[^"]+"/, `${routes[i].url}: ${img}`);
+      assert.match(img, /\sdecoding="async"/);
+      const hero = home && /\/images\/city\/hero-/.test(img);
+      if (hero) { assert.match(img, /\sloading="eager"/, img); assert.match(img, /\sfetchpriority="high"/, img); }
+      else { assert.match(img, /\sloading="lazy"/, `${routes[i].url}: ${img}`); assert.ok(!img.includes('fetchpriority'), `${routes[i].url}: ${img}`); }
+    }
+    if (home) assert.equal(city.filter(img => img.includes('fetchpriority="high"')).length, 2, routes[i].url);
+    for (const key of ['approach', 'work', 'insights', 'contact']) if (routes[i].key === key) assert.ok(h.includes(`/images/city/band-${key}-`), routes[i].url);
+    if (routes[i].key === 'about') assert.ok(h.includes('/images/city/about-london-') && h.includes('/images/city/about-baku-'), routes[i].url);
+  }
+  assert.ok(seen > 0);
+});
+test('first-viewport faces are preloaded: italic on home, latin-ext on Azerbaijani pages', () => {
+  const pre = f => new RegExp(`<link rel="preload" href="/fonts/${f}\.woff2" as="font" type="font/woff2" crossorigin>`);
+  for (const [i, h] of all.entries()) {
+    const {key, locale, url} = routes[i];
+    assert.equal(pre('libre-caslon-text-400italic-latin').test(h), key === 'home', url);
+    for (const f of ['libre-caslon-display-400-latin-ext', 'dm-sans-var-latin-ext']) assert.equal(pre(f).test(h), locale === 'az', `${url} ${f}`);
+  }
+});
 test('fonts are self-hosted WOFF2 with their OFL licences', async () => {
   const files = await fs.readdir(path.join(root, 'dist/fonts'));
   const woff2 = files.filter(f => f.endsWith('.woff2'));
@@ -123,6 +151,12 @@ test('fonts are self-hosted WOFF2 with their OFL licences', async () => {
   for (const [family, file] of [['Libre Caslon Display', 'libre-caslon-display'], ['DM Sans', 'dm-sans']]) {
     assert.ok(css.includes(`font-family:"${family}"`), family);
     assert.ok(files.includes(`${file}-OFL.txt`), `${file}-OFL.txt`);
+  }
+  const ranges = JSON.parse(await fs.readFile(path.join(root, 'public/fonts/unicode-ranges.json'), 'utf8'));
+  for (const f of woff2) {
+    const face = css.split('@font-face').find(rule => rule.includes(`/fonts/${f}"`))?.split('}')[0];
+    assert.ok(face, `${f} has an @font-face rule`);
+    assert.ok(face.includes(`unicode-range:${ranges[f].replace(/, /g, ',')}`), `${f} uses its subset's unicode-range`);
   }
   for (const f of woff2) assert.ok(files.includes(f.replace(/-(?:\d+|var)(?:italic)?-latin(?:-ext)?\.woff2$/, '-OFL.txt')), `${f} has its OFL licence`);
   assert.ok(css.includes('font-display:optional'));

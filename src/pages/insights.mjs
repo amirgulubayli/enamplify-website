@@ -4,7 +4,7 @@ import {fill} from '../i18n.mjs';
 export function insights(ctx) {
   const {articles, guides, copy} = ctx;
   const c = copy.insights;
-  return `${pageHead({title: c.title, lede: c.lede, crumbs: [[copy.routes.insights.crumb]]}, ctx)}
+  return `${pageHead({title: c.title, lede: c.lede, crumbs: [[copy.routes.insights.crumb]], band: 'band-insights'}, ctx)}
 <section class="section wrap" aria-labelledby="essays-title"><h2 id="essays-title" class="section__title">${esc(c.essays)}</h2><div class="cards">${articles.map(a => articleCard(a, ctx)).join('')}</div></section>
 <section id="guides" class="section section--wash" aria-labelledby="guides-title"><div class="wrap"><h2 id="guides-title" class="section__title">${esc(c.guides)}</h2><p class="lede">${esc(c.guidesLede)}</p><div class="cards">${guides.map(g => guideCard(g, ctx)).join('')}</div></div></section>
 ${closeBand(ctx)}`;

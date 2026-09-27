@@ -27,6 +27,7 @@
     "lineSummary": "{label}: {first} at {start}, {last} at {end}",
     "portraitAlt": "Amir Gulubayli, founder of Enamplify",
     "portraitCaption": "Amir Gulubayli, Founder",
+    "photoCredit": "Photo: {name}",
     "ogImageAlt": "Enamplify. AI your team builds, not AI you buy.",
     "feedTitle": "Enamplify Insights",
     "feedDescription": "Practical thinking on AI adoption for operations leaders.",
@@ -86,7 +87,7 @@
       "topic": "The week",
       "title": "Half an operations week goes on work AI can take on.",
       "segments": ["Judgement and client work", "Recurring reporting", "Finding information", "Handoffs and chasing", "Other"],
-      "note": "Reporting, finding information and handoffs, shown in blue, are where AI workflows usually start.",
+      "note": "Reporting, finding information and handoffs, highlighted, are where AI workflows usually start.",
       "source": "Illustrative composite for explanation. A diagnostic replaces it with your own numbers."
     },
     "situationTitle": "Your people are already using AI. The question is whether it’s working for the organisation.",

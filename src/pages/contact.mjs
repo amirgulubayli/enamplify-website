@@ -1,4 +1,4 @@
-import {esc, arrow, button, breadcrumb} from '../components.mjs';
+import {esc, arrow, button, breadcrumb, photo} from '../components.mjs';
 
 // Submitted values stay stable across languages (the server and `?interest=` links rely on them);
 // only the visible labels (copy.contact.interests, same order) are translated.
@@ -30,5 +30,6 @@ export function contact(ctx) {
 <p class="small">${esc(server ? c.noteServer : c.noteEmail)}</p>
 <div id="enquiry-result" class="enquiry-result" role="status" aria-live="polite" hidden></div>
 </form><noscript><p>${esc(c.noscript).replace('{email}', `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>`)}</p></noscript></div>
-</section>`;
+</section>
+${photo('band-contact', ctx, {sizes: '100vw', cls: 'band band--close'})}`;
 }

@@ -13,7 +13,8 @@ const L = (ctx, path) => localePath(ctx.locale, path);
 
 export const breadcrumb = (crumbs, ctx) => `<nav class="crumbs wrap" aria-label="${esc(ctx.copy.common.breadcrumb)}"><ol><li><a href="${L(ctx, '/')}">${esc(ctx.copy.common.home)}</a></li>${crumbs.map(([t, h]) => `<li>${h ? `<a href="${esc(L(ctx, h))}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
 
-export const pageHead = ({title, lede = '', crumbs}, ctx) => `${breadcrumb(crumbs, ctx)}<header class="page-head wrap"><h1>${esc(title)}</h1>${lede ? `<p class="lede">${esc(lede)}</p>` : ''}</header>`;
+/** Page head: breadcrumb, H1 and lede; with `band`, the page's full-width city photograph follows. */
+export const pageHead = ({title, lede = '', crumbs, band = ''}, ctx) => `${breadcrumb(crumbs, ctx)}<header class="page-head page-head--split wrap"><h1>${esc(title)}</h1>${lede ? `<p class="lede">${esc(lede)}</p>` : ''}</header>${band ? photo(band, ctx, {sizes: '100vw', cls: 'band'}) : ''}`;
 
 export const exhibit = ({n, topic, title, chart, source, note = '', cls = ''}, ctx) => `<figure class="exhibit${cls ? ` ${cls}` : ''}"><figcaption class="exhibit__cap"><span class="exhibit__label">${esc(fill(ctx.copy.common.exhibitLabel, {n, topic}))}</span> <span class="exhibit__title">${esc(title)}</span></figcaption><div class="exhibit__chart">${chart}</div>${note ? `<p class="exhibit__note">${esc(note)}</p>` : ''}<p class="exhibit__source">${esc(fill(ctx.copy.common.exhibitSource, {source}))}</p></figure>`;
 
@@ -23,6 +24,28 @@ export const articleCard = (a, ctx) => `<article class="card"><h3 class="card__t
 export const guideCard = (g, ctx) => `<article class="card card--guide"><h3 class="card__title"><a href="${L(ctx, `/insights/guides/${esc(g.slug)}/`)}">${esc(g.name)}</a></h3><p class="card__meta">${esc(ctx.copy.common.fieldGuide)} · ${esc(g.time)}</p><p>${esc(g.description)}</p></article>`;
 
 export const portrait = (ctx, {caption = true, eager = false} = {}) => `<figure class="portrait"><img class="remote-image" src="${esc(ctx.site.portrait)}" alt="${esc(ctx.copy.common.portraitAlt)}" width="304" height="380" loading="${eager ? 'eager' : 'lazy'}" decoding="async">${caption ? `<figcaption>${esc(ctx.copy.common.portraitCaption)}</figcaption>` : ''}</figure>`;
+
+/**
+ * A graded city photograph from content/images.json. `id` names the entry in `ctx.images`; the
+ * srcset lists every exported width, and width/height come from the largest file. Only first
+ * viewport images pass `eager`, which also raises their fetch priority.
+ */
+export function photo(id, ctx, {sizes, eager = false, cls = '', caption = true} = {}) {
+  const img = ctx.images?.[id];
+  if (!img) throw new Error(`Unknown image: ${id}`);
+  if (!sizes) throw new Error(`photo(${id}) needs sizes`);
+  const widths = Object.keys(img.files).map(Number).sort((a, b) => a - b);
+  if (!widths.length) throw new Error(`Image ${id} has no files`);
+  const largest = widths.at(-1);
+  const height = Math.round(img.height * largest / img.width);
+  const src = img.files[widths.filter(w => w <= 1024).at(-1) ?? widths[0]];
+  const srcset = widths.map(w => `${img.files[w]} ${w}w`).join(', ');
+  const loc = ctx.locale;
+  const alt = img.alt[loc] ?? img.alt.en;
+  const place = img.caption[loc] ?? img.caption.en;
+  const credit = fill(ctx.copy.common.photoCredit, {name: img.credit.name});
+  return `<figure class="photo${cls ? ` ${cls}` : ''}"><img src="${esc(src)}" srcset="${esc(srcset)}" sizes="${esc(sizes)}" width="${largest}" height="${height}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>${caption ? `<figcaption>${esc(place)} · ${esc(credit)}</figcaption>` : ''}</figure>`;
+}
 
 function navAttr(path, href) {
   if (path === href) return ' aria-current="page"';

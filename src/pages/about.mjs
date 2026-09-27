@@ -1,4 +1,4 @@
-import {esc, pageHead, closeBand, portrait, textLink} from '../components.mjs';
+import {esc, pageHead, closeBand, portrait, textLink, photo} from '../components.mjs';
 import {commitmentsBlock} from './shared.mjs';
 
 export function about(ctx) {
@@ -17,11 +17,12 @@ ${textLink(copy.common.linkedin, site.linkedin, 'target="_blank" rel="noopener n
 </div></section>
 <section class="section wrap" aria-labelledby="markets-title">
 <div class="split"><h2 id="markets-title" class="section__title">${esc(c.marketsTitle)}</h2>
-<div class="prose"><p>${esc(c.markets)}</p></div></div>
+<div><div class="prose"><p>${esc(c.markets)}</p></div>
+<div class="pair">${['about-london', 'about-baku'].map(id => photo(id, ctx, {sizes: '(min-width: 900px) 360px, 46vw'})).join('')}</div></div></div>
 </section>
-<section class="section wrap" aria-labelledby="how-title">
+<section class="section section--light" aria-labelledby="how-title"><div class="wrap">
 <h2 id="how-title" class="section__title">${esc(c.howTitle)}</h2>
 ${commitmentsBlock(ctx)}
-</section>
+</div></section>
 ${closeBand(ctx)}`;
 }

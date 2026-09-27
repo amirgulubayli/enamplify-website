@@ -103,5 +103,7 @@ export async function loadContent(localeCode = defaultLocale) {
     a.readingTime = Math.max(1, Math.ceil(md.split(/\s+/).length / 220));
   }
   articles.sort((x, y) => y.isoDate.localeCompare(x.isoDate));
-  return {locale: localeCode, site, articles, guides, work, faqs, copy, missing, href: p => localePath(localeCode, p)};
+  // City photography: files, alt text and captions for every locale live together in one manifest.
+  const images = await readJson('images.json');
+  return {locale: localeCode, site, articles, guides, work, faqs, copy, images, missing, href: p => localePath(localeCode, p)};
 }
