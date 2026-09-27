@@ -48,7 +48,7 @@ export function home({site, articles, work}) {
 <p class="lede">Enamplify helps mid-sized organisations make AI part of how their own people work. More gets done each week, the capability stays in-house, and every workflow is visible to the people accountable for it.</p>
 <div class="actions">${button('Book a diagnostic call', '/contact/')}${textLink('How we work', '/approach/')}</div>
 <p class="note">A 30-minute conversation with the founder. No pitch deck.</p></div>
-${exhibit({n: 1, title: 'Where an operations team’s week goes', cls: 'hero__exhibit', chart: stackedBar(weekSegments), note: 'The blue share is where AI workflows usually start.', source: 'Illustrative composite for explanation. A diagnostic replaces it with your own numbers.'})}
+${exhibit({n: 1, title: 'Where an operations team’s week goes', cls: 'hero__exhibit', chart: stackedBar(weekSegments), note: 'Reporting, finding information and handoffs, shown in blue, are where AI workflows usually start.', source: 'Illustrative composite for explanation. A diagnostic replaces it with your own numbers.'})}
 </section>
 
 <section class="section wrap" aria-labelledby="situation-title">

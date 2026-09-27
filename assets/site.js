@@ -1,11 +1,6 @@
 /* Enamplify · progressive enhancement, no trackers or persistent browser storage. */
 (() => {
   'use strict';
-  const webfonts = document.querySelector('[data-webfonts]');
-  if (webfonts) {
-    const useFonts = () => { webfonts.media = 'all'; };
-    if (webfonts.sheet) useFonts(); else webfonts.addEventListener('load', useFonts, {once:true});
-  }
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 
@@ -53,26 +48,6 @@
     img.addEventListener('error', loaded);
     if (img.complete) loaded();
   });
-
-  // Journal filtering: all essays remain rendered and discoverable without JavaScript.
-  let activeTopic = 'all';
-  const search = $('#journal-search');
-  const articles = $$('#article-list .article-card');
-  function filterJournal() {
-    const term = (search?.value || '').trim().toLocaleLowerCase();
-    let shown = 0;
-    articles.forEach(article => {
-      const match = (activeTopic === 'all' || article.dataset.category === activeTopic) && (article.dataset.search || '').includes(term);
-      article.hidden = !match;
-      if (match) shown++;
-    });
-    if ($('.empty-state')) $('.empty-state').hidden = shown > 0;
-    if ($('.search-result-status')) $('.search-result-status').textContent = `${shown} perspective${shown === 1 ? '' : 's'} found.`;
-    $$('.filter').forEach(f => { const selected = f.dataset.filter === activeTopic; f.classList.toggle('is-active', selected); f.setAttribute('aria-pressed', String(selected)); });
-  }
-  $$('.filter').forEach(f => f.addEventListener('click', () => { activeTopic = f.dataset.filter; filterJournal(); }));
-  search?.addEventListener('input', filterJournal);
-  $('[data-reset-filters]')?.addEventListener('click', () => { activeTopic = 'all'; search.value = ''; filterJournal(); search.focus(); });
 
   // Clipboard enhancement has a visible, selectable fallback instead of a silent failure.
   async function copyText(text, trigger) {
@@ -150,8 +125,8 @@
       if (form.dataset.mode !== 'server') {
         const heading = document.createElement('h3'); heading.textContent = 'Your note is ready. You choose when to send it.';
         const paragraph = document.createElement('p'); paragraph.textContent = 'Open the message in your email app, or copy it into your preferred email service. It has not been sent by this website.';
-        const mail = document.createElement('a'); mail.className = 'button button--primary'; mail.textContent = 'Open my email app'; mail.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        const copy = document.createElement('button'); copy.type = 'button'; copy.className = 'text-link'; copy.textContent = 'Copy the message'; copy.addEventListener('click',()=>copyText(`To: ${form.dataset.email}\nSubject: ${subject}\n\n${body}`,copy));
+        const mail = document.createElement('a'); mail.className = 'btn btn--primary'; mail.textContent = 'Open my email app'; mail.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const copy = document.createElement('button'); copy.type = 'button'; copy.className = 'link-arrow'; copy.textContent = 'Copy the message'; copy.addEventListener('click',()=>copyText(`To: ${form.dataset.email}\nSubject: ${subject}\n\n${body}`,copy));
         const preview = document.createElement('pre'); preview.className = 'message-preview'; preview.textContent = body;
         result.replaceChildren(heading, paragraph, preview, mail, copy); result.hidden = false;
         result.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});
@@ -172,5 +147,16 @@
       } finally { submit.disabled=false; submit.textContent=originalLabel; window.turnstile?.reset(); }
     });
   }
+  // Exhibits below the first viewport draw their marks once on arrival; anything already in view never waits.
+  const later = $$('.exhibit').filter(ex => ex.getBoundingClientRect().top > innerHeight);
+  if (later.length && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.remove('is-pending');
+      io.unobserve(entry.target);
+    }), {rootMargin: '0px 0px -12% 0px'});
+    later.forEach(ex => { ex.classList.add('is-pending'); io.observe(ex); });
+  }
+
   document.documentElement.dataset.enamplifyReady = 'true';
 })();
