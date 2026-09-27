@@ -6,6 +6,19 @@
   "installCommand": "npm install --ignore-scripts --no-audit --no-fund",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {"source": "/solutions/", "destination": "/approach/", "permanent": true},
+    {"source": "/solutions/:slug/", "destination": "/approach/", "permanent": true},
+    {"source": "/for/:slug/", "destination": "/", "permanent": true},
+    {"source": "/start/:slug/", "destination": "/contact/", "permanent": true},
+    {"source": "/work/:slug/", "destination": "/work/", "permanent": true},
+    {"source": "/perspectives/", "destination": "/insights/", "permanent": true},
+    {"source": "/perspectives/:slug/", "destination": "/insights/:slug/", "permanent": true},
+    {"source": "/resources/", "destination": "/insights/", "permanent": true},
+    {"source": "/resources/:slug/", "destination": "/insights/guides/:slug/", "permanent": true},
+    {"source": "/credits/", "destination": "/", "permanent": true},
+    {"source": "/thank-you/", "destination": "/", "permanent": true}
+  ],
   "functions": {
     "api/enquiry.js": {
       "maxDuration": 20
