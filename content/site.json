@@ -1,34 +1,15 @@
 {
   "name": "Enamplify",
-  "descriptor": "AI education & advisory",
-  "tagline": "Human potential. Thoughtfully advanced.",
-  "description": "Practical AI education and advisory. We help organisations build the confidence, judgement and capability to use AI well.",
+  "descriptor": "AI enablement for mid-sized teams",
+  "definition": "Enamplify is an AI enablement consultancy, based in London and Baku, that helps mid-sized organisations train their own people to build and run AI workflows safely.",
+  "description": "AI your team builds, not AI you buy. We help mid-sized organisations make AI part of how their people work: more done, owned in-house, in control.",
   "email": "amirg@ragmedium.com",
   "founder": "Amir Gulubayli",
   "linkedin": "https://www.linkedin.com/in/amirgulubayli/",
+  "bookingUrl": "https://cal.com/ragmedium/ragmedium",
   "siteUrl": "https://enamplify.com",
   "portrait": "https://ragmedium.com/images/amir-gulubayli.jpg",
-  "launchDate": "2026-09-26",
-  "nav": [
-    [
-      "Solutions",
-      "/solutions/"
-    ],
-    [
-      "Our approach",
-      "/approach/"
-    ],
-    [
-      "Selected work",
-      "/work/"
-    ],
-    [
-      "Perspectives",
-      "/perspectives/"
-    ],
-    [
-      "About",
-      "/about/"
-    ]
-  ]
+  "launchDate": "2026-09-27",
+  "cities": ["London", "Baku"],
+  "nav": [["Approach", "/approach/"], ["Work", "/work/"], ["Insights", "/insights/"], ["About", "/about/"]]
 }

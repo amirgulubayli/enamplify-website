@@ -42,4 +42,4 @@ Choose one active pilot and write down the six answers with its sponsor. Mark th
 
 Then make an explicit decision: expand under agreed conditions, revise something specific, or stop. A demonstration becomes valuable when it leads to a better decision about the work.
 
-[Use the AI Pilot Acceptance Checklist](/resources/ai-pilot-acceptance-checklist/) to record the evidence, owners and unresolved questions together.
+[Use the AI Pilot Acceptance Checklist](/insights/guides/ai-pilot-acceptance-checklist/) to record the evidence, owners and unresolved questions together.

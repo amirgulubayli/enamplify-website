@@ -52,4 +52,4 @@ Once a brief works well enough for its purpose, record the task, the sources, th
 
 That is the beginning of team capability: not a collection of clever prompts, but a shared understanding of what the work requires.
 
-[Explore the Capability Programme](/solutions/ai-training/) for role-specific practice in briefing, evaluation and repeatable ways of working.
+[Explore the Capability Programme](/approach/) for role-specific practice in briefing, evaluation and repeatable ways of working.

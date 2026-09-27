@@ -40,4 +40,4 @@ Specific truth is a stronger foundation for the brand than simulated scale.
 
 The point is not to avoid assistance. It is to use assistance in a way that respects the person on the other side of the communication.
 
-[Explore the sales-team perspective](/for/sales-teams/) for practical ways to improve preparation and follow-through while keeping human judgement present.
+[Explore the sales-team perspective](/approach/) for practical ways to improve preparation and follow-through while keeping human judgement present.

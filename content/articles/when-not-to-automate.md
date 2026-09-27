@@ -48,4 +48,4 @@ Each can be a worthwhile outcome of advice.
 
 The quality of the recommendation is not measured by how much technology it adds. It is measured by whether it helps the organisation make a better decision about the work.
 
-[Arrange a Leadership Briefing](/solutions/leadership-briefing/) to identify relevant opportunities, useful boundaries and a considered next move.
+[Arrange a Leadership Briefing](/approach/) to identify relevant opportunities, useful boundaries and a considered next move.
