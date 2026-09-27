@@ -132,7 +132,7 @@
         result.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});
         return;
       }
-      const originalLabel = submit.textContent;
+      const originalLabel = submit.innerHTML;
       submit.disabled = true; submit.textContent = 'Sending your enquiry…';
       try {
         const response = await fetch('/api/enquiry', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:AbortSignal.timeout(16000)});
@@ -144,7 +144,7 @@
       } catch (error) {
         errors.textContent = `${error.name === 'TimeoutError' ? 'The request timed out. Please email us directly rather than submitting twice.' : 'The enquiry could not be confirmed as sent.'} You can reach Amir directly at ${form.dataset.email}.`;
         errors.hidden=false;
-      } finally { submit.disabled=false; submit.textContent=originalLabel; window.turnstile?.reset(); }
+      } finally { submit.disabled=false; submit.innerHTML=originalLabel; window.turnstile?.reset(); }
     });
   }
   // Exhibits below the first viewport draw their marks once on arrival; anything already in view never waits.

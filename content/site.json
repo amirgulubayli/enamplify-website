@@ -8,7 +8,7 @@
   "linkedin": "https://www.linkedin.com/in/amirgulubayli/",
   "bookingUrl": "https://cal.com/ragmedium/ragmedium",
   "siteUrl": "https://enamplify.com",
-  "portrait": "https://ragmedium.com/images/amir-gulubayli.jpg",
+  "portrait": "/images/amir-gulubayli.jpg",
   "launchDate": "2026-09-27",
   "cities": ["London", "Baku"],
   "nav": [["Approach", "/approach/"], ["Work", "/work/"], ["Insights", "/insights/"], ["About", "/about/"]]

@@ -17,7 +17,7 @@ export const closeBand = ({title = 'When the timing is right, start with a conve
 export const articleCard = a => `<article class="card"><h3 class="card__title"><a href="/insights/${esc(a.slug)}/">${esc(a.title)}</a></h3><p class="card__meta">${esc(a.category)} · ${a.readingTime} min read</p><p>${esc(a.summary)}</p></article>`;
 export const guideCard = g => `<article class="card card--guide"><h3 class="card__title"><a href="/insights/guides/${esc(g.slug)}/">${esc(g.name)}</a></h3><p class="card__meta">Field guide · ${esc(g.time)}</p><p>${esc(g.description)}</p></article>`;
 
-export const portrait = (site, {caption = true} = {}) => `<figure class="portrait"><img class="remote-image" src="${esc(site.portrait)}" alt="Amir Gulubayli, founder of Enamplify" width="304" height="380" loading="lazy" decoding="async">${caption ? '<figcaption>Amir Gulubayli, Founder</figcaption>' : ''}</figure>`;
+export const portrait = (site, {caption = true, eager = false} = {}) => `<figure class="portrait"><img class="remote-image" src="${esc(site.portrait)}" alt="Amir Gulubayli, founder of Enamplify" width="304" height="380" loading="${eager ? 'eager' : 'lazy'}" decoding="async">${caption ? '<figcaption>Amir Gulubayli, Founder</figcaption>' : ''}</figure>`;
 
 function navAttr(path, href) {
   if (path === href) return ' aria-current="page"';

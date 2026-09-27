@@ -26,7 +26,7 @@ npm start
 - Insights index, six essays (`/insights/<slug>/`) and three interactive field guides with PDFs (`/insights/guides/<slug>/`)
 - Privacy, Cookies, Terms, Accessibility, and a noindex 404
 
-Retired URLs from the previous site (`/solutions/*`, `/perspectives/*`, `/resources/*`, `/for/*`, `/start/*`, the old `/work/<project>/` notes, `/credits/`, `/thank-you/`) 301 to their closest successor. The list lives in `src/routes.mjs` and is mirrored in `vercel.json`; a test keeps them identical and loop-free.
+Retired URLs from the previous site (`/solutions/*`, `/perspectives/*`, `/resources/*`, `/for/*`, `/start/*`, the old `/work/<project>/` notes, `/credits/`, `/thank-you/`) get permanent (308) redirects to their closest successor. The list lives in `src/routes.mjs` and is mirrored in `vercel.json`; a test keeps them identical and loop-free.
 
 ## Structure
 

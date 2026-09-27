@@ -4,7 +4,7 @@ import {commitments} from './shared.mjs';
 export function about({site}) {
   return `${pageHead({title: 'Founder-led, between London and Baku.', lede: site.definition, crumbs: [['About']]})}
 <section class="section wrap founder" aria-labelledby="amir-title">
-${portrait(site)}
+${portrait(site, {eager: true})}
 <div class="prose"><h2 id="amir-title">Amir Gulubayli</h2>
 <p>Amir advises leadership teams on where AI can create measurable value, how it should reshape workflows, and what people need to adopt it successfully. His work spans AI strategy, operating model design, implementation and capability building across travel, marketing, education, finance and clinical technology.</p>
 <p>Before Enamplify, Amir built AI systems for clients under the RAG Medium name, from outbound growth engines to clinical trial management software, and launched two AI products of his own, grademy and pripitch. His team won a Google hackathon with a $10,000 winning build.</p>

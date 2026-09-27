@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {loadContent, root} from '../src/content.mjs';
 import {routeTable} from '../src/routes.mjs';
-import {renderDocument, titleFor} from '../src/seo.mjs';
+import {renderDocument} from '../src/seo.mjs';
 import {esc} from '../src/components.mjs';
 
 export {root};
@@ -14,7 +14,6 @@ const xml = t => esc(t).replace(/&#39;/g, '&apos;');
 export async function build() {
   try { process.loadEnvFile(path.join(root, '.env.local')); } catch (e) { if (e.code !== 'ENOENT') throw e; }
   await fs.mkdir(path.join(root, 'qa'), {recursive: true});
-  if (process.env.VERCEL && process.env.ASSET_SYNC !== '0') { const {syncAssets} = await import('./sync-assets.mjs'); await syncAssets(); }
 
   const content = await loadContent();
   const {site, articles} = content;
@@ -25,8 +24,6 @@ export async function build() {
   const isLive = (process.env.VERCEL_ENV === 'production' || process.env.INDEX_SITE === 'true') && !base.includes('localhost');
   const env = process.env;
   const enquiryMode = env.ENQUIRY_MODE === 'server' && env.RESEND_API_KEY && env.CONTACT_FROM && env.CONTACT_TO && env.CONTACT_ALLOWED_ORIGIN && env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY ? 'server' : 'email';
-  const localPortrait = await fs.stat(path.join(root, 'public/images/amir-gulubayli.jpg')).then(s => s.size > 1000).catch(() => false);
-  if (localPortrait) site.portrait = '/images/amir-gulubayli.jpg';
 
   const routes = routeTable({...content, enquiryMode});
 
@@ -53,7 +50,7 @@ export async function build() {
   await fs.writeFile(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${indexable.map(r => `<url><loc>${xml(base + r.url)}</loc><lastmod>${lastmod(r)}</lastmod></url>`).join('')}</urlset>`);
   await fs.writeFile(path.join(out, 'robots.txt'), isLive ? `User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${base}/sitemap.xml\n` : 'User-agent: *\nDisallow: /\n');
   await fs.writeFile(path.join(out, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Enamplify Insights</title><link>${xml(base)}/insights/</link><description>Practical thinking on AI adoption for operations leaders.</description><language>en-gb</language><atom:link href="${xml(base)}/feed.xml" rel="self" type="application/rss+xml"/>${articles.map(a => `<item><title>${xml(a.title)}</title><link>${xml(base)}/insights/${a.slug}/</link><guid>${xml(base)}/insights/${a.slug}/</guid><description>${xml(a.summary)}</description><pubDate>${new Date(a.isoDate).toUTCString()}</pubDate></item>`).join('')}</channel></rss>`);
-  const section = (heading, list) => `## ${heading}\n\n${list.map(r => `- [${titleFor(r, site)}](${base}${r.url}): ${r.description}`).join('\n')}\n`;
+  const section = (heading, list) => `## ${heading}\n\n${list.map(r => `- [${r.home ? r.title : r.title.replace(/\.$/, '')}](${base}${r.url}): ${r.description}`).join('\n')}\n`;
   await fs.writeFile(path.join(out, 'llms.txt'), `# ${site.name}\n\n> ${site.definition}\n\n${section('Pages', indexable.filter(r => !r.article && !r.url.startsWith('/insights/guides/') && !['/privacy/', '/cookies/', '/terms/', '/accessibility/'].includes(r.url)))}\n${section('Insights', indexable.filter(r => r.article))}\n${section('Field guides', indexable.filter(r => r.url.startsWith('/insights/guides/')))}\n## Contact\n\n- Book a call: ${site.bookingUrl}\n- Email: ${site.email}\n`);
 
   await fs.writeFile(path.join(root, 'qa/routes.json'), JSON.stringify(routes.map(({url, title, description, index}) => ({url, title, description, index: index !== false})), null, 2));

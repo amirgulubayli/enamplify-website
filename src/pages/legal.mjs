@@ -7,7 +7,7 @@ const pages = (site, enquiryMode) => ({
     ['Booking a call', 'Booking opens our scheduling provider in a new tab. The details you enter there are handled under that provider’s privacy policy and used by us only to hold the call.'],
     ['Field guide notes', 'Notes typed into a field guide stay in the page. They are not sent to us or saved.'],
     ['Technical information', 'Our hosting provider processes technical information such as IP addresses to deliver and protect the site. We do not use advertising trackers or marketing analytics.'],
-    ['Fonts and images', 'Fonts are served from this website. The founder portrait may be served from ragmedium.com, our previous website.'],
+    ['Fonts and images', 'Fonts and images are served from this website.'],
     ['Your rights', `You can ask what we hold about you, and ask us to correct or delete it, by emailing ${site.email}.`]]},
   cookies: {title: 'Cookies', description: 'Enamplify sets no advertising or analytics cookies. What the website stores, and what it does not.', lede: 'A short answer: we don’t set any.', sections: [
     ['No cookies from us', 'This website does not set advertising, analytics or preference cookies, and does not use browser storage to follow you.'],

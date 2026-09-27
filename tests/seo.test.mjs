@@ -31,6 +31,7 @@ test('document preloads fonts, uses no third-party stylesheet and sets robots', 
   assert.ok(html.includes('content="noindex,follow"'));
   assert.ok(html.includes('<link rel="canonical" href="https://enamplify.com/work/">'));
 });
+test('not-found document carries no canonical link', () => { const html = renderDocument({base, site, route: {url: '/404/', title: 'Not found', description: 'D', html: '<h1>N</h1>', notFound: true}, cssName: 's.css', jsName: 's.js', indexable: false}); assert.ok(!html.includes('rel="canonical"')); });
 test('document injects the Turnstile widget when the contact page has the form-errors anchor', () => {
   const html = renderDocument({base, site, route: {url: '/contact/', title: 'Contact', description: 'D', html: '<form><div id="form-errors"></div></form>', contact: true}, cssName: 's.css', jsName: 's.js', indexable: true, turnstileKey: 'key123'});
   assert.ok(html.includes('class="cf-turnstile"'));
