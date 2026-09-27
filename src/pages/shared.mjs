@@ -1,3 +1,15 @@
+import {exhibit} from '../components.mjs';
+import {ledger} from '../exhibits.mjs';
+
+/** The proof ledger shared by home and work. */
+export const trackRecord = ({n, cls = ''} = {}) => exhibit({n, topic: 'Track record', title: 'What we can point to today.', cls,
+  chart: ledger({caption: 'Track record', columns: ['Area', 'Evidence'], rows: [
+    ['Recognition', 'Google hackathon winners, with a $10,000 winning build'],
+    ['Experience', '10+ years building software, automation and AI systems'],
+    ['Our own products', 'grademy and pripitch, both in market'],
+    ['Client systems', 'Eight kinds delivered, from clinical trial management to finance reconciliation']]}),
+  source: 'Enamplify and RAG Medium delivery record. Client names withheld.'});
+
 export const stages = [
   {n: '01', name: 'Diagnose', time: '2–3 weeks',
     short: 'We map where your team’s time goes and choose the few workflows worth doing first. The fee is credited if you continue.',

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {esc, header, footer, exhibit, breadcrumb, closeBand} from '../src/components.mjs';
+import {esc, header, footer, exhibit, breadcrumb, closeBand, portrait, articleCard} from '../src/components.mjs';
 
 const site = {name: 'Enamplify', email: 'a@b.co', linkedin: 'https://example.com/in', cities: ['London', 'Baku'], definition: 'Enamplify is an AI enablement consultancy.', nav: [['Approach', '/approach/'], ['Work', '/work/'], ['Insights', '/insights/']]};
 
@@ -29,10 +29,20 @@ test('footer carries the definition sentence and both cities', () => {
   assert.ok(html.includes('Enamplify is an AI enablement consultancy.'));
   assert.ok(html.includes('London · Baku'));
 });
-test('exhibit is a figure with label, title and source', () => {
-  const html = exhibit({n: 2, title: 'More done', chart: '<svg></svg>', source: 'Illustrative.'});
+test('exhibit is a figure with a one-line label, an action title and a source', () => {
+  const html = exhibit({n: 2, topic: 'More done', title: 'Admin falls from 14 hours to 6.', chart: '<svg></svg>', source: 'Illustrative.'});
   assert.match(html, /^<figure class="exhibit/);
-  assert.ok(html.includes('Exhibit 2') && html.includes('More done') && html.includes('Source: Illustrative.'));
+  assert.ok(html.includes('<figcaption class="exhibit__cap"><span class="exhibit__label">Exhibit 2 · More done</span><span class="exhibit__title">Admin falls from 14 hours to 6.</span></figcaption>'));
+  assert.ok(html.includes('Source: Illustrative.'));
+});
+test('portrait caption can be left out where a quote already attributes', () => {
+  const site = {portrait: '/images/p.jpg'};
+  assert.ok(portrait(site).includes('<figcaption>Amir Gulubayli, Founder</figcaption>'));
+  assert.ok(!portrait(site, {caption: false}).includes('<figcaption'));
+});
+test('article card puts its meta line below the title, not above it', () => {
+  const html = articleCard({slug: 's', title: 'T', summary: 'S', category: 'Governance', readingTime: 3});
+  assert.ok(html.indexOf('card__title') < html.indexOf('card__meta'));
 });
 test('breadcrumb marks the last crumb as current', () => {
   assert.ok(breadcrumb([['Insights', '/insights/'], ['Essay']]).includes('<span aria-current="page">Essay</span>'));

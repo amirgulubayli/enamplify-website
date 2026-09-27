@@ -1,7 +1,7 @@
 import {esc} from './components.mjs';
 
 const pct = n => `${Math.round(n)}%`;
-const legend = (items, {hidden = false} = {}) => `<ul class="legend"${hidden ? ' aria-hidden="true"' : ''}>${items.map(s => `<li><span class="swatch swatch--${esc(s.tone)}" aria-hidden="true"></span><span class="legend__label">${esc(s.label)}</span>${s.value === undefined ? '' : `<span class="legend__value">${pct(s.value)}</span>`}</li>`).join('')}</ul>`;
+const legend = (items, {hidden = false, line = false} = {}) => `<ul class="legend"${hidden ? ' aria-hidden="true"' : ''}>${items.map(s => `<li><span class="swatch${line ? ' swatch--line' : ''} swatch--${esc(s.tone)}" aria-hidden="true"></span><span class="legend__label">${esc(s.label)}</span>${s.value === undefined ? '' : `<span class="legend__value">${pct(s.value)}</span>`}</li>`).join('')}</ul>`;
 
 /** A single 100% horizontal bar. The legend carries the data for assistive technology. */
 export function stackedBar(segments) {
@@ -40,8 +40,8 @@ export function lineChart({xLabels, series, max}) {
   const grid = [0, 0.5, 1].map(t => `<line class="gridline" x1="0" x2="${W}" y1="${y(max * t)}" y2="${y(max * t)}"/>`).join('');
   const lines = series.map(s => `<polyline class="mark-line mark-line--${esc(s.tone)}" pathLength="1" points="${s.values.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ')}"/>`).join('');
   const label = series.map(s => `${s.label}: ${s.values[0]} at ${xLabels[0]}, ${s.values.at(-1)} at ${xLabels.at(-1)}`).join('; ');
-  return `<svg class="linechart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${grid}${lines}</svg><div class="axis" aria-hidden="true"><span>${esc(xLabels[0])}</span><span>${esc(xLabels.at(-1))}</span></div>${legend(series.map(({label, tone}) => ({label, tone})), {hidden: true})}`;
+  return `<svg class="linechart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${grid}${lines}</svg><div class="axis" aria-hidden="true"><span>${esc(xLabels[0])}</span><span>${esc(xLabels.at(-1))}</span></div>${legend([...series].sort((a, b) => b.values.at(-1) - a.values.at(-1)).map(({label, tone}) => ({label, tone})), {hidden: true, line: true})}`;
 }
 
 /** A small governance ledger: first cell of each row is its header. */
-export const ledger = ({caption, columns, rows}) => `<div class="ledger-scroll"><table class="ledger"><caption class="sr-only">${esc(caption)}</caption><thead><tr>${columns.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((cell, i) => i === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+export const ledger = ({caption, columns, rows}) => `<div class="ledger-scroll" tabindex="0" role="region" aria-label="${esc(caption)}"><table class="ledger"><caption class="sr-only">${esc(caption)}</caption><thead><tr>${columns.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((cell, i) => i === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;

@@ -65,3 +65,17 @@ test('ledger uses row and column headers', () => {
   assert.ok(html.includes('<th scope="row">Board report</th>'));
   assert.ok(html.includes('<td>Finance</td>'));
 });
+test('ledger scroll wrapper is a focusable, named region', () => {
+  const html = ledger({caption: 'Track record', columns: ['Area'], rows: [['Recognition']]});
+  assert.ok(html.startsWith('<div class="ledger-scroll" tabindex="0" role="region" aria-label="Track record">'));
+});
+test('lineChart legend uses line swatches ordered by final value, highest first', () => {
+  const html = lineChart({xLabels: ['A', 'B'], max: 12, series: [
+    {label: 'Low end', tone: 'navy', values: [3, 1]},
+    {label: 'High end', tone: 'signal', values: [0, 12]}
+  ]});
+  const legendHtml = html.slice(html.indexOf('<ul class="legend"'));
+  assert.ok(legendHtml.indexOf('High end') < legendHtml.indexOf('Low end'));
+  assert.ok(legendHtml.includes('class="swatch swatch--line swatch--signal"'));
+  assert.ok(html.indexOf('mark-line--navy') < html.indexOf('mark-line--signal'), 'series drawing order is unchanged');
+});

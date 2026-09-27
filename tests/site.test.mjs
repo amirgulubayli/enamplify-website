@@ -70,3 +70,9 @@ test('house style: no em dashes, no preheaders, no uppercase', () => {
   assert.ok(!/text-transform\s*:\s*uppercase/i.test(css));
   assert.ok(!js.includes('—'));
 });
+test('proof is an exhibit ledger on home and work, with no kicker lines above titles', async () => {
+  const home = await read('/'), work = await read('/work/');
+  assert.ok(home.includes('Exhibit 5 · Track record') && work.includes('Exhibit 1 · Track record'));
+  assert.ok(!/class="(?:figures|delivered|recognition|numbered__n)"/.test(home + work));
+  for (const [i, h] of all.entries()) assert.ok(!/<p class="card__meta">[^<]*<\/p>\s*<(?:h1|h2|h3)/.test(h), routes[i].url);
+});

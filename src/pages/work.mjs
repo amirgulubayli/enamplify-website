@@ -1,9 +1,10 @@
 import {esc, arrowNE, pageHead, closeBand} from '../components.mjs';
+import {trackRecord} from './shared.mjs';
 
 export function work({work}) {
   return `${pageHead({title: 'Systems we’ve built. Products we run.', lede: 'Before Enamplify, we built AI systems for clients under the RAG Medium name. The same people now help your team build its own.', crumbs: [['Work']]})}
-<section class="section wrap" aria-labelledby="recognition-title">
-<div class="recognition"><h2 id="recognition-title">Google hackathon winners</h2><p>A $10,000 winning build, recognised for technical depth, usefulness and execution.</p></div>
+<section class="section wrap" aria-label="Track record">
+${trackRecord({n: 1, cls: 'exhibit--record'})}
 </section>
 <section class="section wrap" aria-labelledby="delivered-title">
 <h2 id="delivered-title" class="section__title">What we’ve delivered.</h2>
@@ -12,7 +13,7 @@ export function work({work}) {
 </section>
 <section class="section section--wash" aria-labelledby="products-title"><div class="wrap">
 <h2 id="products-title" class="section__title">Products we build and run.</h2>
-<ul class="products">${work.products.map(p => `<li><p class="card__meta">${esc(p.status)}</p><h3>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.name)} ${arrowNE}</a>` : esc(p.name)}</h3><p>${esc(p.line)}</p></li>`).join('')}</ul>
+<ul class="products">${work.products.map(p => `<li><h3>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.name)} ${arrowNE}</a>` : esc(p.name)}</h3><p>${esc(p.status)}. ${esc(p.line)}</p></li>`).join('')}</ul>
 </div></section>
 ${closeBand()}`;
 }
