@@ -1,10 +1,10 @@
-@font-face{font-family:"Schibsted Grotesk";src:url("/fonts/schibsted-grotesk-latin.woff2") format("woff2");font-weight:400 900;font-style:normal;font-display:optional}
-@font-face{font-family:"Public Sans";src:url("/fonts/public-sans-latin.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:optional}
+@font-face{font-family:"Libre Caslon Display";src:url("/fonts/libre-caslon-display-400-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:optional}
+@font-face{font-family:"DM Sans";src:url("/fonts/dm-sans-var-latin.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:optional}
 
 :root{
   --paper:#fff;--wash:#f4f6f8;--navy:#0a1f33;--ink:#1a2633;--muted:#556474;--rule:#d8dee5;--rule-strong:#a8b4c0;--control:#7b8896;
   --signal:#1f5eff;--signal-deep:#1746c8;--signal-wash:#e9efff;
-  --display:"Schibsted Grotesk",Arial,Helvetica,sans-serif;--text:"Public Sans",Arial,Helvetica,sans-serif;
+  --display:"Libre Caslon Display",Georgia,serif;--text:"DM Sans",Arial,Helvetica,sans-serif;
   --gutter:20px;--section:clamp(64px,9vw,128px);--ease:cubic-bezier(.2,.7,.2,1)
 }
 @media (min-width:720px){:root{--gutter:32px}}
@@ -43,7 +43,14 @@ main:focus{outline:none}
 .mobile-menu{border-top:1px solid var(--rule);padding-block:8px 24px;max-height:calc(100dvh - 73px);overflow-y:auto}
 .mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--rule);font:600 1.25rem var(--display);color:var(--navy);text-decoration:none}
 .noscript-nav{display:flex;flex-wrap:wrap;gap:16px;padding-block:12px}
+.lang{display:flex;align-items:center;gap:6px;font-size:.875rem;white-space:nowrap}
+.lang a,.mobile-menu .lang a{display:inline;padding:6px 2px;border:0;border-bottom:1px solid transparent;font:inherit;color:var(--ink);text-decoration:none}
+.lang a:hover{border-bottom-color:var(--navy);color:var(--navy)}
+.lang [aria-current]{padding:6px 2px;font-weight:600;color:var(--navy)}
+.lang__sep{color:var(--muted)}
+.mobile-menu .lang{padding-top:16px;font-size:1rem}
 @media (max-width:1000px){.site-header .site-nav,.site-header .site-header__cta{display:none}.site-header .menu-toggle{display:block}}
+@media (max-width:1000px){[data-enamplify-ready] .site-header__inner>.lang{display:none}}
 @media (min-width:1001px){.mobile-menu{display:none}}
 
 /* Buttons and links */

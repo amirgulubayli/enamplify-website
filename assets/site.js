@@ -4,6 +4,18 @@
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 
+  // Visible strings come from the page (<script id="ui-strings">) in its own language; English if absent.
+  const T = {menu: 'Menu', close: 'Close', copied: 'Copied', copyFallback: 'Select and copy this text', printPlaceholder: '_'.repeat(64),
+    clearConfirm: 'Clear the notes on this page? This cannot be undone.', errName: 'Please add your name.', errEmail: 'Please add a valid email address.',
+    errMessage: 'Please add at least 20 characters about the work.', errHeading: 'A few details need your attention:', mailSubject: 'Enamplify enquiry · {interest}',
+    mailGreeting: 'Hello Amir,', mailName: 'Name', mailEmail: 'Email', mailOrganisation: 'Organisation', mailInterest: 'Interested in', mailNotSupplied: 'Not supplied',
+    readyTitle: 'Your note is ready. You choose when to send it.', readyBody: 'Open the message in your email app, or copy it into your preferred email service. It has not been sent by this website.',
+    openMail: 'Open my email app', copyMessage: 'Copy the message', sending: 'Sending your enquiry…', sentTitle: 'Your enquiry has been sent.',
+    sentBody: 'Thank you for the context. Amir will review your note and reply personally.', timeout: 'The request timed out. Please email us directly rather than submitting twice.',
+    unconfirmed: 'The enquiry could not be confirmed as sent.', reachDirect: 'You can reach Amir directly at {email}.'};
+  try { Object.assign(T, JSON.parse($('#ui-strings')?.textContent || '{}')); } catch { /* keep English */ }
+  const fill = (s, v) => s.replace(/\{(\w+)\}/g, (m, k) => (k in v ? v[k] : m));
+
   // Navigation is a standard document navigation, not a simulated application router.
   const toggle = $('.menu-toggle');
   const menu = $('#mobile-menu');
@@ -14,7 +26,7 @@
     menu.hidden = !open;
     menu.inert = !open;
     document.body.classList.toggle('menu-open', open);
-    $('.menu-label').textContent = open ? 'Close' : 'Menu';
+    $('.menu-label').textContent = open ? T.close : T.menu;
     if (open) {
       previousFocus = document.activeElement;
       requestAnimationFrame(() => $('a', menu)?.focus());
@@ -55,14 +67,14 @@
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(text);
-      if (trigger) { trigger.textContent = 'Copied'; setTimeout(() => { trigger.textContent = previous; }, 2200); }
+      if (trigger) { trigger.textContent = T.copied; setTimeout(() => { trigger.textContent = previous; }, 2200); }
       return true;
     } catch {
       const existing = $('#copy-fallback');
       existing?.remove();
       const box = document.createElement('textarea');
       box.id = 'copy-fallback'; box.className = 'copy-fallback'; box.value = text;
-      box.setAttribute('aria-label', 'Select and copy this text');
+      box.setAttribute('aria-label', T.copyFallback);
       trigger?.insertAdjacentElement('afterend', box);
       box.focus(); box.select();
       return false;
@@ -76,7 +88,7 @@
       if (field.nextElementSibling?.classList.contains('print-value')) return;
       const value = document.createElement('div');
       value.className = 'print-value';
-      value.textContent = field.value || '________________________________________________________________';
+      value.textContent = field.value || T.printPlaceholder;
       field.insertAdjacentElement('afterend', value);
     });
   }
@@ -86,7 +98,7 @@
   $$('[data-print]').forEach(btn => btn.addEventListener('click', () => { preparePrint(); window.print(); }));
   $('[data-clear-notes]')?.addEventListener('click', () => {
     const fields = $$('.worksheet input, .worksheet textarea');
-    if (fields.some(f => f.value) && !window.confirm('Clear the notes on this page? This cannot be undone.')) return;
+    if (fields.some(f => f.value) && !window.confirm(T.clearConfirm)) return;
     fields.forEach(f => f.value = '');
     fields[0]?.focus();
   });
@@ -107,42 +119,42 @@
       result.hidden = true; errors.hidden = true; errors.replaceChildren();
       const data = Object.fromEntries(new FormData(form));
       const problems = [];
-      for (const [name,label] of [['name','your name'],['email','a valid email address'],['message','at least 20 characters about the work']]) {
+      for (const [name,message] of [['name',T.errName],['email',T.errEmail],['message',T.errMessage]]) {
         const field = $(`[name="${name}"]`, form);
         const trimmed = field.value.trim();
         const bad = !trimmed || !field.validity.valid || (name === 'message' && trimmed.length < 20) || (name === 'email' && !/^\S+@[^\s@]+\.[^\s@]+$/.test(trimmed));
-        if (bad) { problems.push([field, `Please add ${label}.`]); field.setAttribute('aria-invalid','true'); }
+        if (bad) { problems.push([field, message]); field.setAttribute('aria-invalid','true'); }
         data[name] = trimmed;
       }
       if (problems.length) {
-        const heading = document.createElement('p'); heading.textContent = 'A few details need your attention:'; errors.append(heading);
+        const heading = document.createElement('p'); heading.textContent = T.errHeading; errors.append(heading);
         const list = document.createElement('ul');
         problems.forEach(([field,message]) => { const li=document.createElement('li'); const a=document.createElement('a'); a.href=`#${field.id}`; a.textContent=message; a.addEventListener('click',()=>field.focus()); li.append(a); list.append(li); });
         errors.append(list); errors.hidden=false; problems[0][0].focus(); return;
       }
-      const subject = `Enamplify enquiry · ${data.interest}`;
-      const body = `Hello Amir,\n\n${data.message}\n\nName: ${data.name}\nEmail: ${data.email}\nOrganisation: ${data.organisation || 'Not supplied'}\nInterested in: ${data.interest}\n`;
+      const subject = fill(T.mailSubject, {interest: data.interest});
+      const body = `${T.mailGreeting}\n\n${data.message}\n\n${T.mailName}: ${data.name}\n${T.mailEmail}: ${data.email}\n${T.mailOrganisation}: ${data.organisation || T.mailNotSupplied}\n${T.mailInterest}: ${data.interest}\n`;
       if (form.dataset.mode !== 'server') {
-        const heading = document.createElement('h3'); heading.textContent = 'Your note is ready. You choose when to send it.';
-        const paragraph = document.createElement('p'); paragraph.textContent = 'Open the message in your email app, or copy it into your preferred email service. It has not been sent by this website.';
-        const mail = document.createElement('a'); mail.className = 'btn btn--primary'; mail.textContent = 'Open my email app'; mail.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        const copy = document.createElement('button'); copy.type = 'button'; copy.className = 'link-arrow'; copy.textContent = 'Copy the message'; copy.addEventListener('click',()=>copyText(`To: ${form.dataset.email}\nSubject: ${subject}\n\n${body}`,copy));
+        const heading = document.createElement('h3'); heading.textContent = T.readyTitle;
+        const paragraph = document.createElement('p'); paragraph.textContent = T.readyBody;
+        const mail = document.createElement('a'); mail.className = 'btn btn--primary'; mail.textContent = T.openMail; mail.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const copy = document.createElement('button'); copy.type = 'button'; copy.className = 'link-arrow'; copy.textContent = T.copyMessage; copy.addEventListener('click',()=>copyText(`To: ${form.dataset.email}\nSubject: ${subject}\n\n${body}`,copy));
         const preview = document.createElement('pre'); preview.className = 'message-preview'; preview.textContent = body;
         result.replaceChildren(heading, paragraph, preview, mail, copy); result.hidden = false;
         result.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});
         return;
       }
       const originalLabel = submit.innerHTML;
-      submit.disabled = true; submit.textContent = 'Sending your enquiry…';
+      submit.disabled = true; submit.textContent = T.sending;
       try {
         const response = await fetch('/api/enquiry', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:AbortSignal.timeout(16000)});
         const payload = await response.json();
         if (!response.ok || payload.ok !== true) throw new Error(payload.error || 'The enquiry could not be sent.');
-        const h = document.createElement('h3'); h.textContent = 'Your enquiry has been sent.';
-        const p = document.createElement('p'); p.textContent = 'Thank you for the context. Amir will review your note and reply personally.';
+        const h = document.createElement('h3'); h.textContent = T.sentTitle;
+        const p = document.createElement('p'); p.textContent = T.sentBody;
         result.replaceChildren(h,p); result.hidden=false; form.reset(); startedAt.value=String(Date.now());
       } catch (error) {
-        errors.textContent = `${error.name === 'TimeoutError' ? 'The request timed out. Please email us directly rather than submitting twice.' : 'The enquiry could not be confirmed as sent.'} You can reach Amir directly at ${form.dataset.email}.`;
+        errors.textContent = `${error.name === 'TimeoutError' ? T.timeout : T.unconfirmed} ${fill(T.reachDirect, {email: form.dataset.email})}`;
         errors.hidden=false;
       } finally { submit.disabled=false; submit.innerHTML=originalLabel; window.turnstile?.reset(); }
     });

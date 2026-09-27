@@ -1,4 +1,5 @@
 import {esc} from './components.mjs';
+import {fill} from './i18n.mjs';
 
 const pct = n => `${Math.round(n)}%`;
 const legend = items => `<ul class="legend">${items.map(s => `<li><span class="swatch swatch--${esc(s.tone)}" aria-hidden="true"></span><span class="legend__label">${esc(s.label)}</span>${s.value === undefined ? '' : `<span class="legend__value">${pct(s.value)}</span>`}</li>`).join('')}</ul>`;
@@ -25,7 +26,7 @@ export function pairedBars({unit, max, rows}) {
 }
 
 /** Hairline line chart with direct end labels in a right-hand gutter; the full labels live in the aria-label. */
-export function lineChart({xLabels, series, max}) {
+export function lineChart({xLabels, series, max, summary = '{label}: {first} at {start}, {last} at {end}'}) {
   const n = series[0].values.length;
   if (n < 2) throw new Error('lineChart needs at least 2 points per series');
   for (const s of series) {
@@ -45,7 +46,7 @@ export function lineChart({xLabels, series, max}) {
   const overflow = ends.length ? Math.max(0, ends.at(-1).ly - (H - P)) : 0;
   for (const e of ends) e.ly = Math.max(P, e.ly - overflow);
   const labels = ends.map(({s, ly}) => `<text class="line-label line-label--${esc(s.tone)}" x="${x(n - 1) + 8}" y="${ly.toFixed(1)}" dominant-baseline="middle">${esc(s.short || s.label)}</text>`).join('');
-  const label = series.map(s => `${s.label}: ${s.values[0]} at ${xLabels[0]}, ${s.values.at(-1)} at ${xLabels.at(-1)}`).join('; ');
+  const label = series.map(s => fill(summary, {label: s.label, first: s.values[0], start: xLabels[0], last: s.values.at(-1), end: xLabels.at(-1)})).join('; ');
   return `<svg class="linechart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${grid}${lines}${labels}</svg><div class="axis" aria-hidden="true"><span>${esc(xLabels[0])}</span><span>${esc(xLabels.at(-1))}</span></div>`;
 }
 

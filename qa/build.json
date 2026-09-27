@@ -1,9 +1,27 @@
 {
-  "pages": 20,
+  "pages": 39,
+  "locales": [
+    "en",
+    "az"
+  ],
+  "missing": [
+    "content/az/site.json",
+    "content/az/articles.json",
+    "content/az/resources.json",
+    "content/az/work.json",
+    "content/az/faqs.json",
+    "content/copy/az.json",
+    "content/articles/az/beyond-the-ai-demo.md",
+    "content/articles/az/better-briefs-better-ai-work.md",
+    "content/articles/az/what-to-measure-after-ai-training.md",
+    "content/articles/az/automate-the-work-not-the-relationship.md",
+    "content/articles/az/when-not-to-automate.md",
+    "content/articles/az/the-handoff-gap.md"
+  ],
   "base": "http://localhost:3000",
   "indexing": false,
   "enquiryMode": "email",
-  "cssBytes": 17607,
-  "jsBytes": 9827,
+  "cssBytes": 18146,
+  "jsBytes": 10905,
   "fontsSelfHosted": true
 }

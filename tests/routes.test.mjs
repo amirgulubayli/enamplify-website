@@ -6,6 +6,7 @@ import {routeTable, redirects} from '../src/routes.mjs';
 
 const c = await loadContent();
 const routes = routeTable({...c, enquiryMode: 'email'});
+const azRoutes = routeTable({...(await loadContent('az')), enquiryMode: 'email'});
 const urls = routes.map(r => r.url);
 
 test('route set matches the spec sitemap', () => {
@@ -15,7 +16,7 @@ test('route set matches the spec sitemap', () => {
   assert.deepEqual([...urls].sort(), [...expected].sort());
 });
 test('every route has a title, a description and rendered HTML', () => {
-  for (const r of routes) {
+  for (const r of [...routes, ...azRoutes]) {
     assert.ok(r.title && r.description && r.html, r.url);
     assert.ok(r.description.length <= 160, `${r.url} description ${r.description.length}`);
     assert.ok((r.home ? r.title : `${r.title} | Enamplify`).length <= 70, `${r.url} title`);
