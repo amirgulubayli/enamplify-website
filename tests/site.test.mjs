@@ -152,6 +152,22 @@ test('first-viewport faces are preloaded: italic on home, latin-ext on Azerbaija
     for (const f of ['libre-caslon-display-400-latin-ext', 'dm-sans-var-latin-ext']) assert.equal(pre(f).test(h), locale === 'az', `${url} ${f}`);
   }
 });
+test('brand assets: oxblood icons, and each language shares its own social card', async () => {
+  for (const [i, h] of all.entries()) {
+    const card = routes[i].locale === 'az' ? '/images/social-card-az.png' : '/images/social-card.png';
+    assert.match(h, new RegExp(`<meta property="og:image" content="[^"]+${card}">`), routes[i].url);
+    assert.ok(h.includes('<meta name="theme-color" content="#f3eee5">'), routes[i].url);
+  }
+  for (const f of ['images/social-card.png', 'images/social-card-az.png', 'favicon.png', 'apple-touch-icon.png']) {
+    const png = await fs.readFile(path.join(root, 'dist', f));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG', f);
+    assert.ok(png.includes('tEXt') || png.includes('iTXt'), `${f} carries embedded provenance`);
+  }
+  for (const f of ['favicon.svg', 'brand-mark.svg']) {
+    const svg = await fs.readFile(path.join(root, 'dist', f), 'utf8');
+    assert.ok(svg.includes('fill="#502d36"') && svg.includes('fill="#f3eee5"') && !svg.includes('<text'), f);
+  }
+});
 test('fonts are self-hosted WOFF2 with their OFL licences', async () => {
   const files = await fs.readdir(path.join(root, 'dist/fonts'));
   const woff2 = files.filter(f => f.endsWith('.woff2'));
