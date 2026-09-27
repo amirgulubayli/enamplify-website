@@ -139,3 +139,27 @@ Every outcome is presented as a numbered exhibit, the way a COO already reads a 
 2. Confirm the booking URL (currently `https://cal.com/ragmedium/ragmedium`).
 3. Confirm "10+ years" and the hackathon wording as they appear on ragmedium.com.
 4. Replace illustrative exhibits with real pilot numbers when available.
+
+---
+
+## 12. Round two (2026-09-27): oxblood, imagery, EN/AZ
+
+User direction after reviewing the Board Pack build: "go back to [oxblood], this design doesn't scream professional at all, some images would help and an eng/az toggle". Decisions:
+
+1. **Keep** the new 20-page structure, copy, exhibits, SEO, redirects and tests. **Replace the visual skin** with the incumbent oxblood world from the previous site, raised to a more premium finish.
+2. **Imagery:** London and Baku architectural photography (Unsplash License), colour-graded towards the palette, self-hosted, responsive, with provenance recorded.
+3. **Language:** full Azerbaijani mirror of every page at `/az/…`, drafted by Claude, reviewed by Amir before launch. EN/AZ toggle in the header links to the same page in the other language.
+
+### 12.1 Visual world: Oxblood Editorial
+- Tokens (from the previous site): paper `#f3eee5`, paper-light `#faf7f1`, paper-deep `#e9e2d7`, ink `#242321`, wine `#502d36`, wine-deep `#3c2229`, wine-light `#67424a`, bronze `#9b8269`, stone `#d8cec0`, line `#d6ccbf`, muted `#696058`.
+- Type: **Libre Caslon Display** for headings (Instrument Serif, the old face, has no ə/Ə and cannot set Azerbaijani); **Libre Caslon Text italic** for emphasised words in headings (wine); **DM Sans** for text (incumbent brand face, covers Azerbaijani). Self-hosted WOFF2, latin + latin-ext subsets, `font-display: optional`.
+- Exhibits keep their anatomy; data marks become wine (highlight), ink (base) and stone (other). The close band becomes a wine field with paper type.
+- Photography is the new signature: a London · Baku diptych in the home hero, and one wide city photograph per inner page header band. Captions name the place.
+- Keeps: square corners, hairlines, no shadows or gradients except a flat wine overlay on photographs where type sits on them.
+
+### 12.2 EN/AZ
+- URLs: English at `/…` (unchanged), Azerbaijani at `/az/…` with identical slugs. `<html lang="az">`, `hreflang` alternates (`en-GB`, `az`, `x-default` → English) on every page, `og:locale` / `og:locale:alternate`, sitemap `xhtml:link` alternates, JSON-LD `inLanguage`.
+- Toggle: "EN · AZ" in the header (and mobile menu); the current language is marked `aria-current`, the other is a link with `hreflang` and `lang` to the counterpart page.
+- Everything is translated: page copy, route titles/descriptions, nav, footer, form labels and client-side messages, exhibits' labels, FAQs, work list, legal pages, the six essays and three field guides. Worksheet PDFs stay English (labelled as such on AZ pages).
+- 404 is bilingual. RSS: `/feed.xml` (EN) and `/az/feed.xml` (AZ). `llms.txt` lists both.
+- Azerbaijani copy is a Claude draft; Amir reviews before launch (added to §11).
