@@ -57,7 +57,7 @@ export async function build() {
   await fs.writeFile(path.join(out, 'llms.txt'), `# ${site.name}\n\n> ${site.definition}\n\n${section('Pages', indexable.filter(r => !r.article && !r.url.startsWith('/insights/guides/') && !['/privacy/', '/cookies/', '/terms/', '/accessibility/'].includes(r.url)))}\n${section('Insights', indexable.filter(r => r.article))}\n${section('Field guides', indexable.filter(r => r.url.startsWith('/insights/guides/')))}\n## Contact\n\n- Book a call: ${site.bookingUrl}\n- Email: ${site.email}\n`);
 
   await fs.writeFile(path.join(root, 'qa/routes.json'), JSON.stringify(routes.map(({url, title, description, index}) => ({url, title, description, index: index !== false})), null, 2));
-  await fs.writeFile(path.join(root, 'qa/build.json'), JSON.stringify({builtAt: new Date().toISOString(), pages: routes.length, base, indexing: isLive, enquiryMode, cssBytes: Buffer.byteLength(css), jsBytes: Buffer.byteLength(js), fontsSelfHosted: true}, null, 2));
+  await fs.writeFile(path.join(root, 'qa/build.json'), JSON.stringify({pages: routes.length, base, indexing: isLive, enquiryMode, cssBytes: Buffer.byteLength(css), jsBytes: Buffer.byteLength(js), fontsSelfHosted: true}, null, 2));
   console.log(`Built ${routes.length} pages. Enquiries: ${enquiryMode}. Indexing: ${isLive}. Base: ${base}`);
   return {routes, base, enquiryMode};
 }

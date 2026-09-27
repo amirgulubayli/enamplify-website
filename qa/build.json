@@ -1,10 +1,9 @@
 {
-  "builtAt": "2026-09-27T02:25:05.546Z",
   "pages": 20,
   "base": "http://localhost:3000",
   "indexing": false,
   "enquiryMode": "email",
-  "cssBytes": 17846,
+  "cssBytes": 18372,
   "jsBytes": 9831,
   "fontsSelfHosted": true
 }

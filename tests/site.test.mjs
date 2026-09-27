@@ -17,7 +17,16 @@ const types = html => ld(html).flatMap(d => d['@graph'].map(n => n['@type']));
 test('20 pages are built', () => assert.equal(routes.length, 20));
 test('one H1 and one main per page, British English', () => { for (const [i, h] of all.entries()) { assert.equal([...h.matchAll(/<h1(?:\s|>)/g)].length, 1, routes[i].url); assert.equal([...h.matchAll(/<main(?:\s|>)/g)].length, 1); assert.ok(h.includes('lang="en-GB"')); } });
 test('titles and descriptions are unique', () => { for (const p of [/<title>(.*?)<\/title>/s, /<meta name="description" content="([^"]*)"/]) { const v = all.map(h => h.match(p)?.[1]); assert.ok(v.every(Boolean)); assert.equal(new Set(v).size, v.length); } });
-test('every internal link resolves', async () => { for (const h of all) for (const m of h.matchAll(/(?:href|src)="(\/[^"#]*)"/g)) { const link = m[1].split('?')[0]; const file = path.join(root, 'dist', link, link.endsWith('/') ? 'index.html' : ''); assert.ok(await fs.access(file).then(() => true, () => false), `Missing ${link}`); } });
+test('every internal link resolves', async () => {
+  for (const h of all) for (const m of h.matchAll(/(?:href|src)="(\/[^"#]*)"/g)) {
+    const raw = m[1];
+    if (raw.startsWith('//')) continue;
+    const link = raw.split('?')[0];
+    assert.ok(link.endsWith('/') || path.extname(link), `Link is missing a trailing slash or file extension: ${link}`);
+    const file = path.join(root, 'dist', link, link.endsWith('/') ? 'index.html' : '');
+    assert.ok(await fs.access(file).then(() => true, () => false), `Missing ${link}`);
+  }
+});
 test('structured data: practice everywhere, FAQ on approach, articles marked up', async () => {
   for (const h of all) { assert.ok(types(h).includes('ProfessionalService')); assert.ok(!JSON.stringify(ld(h)).includes('aggregateRating')); }
   assert.ok(types(await read('/approach/')).includes('FAQPage'));
@@ -53,6 +62,9 @@ test('worksheet PDFs exist', async () => { for (const n of ['ai-pilot-acceptance
 test('enquiry composer states nothing has been sent', async () => { const h = await read('/contact/'); if (buildInfo.enquiryMode === 'email') { assert.ok(h.includes('Nothing is sent until you choose to send it.')); assert.ok(h.includes('data-mode="email"')); } else { assert.ok(h.includes('data-mode="server"')); assert.ok(h.includes('cf-turnstile')); } assert.ok(!h.includes('Your enquiry has been sent.')); });
 test('no trackers or browser storage in client code', () => assert.ok(!/localStorage\.|sessionStorage\.|document\.cookie\s*=|googletagmanager|fbq\(/.test(js)));
 test('accessibility fallbacks', () => { assert.ok(css.includes('prefers-reduced-motion')); assert.ok(css.includes(':focus-visible')); for (const h of all) { assert.ok(h.includes('Skip to content')); assert.ok(h.includes('<noscript>')); } });
+test('mobile header CTA hiding rule has higher specificity than .btn', () => {
+  assert.ok(css.includes('@media (max-width:1000px){.site-header .site-nav,.site-header .site-header__cta{display:none}'), 'the CTA-hiding selector must be more specific than .btn');
+});
 test('house style: no em dashes, no preheaders, no uppercase', () => {
   for (const [i, h] of all.entries()) { assert.ok(!/[—]|&mdash;|&#(?:8212|x2014);/i.test(h), routes[i].url); assert.ok(!/class="[^"]*\b(?:eyebrow|section-label|service-kicker|visual-overline)\b/.test(h), routes[i].url); }
   assert.ok(!/text-transform\s*:\s*uppercase/i.test(css));
