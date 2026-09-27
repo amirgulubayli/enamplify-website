@@ -147,3 +147,8 @@ test('the bilingual 404 title fits', () => {
   assert.ok(`${r.title} | Enamplify`.length <= 70, r.title);
   assert.ok(r.description.length <= 160, r.description);
 });
+
+test('az titles and descriptions spell out "süni intellekt" rather than the abbreviation', () => {
+  const seo = [...azRoutes.flatMap(r => [r.title, r.description]), az.copy.common.feedDescription, az.site.description];
+  for (const s of seo) assert.ok(!s.includes('Sİ'), s);
+});

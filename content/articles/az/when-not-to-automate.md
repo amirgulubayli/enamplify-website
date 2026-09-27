@@ -30,7 +30,7 @@ Bəzən ilk faydalı layihə məlumatı və onun sahibliyini qaydaya salmaqdır.
 
 ## Səhv olduqda nə baş verir?
 
-Cavab dizaynın nə qədər yoxlama, yuxarıya ötürmə və ehtiyat plan tələb etdiyini müəyyənləşdirir. Daxili qeydin qaralaması ilə ciddi nəticələri olan xarici qərar eyni tələblər daşımır.
+Cavab dizaynın nə qədər yoxlama, yuxarıya ötürmə və ehtiyat plan tələb etdiyini müəyyənləşdirir. Daxili qeydin qaralaması ilə kənar tərəflərə təsir edən, ciddi nəticələri olan qərar eyni tələblər daşımır.
 
 Nəticəyə cavabdeh olan şəxsi və prosesi dayandırmaq yolunu göstərin. Sərhəd aydın olmadıqda qeyri-müəyyənliyi geniş vədin arxasında gizlətmək əvəzinə, sınağın əhatəsini daraldın.
 
@@ -42,7 +42,7 @@ Kiçik təkmilləşmə sadə dəyişikliyə haqq qazandıra bilər. Təsirli gö
 
 ## Yaxşı növbəti addım kiçik ola bilər
 
-Bir prosesi aydınlaşdırın. Təhlükəsiz nümunələr toplayın. Keyfiyyət meyarlarını razılaşdırın. Giriş məsələsini həll edin. Hüdudları bəlli sınaq keçirin.
+Bir prosesi aydınlaşdırın. Təhlükəsiz nümunələr toplayın. Keyfiyyət meyarlarını razılaşdırın. Giriş məsələsini həll edin. Sərhədləri bəlli sınaq keçirin.
 
 Bunların hər biri məsləhətin dəyərli nəticəsi ola bilər.
 

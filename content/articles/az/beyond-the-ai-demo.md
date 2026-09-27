@@ -10,7 +10,7 @@ Müştəri üçün Sİ ilə brif hazırlamağı sınaqdan keçirən hipotetik bi
 
 Sonra başqa bir əməkdaş ondan istifadə etməyə çalışır. O, mənbələrdən birinə daxil ola bilmir. Bir detal köhnəlib. Nəticəni başqa sistemə köçürmək lazımdır. Müştəri ilə görüşdən əvvəl onu kimin yoxlamalı olduğunu heç kim dəqiq bilmir.
 
-Xülasə mütləq pisləşməyib. Sadəcə nümayiş gündəlik işin bütün şərtlərini əhatə etməyib.
+Bu, xülasənin pisləşdiyi demək deyil. Sadəcə nümayiş gündəlik işin bütün şərtlərini əhatə etməyib.
 
 Bu fərq vacibdir, çünki həll olunmamış hər şərt fərqli cavab tələb edir. Mənbələrin sahibliyi məsələsi promptu cilalamaqla həll olunmayacaq. Qeyri-müəyyən təsdiq mərhələsi cavabı uzatmaqla aydınlaşmayacaq.
 
@@ -30,7 +30,7 @@ Nəhayət, qərar meyarlarını razılaşdırın. Hansı sübut genişləndirmə
 
 ## Pilot layihə faydalı “yox” cavabı verə bilər
 
-Genişləndirməni yeganə uğurlu nəticə kimi qəbul etmək cəlbedicidir. Amma yaxşı aparılmış pilot layihə daha sadə prosesin kifayət etdiyini, mənbə məlumatı üzərində işləmək lazım olduğunu və ya gözlənilən faydanın əlavə səyə dəymədiyini göstərə bilər.
+Genişləndirməni yeganə uğurlu nəticə saymaq istəyi təbiidir. Amma yaxşı aparılmış pilot layihə daha sadə prosesin kifayət etdiyini, mənbə məlumatı üzərində işləmək lazım olduğunu və ya gözlənilən faydanın əlavə səyə dəymədiyini göstərə bilər.
 
 Sual və sərhədlər əvvəldən aydın olduqda, bunlar faydalı nəticələrdir.
 
@@ -38,8 +38,8 @@ Problem davam etməmək qərarı ilə bitən pilot layihə deyil. Problem hamın
 
 ## Praktik növbəti addım
 
-Davam edən bir pilot layihə seçin və onun sponsoru ilə birlikdə altı sualın cavabını yazın. Boşluqları tək bir rahatladıcı bala çevirmək əvəzinə, onları qeyd edin.
+Davam edən bir pilot layihə seçin və onun sponsoru ilə birlikdə altı sualın cavabını yazın. Boşluqları tək bir arxayınlaşdırıcı bala çevirmək əvəzinə, onları qeyd edin.
 
 Sonra açıq qərar qəbul edin: razılaşdırılmış şərtlərlə genişləndirin, konkret nəyisə dəyişin və ya dayandırın. Nümayiş iş haqqında daha yaxşı qərara gətirəndə dəyər qazanır.
 
-[Sİ pilot layihəsinin qəbul yoxlama siyahısından istifadə edin](/insights/guides/ai-pilot-acceptance-checklist/): sübutları, məsul şəxsləri və açıq sualları bir yerdə qeyd edin.
+[Süni intellekt pilot layihəsinin qəbul yoxlama siyahısından istifadə edin](/insights/guides/ai-pilot-acceptance-checklist/): sübutları, məsul şəxsləri və açıq sualları bir yerdə qeyd edin.

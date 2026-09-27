@@ -22,11 +22,11 @@ Auditoriyanı müəyyənləşdirin: nəticədən kim istifadə edəcək və onla
 
 Məhdudiyyətləri müəyyən edin: nə mütləq daxil edilməlidir, nə uydurulmamalıdır və məlumat çatışmadıqda nə baş verməlidir.
 
-Nəticənin formatını göstərin: qısa memorandum, müqayisə cədvəli və ya sualları aydın qeyd olunmuş qaralama.
+Nəticənin formatını göstərin: qısa arayış, müqayisə cədvəli və ya sualları aydın qeyd olunmuş qaralama.
 
 Yoxlamanı müəyyən edin: nəticə qəbul edilməzdən əvvəl insan nəyi yoxlayacaq.
 
-Bunlar sehrli tərkib hissələri və ya düzgünlüyə zəmanət deyil. Bunlar tapşırığı və onun hüdudlarını görünən etməyin bir yoludur.
+Bunlar sehrli tərkib hissələri və ya düzgünlüyə zəmanət deyil. Bunlar tapşırığı və onun sərhədlərini görünən etməyin bir yoludur.
 
 ## Nümunə: görüş üçün brif
 
@@ -34,7 +34,7 @@ Zəif sorğu belə ola bilər: “Bu müştərini araşdır və mənə əla sat�
 
 Daha faydalı, hipotetik brif isə belə olardı:
 
-“Müştəri meneceri üçün ilk görüşdən əvvəl daxili brifinq hazırla. Yalnız təqdim olunmuş şirkət məlumatından və təsdiqlənmiş qeydlərdən istifadə et. Müşahidə olunan faktları veriləcək suallardan ayır. Potensial müştərinin büdcəsi və ya prioritetləri barədə nəticə çıxarma. Müvafiq kontekst, üç açıq sual və çatışmayan məlumatları daxil et. Müştəri meneceri brifdən istifadə etməzdən əvvəl faktları yoxlayacaq.”
+“Müştəri meneceri üçün ilk görüşdən əvvəl daxili brif hazırla. Yalnız təqdim olunmuş şirkət məlumatından və təsdiqlənmiş qeydlərdən istifadə et. Müşahidə olunan faktları veriləcək suallardan ayır. Potensial müştərinin büdcəsi və ya prioritetləri barədə nəticə çıxarma. Müvafiq kontekst, üç açıq sual və çatışmayan məlumatları daxil et. Müştəri meneceri brifdən istifadə etməzdən əvvəl faktları yoxlayacaq.”
 
 Təkmilləşmə xüsusi bir ifadədə deyil. Təkmilləşmə ondadır ki, tapşırığı idarə edən şəxs bir neçə qərarı əvvəlcədən qəbul edib.
 
@@ -44,7 +44,7 @@ Aydın göstəriş etibarsız mənbəni düzəltmir. O, məxfi məlumatdan istif
 
 Nəticə zəif olanda səbəbi müəyyənləşdirin. Mənbə natamam idi? Tapşırıq aydın deyildi? Sistemdən insanda qalmalı olan bir mühakimə tələb olunurdu?
 
-Bu suallara cavab vermədən promptu təkrar-təkrar dəyişmək rutin işin başqa bir formasına çevrilə bilər.
+Bu suallara cavab vermədən promptu təkrar-təkrar dəyişmək mənasız əlavə işin başqa formasına çevrilə bilər.
 
 ## Metodu paylaşıla bilən edin
 

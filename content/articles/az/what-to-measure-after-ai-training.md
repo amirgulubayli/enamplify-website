@@ -10,7 +10,7 @@ Yaxşı qarşılanmış məşğələ təcrübənin özü haqqında yaxşı əlam
 
 Proqramın dəstəkləməli olduğu bir tapşırıq seçin. Mövcud məlumatı, gözlənilən nəticəni və həmin nəticəni istifadəyə yararlı edən meyarları müəyyənləşdirin.
 
-İştirakçılardan proqramdan əvvəl və sonra, sənədləşdirilmiş şərtlər altında müqayisə edilə bilən tapşırığı yerinə yetirmələrini xahiş edin. Tapşırıqları müqayisə üçün kifayət qədər oxşar saxlayın, eyni zamanda təkrarın və tanışlığın da nəticəyə təsir edə biləcəyini nəzərə alın.
+İştirakçılardan proqramdan əvvəl və sonra, sənədləşdirilmiş şərtlərdə müqayisə edilə bilən tapşırığı yerinə yetirmələrini xahiş edin. Tapşırıqları müqayisə üçün kifayət qədər oxşar saxlayın, eyni zamanda təkrarın və tanışlığın da nəticəyə təsir edə biləcəyini nəzərə alın.
 
 Məqsəd qısa kurs daxilində mükəmməl elmi eksperiment qurmaq deyil. Məqsəd işə baxmadan irəliləyiş iddia etməməkdir.
 
@@ -26,7 +26,7 @@ Rədd edilməli olan nümunələri də daxil edin. Nəticədən nə vaxt istifad
 
 Məlumatın hazırlanmasına, nəticənin yaradılmasına, yoxlanmasına, düzəldilməsinə və lazım olan yerə ötürülməsinə sərf olunan vaxtı ölçün.
 
-Açıq şəkildə şərti bir nümunə üçün əvvəllər 40 dəqiqə çəkən tapşırığı təsəvvür edin. Süni intellektin (Sİ) köməyi ilə qaralama 15 dəqiqə çəkir, lakin yoxlama 10, ötürmə isə daha 5 dəqiqə aparır. Müşahidə olunan fərq 25 deyil, 10 dəqiqədir.
+Sırf izah üçün şərti bir nümunə götürək: əvvəllər 40 dəqiqə çəkən bir tapşırıq. Süni intellektin (Sİ) köməyi ilə qaralama 15 dəqiqə çəkir, lakin yoxlama 10, ötürmə isə daha 5 dəqiqə aparır. Müşahidə olunan fərq 25 deyil, 10 dəqiqədir.
 
 Bu da faydalı ola bilər. Sadəcə, o, daha sürətli görünən yaratma mərhələsindən fərqli bir nəticəni təsvir edir.
 

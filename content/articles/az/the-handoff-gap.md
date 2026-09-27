@@ -16,7 +16,7 @@ Bu, müştəri nəticəsi haqqında hesabat deyil, izah üçün götürülmüş 
 
 ## Aydınlaşdırılmalı olan dörd şey
 
-Birincisi, alıcını müəyyənləşdirin. “Komanda” çox vaxt həddən artıq geniş anlayışdır. Nəticəni kim yoxlamalı və ya ondan kim istifadə etməlidir?
+Birincisi, nəticəni kimin alacağını müəyyənləşdirin. “Komanda” çox vaxt həddən artıq geniş anlayışdır. Nəticəni kim yoxlamalı və ya ondan kim istifadə etməlidir?
 
 İkincisi, hərəkəti göstərin. Onlar qaralamanı yoxlayır, qərar qəbul edir, qeydi yeniləyir, yoxsa tapşırığı yerinə yetirir? Bildiriş hələ tamamlanmış ötürmə demək deyil.
 
@@ -34,7 +34,7 @@ Düzgün dizayn səhvin nəticələrindən, istifadə olunan alətlərdən və m
 
 ## Sadə iş axını kartı
 
-Başladıcı hadisəni, icazə verilən daxilolmaları, gözlənilən nəticəni, keyfiyyət yoxlamasını, məsul yoxlayıcını, təyinat yerini və ehtiyat planı yazın. Prosesin sahibini və hər hansı texniki əlaqəni dəstəkləyən şəxsi də əlavə edin.
+Başlanğıc hadisəni, icazə verilən giriş məlumatlarını, gözlənilən nəticəni, keyfiyyət yoxlamasını, məsul yoxlayıcını, təyinat yerini və ehtiyat planı yazın. Prosesin sahibini və hər hansı texniki əlaqəni dəstəkləyən şəxsi də əlavə edin.
 
 İlkin layihədən kənar birindən nəticə natamam olduqda nə baş verdiyini izah etməsini xahiş edin. Onun sualları sənədlərin hansı məqamlarda hələ də sistemi quran şəxsin yaddaşına arxalandığını göstərə bilər.
 

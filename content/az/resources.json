@@ -1,12 +1,12 @@
 [
   {
     "slug": "ai-pilot-acceptance-checklist",
-    "name": "Sİ pilot layihəsinin qəbul yoxlama siyahısı",
+    "name": "Süni intellekt pilot layihəsinin qəbul yoxlama siyahısı",
     "short": "Pilot layihə prosesə çevrilməzdən əvvəl.",
     "description": "Sahibliyi, keyfiyyəti və növbəti qərarı aydınlaşdırmaq üçün altı praktik yoxlama.",
     "time": "20–30 dəqiqə",
     "audience": "Pilot layihə sponsorları, əməliyyat rəhbərləri və layihə sahibləri",
-    "intro": "Uğurlu nümayiş komandanızın etibar edə biləcəyi iş axını ilə eyni deyil. Genişləndirmə qərarından əvvəl sübutları, məsul şəxsləri və açıq sualları qeyd etmək üçün bu iş vərəqindən istifadə edin. Bu, qərar üçün köməkçi vasitədir, sertifikat və ya gəlir vədi deyil.",
+    "intro": "Uğurlu nümayiş komandanızın etibar edə biləcəyi iş axını ilə eyni deyil. Genişləndirmə qərarından əvvəl sübutları, məsul şəxsləri və açıq sualları qeyd etmək üçün bu iş vərəqindən istifadə edin. Bu, qərar üçün köməkçi vasitədir, sertifikat və ya səmərə vədi deyil.",
     "fields": [
       "İş axını və ya pilot layihə",
       "Biznes üzrə məsul şəxs",
@@ -22,13 +22,13 @@
       ["Giriş və texniki dəstək", "Hansı məlumat lazımdır? Ona kim daxil ola bilər? Mənbələrə və inteqrasiyaya kim baxır? Lazım olduqda təşkilatınızın təhlükəsizlik və məxfilik yoxlamasını da daxil edin."],
       ["Kommersiya qərarı", "Müşahidə olunan faydaları proqram təminatı, tətbiq, yoxlama və texniki dəstək xərcləri ilə müqayisə edin. Hansı sübutun genişləndirmə, düzəliş və ya dayandırma demək olduğunu razılaşdırın."]
     ],
-    "closing": "Cavabsız altı sualı bir rahatladıcı bala çevirməyin. Hər biri üzrə sübutu qeyd edin, qalan məsul şəxsləri adlandırın, sonra açıq qərar qəbul edin."
+    "closing": "Cavabsız altı sualı bir arxayınlaşdırıcı bala çevirməyin. Hər biri üzrə sübutu qeyd edin, qalan məsul şəxsləri adlandırın, sonra açıq qərar qəbul edin."
   },
   {
     "slug": "ai-opportunity-canvas",
-    "name": "Sİ imkanları kanvası",
+    "name": "Süni intellekt imkanları kanvası",
     "short": "Təkmilləşdirməyə dəyən tapşırığı tapın.",
-    "description": "Faydalı və hüdudları bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
+    "description": "Faydalı və sərhədləri bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
     "time": "30 dəqiqə",
     "audience": "Rəhbər komandalar, daxili liderlər və iş axınlarının sahibləri",
     "intro": "Alətdən deyil, işdən başlayın. Bu kanvas konkret tapşırığı, cəlb olunan insanları və faydalı təkmilləşdirmənin cavab verməli olduğu şərtləri müəyyənləşdirməyə kömək edir. O, avtomatik tövsiyə vermək üçün deyil, yaxşı müzakirəyə başlamaq üçün hazırlanıb.",
@@ -50,11 +50,11 @@
   },
   {
     "slug": "team-ai-readiness",
-    "name": "Komandanın Sİ-yə hazırlıq bələdçisi",
+    "name": "Komandanın süni intellektə hazırlıq bələdçisi",
     "short": "Söhbətə daha yaxşı başlanğıc.",
-    "description": "İnsanları Sİ balına endirmədən komandanın başlanğıc nöqtəsini anlayın.",
+    "description": "İnsanları tək bir süni intellekt balı ilə qiymətləndirmədən komandanın başlanğıc nöqtəsini anlayın.",
     "time": "30–45 dəqiqə",
-    "audience": "Komanda rəhbərləri, kadrlar üzrə komandalar və təlim sponsorları",
+    "audience": "Komanda rəhbərləri, insan resursları (HR) komandaları və təlim sponsorları",
     "intro": "Təlim seçməzdən əvvəl komandanızın bu gün necə işlədiyini anlayın. Bu sualları cəlb olunan insanlarla birlikdə istifadə edin. Əməkdaşları sıralayan bal deyil, giriş imkanlarında, özünəinamda və kontekstdə fərqləri axtarın.",
     "fields": [
       "Komanda və ya funksiya",
