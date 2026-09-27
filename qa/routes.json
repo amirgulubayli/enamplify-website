@@ -1,230 +1,470 @@
 [
   {
     "url": "/",
-    "title": "AI education & advisory",
-    "description": "Practical AI education and advisory. We help organisations build the confidence, judgement and capability to use AI well.",
-    "index": true
-  },
-  {
-    "url": "/solutions/",
-    "title": "Ways to work together",
-    "description": "Practical AI training, leadership briefings, workflow design and ongoing advice. Find the right starting point for your organisation.",
-    "index": true
-  },
-  {
-    "url": "/solutions/ai-training/",
-    "title": "The Capability Programme",
-    "description": "Practical, role-specific learning for teams that want to use AI with greater confidence, consistency and judgement.",
-    "index": true
-  },
-  {
-    "url": "/solutions/leadership-briefing/",
-    "title": "The Leadership Briefing",
-    "description": "A focused working session for leaders who need to decide where AI belongs, where it does not, and what a sensible first step looks like.",
-    "index": true
-  },
-  {
-    "url": "/solutions/workflow-design/",
-    "title": "The Workflow Design Sprint",
-    "description": "A focused engagement to map, test and improve one AI-assisted workflow, with the people, information and handoffs considered together.",
-    "index": true
-  },
-  {
-    "url": "/solutions/advisory/",
-    "title": "The Advisory Partnership",
-    "description": "Ongoing, founder-led advice for organisations that want a thoughtful partner as their use of AI develops.",
+    "key": "home",
+    "locale": "en",
+    "alternates": {
+      "en": "/",
+      "az": "/az/"
+    },
+    "title": "Enamplify · AI enablement for mid-sized teams",
+    "description": "AI your team builds, not AI you buy. We help mid-sized organisations make AI part of how their people work: more done, owned in-house, in control.",
     "index": true
   },
   {
     "url": "/approach/",
-    "title": "Our approach",
-    "description": "Understand, practise, apply and review. A thoughtful method for turning AI into practical capability that stays with your people.",
-    "index": true
-  },
-  {
-    "url": "/about/",
-    "title": "About Enamplify & Amir Gulubayli",
-    "description": "Meet the thinking behind Enamplify: a founder-led AI education and advisory practice shaped by software, automation and product work.",
+    "key": "approach",
+    "locale": "en",
+    "alternates": {
+      "en": "/approach/",
+      "az": "/az/approach/"
+    },
+    "title": "How AI enablement works: diagnose, prove, scale",
+    "description": "Start small, prove it, then scale. How Enamplify helps teams build their own AI workflows with review, governance and data kept where it belongs.",
     "index": true
   },
   {
     "url": "/work/",
-    "title": "Selected founder projects",
-    "description": "Explore the context and ideas behind pripitch, grademy and RAG-X. Candid founder project notes, without unsupported customer results.",
+    "key": "work",
+    "locale": "en",
+    "alternates": {
+      "en": "/work/",
+      "az": "/az/work/"
+    },
+    "title": "AI systems we’ve built and products we run",
+    "description": "Delivered AI systems across clinical, finance, growth and operations, a Google hackathon win, and the AI products we build and run ourselves.",
     "index": true
   },
   {
-    "url": "/work/pripitch/",
-    "title": "pripitch · a founder project note",
-    "description": "Connecting preparation, live guidance and follow-through in an AI-assisted sales workflow.",
+    "url": "/about/",
+    "key": "about",
+    "locale": "en",
+    "alternates": {
+      "en": "/about/",
+      "az": "/az/about/"
+    },
+    "title": "About Enamplify: founder-led, London and Baku",
+    "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.",
     "index": true
   },
   {
-    "url": "/work/grademy/",
-    "title": "grademy · a founder project note",
-    "description": "An AI tutoring product exploring continuity, feedback and a learner’s developing understanding.",
+    "url": "/insights/",
+    "key": "insights",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/",
+      "az": "/az/insights/"
+    },
+    "title": "Insights on AI adoption for operations leaders",
+    "description": "Practical essays and free field guides on AI adoption, pilots, measurement and governance for operations leaders.",
     "index": true
   },
   {
-    "url": "/work/rag-x/",
-    "title": "RAG-X · a founder project note",
-    "description": "An AI-first CRM concept exploring how business information can support better questions and more relevant answers.",
-    "index": true
-  },
-  {
-    "url": "/perspectives/",
-    "title": "Perspectives · the Enamplify journal",
-    "description": "Useful thinking on AI, human judgement and the work in between. Essays and practical questions by Amir Gulubayli.",
-    "index": true
-  },
-  {
-    "url": "/perspectives/beyond-the-ai-demo/",
+    "url": "/insights/beyond-the-ai-demo/",
+    "key": "article:beyond-the-ai-demo",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/beyond-the-ai-demo/",
+      "az": "/az/insights/beyond-the-ai-demo/"
+    },
     "title": "A working AI demo is not an operating workflow.",
     "description": "A useful answer does not settle ownership, review, access or what happens next.",
     "index": true
   },
   {
-    "url": "/perspectives/better-briefs-better-ai-work/",
+    "url": "/insights/better-briefs-better-ai-work/",
+    "key": "article:better-briefs-better-ai-work",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/better-briefs-better-ai-work/",
+      "az": "/az/insights/better-briefs-better-ai-work/"
+    },
     "title": "Start with a better brief. Not a better prompt.",
     "description": "The most useful context is often the part nobody thought to write down.",
     "index": true
   },
   {
-    "url": "/perspectives/what-to-measure-after-ai-training/",
+    "url": "/insights/what-to-measure-after-ai-training/",
+    "key": "article:what-to-measure-after-ai-training",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/what-to-measure-after-ai-training/",
+      "az": "/az/insights/what-to-measure-after-ai-training/"
+    },
     "title": "What should change after AI training?",
     "description": "Attendance is easy to count. Capability takes a more thoughtful look.",
     "index": true
   },
   {
-    "url": "/perspectives/automate-the-work-not-the-relationship/",
+    "url": "/insights/automate-the-work-not-the-relationship/",
+    "key": "article:automate-the-work-not-the-relationship",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/automate-the-work-not-the-relationship/",
+      "az": "/az/insights/automate-the-work-not-the-relationship/"
+    },
     "title": "Automate the work. Not the relationship.",
     "description": "Better preparation should make communication more human, not less accountable.",
     "index": true
   },
   {
-    "url": "/perspectives/when-not-to-automate/",
+    "url": "/insights/when-not-to-automate/",
+    "key": "article:when-not-to-automate",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/when-not-to-automate/",
+      "az": "/az/insights/when-not-to-automate/"
+    },
     "title": "Good AI advice includes knowing when not to automate.",
     "description": "Sometimes the next useful move is a clearer process, not another system.",
     "index": true
   },
   {
-    "url": "/perspectives/the-handoff-gap/",
+    "url": "/insights/the-handoff-gap/",
+    "key": "article:the-handoff-gap",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/the-handoff-gap/",
+      "az": "/az/insights/the-handoff-gap/"
+    },
     "title": "The handoff gap.",
     "description": "What happens after the answer is generated deserves as much attention as the answer.",
     "index": true
   },
   {
-    "url": "/resources/",
-    "title": "Field guides for practical AI work",
-    "description": "Free practical worksheets for AI pilots, opportunity selection and team readiness. Useful questions, no email gate.",
-    "index": true
-  },
-  {
-    "url": "/resources/ai-pilot-acceptance-checklist/",
+    "url": "/insights/guides/ai-pilot-acceptance-checklist/",
+    "key": "guide:ai-pilot-acceptance-checklist",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/guides/ai-pilot-acceptance-checklist/",
+      "az": "/az/insights/guides/ai-pilot-acceptance-checklist/"
+    },
     "title": "The AI Pilot Acceptance Checklist",
     "description": "Six practical checks to make ownership, quality and the next decision explicit.",
     "index": true
   },
   {
-    "url": "/resources/ai-opportunity-canvas/",
+    "url": "/insights/guides/ai-opportunity-canvas/",
+    "key": "guide:ai-opportunity-canvas",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/guides/ai-opportunity-canvas/",
+      "az": "/az/insights/guides/ai-opportunity-canvas/"
+    },
     "title": "The AI Opportunity Canvas",
     "description": "A one-workflow canvas for choosing a useful, bounded next step.",
     "index": true
   },
   {
-    "url": "/resources/team-ai-readiness/",
+    "url": "/insights/guides/team-ai-readiness/",
+    "key": "guide:team-ai-readiness",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/guides/team-ai-readiness/",
+      "az": "/az/insights/guides/team-ai-readiness/"
+    },
     "title": "The Team AI Readiness Guide",
     "description": "Understand the team’s starting point without reducing people to an AI score.",
     "index": true
   },
   {
-    "url": "/for/professional-services/",
-    "title": "AI capability for professional services",
-    "description": "Practical AI education for firms whose work depends on judgement, quality and client trust.",
-    "index": true
-  },
-  {
-    "url": "/for/sales-teams/",
-    "title": "AI capability for sales & client teams",
-    "description": "Help client-facing teams use AI for the work around a conversation, without losing the human relationship.",
-    "index": true
-  },
-  {
-    "url": "/for/operations/",
-    "title": "AI capability for operations teams",
-    "description": "Explore AI at the level where it has to earn its place: the actual workflow.",
-    "index": true
-  },
-  {
-    "url": "/for/learning-and-development/",
-    "title": "AI capability for learning & development",
-    "description": "Role-specific AI education that connects a session to observable capability at work.",
-    "index": true
-  },
-  {
     "url": "/contact/",
-    "title": "Begin a conversation",
-    "description": "Tell Amir about your team, the work and the change you have in mind. Begin a conversation about practical AI education and advisory.",
+    "key": "contact",
+    "locale": "en",
+    "alternates": {
+      "en": "/contact/",
+      "az": "/az/contact/"
+    },
+    "title": "Book a diagnostic call",
+    "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.",
     "index": true
-  },
-  {
-    "url": "/start/team-ai-training/",
-    "title": "Practical AI training for your team",
-    "description": "Build shared capability with relevant learning, applied practice and a team playbook.",
-    "index": false
-  },
-  {
-    "url": "/start/leadership-briefing/",
-    "title": "A clearer leadership decision about AI",
-    "description": "A focused briefing built around your organisation and a useful next decision.",
-    "index": false
-  },
-  {
-    "url": "/start/pilot-review/",
-    "title": "What happens after your AI pilot?",
-    "description": "Review ownership, quality and handoffs before expanding an AI pilot.",
-    "index": false
   },
   {
     "url": "/privacy/",
+    "key": "legal:privacy",
+    "locale": "en",
+    "alternates": {
+      "en": "/privacy/",
+      "az": "/az/privacy/"
+    },
     "title": "Privacy",
-    "description": "Privacy: the practical details of the Enamplify website.",
+    "description": "How the Enamplify website handles the information you share, in plain English.",
     "index": true
   },
   {
     "url": "/cookies/",
+    "key": "legal:cookies",
+    "locale": "en",
+    "alternates": {
+      "en": "/cookies/",
+      "az": "/az/cookies/"
+    },
     "title": "Cookies",
-    "description": "Cookies: the practical details of the Enamplify website.",
+    "description": "Enamplify sets no advertising or analytics cookies. What the website stores, and what it does not.",
     "index": true
   },
   {
     "url": "/terms/",
+    "key": "legal:terms",
+    "locale": "en",
+    "alternates": {
+      "en": "/terms/",
+      "az": "/az/terms/"
+    },
     "title": "Terms",
-    "description": "Terms: the practical details of the Enamplify website.",
+    "description": "The terms that apply to using the Enamplify website and its free field guides.",
     "index": true
   },
   {
     "url": "/accessibility/",
+    "key": "legal:accessibility",
+    "locale": "en",
+    "alternates": {
+      "en": "/accessibility/",
+      "az": "/az/accessibility/"
+    },
     "title": "Accessibility",
-    "description": "Accessibility: the practical details of the Enamplify website.",
+    "description": "How the Enamplify website is built to be usable by as many people as possible, and how to report a problem.",
     "index": true
-  },
-  {
-    "url": "/credits/",
-    "title": "Credits",
-    "description": "Credits: the practical details of the Enamplify website.",
-    "index": true
-  },
-  {
-    "url": "/thank-you/",
-    "title": "A good next step",
-    "description": "Continue exploring Enamplify after your conversation.",
-    "index": false
   },
   {
     "url": "/404/",
-    "title": "Page not found",
-    "description": "Let’s get you back to something useful.",
+    "key": "notFound",
+    "locale": "en",
+    "alternates": {
+      "en": "/",
+      "az": "/az/"
+    },
+    "title": "Page not found · Səhifə tapılmadı",
+    "description": "This page has moved. Find your way back to Enamplify. Bu səhifənin ünvanı dəyişib. Ana səhifədən davam edin.",
     "index": false
+  },
+  {
+    "url": "/az/",
+    "key": "home",
+    "locale": "az",
+    "alternates": {
+      "en": "/",
+      "az": "/az/"
+    },
+    "title": "Enamplify · Orta ölçülü şirkətlərdə süni intellekt bacarıqları",
+    "description": "Orta ölçülü təşkilatlara süni intellekti əməkdaşlarının gündəlik işinin bir hissəsinə çevirməyə kömək edirik: daha çox iş, daxili bacarıq, tam nəzarət.",
+    "index": true
+  },
+  {
+    "url": "/az/approach/",
+    "key": "approach",
+    "locale": "az",
+    "alternates": {
+      "en": "/approach/",
+      "az": "/az/approach/"
+    },
+    "title": "Süni intellekt bacarıqları: diaqnoz, sübut, genişləndirmə",
+    "description": "Kiçikdən başlayın, sübut edin, genişləndirin. Komandalar yoxlama və idarəetmə ilə, məlumatları lazımi yerdə saxlayaraq öz süni intellekt iş axınlarını qurur.",
+    "index": true
+  },
+  {
+    "url": "/az/work/",
+    "key": "work",
+    "locale": "az",
+    "alternates": {
+      "en": "/work/",
+      "az": "/az/work/"
+    },
+    "title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız",
+    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri, Google hakatonunda qələbə və öz məhsullarımız.",
+    "index": true
+  },
+  {
+    "url": "/az/about/",
+    "key": "about",
+    "locale": "az",
+    "alternates": {
+      "en": "/about/",
+      "az": "/az/about/"
+    },
+    "title": "Təsisçinin rəhbərlik etdiyi şirkət, London və Bakı",
+    "description": "Enamplify London və Bakıda təsisçinin rəhbərlik etdiyi süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Amir Gulubayli və iş prinsiplərimiz.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/",
+    "key": "insights",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/",
+      "az": "/az/insights/"
+    },
+    "title": "Rəhbərlər üçün süni intellektin tətbiqinə dair təhlillər",
+    "description": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik esselər və pulsuz bələdçilər: pilot layihələr, ölçmə və idarəetmə.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/beyond-the-ai-demo/",
+    "key": "article:beyond-the-ai-demo",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/beyond-the-ai-demo/",
+      "az": "/az/insights/beyond-the-ai-demo/"
+    },
+    "title": "Süni intellekt demosu hələ gündəlik iş axını deyil.",
+    "description": "Faydalı cavab sahiblik, yoxlama, giriş və sonrakı addım məsələlərini həll etmir.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/better-briefs-better-ai-work/",
+    "key": "article:better-briefs-better-ai-work",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/better-briefs-better-ai-work/",
+      "az": "/az/insights/better-briefs-better-ai-work/"
+    },
+    "title": "Daha yaxşı brifdən başlayın. Daha yaxşı promptdan yox.",
+    "description": "Ən faydalı kontekst çox vaxt heç kimin yazmağı ağlına gətirmədiyi hissədir.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/what-to-measure-after-ai-training/",
+    "key": "article:what-to-measure-after-ai-training",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/what-to-measure-after-ai-training/",
+      "az": "/az/insights/what-to-measure-after-ai-training/"
+    },
+    "title": "Süni intellekt təlimindən sonra nə dəyişməlidir?",
+    "description": "İştirakı saymaq asandır. Bacarığı qiymətləndirmək daha diqqətli baxış tələb edir.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/automate-the-work-not-the-relationship/",
+    "key": "article:automate-the-work-not-the-relationship",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/automate-the-work-not-the-relationship/",
+      "az": "/az/insights/automate-the-work-not-the-relationship/"
+    },
+    "title": "İşi avtomatlaşdırın. Münasibətləri yox.",
+    "description": "Daha yaxşı hazırlıq ünsiyyəti daha insani etməlidir, daha az məsuliyyətli yox.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/when-not-to-automate/",
+    "key": "article:when-not-to-automate",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/when-not-to-automate/",
+      "az": "/az/insights/when-not-to-automate/"
+    },
+    "title": "Yaxşı məsləhət nəyi avtomatlaşdırmamağı da bilir.",
+    "description": "Bəzən növbəti faydalı addım yeni sistem deyil, daha aydın prosesdir.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/the-handoff-gap/",
+    "key": "article:the-handoff-gap",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/the-handoff-gap/",
+      "az": "/az/insights/the-handoff-gap/"
+    },
+    "title": "Ötürmə boşluğu.",
+    "description": "Cavab yarandıqdan sonra baş verənlər cavabın özü qədər diqqətə layiqdir.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/guides/ai-pilot-acceptance-checklist/",
+    "key": "guide:ai-pilot-acceptance-checklist",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/guides/ai-pilot-acceptance-checklist/",
+      "az": "/az/insights/guides/ai-pilot-acceptance-checklist/"
+    },
+    "title": "Süni intellekt pilot layihəsinin qəbul yoxlama siyahısı",
+    "description": "Sahibliyi, keyfiyyəti və növbəti qərarı aydınlaşdırmaq üçün altı praktik yoxlama.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/guides/ai-opportunity-canvas/",
+    "key": "guide:ai-opportunity-canvas",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/guides/ai-opportunity-canvas/",
+      "az": "/az/insights/guides/ai-opportunity-canvas/"
+    },
+    "title": "Süni intellekt imkanları kanvası",
+    "description": "Faydalı və sərhədləri bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/guides/team-ai-readiness/",
+    "key": "guide:team-ai-readiness",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/guides/team-ai-readiness/",
+      "az": "/az/insights/guides/team-ai-readiness/"
+    },
+    "title": "Komandanın süni intellektə hazırlıq bələdçisi",
+    "description": "İnsanları tək bir süni intellekt balı ilə qiymətləndirmədən komandanın başlanğıc nöqtəsini anlayın.",
+    "index": true
+  },
+  {
+    "url": "/az/contact/",
+    "key": "contact",
+    "locale": "az",
+    "alternates": {
+      "en": "/contact/",
+      "az": "/az/contact/"
+    },
+    "title": "Diaqnostik görüş təyin edin",
+    "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız, onun işi və süni intellekt haqqında söhbət.",
+    "index": true
+  },
+  {
+    "url": "/az/privacy/",
+    "key": "legal:privacy",
+    "locale": "az",
+    "alternates": {
+      "en": "/privacy/",
+      "az": "/az/privacy/"
+    },
+    "title": "Məxfilik",
+    "description": "Enamplify veb saytı paylaşdığınız məlumatla necə davranır, sadə dillə.",
+    "index": true
+  },
+  {
+    "url": "/az/cookies/",
+    "key": "legal:cookies",
+    "locale": "az",
+    "alternates": {
+      "en": "/cookies/",
+      "az": "/az/cookies/"
+    },
+    "title": "Kukilər",
+    "description": "Enamplify reklam və ya analitika kukiləri yerləşdirmir. Veb saytın nəyi saxladığı və nəyi saxlamadığı.",
+    "index": true
+  },
+  {
+    "url": "/az/terms/",
+    "key": "legal:terms",
+    "locale": "az",
+    "alternates": {
+      "en": "/terms/",
+      "az": "/az/terms/"
+    },
+    "title": "Şərtlər",
+    "description": "Enamplify veb saytından və onun pulsuz praktik bələdçilərindən istifadəyə tətbiq olunan şərtlər.",
+    "index": true
+  },
+  {
+    "url": "/az/accessibility/",
+    "key": "legal:accessibility",
+    "locale": "az",
+    "alternates": {
+      "en": "/accessibility/",
+      "az": "/az/accessibility/"
+    },
+    "title": "Əlçatanlıq",
+    "description": "Enamplify veb saytı mümkün qədər çox insanın istifadə edə bilməsi üçün necə qurulub və problem barədə necə xəbər vermək olar.",
+    "index": true
   }
 ]

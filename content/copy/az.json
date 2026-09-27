@@ -1,0 +1,309 @@
+{
+  "common": {
+    "skipLink": "Məzmuna keçin",
+    "homeLabel": "Enamplify ana səhifə",
+    "mainNav": "Əsas menyu",
+    "mobileNav": "Mobil menyu",
+    "noscriptNav": "JavaScript olmadan əsas menyu",
+    "menu": "Menyu",
+    "bookCall": "Görüş təyin edin",
+    "bookDiagnostic": "Diaqnostik görüş təyin edin",
+    "breadcrumb": "Naviqasiya zənciri",
+    "home": "Ana səhifə",
+    "language": "Dil",
+    "footerNav": "Alt menyu",
+    "footerPages": "Səhifələr",
+    "footerContact": "Əlaqə",
+    "linkedin": "Amir LinkedIn-də",
+    "feedLink": "Təhlillər lenti",
+    "legalNav": "Hüquqi məlumat",
+    "legalLinks": {"privacy": "Məxfilik", "cookies": "Kukilər", "terms": "Şərtlər", "accessibility": "Əlçatanlıq"},
+    "closeTitle": "Vaxtı çatanda, söhbətlə başlayın.",
+    "closeBody": "Komandanız və dəyişmək istədiyiniz iş haqqında otuz dəqiqəlik söhbət. Uyğun tərəfdaş olmasaq, bunu açıq deyəcəyik.",
+    "minRead": "{n} dəqiqəyə oxunur",
+    "fieldGuide": "Praktik bələdçi",
+    "exhibitLabel": "Qrafik {n} · {topic}.",
+    "exhibitSource": "Mənbə: {source}",
+    "lineSummary": "{label}: {start}: {first}; {end}: {last}",
+    "portraitAlt": "Amir Gulubayli, Enamplify-ın təsisçisi",
+    "portraitCaption": "Amir Gulubayli, təsisçi",
+    "photographyCredits": "Fotoşəkillər: {names}",
+    "ogImageAlt": "Enamplify. Satın aldığınız deyil, komandanızın qurduğu Sİ.",
+    "feedTitle": "Enamplify təhlilləri",
+    "feedDescription": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik düşüncələr.",
+    "wontTitle": "Etməyəcəyik",
+    "willTitle": "Edəcəyik",
+    "commitments": {
+      "wont": ["Sübut edə bilmədiyimiz faizlər vəd etmək.", "Sizi öz alətlərimizə bağlamaq.", "Məlumatlarınızı təsdiqləmədiyiniz yerə aparmaq.", "Bu işi əməkdaşlarınızı əvəz etmək kimi təqdim etmək."],
+      "will": ["Uğurun necə ölçüləcəyini işə başlamazdan əvvəl razılaşdırmaq.", "Sizə komandanızın bizsiz idarə edə biləcəyi bir sistem təhvil vermək."]
+    },
+    "stages": [
+      {"n": "01", "name": "Diaqnostika", "time": "2–3 həftə",
+        "short": "Komandanızın vaxtının hara getdiyini müəyyənləşdirir və ilk növbədə görülməyə dəyən bir neçə iş axınını seçirik. Davam etsəniz, ödəniş pilot layihənin dəyərindən çıxılır.",
+        "what": "İşi görən insanlarla danışır, vaxtlarının hara getdiyini xəritələyir və məlumatlarınızın, sistemlərinizin və daxili qaydalarınızın nəyə imkan verdiyini yoxlayırıq.",
+        "get": ["Bu gün vaxtın hara getdiyinə dair başlanğıc göstəricilər", "Dəyər və riskə görə sıralanmış üç-beş iş axını", "Göstəriciləri əvvəlcədən razılaşdırılmış pilot layihə planı"],
+        "note": "Sabit ödəniş; davam etsəniz, pilot layihənin dəyərindən çıxılır."},
+      {"n": "02", "name": "Sübut", "time": "8–12 həftə",
+        "short": "Bir və ya iki komanda bizimlə real iş axınları qurur, nəticələr isə əvvəlcədən razılaşdırılmış göstəricilərlə ölçülür.",
+        "what": "Bir və ya iki komandadan 10–15 nəfər təşkilatınız üçün qurulmuş idarəetmə qaydaları müəyyən edilmiş mühitdə bizimlə real iş axınları qurur.",
+        "get": ["Nümayiş üçün deyil, gündəlik istifadədə olan iş axınları", "Növbətiləri özləri qura bilən insanlar", "Başlanğıc göstəricilərlə müqayisədə ölçülmüş nəticələr"],
+        "note": "Əhatə dairəsi və qiyməti diaqnostikadan sonra yazılı təklifdə müəyyənləşdirilir."},
+      {"n": "03", "name": "Genişləndirmə", "time": "Davamlı",
+        "short": "Öz şərtlərinizlə genişləndirin: idarəetmə, yeni istifadə halları və nəyin dəyişdiyinə dair rüblük hesabatla.",
+        "what": "Seçdiyiniz tempdə daha çox komandaya genişləndirin. Biz mühitin idarəetməsini qoruyur, yeni iş axını şablonları əlavə edir və hər rüb nəyin dəyişdiyini hesabatla təqdim edirik.",
+        "get": ["Komandanıza məxsus, getdikcə böyüyən iş axınları kitabxanası", "İstifadə ilə ayaqlaşan idarəetmə", "Rəhbərlik üçün rüblük təsir hesabatı"],
+        "note": "Artıra, azalda və ya dayandıra biləcəyiniz abunə."}
+    ],
+    "trackRecord": {
+      "topic": "Görülmüş işlər",
+      "title": "Bu gün göstərə biləcəyimiz nəticələr.",
+      "caption": "Görülmüş işlər",
+      "columns": ["Sahə", "Sübut"],
+      "rows": [
+        ["Tanınma", "Google hakatonunun qalibləri, $10,000 mükafat qazanmış layihə ilə"],
+        ["Təcrübə", "Proqram təminatı, avtomatlaşdırma və Sİ sistemlərinin qurulmasında 10+ il"],
+        ["Öz məhsullarımız", "grademy və pripitch, hər ikisi bazardadır"],
+        ["Müştəri sistemləri", "Klinik sınaqların idarəsindən maliyyə uzlaşdırmasına qədər səkkiz növ sistem təhvil verilib"]
+      ],
+      "source": "Enamplify və RAG Medium-un icra təcrübəsi. Müştəri adları açıqlanmır."
+    }
+  },
+  "routes": {
+    "home": {"title": "Enamplify · Orta ölçülü şirkətlərdə süni intellekt bacarıqları"},
+    "approach": {"title": "Süni intellekt bacarıqları: diaqnoz, sübut, genişləndirmə", "description": "Kiçikdən başlayın, sübut edin, genişləndirin. Komandalar yoxlama və idarəetmə ilə, məlumatları lazımi yerdə saxlayaraq öz süni intellekt iş axınlarını qurur.", "crumb": "Yanaşma"},
+    "work": {"title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız", "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri, Google hakatonunda qələbə və öz məhsullarımız.", "crumb": "İşlərimiz"},
+    "about": {"title": "Təsisçinin rəhbərlik etdiyi şirkət, London və Bakı", "description": "Enamplify London və Bakıda təsisçinin rəhbərlik etdiyi süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Amir Gulubayli və iş prinsiplərimiz.", "crumb": "Haqqımızda"},
+    "insights": {"title": "Rəhbərlər üçün süni intellektin tətbiqinə dair təhlillər", "description": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik esselər və pulsuz bələdçilər: pilot layihələr, ölçmə və idarəetmə.", "crumb": "Təhlillər"},
+    "contact": {"title": "Diaqnostik görüş təyin edin", "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız, onun işi və süni intellekt haqqında söhbət.", "crumb": "Görüş təyin edin"},
+    "notFound": {"title": "Səhifə tapılmadı", "description": "Bu səhifənin ünvanı dəyişib. Ana səhifədən davam edin."}
+  },
+  "home": {
+    "heroTitle": "Komandanızın qurduğu Sİ.",
+    "heroTitleAlt": "Satın aldığınız Sİ deyil.",
+    "lede": "Enamplify orta ölçülü təşkilatlara süni intellekti (Sİ) öz əməkdaşlarının gündəlik işinin bir hissəsinə çevirməyə kömək edir. Hər həftə daha çox iş görülür, bacarıq şirkət daxilində qalır və hər iş axını ona cavabdeh olan insanlar üçün görünəndir.",
+    "howWeWork": "Necə işləyirik",
+    "note": "Təsisçi ilə 30 dəqiqəlik söhbət. Satış təqdimatı olmadan.",
+    "week": {
+      "topic": "Həftə",
+      "title": "Əməliyyat komandasının iş həftəsinin yarısı Sİ-nin öz üzərinə götürə biləcəyi işlərə sərf olunur.",
+      "segments": ["Peşəkar qərarlar və müştəri işi", "Təkrarlanan hesabatlar", "Məlumat axtarışı", "İş ötürmələri və xatırlatmalar", "Digər"],
+      "note": "Sİ iş axınları adətən vurğulanmış hissələrdən başlayır: hesabatlar, məlumat axtarışı və iş ötürmələri.",
+      "source": "İzah üçün şərti nümunə. Diaqnostika onu sizin öz rəqəmlərinizlə əvəz edir."
+    },
+    "situationTitle": "Əməkdaşlarınız artıq Sİ-dən istifadə edir. Əsas sual budur: bu, təşkilata fayda verirmi?",
+    "situation": [
+      ["Alətlər alındı. İş dəyişmədi.", "İşin necə görüldüyünü dəyişmək üçün heç kimə nə icazə, nə də üsul verilmədikdə lisenziyalar istifadəsiz qalır."],
+      ["Real istifadə gözdən uzaqdadır.", "Təsdiqlənmiş yol daha yavaş olduğu üçün insanlar işi şəxsi hesablarına köçürürlər. Rəhbərlik bunu görmür, deməli, yaxşılaşdıra da bilmir."],
+      ["Pilot layihələr ikinci ayda dayanır.", "Demo işlədi. Amma sahiblik, yoxlama və iş ötürmələri heç vaxt planlaşdırılmamışdı."]
+    ],
+    "marked": "Sİ layihələrinin əksəriyyəti texnologiya səbəbindən uğursuzluğa düçar olmur. Onlar sonradan işə kimin cavabdeh olacağı bəlli olmadığı üçün alınmır.",
+    "outcomesTitle": "Rəhbərliyə təqdim edə biləcəyiniz üç nəticə.",
+    "moreDone": {
+      "topic": "Daha çox iş",
+      "title": "Təkrarlanan inzibati iş həftədə 14 saatdan 6 saata enir.",
+      "unit": "saat",
+      "before": "Əvvəl",
+      "after": "Sonra",
+      "note": "Vaxt heç kimin könüllü seçmədiyi işlərdən azad olur: hesabatlar, axtarış, məlumatın təkrar daxil edilməsi, xatırlatmalar.",
+      "source": "Şərti nümunə. Bir vəzifə, həftəlik."
+    },
+    "ownedInHouse": {
+      "topic": "Sizin komandanızda",
+      "title": "12-ci aya qədər komandanız iş axınlarının əksəriyyətini özü idarə edir.",
+      "start": "1-ci ay",
+      "end": "12-ci ay",
+      "team": "Komandanızın dəstəklədiyi iş axınları",
+      "teamShort": "Komandanız",
+      "us": "Enamplify-ın dəstəklədiyi iş axınları",
+      "usShort": "Enamplify",
+      "note": "Əməkdaşlarınız öz iş axınlarını qurmağı və idarə etməyi öyrənir. Biz geri çəkiləndə bacarıq sizdə qalır.",
+      "source": "Şərti nümunə."
+    },
+    "inControl": {
+      "topic": "Nəzarət sizdədir",
+      "title": "Hər iş axınının məsul şəxsi, yoxlaması və sərhədi var.",
+      "caption": "İş axınları reyestri nümunəsi",
+      "columns": ["İş axını", "Məsul", "Yoxlanılıb", "Məlumat harada qalır"],
+      "rows": [
+        ["Rəhbərlik üçün aylıq hesabat", "Maliyyə", "Bəli", "Maliyyə sisteminiz"],
+        ["Müştəri müraciətlərinin çeşidlənməsi", "Əməliyyatlar", "Bəli", "CRM sisteminiz"],
+        ["Müqavilənin ilkin oxunuşu", "Hüquq", "Bəli", "Sənəd bazanız"]
+      ],
+      "note": "Hər iş axını görünəndir, istifadəyə verilməzdən əvvəl yoxlanılır və sizin müəyyən etdiyiniz hədlər daxilində işləyir.",
+      "source": "Reyestr nümunəsi."
+    },
+    "startTitle": "Kiçikdən başlayın. Sübut edin. Sonra qərar verin.",
+    "moreApproach": "Yanaşmamız haqqında ətraflı",
+    "commitTitle": "Nə edəcəyik və nə etməyəcəyik.",
+    "recordTitle": "Real sistemlər təhvil vermiş komanda.",
+    "seeWork": "İşlərimizə baxın",
+    "founderTitle": "Təsisçinin rəhbərliyi ilə, London və Bakı arasında.",
+    "quote": "“Sİ-dən real dəyər əldə edən təşkilatlar ən böyük büdcəsi olanlar deyil. Əməkdaşları ondan necə istifadə etməyi bilən təşkilatlardır.”",
+    "quoteBy": "Amir Gulubayli, təsisçi",
+    "aboutLink": "Enamplify haqqında",
+    "insightsTitle": "Son yazılar.",
+    "allInsights": "Bütün təhlillər"
+  },
+  "approach": {
+    "title": "Kiçikdən başlayın. Sübut edin. Sonra genişləndirin.",
+    "lede": "Hər əməkdaşlıq kiçik, dəqiq müəyyən edilmiş bir işlə və aydın qərar nöqtəsi ilə başlayır. Yalnız sübutlar buna dəydiyini göstərəndə irəli gedirsiniz.",
+    "stagesLabel": "Mərhələlər",
+    "whatYouGet": "Nə əldə edirsiniz",
+    "controlTitle": "“Nəzarət sizdədir” praktikada nə deməkdir.",
+    "control": [
+      ["Sizin girişiniz, sizin rollarınız", "İnsanlar şirkət hesabları ilə daxil olur. Kimin qura, təsdiqləyə və istifadə edə biləcəyini rollar müəyyən edir."],
+      ["İşə düşməzdən əvvəl yoxlanılır", "Heç bir iş axını adı bəlli məsul şəxs və yoxlama mərhələsi olmadan istifadəyə verilmir."],
+      ["Tam qeydiyyat", "Hər icra qeydə alınır: nəyin, nə vaxt və kimin səlahiyyəti ilə baş verdiyini görə bilərsiniz."],
+      ["Məlumat həssaslığa görə yönləndirilir", "Həssas məlumat yalnız sizin mühitinizdə işləyən modellərə göndərilir. Heç kim bu qərarı əl ilə verməli deyil."],
+      ["Görünən xərclər", "Hər komanda üçün istifadə limitləri və Sİ-nin sizə neçəyə başa gəldiyinin aydın mənzərəsi."],
+      ["Hostinq sizin seçdiyiniz yerdə", "Öz infrastrukturunuzda və ya Böyük Britaniyada, yaxud Avropa İttifaqında yerləşən serverlərdə."]
+    ],
+    "leavesTitle": "Komandanızda nə qalır.",
+    "leaves": ["Əməkdaşlarınızın hər həftə istifadə etdiyi iş axınları", "Növbətiləri qura bilən insanlar", "Təşkilatınızın Sİ-dən necə istifadə etdiyinə dair iş qaydaları", "Ölçülmüş başlanğıc göstəricilər və nəyin dəyişdiyinə dair sübutlar"],
+    "faqTitle": "Rəhbərlərin verdiyi suallar."
+  },
+  "work": {
+    "title": "Qurduğumuz sistemlər. İdarə etdiyimiz məhsullar.",
+    "lede": "Enamplify-dan əvvəl RAG Medium adı altında müştərilər üçün Sİ sistemləri qurmuş, $10,000 mükafat qazanan layihə ilə Google hakatonunda qalib gəlmişik. İndi eyni insanlar komandanıza öz sistemlərini qurmağa kömək edir.",
+    "deliveredLabel": "Təhvil verilmiş sistemlər",
+    "delivered": {
+      "topic": "Təhvil verilib",
+      "title": "Səkkiz növ müştəri sistemi təhvil verilib.",
+      "caption": "Təhvil verilmiş müştəri sistemləri",
+      "columns": ["Sistem", "Nə edir"],
+      "source": "RAG Medium və Enamplify-ın icra təcrübəsi. Müştəri adları açıqlanmır; referanslar görüş zamanı təqdim oluna bilər."
+    },
+    "productsTitle": "Qurduğumuz və idarə etdiyimiz məhsullar."
+  },
+  "about": {
+    "title": "Təsisçinin rəhbərliyi ilə, London və Bakı arasında.",
+    "bio": [
+      "Amir rəhbər komandalara Sİ-nin harada ölçülə bilən dəyər yarada biləcəyi, iş axınlarını necə dəyişməli olduğu və insanların onu uğurla mənimsəməsi üçün nəyin lazım olduğu barədə məsləhət verir. Onun işi turizm, marketinq, təhsil, maliyyə və klinik texnologiyalar sahələrində Sİ strategiyası, əməliyyat modelinin qurulması, tətbiq və bacarıqların inkişafını əhatə edir.",
+      "Enamplify-dan əvvəl Amir RAG Medium adı altında müştərilər üçün aktiv satış (outbound) sistemlərindən klinik sınaqların idarə olunması proqramına qədər Sİ sistemləri qurub, həmçinin özünün iki Sİ məhsulunu, grademy və pripitch-i bazara çıxarıb. Onun komandası $10,000 mükafat qazanan layihə ilə Google hakatonunda qalib gəlib."
+    ],
+    "whyTitle": "Enamplify nə üçün yaradılıb.",
+    "why": [
+      "Təşkilatların çoxuna yeni bir Sİ aləti lazım deyil. Onlara lazım olan, öz əməkdaşlarının mövcud alətlərdən təhlükəsiz şəkildə, həqiqətən vacib olan işlərdə istifadə edə bilməsidir.",
+      "Enamplify bunu adi hala çevirmək üçün yaradılıb: satın aldığınız deyil, komandanızın qurduğu Sİ."
+    ],
+    "marketsTitle": "İki bazar, bir standart.",
+    "markets": "Londondan Böyük Britaniya və Avropa üzrə, Bakıdan isə Azərbaycan üzrə işləyirik. Hər ikisində standart eynidir: məlumatlarınız sizin qərar verdiyiniz yerdə, bacarıq isə əməkdaşlarınızda qalır.",
+    "howTitle": "Necə işləyirik."
+  },
+  "insights": {
+    "title": "Təhlillər.",
+    "lede": "Sİ-ni işlək etməli olan insanlar üçün: tətbiq, pilot layihələr, ölçmə və idarəetmə haqqında praktik düşüncələr.",
+    "essays": "Esselər",
+    "guides": "Praktik bələdçilər",
+    "guidesLede": "Komandanızla istifadə üçün pulsuz iş vərəqləri. E-poçt ünvanı tələb olunmur."
+  },
+  "article": {
+    "by": "Müəllif:",
+    "guideTitle": "Praktik bələdçi: {name}",
+    "openGuide": "Bələdçini açın",
+    "copyLink": "Linki kopyalayın",
+    "keepReading": "Oxumağa davam edin."
+  },
+  "guide": {
+    "download": "İş vərəqini yükləyin (ingiliscə)",
+    "print": "Bələdçini çap edin",
+    "meta": "Praktik bələdçi · {time}. Komandanızla pulsuz istifadə edin. Kimlərlə müzakirə edin: {audience}",
+    "notesNote": "Qeydlər bu səhifədə qalır. Onlar göndərilmir və saxlanılmır.",
+    "notesFor": "“{title}” üçün qeydlər",
+    "nextDecision": "Növbəti qərar",
+    "whatNext": "Bundan sonra nə olur?",
+    "printNotes": "Qeydlərinizlə birlikdə çap edin",
+    "clearNotes": "Qeydlərimi silin",
+    "closeTitle": "Kağız üzərində faydalıdır. Praktikada daha da faydalıdır.",
+    "closeBody": "Doldurulmuş bələdçini komandanızın işi haqqında söhbətə gətirin."
+  },
+  "contact": {
+    "title": "Diaqnostik görüş təyin edin.",
+    "lede": "Təsisçi Amir ilə komandanız və dəyişmək istədiyiniz iş haqqında otuz dəqiqə. Satış təqdimatı da, avtomatik ardıcıl e-poçt göndərişləri də yoxdur.",
+    "coverTitle": "Nələri müzakirə edəcəyik",
+    "cover": ["Komandanızın vaxtı bu gün hara gedir", "Sİ-dən artıq harada istifadə olunur, rəsmi və ya qeyri-rəsmi", "Diaqnostikanın dəyib-dəyməyəcəyi və nələrə baxacağı"],
+    "afterTitle": "Sonra nə olur",
+    "after": "Uyğunluq olarsa, diaqnostika üçün qısa yazılı təklif alırsınız. Olmazsa, bunu açıq deyəcək və sizi faydalı bir ünvana yönləndirəcəyik.",
+    "chooseTime": "Vaxt seçin",
+    "calendarNote": "Görüş təqvimimiz yeni vərəqdə açılır.",
+    "formTitle": "Yazmağı üstün tutursunuz?",
+    "name": "Adınız",
+    "email": "İş e-poçtu",
+    "organisation": "Təşkilat",
+    "interest": "Nə haqqında danışmaq istərdiniz?",
+    "interests": ["Hələ əmin deyiləm", "Diaqnostik görüş", "Komandanın Sİ bacarıqları", "Fərdi Sİ sistemi", "Başqa mövzu"],
+    "message": "İş haqqında bir az məlumat",
+    "honeypot": "Bu sahəni boş saxlayın",
+    "confidential": "Zəhmət olmasa, məxfi məlumat daxil etməyin. {link} ilə tanış olun.",
+    "privacyLink": "Məxfilik qeydimiz",
+    "submitServer": "Mesajınızı göndərin",
+    "submitEmail": "Mesajınızı hazırlayın",
+    "noteServer": "Mesajınız birbaşa Amirə çatır. Heç bir abunəyə yazılmırsınız.",
+    "noteEmail": "Bu, e-poçt proqramınızda mesaj hazırlayır. Siz göndərməyi seçənə qədər heç nə göndərilmir.",
+    "noscript": "Zəhmət olmasa, {email} ünvanına yazın."
+  },
+  "legal": {
+    "lastUpdated": "Son yenilənmə: {date}.",
+    "pages": {
+      "privacy": {"title": "Məxfilik", "description": "Enamplify veb saytı paylaşdığınız məlumatla necə davranır, sadə dillə.", "lede": "Bu veb sayt nə toplayır, nə üçün və bizimlə necə əlaqə saxlamaq olar.", "sections": [
+        ["Biz kimik", "Enamplify Amir Gulubayli tərəfindən idarə olunan süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Məlumatlarınızla bağlı istənilən sual üçün {email} ünvanına yazın."],
+        ["Müraciətiniz", {"server": "Əlaqə forması məlumatlarınızı və mesajınızı Resend vasitəsilə poçt qutumuza göndərir, Cloudflare Turnstile isə formanı avtomatlaşdırılmış sui-istifadəyə qarşı yoxlayır. Müraciətinizdən yalnız sizə cavab vermək üçün istifadə edirik.", "email": "Əlaqə forması sizin öz e-poçt proqramınızda mesaj hazırlayır. Yazdıqlarınızın heç biri Enamplify serverinə göndərilmir; mesajı göndərməyi seçdiyiniz zaman onu e-poçt provayderiniz emal edir."}],
+        ["Görüş təyini", "Görüş təyini planlaşdırma provayderimizi yeni vərəqdə açır. Orada daxil etdiyiniz məlumatlar həmin provayderin məxfilik siyasətinə uyğun emal olunur və bizim tərəfimizdən yalnız görüşü keçirmək üçün istifadə edilir."],
+        ["Bələdçi qeydləri", "Praktik bələdçiyə yazılan qeydlər səhifədə qalır. Onlar bizə göndərilmir və saxlanılmır."],
+        ["Texniki məlumat", "Hostinq provayderimiz saytı təqdim etmək və qorumaq üçün IP ünvanları kimi texniki məlumatları emal edir. Biz reklam izləyicilərindən və ya marketinq analitikasından istifadə etmirik."],
+        ["Şriftlər və şəkillər", "Şriftlər və şəkillər bu veb saytın özündən yüklənir."],
+        ["Hüquqlarınız", "{email} ünvanına yazaraq haqqınızda hansı məlumatları saxladığımızı soruşa, onların düzəldilməsini və ya silinməsini xahiş edə bilərsiniz."]]},
+      "cookies": {"title": "Kukilər", "description": "Enamplify reklam və ya analitika kukiləri yerləşdirmir. Veb saytın nəyi saxladığı və nəyi saxlamadığı.", "lede": "Qısa cavab: heç bir kuki yerləşdirmirik.", "sections": [
+        ["Bizdən kuki yoxdur", "Bu veb sayt reklam, analitika və ya tənzimləmə kukiləri yerləşdirmir və sizi izləmək üçün brauzer yaddaşından istifadə etmir."],
+        ["Digər xidmətlər", "Görüş təyini provayderimiz və LinkedIn onların saytlarına daxil olduğunuz zaman öz kukilərini yerləşdirir. Orada onların siyasətləri tətbiq olunur."],
+        ["Bu dəyişərsə", "Nə vaxtsa analitika və ya daxil edilmiş xidmətlər əlavə etsək, bu səhifəni yeniləyəcək və qanunun tələb etdiyi hallarda onlar işə düşməzdən əvvəl razılığınızı istəyəcəyik."]]},
+      "terms": {"title": "Şərtlər", "description": "Enamplify veb saytından və onun pulsuz praktik bələdçilərindən istifadəyə tətbiq olunan şərtlər.", "lede": "Bu veb saytın əsas qaydaları.", "sections": [
+        ["Ümumi məlumat", "Bu veb sayt Enamplify və onun iş üsulu haqqındadır. Bu, ümumi məlumatdır, müəyyən xidmət göstərmək təklifi deyil."],
+        ["Əməkdaşlıqlar", "Hər əməkdaşlıq əhatə dairəsini, ödənişləri və öhdəlikləri müəyyən edən ayrıca yazılı müqavilə ilə tənzimlənir. Müraciət və ya görüş belə müqavilə yaratmır."],
+        ["Peşəkar məsləhət deyil", "Məqalələr və praktik bələdçilər maarifləndirici xarakter daşıyır. Onlar hüquqi, tənzimləyici və ya maliyyə məsləhəti deyil."],
+        ["Nəticə zəmanəti yoxdur", "Şərti kimi qeyd olunan nümunələr və qrafiklər bir qanunauyğunluğu izah edir; onlar nəticə vədi deyil."],
+        ["Praktik bələdçilərdən istifadə", "Praktik bələdçilərdən təşkilatınız daxilində istifadə edə və onlara keçidləri paylaşa bilərsiniz. Zəhmət olmasa, Enamplify istinadını saxlayın."],
+        ["Suallar", "{email} ünvanına yazın."]]},
+      "accessibility": {"title": "Əlçatanlıq", "description": "Enamplify veb saytı mümkün qədər çox insanın istifadə edə bilməsi üçün necə qurulub və problem barədə necə xəbər vermək olar.", "lede": "Bütün saytda WCAG 2.2 AA tələblərinə cavab verməyi hədəfləyirik.", "sections": [
+        ["Sayt necə qurulub", "Səhifələrdə semantik HTML, görünən fokus vəziyyətləri, kifayət qədər rəng kontrastı və məzmuna keçid linki istifadə olunur. Hər səhifə JavaScript olmadan işləyir; cihazınızda hərəkətin azaldılmasını seçsəniz, animasiya söndürülür."],
+        ["Qrafiklər", "Hər qrafikin mətn ekvivalenti var: oxunaqlı izah, cədvəl və ya ekran oxuyucuları üçün təsvir."],
+        ["Məlum məhdudiyyətlər", "Görüş təqvimini üçüncü tərəf təqdim edir və o, eyni standarta cavab verməyə bilər. Çətinlik yaranarsa, bizə yazın; vaxtı birbaşa razılaşdıraq."],
+        ["Problem barədə xəbər verin", "{email} ünvanına yazın, beş iş günü ərzində cavab verəcəyik."]]}
+    }
+  },
+  "notFound": {
+    "title": "Bu səhifə köçürülüb və ya heç vaxt mövcud olmayıb.",
+    "lede": "Bu yaxınlarda saytı yenidən qurduq. Burada olanların çoxu indi Yanaşma və ya Təhlillər bölmələrindədir.",
+    "back": "Ana səhifəyə qayıdın",
+    "browse": "Təhlillərə baxın"
+  },
+  "client": {
+    "menu": "Menyu",
+    "close": "Bağlayın",
+    "copied": "Kopyalandı",
+    "copyFallback": "Bu mətni seçib kopyalayın",
+    "printPlaceholder": "________________________________________________________________",
+    "clearConfirm": "Bu səhifədəki qeydlər silinsin? Bu əməliyyatı geri qaytarmaq mümkün deyil.",
+    "errName": "Zəhmət olmasa, adınızı yazın.",
+    "errEmail": "Zəhmət olmasa, düzgün e-poçt ünvanı yazın.",
+    "errMessage": "Zəhmət olmasa, iş haqqında ən azı 20 simvol yazın.",
+    "errHeading": "Zəhmət olmasa, aşağıdakı xanaları yoxlayın:",
+    "mailSubject": "Enamplify müraciəti · {interest}",
+    "mailGreeting": "Hörmətli Amir,",
+    "mailName": "Ad",
+    "mailEmail": "E-poçt",
+    "mailOrganisation": "Təşkilat",
+    "mailInterest": "Maraq dairəsi",
+    "mailNotSupplied": "Qeyd olunmayıb",
+    "readyTitle": "Mesajınız hazırdır. Nə vaxt göndərəcəyinizi siz seçirsiniz.",
+    "readyBody": "Mesajı e-poçt proqramınızda açın və ya üstünlük verdiyiniz e-poçt xidmətinə köçürün. Bu veb sayt onu göndərməyib.",
+    "openMail": "E-poçt proqramını açın",
+    "copyMessage": "Mesajı kopyalayın",
+    "sending": "Müraciətiniz göndərilir…",
+    "sentTitle": "Müraciətiniz göndərildi.",
+    "sentBody": "Ətraflı məlumat üçün təşəkkür edirik. Amir mesajınızı nəzərdən keçirib şəxsən cavab verəcək.",
+    "timeout": "Gözləmə müddəti bitdi. Zəhmət olmasa, təkrar göndərmək əvəzinə bizə birbaşa yazın.",
+    "unconfirmed": "Müraciətin göndərildiyini təsdiqləmək mümkün olmadı.",
+    "reachDirect": "Amirə birbaşa {email} ünvanına yaza bilərsiniz."
+  }
+}

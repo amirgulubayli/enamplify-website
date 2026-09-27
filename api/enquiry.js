@@ -32,7 +32,7 @@ export async function processEnquiry({method,headers,body},{env=process.env,fetc
   const verification=await checked.json();
   const allowedHosts=origins.map(x=>new URL(x).hostname);
   if(!checked.ok||verification.success!==true||verification.action!=='enquiry'||!allowedHosts.includes(verification.hostname))return {status:400,body:{error:'Verification did not complete. Please try again.'}};
-  const mail={from:env.CONTACT_FROM,to:[env.CONTACT_TO],reply_to:data.email,subject:`Enamplify enquiry — ${data.interest||'A conversation'}`,text:`${data.message}\n\nName: ${data.name}\nEmail: ${data.email}\nOrganisation: ${data.organisation||'Not supplied'}\nInterest: ${data.interest||'Not specified'}\n`};
+  const mail={from:env.CONTACT_FROM,to:[env.CONTACT_TO],reply_to:data.email,subject:`Enamplify enquiry · ${data.interest||'A conversation'}`,text:`${data.message}\n\nName: ${data.name}\nEmail: ${data.email}\nOrganisation: ${data.organisation||'Not supplied'}\nInterest: ${data.interest||'Not specified'}\n`};
   const idempotency=createHash('sha256').update(JSON.stringify(mail)+String(data.startedAt)).digest('hex');
   const sent=await fetcher('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':`enquiry-${idempotency}`},body:JSON.stringify(mail),signal:AbortSignal.timeout(8000)});
   const receipt=await sent.json();

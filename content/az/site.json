@@ -1,0 +1,11 @@
+{
+  "description": "Orta ölçülü təşkilatlara süni intellekti əməkdaşlarının gündəlik işinin bir hissəsinə çevirməyə kömək edirik: daha çox iş, daxili bacarıq, tam nəzarət.",
+  "definition": "Enamplify London və Bakıda fəaliyyət göstərən, süni intellekt (Sİ) bacarıqları üzrə konsaltinq şirkətidir. O, orta ölçülü təşkilatlara əməkdaşlarını Sİ iş axınlarını təhlükəsiz qurmağa və idarə etməyə öyrətməkdə kömək edir.",
+  "cities": ["London", "Bakı"],
+  "nav": [
+    ["Yanaşma", "/approach/"],
+    ["İşlərimiz", "/work/"],
+    ["Təhlillər", "/insights/"],
+    ["Haqqımızda", "/about/"]
+  ]
+}

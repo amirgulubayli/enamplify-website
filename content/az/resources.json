@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "ai-pilot-acceptance-checklist",
+    "name": "Süni intellekt pilot layihəsinin qəbul yoxlama siyahısı",
+    "short": "Pilot layihə prosesə çevrilməzdən əvvəl.",
+    "description": "Sahibliyi, keyfiyyəti və növbəti qərarı aydınlaşdırmaq üçün altı praktik yoxlama.",
+    "time": "20–30 dəqiqə",
+    "audience": "Pilot layihə sponsorları, əməliyyat rəhbərləri və layihə sahibləri",
+    "intro": "Uğurlu nümayiş komandanızın etibar edə biləcəyi iş axını ilə eyni deyil. Genişləndirmə qərarından əvvəl sübutları, məsul şəxsləri və açıq sualları qeyd etmək üçün bu iş vərəqindən istifadə edin. Bu, qərar üçün köməkçi vasitədir, sertifikat və ya səmərə vədi deyil.",
+    "fields": [
+      "İş axını və ya pilot layihə",
+      "Biznes üzrə məsul şəxs",
+      "Mövcud proses",
+      "Əhatə dairəsi və istisnalar",
+      "Qərar tarixi"
+    ],
+    "checks": [
+      ["Adı bəlli məsul şəxs", "Nümayişdən sonra kim cavabdehdir? İş axınını kim dayandıra bilər? Həm adları, həm də öhdəlikləri yazın."],
+      ["Ölçülmüş başlanğıc göstəricilər", "Tapşırıqların hazırkı həcmi, icra müddəti və düzəlişlərə gedən əmək nə qədərdir? Ölçülmüş göstəriciləri fərziyyələrdən ayırın."],
+      ["Keyfiyyət həddi", "Nəticəni nə istifadəyə yararlı edir? Qəbul edilməli, rədd edilməli və ya yuxarıya ötürülməli olan nümunələri daxil edin. Yalnız problemsiz ssenarini deyil, çətin halları da yoxlayın."],
+      ["İnsan yoxlaması və istisnalar", "Nəyi insan təsdiqləməlidir? İstisnalar ona necə çatır? İlkin prosesi necə bərpa etmək olar?"],
+      ["Giriş və texniki dəstək", "Hansı məlumat lazımdır? Ona kim daxil ola bilər? Mənbələrə və inteqrasiyaya kim baxır? Lazım olduqda təşkilatınızın təhlükəsizlik və məxfilik yoxlamasını da daxil edin."],
+      ["Kommersiya qərarı", "Müşahidə olunan faydaları proqram təminatı, tətbiq, yoxlama və texniki dəstək xərcləri ilə müqayisə edin. Hansı sübutun genişləndirmə, düzəliş və ya dayandırma demək olduğunu razılaşdırın."]
+    ],
+    "closing": "Cavabsız altı sualı bir arxayınlaşdırıcı bala çevirməyin. Hər biri üzrə sübutu qeyd edin, qalan məsul şəxsləri adlandırın, sonra açıq qərar qəbul edin."
+  },
+  {
+    "slug": "ai-opportunity-canvas",
+    "name": "Süni intellekt imkanları kanvası",
+    "short": "Təkmilləşdirməyə dəyən tapşırığı tapın.",
+    "description": "Faydalı və sərhədləri bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
+    "time": "30 dəqiqə",
+    "audience": "Rəhbər komandalar, daxili liderlər və iş axınlarının sahibləri",
+    "intro": "Alətdən deyil, işdən başlayın. Bu kanvas konkret tapşırığı, cəlb olunan insanları və faydalı təkmilləşdirmənin cavab verməli olduğu şərtləri müəyyənləşdirməyə kömək edir. O, avtomatik tövsiyə vermək üçün deyil, yaxşı müzakirəyə başlamaq üçün hazırlanıb.",
+    "fields": [
+      "Tapşırıq",
+      "Cəlb olunan insanlar",
+      "Prosesin sahibi",
+      "Qəbul etməli olduğumuz qərar"
+    ],
+    "checks": [
+      ["Real tapşırığı müəyyənləşdirin", "Tapşırığı bir cümlə ilə təsvir edin. Onu nə başladır, nə bitirir və nəticədən kim istifadə edir?"],
+      ["Maneəni tapın", "Bu gün vaxt və diqqət hara gedir? Yoxlama, köçürmə, gözləmə, düzəlişlər və istisnaları da daxil edin."],
+      ["Məlumatın xəritəsini çəkin", "Hansı mənbələr lazımdır? Onlar əlçatandır, aktualdır və nəzərdə tutulan istifadə üçün təsdiqlənibmi? Onların sahibi kimdir?"],
+      ["Faydalı nəticəni təsvir edin", "Nə yaxşılaşacaq və bunu necə anlayacaqsınız? Nəticəni mümkün alətin funksiyalarından ayrı saxlayın."],
+      ["Sərhədləri müəyyən edin", "Hansı qərarlar insanda qalır? Nə avtomatlaşdırılmamalıdır? Daha sadə prosesi və ya ənənəvi avtomatlaşdırmanı da nəzərdən keçirin."],
+      ["Kiçik növbəti addım seçin", "Məsul şəxsi, sınağı, tələb olunan sübutu və qərar tarixini göstərin. Nə sizi davam etməyə, dəyişiklik etməyə və ya dayanmağa vadar edərdi?"]
+    ],
+    "closing": "Faydalı imkanın real tapşırığı, cavabdeh sahibi və fərqi yoxlamaq üsulu olur. Onun təsirli səslənməsi vacib deyil."
+  },
+  {
+    "slug": "team-ai-readiness",
+    "name": "Komandanın süni intellektə hazırlıq bələdçisi",
+    "short": "Söhbətə daha yaxşı başlanğıc.",
+    "description": "İnsanları tək bir süni intellekt balı ilə qiymətləndirmədən komandanın başlanğıc nöqtəsini anlayın.",
+    "time": "30–45 dəqiqə",
+    "audience": "Komanda rəhbərləri, insan resursları (HR) komandaları və təlim sponsorları",
+    "intro": "Təlim seçməzdən əvvəl komandanızın bu gün necə işlədiyini anlayın. Bu sualları cəlb olunan insanlarla birlikdə istifadə edin. Əməkdaşları sıralayan bal deyil, giriş imkanlarında, özünəinamda və kontekstdə fərqləri axtarın.",
+    "fields": [
+      "Komanda və ya funksiya",
+      "Sponsor",
+      "Təkmilləşdirmək istədiyimiz tapşırıqlar",
+      "Hazırda icazə verilən alətlər"
+    ],
+    "checks": [
+      ["Ortaq anlayış", "Komanda Sİ-nin harada kömək edə biləcəyini və harada yanıla biləcəyini izah edə bilirmi? İnsanlar hansı sualları verməyə çəkinirlər?"],
+      ["Giriş və icazələr", "İnsanlar hansı alətlərdən, hansı məlumatla istifadə edə biləcəklərini və əmin olmadıqda kimdən soruşacaqlarını bilirlərmi?"],
+      ["Uyğun tapşırıqlar", "Hansı təkrarlanan tapşırıqlar faydalı məşq ola bilər? Vacib olan və təhlükəsiz müzakirə edilə bilən işi seçin."],
+      ["Keyfiyyət və mühakimə", "İş bu gün necə yoxlanılır? İnsanlar inandırıcı görünən, lakin məqsədə uyğun olmayan cavabı tanıya bilirlərmi?"],
+      ["Vaxt və dəstək", "Məşğələlər arasında məşq etməyə vaxt varmı? Öyrənilənləri gündəlik işlə əlaqələndirməyə kim kömək edə bilər?"],
+      ["İrəliləyişin sübutu", "İnsanlar sonra nəyi edə bilməlidirlər? Müşahidə oluna bilən bir neçə tapşırıq seçin və onları ədalətli qiymətləndirməyin qaydasını razılaşdırın."]
+    ],
+    "closing": "Boşluqlardan insanları qiymətləndirmək üçün deyil, proqramı formalaşdırmaq üçün istifadə edin. Ortaq başlanğıc nöqtəsi təlimi daha aktual, sonrakı addımları isə daha real edir."
+  }
+]

@@ -1,32 +1,99 @@
-export const esc = (value = '') => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export const arrow = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>`;
-export const arrowNE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>`;
-export const mark = `<svg class="monogram" viewBox="0 0 76 86" fill="currentColor" aria-hidden="true"><path d="M11 9h54v17h-1C61 12 54 11 42 11H31v29h7c11 0 16-3 19-12h1v28h-1c-3-11-8-14-19-14h-7v31h12c13 0 19-5 23-19h1l-2 21H11v-2c9 0 10-2 10-9V21c0-8-1-10-10-10V9Z"/></svg>`;
-export const button = (text, href, variant='primary', extra='') => `<a class="button button--${variant}" href="${esc(href)}" ${extra}><span>${esc(text)}</span>${arrow}</a>`;
-export const textLink = (text, href, extra='') => `<a class="text-link" href="${esc(href)}" ${extra}><span>${esc(text)}</span>${arrow}</a>`;
-export const breadcrumb = items => `<nav class="breadcrumb wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${items.map(([t,h])=>`<li>${h?`<a href="${esc(h)}">${esc(t)}</a>`:`<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
-export const ctaBand = (title='A more capable tomorrow.',desc='Start with the work you want to make better. We’ll start with a conversation.',cta='Begin a conversation',href='/contact/') => `<section class="cta-band"><div class="wrap cta-inner"><div><h2>${esc(title)}</h2><p>${esc(desc)}</p></div>${button(cta,href,'light')}</div></section>`;
-export const folio = (variant='default',label='The capability programme') => `<div class="folio-scene folio-scene--${variant}" role="img" aria-label="Enamplify editorial cover, reading A more capable tomorrow"><div class="folio-shadow"></div><div class="folio-sheets"></div><div class="folio-cover"><span class="folio-brand">Enamplify</span><div class="folio-rule"></div><span class="folio-label">${esc(label)}</span><div class="folio-title">A more<br>capable<br><em>tomorrow.</em></div><div class="folio-bottom"><span>People.<br>Perspective.<br>Possibility.</span>${mark}</div></div><span class="folio-caption">Thoughtful by design.</span></div>`;
-export function diagram(kind='signal',label='') {
- const common=`viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label||'An editorial illustration of connected thinking')}"`;
- const bg=`<rect width="600" height="400" fill="#e9e3d9"/><path d="M40 350H560" stroke="#c8beb0"/>`;
- let shape='';
- if(kind==='brief') shape=`<g transform="translate(142 42) rotate(5 155 160)"><rect x="18" y="12" width="290" height="305" fill="#d5cabb"/><rect width="290" height="305" fill="#f8f4ed"/><path d="M40 53h90M40 99h210M40 121h170M40 180h210M40 202h185M40 224h145" stroke="#aa9c8d" stroke-width="2"/><rect x="40" y="47" width="6" height="12" fill="#502d36"/><circle cx="232" cy="262" r="14" stroke="#502d36"/><path d="m225 262 5 5 10-11" stroke="#502d36"/></g>`;
- else if(kind==='connection'||kind==='handoff') shape=`<path d="M80 198H210M390 198H520" stroke="#9b8269" stroke-width="2"/><circle cx="160" cy="200" r="70" fill="#d8cdbc"/><circle cx="440" cy="200" r="70" fill="#502d36"/><path d="M205 165c100-85 90 160 190 70" stroke="#242321" stroke-width="2"/><path d="m384 223 16 12-18 10" stroke="#242321" stroke-width="2"/><circle cx="160" cy="200" r="34" stroke="#8c725b"/><circle cx="440" cy="200" r="34" stroke="#e4d9c9"/>`;
- else if(kind==='steps') shape=`<path d="M100 317h110v-60h110v-60h110v-60h80" stroke="#502d36" stroke-width="2"/><rect x="100" y="258" width="108" height="59" fill="#d4c9b9"/><rect x="210" y="198" width="108" height="119" fill="#b4a08c"/><rect x="320" y="138" width="108" height="179" fill="#876959"/><path d="M90 137c123 0 175-52 319-52" stroke="#9b8269"/><circle cx="441" cy="83" r="20" fill="#502d36"/>`;
- else if(kind==='balance') shape=`<path d="M300 95v213M245 310h110M145 146h310M175 146l-58 108h116l-58-108ZM425 146l-58 108h116l-58-108Z" stroke="#776452" stroke-width="2"/><circle cx="300" cy="106" r="32" fill="#502d36"/><path d="M117 255a58 58 0 0 0 116 0M367 255a58 58 0 0 0 116 0" fill="#cec0ac"/>`;
- else shape=`<path d="M110 308V205a190 190 0 0 1 380 0v103" stroke="#d1c5b6" stroke-width="30"/><path d="M170 308V205a130 130 0 0 1 260 0v103" stroke="#b29b82" stroke-width="22"/><path d="M229 308V205a71 71 0 0 1 142 0v103" stroke="#502d36" stroke-width="15"/><path d="M70 327h460" stroke="#9b8269"/>`;
- return `<svg ${common}>${bg}${shape}</svg>`;
+import {locales, localePath, fill} from './i18n.mjs';
+
+export const esc = (value = '') => String(value).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+
+export const arrow = `<svg class="icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>`;
+export const arrowNE = `<svg class="icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>`;
+
+export const button = (text, href, variant = 'primary', extra = '') => `<a class="btn btn--${variant}" href="${esc(href)}" ${extra}>${esc(text)}${extra.includes('_blank') ? arrowNE : arrow}</a>`;
+export const textLink = (text, href, extra = '') => `<a class="link-arrow" href="${esc(href)}" ${extra}>${esc(text)}${extra.includes('_blank') ? arrowNE : arrow}</a>`;
+
+// Components receive the render context: `{locale, copy, site, ...}` as returned by loadContent.
+const L = (ctx, path) => localePath(ctx.locale, path);
+
+export const breadcrumb = (crumbs, ctx) => `<nav class="crumbs wrap" aria-label="${esc(ctx.copy.common.breadcrumb)}"><ol><li><a href="${L(ctx, '/')}">${esc(ctx.copy.common.home)}</a></li>${crumbs.map(([t, h]) => `<li>${h ? `<a href="${esc(L(ctx, h))}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
+
+/** Page head: breadcrumb, H1 and lede; with `band`, the page's full-width city photograph follows. */
+export const pageHead = ({title, lede = '', crumbs, band = ''}, ctx) => `${breadcrumb(crumbs, ctx)}<header class="page-head page-head--split wrap"><h1>${esc(title)}</h1>${lede ? `<p class="lede">${esc(lede)}</p>` : ''}</header>${band ? photo(band, ctx, {sizes: '100vw', cls: 'band'}) : ''}`;
+
+export const exhibit = ({n, topic, title, chart, source, note = '', cls = ''}, ctx) => `<figure class="exhibit${cls ? ` ${cls}` : ''}"><figcaption class="exhibit__cap"><span class="exhibit__label">${esc(fill(ctx.copy.common.exhibitLabel, {n, topic}))}</span> <span class="exhibit__title">${esc(title)}</span></figcaption><div class="exhibit__chart">${chart}</div>${note ? `<p class="exhibit__note">${esc(note)}</p>` : ''}<p class="exhibit__source">${esc(fill(ctx.copy.common.exhibitSource, {source}))}</p></figure>`;
+
+export const closeBand = (ctx, {title = ctx.copy.common.closeTitle, body = ctx.copy.common.closeBody} = {}) => `<section class="close" aria-labelledby="close-title"><div class="wrap close__inner"><h2 id="close-title">${esc(title)}</h2><div class="close__body"><p>${esc(body)}</p>${button(ctx.copy.common.bookDiagnostic, L(ctx, '/contact/'), 'inverse')}</div></div></section>`;
+
+export const articleCard = (a, ctx) => `<article class="card"><h3 class="card__title"><a href="${L(ctx, `/insights/${esc(a.slug)}/`)}">${esc(a.title)}</a></h3><p class="card__meta">${esc(a.category)} · ${esc(fill(ctx.copy.common.minRead, {n: a.readingTime}))}</p><p>${esc(a.summary)}</p></article>`;
+export const guideCard = (g, ctx) => `<article class="card card--guide"><h3 class="card__title"><a href="${L(ctx, `/insights/guides/${esc(g.slug)}/`)}">${esc(g.name)}</a></h3><p class="card__meta">${esc(ctx.copy.common.fieldGuide)} · ${esc(g.time)}</p><p>${esc(g.description)}</p></article>`;
+
+export const portrait = (ctx, {caption = true, eager = false} = {}) => `<figure class="portrait"><img class="remote-image" src="${esc(ctx.site.portrait)}" alt="${esc(ctx.copy.common.portraitAlt)}" width="304" height="380" loading="${eager ? 'eager' : 'lazy'}" decoding="async">${caption ? `<figcaption>${esc(ctx.copy.common.portraitCaption)}</figcaption>` : ''}</figure>`;
+
+/**
+ * A graded city photograph from content/images.json. `id` names the entry in `ctx.images`; the
+ * srcset lists every exported width, and width/height come from the largest file. Only first
+ * viewport images pass `eager`, which also raises their fetch priority. The caption names the
+ * place; photographers are credited once, in the footer colophon (see `photoCredits`).
+ */
+export function photo(id, ctx, {sizes, eager = false, cls = '', caption = true} = {}) {
+  const img = ctx.images?.[id];
+  if (!img) throw new Error(`Unknown image: ${id}`);
+  if (!sizes) throw new Error(`photo(${id}) needs sizes`);
+  const widths = Object.keys(img.files).map(Number).sort((a, b) => a - b);
+  if (!widths.length) throw new Error(`Image ${id} has no files`);
+  const largest = widths.at(-1);
+  const height = Math.round(img.height * largest / img.width);
+  const src = img.files[widths.filter(w => w <= 1024).at(-1) ?? widths[0]];
+  const srcset = widths.map(w => `${img.files[w]} ${w}w`).join(', ');
+  const loc = ctx.locale;
+  const alt = img.alt[loc] ?? img.alt.en;
+  const place = img.caption[loc] ?? img.caption.en;
+  return `<figure class="photo${cls ? ` ${cls}` : ''}"><img src="${esc(src)}" srcset="${esc(srcset)}" sizes="${esc(sizes)}" width="${largest}" height="${height}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>${caption ? `<figcaption>${esc(place)}</figcaption>` : ''}</figure>`;
 }
-export function projectArt(project) {
- if(project.art==='pripitch') return `<div class="project-visual project-visual--sales" role="img" aria-label="Editorial diagram: research, conversation, follow-through"><div class="project-wordmark">pripitch<span>↗</span></div><div class="pipeline"><span>Research</span><i></i><span>Conversation</span><i></i><span>Follow-through</span></div><span class="visual-foot">Context before. Clarity after.</span></div>`;
- if(project.art==='grademy') return `<div class="project-visual project-visual--learning" role="img" aria-label="Editorial diagram of connected learning"><div class="learning-orbits"><span></span><span></span><span></span><b>g</b></div><div class="learning-name">grademy</div><span class="visual-foot">Learning that builds.</span></div>`;
- return `<div class="project-visual project-visual--context" role="img" aria-label="Editorial diagram connecting information to business context"><div class="context-diagram"><span class="context-node">People</span><span class="context-node">Knowledge</span><b>RAG-X</b><span class="context-node">Decisions</span><span class="context-node">Work</span></div><span class="visual-foot">From information to relevance.</span></div>`;
+
+/** Ids of the city photographs a rendered page shows, in order of first appearance. */
+export const photosIn = html => [...new Set([...html.matchAll(/\/images\/city\/([a-z0-9-]+?)-\d+\.webp/g)].map(m => m[1]))];
+
+/** "Photography: A, B" with each photographer linked once, for the photos in `ids`. */
+export function photoCredits(ctx, ids = []) {
+  const people = new Map();
+  for (const id of ids) { const credit = ctx.images?.[id]?.credit; if (credit && !people.has(credit.name)) people.set(credit.name, credit.url); }
+  if (!people.size) return '';
+  const names = [...people].map(([name, url]) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`).join(', ');
+  return `<p class="colophon">${fill(esc(ctx.copy.common.photographyCredits), {names})}</p>`;
 }
-export const articleCard = a => `<article class="article-card" data-category="${esc(a.category)}" data-search="${esc((a.title+' '+a.summary+' '+a.category).toLowerCase())}"><a class="article-image" href="/perspectives/${a.slug}/" tabindex="-1" aria-hidden="true">${diagram(a.art,a.title)}</a><div class="article-meta"><span>${esc(a.category)}</span><span>${a.readingTime} min read</span></div><h3><a href="/perspectives/${a.slug}/">${esc(a.title)}</a></h3><p>${esc(a.summary)}</p>${textLink('Read the perspective',`/perspectives/${a.slug}/`)}</article>`;
-export const resourceCard = r => `<article class="resource-card"><div class="resource-number">${r.number}</div><h3><a href="/resources/${r.slug}/">${esc(r.name)}</a></h3><p>${esc(r.description)}</p><div class="resource-bottom"><span>${esc(r.time)}</span>${textLink('Open the guide',`/resources/${r.slug}/`)}</div></article>`;
-export function portrait(config,large=false) { return `<figure class="portrait ${large?'portrait--large':''}"><div class="portrait-fallback" aria-label="Amir Gulubayli"><span>AG</span><p>Amir Gulubayli<br><small>Founder, Enamplify</small></p></div><img src="${esc(config.portrait)}" alt="Amir Gulubayli, founder of Enamplify" width="640" height="800" loading="lazy" class="remote-image" data-remote="portrait"><figcaption>Amir Gulubayli <span>Founder</span></figcaption></figure>`; }
-export function header(config,path) {
- return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="/" aria-label="Enamplify home">Enamplify</a><nav class="desktop-nav" aria-label="Main navigation">${config.nav.map(([t,h])=>`<a href="${h}" ${path.startsWith(h)?'aria-current="page"':''}>${t}</a>`).join('')}</nav>${button('Begin a conversation','/contact/','primary','')}<button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="menu-label">Menu</span><span class="menu-lines"><i></i><i></i></span></button></div><nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" inert hidden><div class="wrap">${config.nav.map(([t,h],i)=>`<a href="${h}"><span>0${i+1}</span>${t}${arrow}</a>`).join('')}${button('Begin a conversation','/contact/')}</div></nav></header><noscript><nav class="noscript-nav" aria-label="Navigation without JavaScript">${config.nav.map(([t,h])=>`<a href="${h}">${esc(t)}</a>`).join('')}<a href="/contact/">Contact</a></nav></noscript>`;
+
+function navAttr(path, href) {
+  if (path === href) return ' aria-current="page"';
+  if (!Object.values(locales).some(l => `${l.prefix}/` === href) && path.startsWith(href)) return ' aria-current="true"';
+  return '';
 }
-export function footer(config){return `<footer class="site-footer"><div class="wrap"><div class="footer-top"><div><a class="wordmark" href="/">Enamplify</a><p>AI education & advisory.<br>For a more capable tomorrow.</p><a class="footer-social" href="${config.linkedin}" target="_blank" rel="noopener noreferrer">Amir on LinkedIn ${arrowNE}</a></div><div><h2>Explore</h2><a href="/solutions/">Solutions</a><a href="/approach/">Our approach</a><a href="/work/">Selected work</a><a href="/about/">About Enamplify</a></div><div><h2>Thinking & tools</h2><a href="/perspectives/">Perspectives</a><a href="/resources/">Field guides</a><a href="/for/professional-services/">For professional services</a><a href="/for/learning-and-development/">For learning teams</a></div><div><h2>Let’s talk</h2><a href="/contact/">Begin a conversation</a><a href="mailto:${config.email}">${config.email}</a><p class="footer-note">Founder-led.<br>Thoughtful by design.</p></div></div><div class="footer-bottom"><p>© ${new Date().getFullYear()} Enamplify</p><div><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a><a href="/credits/">Credits</a></div><a class="back-top" href="#top">Back to top ↑</a></div></div></footer>`;}
+
+/**
+ * The EN · AZ switch. `alternates` maps locale code → URL of this page in that locale; the current
+ * locale is marked, the others link to their counterpart. With `current` unset (the bilingual 404)
+ * every locale is a link.
+ */
+export function languageToggle(ctx, alternates, current = ctx.locale) {
+  const items = Object.values(locales).map(l => {
+    const name = `<span class="sr-only"> ${esc(l.name)}</span>`;
+    return l.code === current
+      ? `<span aria-current="true" lang="${l.lang}">${l.label}${name}</span>`
+      : `<a href="${esc(alternates[l.code])}" hreflang="${l.hreflang}" lang="${l.lang}">${l.label}${name}</a>`;
+  });
+  return `<nav class="lang" aria-label="${esc(ctx.copy.common.language)}">${items.join('<span class="lang__sep" aria-hidden="true">·</span>')}</nav>`;
+}
+
+/** Site header. `route` supplies the current URL and its language alternates. */
+export function header(ctx, route) {
+  const {site, copy: {common: c}} = ctx;
+  const path = route.url;
+  const toggle = languageToggle(ctx, route.alternates, route.notFound ? null : ctx.locale);
+  const nav = site.nav.map(([t, h]) => [t, L(ctx, h)]);
+  const contact = L(ctx, '/contact/');
+  const links = nav.map(([t, h]) => `<a href="${esc(h)}"${navAttr(path, h)}>${esc(t)}</a>`).join('');
+  const bookAttr = navAttr(path, contact);
+  return `<a class="skip-link" href="#main">${esc(c.skipLink)}</a><header class="site-header"><div class="wrap site-header__inner"><a class="wordmark" href="${L(ctx, '/')}" aria-label="${esc(c.homeLabel)}">Enamplify</a><nav class="site-nav" aria-label="${esc(c.mainNav)}">${links}</nav>${toggle}<a class="btn btn--quiet site-header__cta" href="${contact}"${bookAttr}>${esc(c.bookCall)}</a><button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="menu-label">${esc(c.menu)}</span></button></div><nav id="mobile-menu" class="mobile-menu" aria-label="${esc(c.mobileNav)}" inert hidden><div class="wrap">${links}<a href="${contact}"${bookAttr}>${esc(c.bookCall)}</a>${toggle}</div></nav></header><noscript><nav class="noscript-nav wrap" aria-label="${esc(c.noscriptNav)}">${links}<a href="${contact}">${esc(c.bookCall)}</a></nav></noscript>`;
+}
+
+export function footer(ctx, {photos = []} = {}) {
+  const {site, copy: {common: c}} = ctx;
+  const legal = ['privacy', 'cookies', 'terms', 'accessibility'].map(k => [c.legalLinks[k], L(ctx, `/${k}/`)]);
+  return `<footer class="site-footer"><div class="wrap"><div class="site-footer__top"><div class="site-footer__brand"><a class="wordmark" href="${L(ctx, '/')}">Enamplify</a><p>${esc(site.definition)}</p><p class="site-footer__cities">${site.cities.map(esc).join(' · ')}</p></div><nav aria-label="${esc(c.footerNav)}"><h2>${esc(c.footerPages)}</h2>${[...site.nav, [c.bookCall, '/contact/']].map(([t, h]) => `<a href="${esc(L(ctx, h))}">${esc(t)}</a>`).join('')}</nav><div><h2>${esc(c.footerContact)}</h2><a href="mailto:${esc(site.email)}">${esc(site.email)}</a><a href="${esc(site.linkedin)}" target="_blank" rel="noopener noreferrer">${esc(c.linkedin)} ${arrowNE}</a><a href="${L(ctx, '/feed.xml')}">${esc(c.feedLink)}</a></div></div><div class="site-footer__bottom"><p>© ${new Date().getFullYear()} Enamplify</p>${photoCredits(ctx, photos)}<nav aria-label="${esc(c.legalNav)}">${legal.map(([t, h]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('')}</nav></div></div></footer>`;
+}

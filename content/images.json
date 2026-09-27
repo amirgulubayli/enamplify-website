@@ -1,0 +1,194 @@
+{
+  "hero-london": {
+    "files": {
+      "640": "/images/city/hero-london-640.webp",
+      "958": "/images/city/hero-london-958.webp"
+    },
+    "width": 958,
+    "height": 1198,
+    "alt": {
+      "en": "The Royal Exchange portico at Bank junction in the City of London, its Corinthian columns lit by low evening sun",
+      "az": "London Sitisində, Bank qovşağında Kral Birjasının portiki; Korinf sütunları axşamın alçaq günəşi ilə işıqlanır"
+    },
+    "caption": {
+      "en": "The Royal Exchange, London",
+      "az": "Kral Birjası, London"
+    },
+    "credit": {
+      "name": "Francais a Londres",
+      "url": "https://unsplash.com/@francaisalondres",
+      "source": "https://unsplash.com/photos/a-large-building-with-columns-and-a-flag-on-top-b07tX5xgZ5U",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Francais a Londres (https://unsplash.com/photos/a-large-building-with-columns-and-a-flag-on-top-b07tX5xgZ5U), Unsplash License. Cropped (source fractions l,t,r,b = 0.21, 0, 0.6092, 0.665), white balance warmed by 0.07 and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "hero-baku": {
+    "files": {
+      "640": "/images/city/hero-baku-640.webp",
+      "1024": "/images/city/hero-baku-1024.webp"
+    },
+    "width": 1024,
+    "height": 1280,
+    "alt": {
+      "en": "An ornate sandstone building with a corner turret near the Maiden Tower in Baku, in warm evening light",
+      "az": "Bakıda, Qız qalası yaxınlığında künc qülləli, naxışlı qumdaşı bina; axşamın isti işığında"
+    },
+    "caption": {
+      "en": "Near the Maiden Tower, Baku",
+      "az": "Qız qalası yaxınlığında, Bakı"
+    },
+    "credit": {
+      "name": "Zulfugar Karimov",
+      "url": "https://unsplash.com/@zulfugarkarimov",
+      "source": "https://unsplash.com/photos/historic-buildings-stand-against-the-bright-sunset-Sbdf2-5NI_8",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Zulfugar Karimov (https://unsplash.com/photos/historic-buildings-stand-against-the-bright-sunset-Sbdf2-5NI_8), Unsplash License. Cropped (source fractions l,t,r,b = 0.515, 0.02, 0.985, 0.9) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "about-london": {
+    "files": {
+      "640": "/images/city/about-london-640.webp",
+      "1024": "/images/city/about-london-1024.webp"
+    },
+    "width": 1024,
+    "height": 1280,
+    "alt": {
+      "en": "The City of London towers at dusk, including 30 St Mary Axe and 22 Bishopsgate, with lit office windows",
+      "az": "Axşam çağı London Sitisinin göydələnləri, o cümlədən 30 St Mary Axe və 22 Bishopsgate; ofis pəncərələrində işıq yanır"
+    },
+    "caption": {
+      "en": "The City of London at dusk",
+      "az": "Axşam çağı London Siti"
+    },
+    "credit": {
+      "name": "Leo",
+      "url": "https://unsplash.com/@ocuole",
+      "source": "https://unsplash.com/photos/a-view-of-the-city-of-london-at-dusk-7jya7iDFGtY",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Leo (https://unsplash.com/photos/a-view-of-the-city-of-london-at-dusk-7jya7iDFGtY), Unsplash License. Cropped (source fractions l,t,r,b = 0.215, 0, 0.748, 1) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "about-baku": {
+    "files": {
+      "640": "/images/city/about-baku-640.webp",
+      "1024": "/images/city/about-baku-1024.webp"
+    },
+    "width": 1024,
+    "height": 1280,
+    "alt": {
+      "en": "The Flame Towers silhouetted at dusk above lit historic facades in central Baku",
+      "az": "Alaqaranlıqda Bakının mərkəzində işıqlandırılmış tarixi binaların üzərində Alov qüllələrinin siluetləri"
+    },
+    "caption": {
+      "en": "Flame Towers, Baku",
+      "az": "Alov qüllələri, Bakı"
+    },
+    "credit": {
+      "name": "Orkhan Musayev",
+      "url": "https://unsplash.com/@orkhnix",
+      "source": "https://unsplash.com/photos/brown-concrete-building-during-night-time-cqQdetCLDjM",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Orkhan Musayev (https://unsplash.com/photos/brown-concrete-building-during-night-time-cqQdetCLDjM), Unsplash License. Cropped (source fractions l,t,r,b = 0.29, 0.13, 0.757, 0.908) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "band-approach": {
+    "files": {
+      "640": "/images/city/band-approach-640.webp",
+      "1024": "/images/city/band-approach-1024.webp",
+      "1600": "/images/city/band-approach-1600.webp",
+      "2400": "/images/city/band-approach-2400.webp"
+    },
+    "width": 2400,
+    "height": 1029,
+    "alt": {
+      "en": "A Portland stone colonnade in London, its columns receding toward a hanging lantern and trees beyond",
+      "az": "Londonda Portlend daşından sütunlu qalereya; sütunlar asılmış fənərə və arxadakı ağaclara doğru uzanır"
+    },
+    "caption": {
+      "en": "A colonnade in London",
+      "az": "London, sütunlu qalereya"
+    },
+    "credit": {
+      "name": "Rita K",
+      "url": "https://unsplash.com/@margarita30",
+      "source": "https://unsplash.com/photos/a-row-of-columns-with-a-clock-tower-in-the-background-hPAXT1UWWEk",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Rita K (https://unsplash.com/photos/a-row-of-columns-with-a-clock-tower-in-the-background-hPAXT1UWWEk), Unsplash License. Cropped (source fractions l,t,r,b = 0, 0.19, 1, 0.833) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "band-work": {
+    "files": {
+      "640": "/images/city/band-work-640.webp",
+      "1024": "/images/city/band-work-1024.webp",
+      "1600": "/images/city/band-work-1600.webp",
+      "2400": "/images/city/band-work-2400.webp"
+    },
+    "width": 2400,
+    "height": 1029,
+    "alt": {
+      "en": "The three Flame Towers above central Baku at golden hour, with the city and hills behind",
+      "az": "Qürub çağı Bakının mərkəzi üzərində üç Alov qülləsi; arxada şəhər və təpələr görünür"
+    },
+    "caption": {
+      "en": "Baku at golden hour",
+      "az": "Qürub çağı Bakı"
+    },
+    "credit": {
+      "name": "Lloyd Alozie",
+      "url": "https://unsplash.com/@iamllwyd",
+      "source": "https://unsplash.com/photos/city-skyline-under-blue-sky-during-daytime-wX_9ZhIErpg",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Lloyd Alozie (https://unsplash.com/photos/city-skyline-under-blue-sky-during-daytime-wX_9ZhIErpg), Unsplash License. Cropped (source fractions l,t,r,b = 0, 0.2, 1, 0.8) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "band-insights": {
+    "files": {
+      "640": "/images/city/band-insights-640.webp",
+      "1024": "/images/city/band-insights-1024.webp",
+      "1600": "/images/city/band-insights-1600.webp",
+      "2400": "/images/city/band-insights-2400.webp"
+    },
+    "width": 2400,
+    "height": 1029,
+    "alt": {
+      "en": "The City of London skyline seen across the Thames, from 20 Fenchurch Street to 30 St Mary Axe",
+      "az": "Temza çayının o tayından London Sitisinin siluetinə görünüş: 20 Fenchurch Street binasından 30 St Mary Axe binasınadək"
+    },
+    "caption": {
+      "en": "The City of London from the Thames",
+      "az": "Temza çayından London Siti"
+    },
+    "credit": {
+      "name": "Tadas Petrokas",
+      "url": "https://unsplash.com/@petrokas",
+      "source": "https://unsplash.com/photos/white-and-black-boat-on-water-near-city-buildings-during-daytime-G7nWQwb6AP4",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by Tadas Petrokas (https://unsplash.com/photos/white-and-black-boat-on-water-near-city-buildings-during-daytime-G7nWQwb6AP4), Unsplash License. Cropped (source fractions l,t,r,b = 0, 0.06, 1, 0.822) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  },
+  "band-contact": {
+    "files": {
+      "640": "/images/city/band-contact-640.webp",
+      "1024": "/images/city/band-contact-1024.webp",
+      "1600": "/images/city/band-contact-1600.webp",
+      "2400": "/images/city/band-contact-2400.webp"
+    },
+    "width": 2400,
+    "height": 1029,
+    "alt": {
+      "en": "Government House in Baku at dusk, seen from across a fountain pool",
+      "az": "Alaqaranlıqda fəvvarə hovuzunun o tayından Bakıdakı Hökumət evinə görünüş"
+    },
+    "caption": {
+      "en": "Government House, Baku",
+      "az": "Hökumət evi, Bakı"
+    },
+    "credit": {
+      "name": "İltun Huseynli",
+      "url": "https://unsplash.com/@iltunography",
+      "source": "https://unsplash.com/photos/brown-concrete-building-near-body-of-water-during-daytime-YDpOE-vttIo",
+      "license": "Unsplash License"
+    },
+    "provenance": "Photograph by İltun Huseynli (https://unsplash.com/photos/brown-concrete-building-near-body-of-water-during-daytime-YDpOE-vttIo), Unsplash License. Cropped (source fractions l,t,r,b = 0, 0.01, 1, 0.581) and colour-graded by scripts/process-photos.py for Enamplify; no generative model."
+  }
+}

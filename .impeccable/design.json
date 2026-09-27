@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T00:00:00Z",
+  "title": "Design System: Enamplify",
+  "extensions": {
+    "colorMeta": {
+      "signal": { "role": "primary", "displayName": "Signal Blue", "canonical": "#1f5eff", "tonalRamp": ["#0a1f5c", "#0f2f8a", "#1746c8", "#1f5eff", "#4d80ff", "#85a8ff", "#bccfff", "#e9efff"] },
+      "signal-deep": { "role": "primary", "displayName": "Signal Deep", "canonical": "#1746c8", "tonalRamp": ["#0a1f5c", "#0f2f8a", "#1746c8", "#1f5eff", "#4d80ff", "#85a8ff", "#bccfff", "#e9efff"] },
+      "signal-wash": { "role": "primary", "displayName": "Signal Wash", "canonical": "#e9efff", "tonalRamp": ["#0a1f5c", "#0f2f8a", "#1746c8", "#1f5eff", "#4d80ff", "#85a8ff", "#bccfff", "#e9efff"] },
+      "navy": { "role": "neutral", "displayName": "Board Navy", "canonical": "#0a1f33", "tonalRamp": ["#050f1a", "#0a1f33", "#16324f", "#25486b", "#3d6189", "#6a88a8", "#a6b8cb", "#e1e8ef"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1a2633", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
+      "muted": { "role": "neutral", "displayName": "Slate", "canonical": "#556474", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
+      "control": { "role": "neutral", "displayName": "Control Grey", "canonical": "#7b8896", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
+      "rule-strong": { "role": "neutral", "displayName": "Strong Hairline", "canonical": "#a8b4c0", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#d8dee5", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
+      "close-text": { "role": "neutral", "displayName": "Close Text", "canonical": "#d6dde6", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d6dde6", "#f4f6f8"] },
+      "wash": { "role": "neutral", "displayName": "Report Wash", "canonical": "#f4f6f8", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#ffffff"] },
+      "error": { "role": "error", "displayName": "Error Red", "canonical": "#b42318", "tonalRamp": ["#3d0b07", "#6b140d", "#8f1b12", "#b42318", "#d9493d", "#ec8177", "#f6b8b2", "#fdeceb"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The one H1 per page, max 18ch; the hero may set its second clause on its own line in Slate." },
+      "display-article": { "displayName": "Article display", "purpose": "Article and guide H1, max 24ch." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s, written as sentences, max 24ch." },
+      "title": { "displayName": "Title", "purpose": "H3s in numbered lists, stages, cards and commitments." },
+      "statement": { "displayName": "Statement", "purpose": "Marked pull statement, founder quote, large ticks and prose blockquotes, always under a 2px navy top rule." },
+      "exhibit-caption": { "displayName": "Exhibit caption", "purpose": "Run-in exhibit caption; the 'Exhibit N · Topic.' label is set at 700." },
+      "lede": { "displayName": "Lede", "purpose": "Page and hero ledes, max 42ch." },
+      "body": { "displayName": "Body", "purpose": "Running text; prose max 66ch." },
+      "label": { "displayName": "Label", "purpose": "Buttons and arrow links." },
+      "small": { "displayName": "Small", "purpose": "Notes and ledger text." },
+      "caption": { "displayName": "Caption", "purpose": "Card meta, source lines, axis labels, breadcrumbs, legal row." },
+      "figures": { "displayName": "Figures", "purpose": "Legend values, bar values, ledgers, axes and stage numbers only." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.2,.7,.2,1)", "purpose": "The single easing curve for exhibit reveals and the arrow nudge." },
+      { "name": "state-change", "value": "200ms background-color, color, border-color", "purpose": "Button and link hover states." },
+      { "name": "arrow-nudge", "value": "transform: translateX(3px) over 200ms", "purpose": "Arrow icon in buttons and arrow links on hover." },
+      { "name": "bar-grow", "value": "transform scaleX(0 to 1) over 1s, origin left", "purpose": "Below-fold exhibit bars, once on entering view." },
+      { "name": "line-draw", "value": "stroke-dashoffset 1 to 0 over 1.4s", "purpose": "Below-fold exhibit lines, once on entering view." },
+      { "name": "reduced-motion", "value": "all transitions and animations off; marks render complete", "purpose": "prefers-reduced-motion: reduce, and print." }
+    ],
+    "breakpoints": [
+      { "name": "form-row", "value": "600px" },
+      { "name": "gutter-wide", "value": "720px" },
+      { "name": "two-up", "value": "760px" },
+      { "name": "split", "value": "900px" },
+      { "name": "hero", "value": "1000px" },
+      { "name": "desktop-nav", "value": "1001px" },
+      { "name": "three-up", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Signal blue, square, with a trailing arrow. One per view, for booking a diagnostic call.",
+      "html": "<a class=\"ds-btn ds-btn--primary\" href=\"#\">Book a diagnostic call<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 20px;font:600 .9375rem/1 var(--text,'Public Sans',Arial,sans-serif);text-decoration:none;border:1px solid transparent;border-radius:0;transition:background-color .2s,color .2s,border-color .2s}.ds-icon{transition:transform .2s cubic-bezier(.2,.7,.2,1)}.ds-btn:hover .ds-icon{transform:translateX(3px)}.ds-btn:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}.ds-btn--primary{background:var(--signal,#1f5eff);color:#fff}.ds-btn--primary:hover{background:var(--signal-deep,#1746c8)}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Navy-outlined 40px button used in the header.",
+      "html": "<a class=\"ds-btn-quiet\" href=\"#\">Book a call</a>",
+      "css": ".ds-btn-quiet{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;font:600 .9375rem/1 var(--text,'Public Sans',Arial,sans-serif);color:var(--navy,#0a1f33);border:1px solid var(--navy,#0a1f33);border-radius:0;text-decoration:none;transition:background-color .2s,color .2s}.ds-btn-quiet:hover{background:var(--navy,#0a1f33);color:#fff}.ds-btn-quiet:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "White button used only inside the navy close band.",
+      "html": "<div class=\"ds-close-demo\"><a class=\"ds-btn-inverse\" href=\"#\">Book a diagnostic call</a></div>",
+      "css": ".ds-close-demo{background:var(--navy,#0a1f33);padding:32px}.ds-btn-inverse{display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;font:600 .9375rem/1 var(--text,'Public Sans',Arial,sans-serif);background:#fff;color:var(--navy,#0a1f33);border-radius:0;text-decoration:none;transition:background-color .2s}.ds-btn-inverse:hover{background:var(--signal-wash,#e9efff)}.ds-btn-inverse:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+    },
+    {
+      "name": "Arrow Link",
+      "kind": "custom",
+      "refersTo": "link-arrow",
+      "description": "Text-link partner to a button: Signal Deep label, currentColor underline, arrow nudge.",
+      "html": "<a class=\"ds-link-arrow\" href=\"#\">How we work<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-link-arrow{display:inline-flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid currentColor;font:600 .9375rem var(--text,'Public Sans',Arial,sans-serif);color:var(--signal-deep,#1746c8);text-decoration:none}.ds-link-arrow .ds-icon{transition:transform .2s cubic-bezier(.2,.7,.2,1)}.ds-link-arrow:hover .ds-icon{transform:translateX(3px)}.ds-link-arrow:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square white field with a Control Grey border; label above in navy.",
+      "html": "<label class=\"ds-label\">Work email<input class=\"ds-input\" type=\"email\" placeholder=\"name@company.com\"></label>",
+      "css": ".ds-label{display:grid;gap:8px;font:500 .9375rem var(--text,'Public Sans',Arial,sans-serif);color:var(--navy,#0a1f33)}.ds-input{width:100%;padding:12px 14px;font:400 1rem/1.4 var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633);background:#fff;border:1px solid var(--control,#7b8896);border-radius:0}.ds-input:focus{outline:2px solid var(--signal,#1f5eff);outline-offset:0;border-color:var(--signal,#1f5eff)}.ds-input[aria-invalid=true]{border-color:#b42318}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Wordmark, four text links with navy underline on hover or current, quiet button.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">Enamplify</a><span class=\"ds-nav__links\"><a href=\"#\" aria-current=\"page\">Approach</a><a href=\"#\">Work</a><a href=\"#\">Insights</a><a href=\"#\">About</a></span></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;min-height:72px;padding:0 20px;background:#fff;border-bottom:1px solid var(--rule,#d8dee5)}.ds-wordmark{font:700 1.375rem var(--display,'Schibsted Grotesk',Arial,sans-serif);letter-spacing:-.02em;color:var(--navy,#0a1f33);text-decoration:none}.ds-nav__links{display:flex;gap:28px;margin-left:auto}.ds-nav__links a{font:400 .9375rem var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}.ds-nav__links a:hover,.ds-nav__links a[aria-current]{border-bottom-color:var(--navy,#0a1f33);color:var(--navy,#0a1f33)}.ds-nav a:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+    },
+    {
+      "name": "Exhibit",
+      "kind": "custom",
+      "refersTo": "exhibit",
+      "description": "Numbered figure: run-in label and action title, chart in navy/signal/rule tones, note, source line labelling illustrative data.",
+      "html": "<figure class=\"ds-exhibit\"><figcaption class=\"ds-exhibit__cap\"><span class=\"ds-exhibit__label\">Exhibit 1 · The week.</span> Half an operations week goes on work AI can take on.</figcaption><svg class=\"ds-stack\" viewBox=\"0 0 100 14\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><rect fill=\"#0a1f33\" x=\"0\" width=\"40.4\" height=\"14\"/><rect fill=\"#1f5eff\" x=\"41\" width=\"49.4\" height=\"14\"/><rect fill=\"#a8b4c0\" x=\"91\" width=\"9\" height=\"14\"/></svg><ul class=\"ds-legend\"><li><span class=\"ds-swatch\" data-t=\"navy\"></span>Judgement and client work<b>41%</b></li><li><span class=\"ds-swatch\" data-t=\"signal\"></span>Reporting, finding, handoffs<b>50%</b></li><li><span class=\"ds-swatch\" data-t=\"rule\"></span>Other<b>9%</b></li></ul><p class=\"ds-exhibit__source\">Source: Illustrative composite for explanation.</p></figure>",
+      "css": ".ds-exhibit{margin:0;border-top:2px solid var(--navy,#0a1f33);padding-top:16px;max-width:480px}.ds-exhibit__cap{margin-bottom:24px;font:400 1.1875rem/1.35 var(--display,'Schibsted Grotesk',Arial,sans-serif);color:var(--navy,#0a1f33)}.ds-exhibit__label{font-weight:700}.ds-stack{display:block;width:100%;height:56px}.ds-legend{display:grid;gap:8px;margin:20px 0 0;padding:0;list-style:none}.ds-legend li{display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;font:400 .9375rem var(--text,'Public Sans',Arial,sans-serif)}.ds-legend b{font-weight:600;color:var(--navy,#0a1f33);font-variant-numeric:tabular-nums lining-nums}.ds-swatch{width:12px;height:12px;background:#0a1f33}.ds-swatch[data-t=signal]{background:#1f5eff}.ds-swatch[data-t=rule]{background:#a8b4c0}.ds-exhibit__source{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--rule,#d8dee5);font:400 .8125rem var(--text,'Public Sans',Arial,sans-serif);color:var(--muted,#556474)}"
+    },
+    {
+      "name": "Ledger",
+      "kind": "custom",
+      "refersTo": "ledger",
+      "description": "Hairline table with tabular figures, Slate column heads and navy row heads.",
+      "html": "<table class=\"ds-ledger\"><thead><tr><th>Workflow</th><th>Owner</th><th>Reviewed</th></tr></thead><tbody><tr><th>Monthly board report</th><td>Finance</td><td>Yes</td></tr><tr><th>Client enquiry triage</th><td>Operations</td><td>Yes</td></tr></tbody></table>",
+      "css": ".ds-ledger{width:100%;border-collapse:collapse;font:400 .875rem var(--text,'Public Sans',Arial,sans-serif);font-variant-numeric:tabular-nums lining-nums}.ds-ledger th,.ds-ledger td{padding:10px 12px 10px 0;text-align:left;border-bottom:1px solid var(--rule,#d8dee5);vertical-align:top}.ds-ledger thead th{font-weight:600;color:var(--muted,#556474);border-bottom-color:var(--rule-strong,#a8b4c0)}.ds-ledger tbody th{font-weight:600;color:var(--navy,#0a1f33)}"
+    },
+    {
+      "name": "Article Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Navy top rule, title first, meta below it, whole card clickable.",
+      "html": "<article class=\"ds-card\"><h3 class=\"ds-card__title\"><a href=\"#\">Why AI pilots stall in month two</a></h3><p class=\"ds-card__meta\">Operations · 6 min read</p><p class=\"ds-card__body\">Ownership, review and handoffs were never designed.</p></article>",
+      "css": ".ds-card{position:relative;padding:24px 0;border-top:2px solid var(--navy,#0a1f33);max-width:360px;font:400 1.0625rem/1.6 var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633)}.ds-card__title{margin:0 0 10px;font:600 1.1875rem/1.3 var(--display,'Schibsted Grotesk',Arial,sans-serif);color:var(--navy,#0a1f33)}.ds-card__title a{color:inherit;text-decoration:none}.ds-card__title a::after{content:'';position:absolute;inset:0}.ds-card:hover .ds-card__title a{color:var(--signal-deep,#1746c8)}.ds-card__title a:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}.ds-card__meta{margin:0 0 10px;font-size:.8125rem;color:var(--muted,#556474)}.ds-card__body{margin:0}"
+    },
+    {
+      "name": "Commitment Ticks",
+      "kind": "custom",
+      "refersTo": "ticks",
+      "description": "Hairline rows with a CSS-drawn navy check, or a Slate dash for refusals.",
+      "html": "<ul class=\"ds-ticks\"><li>Agree how success is measured before we start.</li><li class=\"ds-no\">Lock you into our tools.</li></ul>",
+      "css": ".ds-ticks{margin:0;padding:0;list-style:none;font:400 1.0625rem/1.6 var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633)}.ds-ticks li{position:relative;padding:12px 0 12px 32px;border-bottom:1px solid var(--rule,#d8dee5)}.ds-ticks li::before{content:'';position:absolute;left:2px;top:19px;width:14px;height:8px;border-left:2px solid var(--navy,#0a1f33);border-bottom:2px solid var(--navy,#0a1f33);transform:rotate(-45deg)}.ds-ticks li.ds-no::before{top:22px;height:0;border-left:0;border-bottom-color:var(--muted,#556474);transform:none}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Board Pack",
+    "overview": "Every outcome is shown as a numbered exhibit, the way a COO already reads a board pack. The page is white paper set in deep navy ink, with hairline rules doing the structural work that shadows, cards and gradients do elsewhere. Exhibits carry a run-in label, an action title that states the finding, a chart drawn in two or three flat tones, and a source line. One electric blue is reserved for the thing the reader should look at: the highlighted data, the link, the primary button, the focus ring.\n\nDensity is that of a well-set report: generous section rhythm (64 to 128px), content held to readable measures (42ch ledes, 66ch prose), grids that collapse to a single column on phones without losing the rule structure. Nothing floats, nothing glows, nothing is rounded. The system refuses the category default of a dark gradient hero with a product screenshot and three feature cards, and it refuses the cream-serif editorial look it replaced.\n\nMotion is a single idea: exhibit marks below the first viewport draw themselves once as they arrive. Everything else changes state in 200ms colour shifts.",
+    "keyCharacteristics": [
+      "White paper, navy ink, one reserved signal blue.",
+      "Numbered exhibits with run-in label, action title, chart, note and source line.",
+      "Structure from 1px hairlines and 2px navy top rules; no shadows, no gradients, no radius.",
+      "Schibsted Grotesk display over Public Sans text, self-hosted, tabular figures only where numbers are compared.",
+      "Sentence case everywhere; no preheaders, kickers, eyebrows or uppercase.",
+      "At most one navy close band per page, before the footer."
+    ],
+    "rules": [
+      { "name": "The Signal Reservation Rule", "body": "Signal blue appears only on data marks the reader should compare against, links, the primary button and focus. It is never a background band, a decorative rule, an icon tint or a heading colour. In a chart, blue is the answer and navy or grey is the context.", "section": "colors" },
+      { "name": "The One Navy Band Rule", "body": "A page carries at most one full-bleed navy surface: the close band before the footer. Persuasion and reading pages end with it; the contact page (already the destination), legal pages and the 404 omit it. Other sections alternate paper and wash.", "section": "colors" },
+      { "name": "The Figures Rule", "body": "Tabular lining figures are switched on only for elements whose numbers are compared in columns: legend values, bar values, ledgers, chart axes and stage numbers. Body text keeps proportional lining figures.", "section": "typography" },
+      { "name": "The Sentence Case Rule", "body": "Every heading, button, label, caption and nav item is sentence case. No `text-transform: uppercase`, no letterspaced small-caps labels, no preheader or kicker line above a heading. Context that would be a kicker goes after the title (card meta) or runs in (exhibit label).", "section": "typography" },
+      { "name": "The Hairline Rule", "body": "If a group needs separating, draw a rule above it. Never lift it with a shadow or box it with a border on all four sides; the only fully bordered elements are form controls, the quiet button and the error box.", "section": "elevation" },
+      { "name": "The Top-Rule Rule", "body": "Emphasis rules run across the top of a block, full width. Coloured side stripes on the left edge of cards, quotes or callouts are not part of this world.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do show every claimed outcome as a numbered exhibit with a run-in \"Exhibit N · Topic.\" label, an action title, a chart, and a source line.",
+      "Do label invented, composite or example data as illustrative in the source line.",
+      "Do keep Signal Blue to data marks, links, the primary button and focus; use navy and Strong Hairline for context series.",
+      "Do separate groups with 1px hairlines and open emphasised blocks with a 2px navy top rule.",
+      "Do end persuasion and reading pages with exactly one navy close band; omit it on contact, legal and 404 pages.",
+      "Do set every heading, button and label in sentence case, with headings written as sentences.",
+      "Do switch on tabular figures only for legend values, bar values, ledgers, axes and stage numbers.",
+      "Do put card meta below the card title.",
+      "Do keep all styling in the stylesheet; the site runs under a CSP with no inline styles.",
+      "Do let only below-the-fold exhibit marks animate, once, and render everything complete under reduced motion and in print."
+    ],
+    "donts": [
+      "Don't use shadows, gradients, blurs or rounded corners anywhere.",
+      "Don't put a preheader, kicker or eyebrow line above a heading.",
+      "Don't use `text-transform: uppercase` or letterspaced label type.",
+      "Don't use em dashes in copy; use a full stop, comma or colon.",
+      "Don't draw coloured side-stripe borders on cards, quotes or callouts.",
+      "Don't add a second navy band, or use Signal Blue as a section or panel background.",
+      "Don't use stock photography, product screenshots or icon glyph sets; icons are the two 16px stroke arrows.",
+      "Don't write `style` attributes or inline `<style>` blocks."
+    ]
+  }
+}

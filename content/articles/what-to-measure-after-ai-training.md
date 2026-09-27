@@ -50,4 +50,4 @@ Separate participant feedback, observed task performance and any measured operat
 
 A modest, well-described result is more useful than an impressive number nobody can explain.
 
-[Discuss a team programme](/contact/?interest=Team%20education) to agree relevant tasks, a practical learning method and a review that matches the work.
+[Discuss a team programme](/contact/) to agree relevant tasks, a practical learning method and a review that matches the work.

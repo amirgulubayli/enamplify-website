@@ -1,0 +1,17 @@
+{
+  "delivered": [
+    ["AI clinical trial management", "Safer trial operations, grounded search and less friction across complex clinical workflows."],
+    ["AI finance tracking", "Clearer reporting, automated reconciliation and an always-current view of financial performance."],
+    ["Market intelligence", "Research, communications and decision support built around live market signals."],
+    ["Outbound growth systems", "Signal-led prospecting, enrichment, qualification and outreach without the busywork."],
+    ["SaaS product builds", "Focused software products taken from a rough workflow to a production-ready platform."],
+    ["Internal operations", "Custom systems that remove repetitive handoffs and give teams a shared source of truth."],
+    ["Marketing agency systems", "Brand-aware content, distribution and campaign systems with human judgement built in."],
+    ["PR agency systems", "Research, outreach, pitching and reporting workflows that turn good stories into momentum."]
+  ],
+  "products": [
+    {"name": "grademy", "url": "https://www.grademy.work/", "status": "In market", "line": "An adaptive AI study ecosystem grounded in the material learners actually use."},
+    {"name": "pripitch", "url": "https://www.pripitch.com/", "status": "In market", "line": "Sales intelligence for meeting preparation, prospect context and better conversations."},
+    {"name": "RAG-X", "url": null, "status": "Concept", "line": "An AI-first CRM concept exploring how business information can support better questions."}
+  ]
+}

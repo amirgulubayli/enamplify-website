@@ -1,14 +1,10 @@
 # Enamplify
 
-**Human potential. Thoughtfully advanced.**
+**AI your team builds. Not AI you buy.**
 
-A complete editorial website for Amir Gulubayli’s AI education and advisory practice. Warm parchment, oxblood, original letterform artwork, generous typography and practical, human-centred content.
+The website for Enamplify, an AI enablement consultancy based in London and Baku that helps mid-sized organisations train their own people to build and run AI workflows safely. Enamplify replaces RAG Medium as the single brand.
 
-## Delivery status
-
-The site has been built and tested locally. **No remote GitHub repository or Vercel deployment was created in the development session.** The available GitHub connector did not expose repository creation; the Vercel deployment action returned `Tool deploy_to_vercel not found`. Existing repositories and Vercel projects were not modified.
-
-The publishing script below performs the remaining authenticated operations from your own machine. It does not buy a domain, upgrade a plan, or change DNS.
+The visual system is "The Board Pack": white paper, navy ink, one electric-blue signal, and every outcome shown as a numbered exhibit. See `DESIGN.md` for tokens and rules, `PRODUCT.md` for product truth, and `docs/superpowers/specs/2026-09-27-enamplify-redesign-design.md` for the site structure and copy.
 
 ## Run it
 
@@ -20,107 +16,61 @@ npm start
 # Open http://localhost:3000
 ```
 
-`npm run dev` rebuilds when content or templates change. Refresh the page after editing. `npm run check` builds and runs the automated test suite. Vercel runs this same check before producing a deployment.
-
-## Publish to a new repository and Vercel
-
-Install GitHub CLI (`gh`) and sign in to the intended accounts through the normal CLI/browser authentication. The script fetches Vercel CLI with `npx`; internet access is required.
-
-```sh
-npm run publish:site
-```
-
-Default targets are a **new private** `amirgulubayli/enamplify` GitHub repository and a **new** `enamplify` Vercel project in `amirgulubaylis-projects`. Existing conflicting destinations cause the script to stop instead of silently replacing anything. If a step fails after repository creation, the script can resume from the linked folder. Inspect the actual CLI output: the deployment URL is not known in advance.
-
-Optional explicit overrides:
-
-```sh
-ENAMPLIFY_REPO=enamplify-website ENAMPLIFY_PROJECT=enamplify-website npm run publish:site
-```
-
-Confirm that your Vercel plan permits the intended business use. The script does not choose or purchase a new plan. The provider-side deployment, Git integration and custom-domain configuration still need live verification.
+`npm run dev` rebuilds on change. `npm run check` builds and runs every test; Vercel runs the same command as its build step, so a failing test blocks a deploy.
 
 ## Pages
 
-38 complete HTML pages, including the custom 404:
+20 pre-rendered pages:
 
-- Home; Solutions overview and four engagements; Approach; About; Contact.
-- Selected Work index and three founder-project notes: pripitch, grademy, RAG-X.
-- Perspectives index with search/topic filters and six complete essays.
-- Field Guides index and three interactive worksheets, each with a real two-page PDF.
-- Four audience pages: professional services, sales, operations, learning and development.
-- Three focused campaign pages.
-- Privacy, cookies, terms, accessibility, credits and a post-enquiry utility page.
+- Home, Approach, Work, About, Book a call (`/contact/`)
+- Insights index, six essays (`/insights/<slug>/`) and three interactive field guides with PDFs (`/insights/guides/<slug>/`)
+- Privacy, Cookies, Terms, Accessibility, and a noindex 404
 
-All routes are listed in `qa/routes.json`. Campaign and utility pages are not indexable. An unknown route produces a custom 404 rather than a single-page-app fallback.
+Retired URLs from the previous site (`/solutions/*`, `/perspectives/*`, `/resources/*`, `/for/*`, `/start/*`, the old `/work/<project>/` notes, `/credits/`, `/thank-you/`) get permanent (308) redirects to their closest successor. The list lives in `src/routes.mjs` and is mirrored in `vercel.json`; a test keeps them identical and loop-free.
 
-## Architecture
-
-This is a pre-rendered multipage website, not a client-side application that needs hydration. Each route has complete semantic HTML. JavaScript enhances the menu, filters, email composer, print notes and clipboard controls. Native document navigation keeps the website useful without a framework runtime. Supported browsers get a quiet 160 ms crossfade; reduced-motion settings disable the effects.
+## Structure
 
 ```
-content/site.json          Practice details and navigation
-content/services.json      Four engagement pages
-content/projects.json      Founder-project facts and narrative
-content/audiences.json     Audience-specific pages
-content/resources.json     Field-guide web content
-content/articles.json      Essay metadata
-content/articles/*.md      Authoritative essay copy
-src/components.mjs        Reusable visual and semantic components
-src/pages.mjs             Page templates
-src/markdown.mjs           Safe editorial Markdown subset
-assets/styles.css         Responsive design system
-assets/site.js            Progressive enhancements
-public/downloads/         Finished PDF worksheets
-api/enquiry.js            Optional server-side delivery, disabled by default
-scripts/build.mjs         HTML, sitemap, RSS, metadata and asset build
-scripts/publish.sh        Authenticated repository creation and deployment
+content/site.json            Brand, nav, booking URL, definition sentence
+content/work.json            Delivered systems and own products
+content/faqs.json            Approach FAQs (also FAQPage JSON-LD)
+content/articles.json + articles/*.md   Essays
+content/resources.json       Field guides
+src/content.mjs              Loads and validates all content
+src/routes.mjs               Route table (title, description, crumbs) and redirects
+src/seo.mjs                  Document head, canonical, robots, JSON-LD graph
+src/exhibits.mjs             Exhibit charts: stacked bar, paired bars, line chart, ledger
+src/components.mjs           Header, footer, exhibit frame, cards, close band
+src/pages/*.mjs              One renderer per page type
+src/markdown.mjs             Safe Markdown subset for essays
+assets/styles.css            Board Pack stylesheet (budget 36 KB)
+assets/site.js               Menu, enquiry composer, print notes, exhibit reveal (budget 12 KB)
+public/fonts/                Self-hosted Schibsted Grotesk and Public Sans (OFL)
+scripts/build.mjs            Build: pages, sitemap, robots, RSS, llms.txt
+scripts/make_og.py           Renders public/images/social-card.png
+scripts/fetch-fonts.mjs      One-off font download
+api/enquiry.js               Optional server-side enquiry delivery
 ```
-
-`dist/` is generated and not committed. It is included in the downloadable handoff so a local preview can be served immediately.
 
 ## Editing
 
-Edit essay text in `content/articles/*.md`, and titles, descriptions, categories and dates in `content/articles.json`. The build compiles Markdown; there is no duplicate HTML copy to maintain. The supported subset includes paragraphs, headings `##`–`####`, emphasis, safe links, lists, quotations and code blocks. Raw HTML is escaped. Use a page title in metadata rather than a second `#` heading.
+- **Copy:** page copy lives in `src/pages/*.mjs`; shared copy (engagement stages, commitments, track record) in `src/pages/shared.mjs`. Keep sentence case, no em dashes and no kicker lines above headings: the tests enforce these.
+- **Essays:** edit `content/articles/*.md` and their metadata in `content/articles.json`.
+- **Exhibits:** any illustrative figure must say so in its source line. Replace illustrative data with real pilot numbers when you have them.
+- **Booking link:** `bookingUrl` in `content/site.json`.
 
-Edit service, project and audience narratives in their JSON files. Add an article by adding its metadata and matching Markdown file. Keep publication dates truthful; do not manufacture historical posts or results.
+## Enquiries
 
-Field-guide PDF files are already generated. After editing guide content, regenerate the PDFs with `python scripts/make_print_assets.py` in an environment with Pillow, ReportLab and fontconfig. This optional print-production step is not needed for a normal website build.
+The contact page offers a booking link and an email composer that prepares a message in the visitor's own email app and says clearly that nothing has been sent. Server delivery through Resend with Cloudflare Turnstile is implemented but off by default; configure every variable in `.env.example` on Vercel to enable it.
 
-## Enquiries: the default is deliberately honest
+## SEO, AI search and performance
 
-The current contact page is a **functional email composer**. It validates the details, prepares a correctly addressed message, offers an email-app link and a copyable draft, and explicitly tells the visitor that nothing has been sent yet. It does not silently discard a submission or show fake success.
+- Unique titles and descriptions, canonical URLs, Open Graph image, sitemap with lastmod, RSS feed.
+- JSON-LD on every page: ProfessionalService (London, Baku, UK, Azerbaijan), Person, WebSite; plus BreadcrumbList, FAQPage (Approach) and Article (essays).
+- `/llms.txt` summarises the site for AI search engines.
+- Core Web Vitals: fonts are self-hosted, preloaded and `font-display: optional` (no layout shift); no hero image; every image has dimensions; no third-party stylesheets or trackers.
+- Local and preview builds are noindex. After the custom domain is live, set `SITE_URL=https://enamplify.com` and redeploy.
 
-The receiving address is the existing public business contact found in RAGmedium’s source: `amirg@ragmedium.com`. A new Enamplify email address has not been invented or provisioned.
+## Evidence boundaries
 
-Direct server delivery is implemented, but **has not been connected to a real provider or tested with a real email**. To enable it, configure all the variables in `.env.example` on Vercel, including a verified Resend sender and Cloudflare Turnstile. Keep secrets in Vercel settings, not source control or chat. `CONTACT_ALLOWED_ORIGIN` must contain the exact live origin. The server validates input, origin, token action/hostname and size, uses an idempotency key, and only reports success after provider acceptance. Unit tests mock both providers; they do not send email. Rebuild after changing form mode.
-
-## Images and type
-
-The hero folio, monogram, project illustrations, diagrams, social card and icons are original website assets. Project diagrams are not presented as application screenshots or evidence of results.
-
-The founder-photo reference is `https://ragmedium.com/images/amir-gulubayli.jpg`, found in the existing website source. **Its download could not be verified in the development environment.** The layout has an intentional initials fallback; it never fabricates a likeness. Verify the actual portrait on the live page, or place the approved image at `public/images/amir-gulubayli.jpg`.
-
-An Unsplash library photograph was visually reviewed and selected as editorial atmosphere, not represented as an office or client location. Container downloads failed, so the current source uses the remote reference with a clean fallback. `npm run assets:sync` attempts to make the portrait and library image local. Vercel builds also attempt the sync unless `ASSET_SYNC=0`. A failed sync never changes the contents of existing approved image files.
-
-Typography uses Google-hosted Instrument Serif and DM Sans with system fallbacks. No font binaries are included. The original moodboard’s Canela/Söhne combination is not falsely represented as licensed.
-
-## Metadata, performance and security
-
-Every page has a distinct title and description, canonical URL, Open Graph metadata, semantic landmarks and an appropriate indexing setting. Essays have Article structured data. The practice and founder have conservative structured data without fabricated addresses, awards or review ratings. RSS and XML sitemap are generated.
-
-Styles and scripts are content-hashed and receive immutable caching. Images have dimensions. There is no analytics library, tracking pixel, local-storage persistence, login, checkout or unnecessary frontend dependency. Security headers and a restrictive Content Security Policy are configured in `vercel.json`.
-
-`SITE_URL` takes precedence over the platform URL. When unset, Vercel’s actual production domain is used. Local and preview builds are non-indexable. After connecting the custom domain, set `SITE_URL=https://enamplify.com` and redeploy. Do not claim a domain is connected until its DNS and certificate are verified. If Vercel system environment variables are disabled, set `SITE_URL` explicitly.
-
-## Evidence and publication boundaries
-
-The Work pages are clearly **founder-project notes**, not fabricated Enamplify client case studies. There are no invented testimonials, client logos, revenue improvements, savings, accreditations or guaranteed results. RAG-X remains described as a concept. Existing product links provide context, not proof of customer outcomes.
-
-Services are descriptions of potential scoped engagements; they are not a promise of a fixed delivery schedule or capacity. There are no fabricated programme dates, prices or available seats.
-
-Legal pages describe this implementation and known contact information; they are not a substitute for review of your actual entity, data handling and contracts before commercial engagements.
-
-## QA and remaining launch checks
-
-See `qa/README.md`, `qa/browser-report.json`, `qa/unit-tests.txt` and `docs/LAUNCH_CHECKS.md` for the tested scope and remaining provider-side checks. No Lighthouse score, cross-browser certification or cloud deployment is claimed without measurement.
+No invented clients, logos, testimonials, results or guarantees. Client names are withheld by default. RAG-X is described as a concept. Illustrative exhibits are labelled as such.

@@ -1,0 +1,17 @@
+{
+  "delivered": [
+    ["Klinik sınaqların Sİ ilə idarə olunması", "Daha təhlükəsiz sınaq əməliyyatları, mənbələrə əsaslanan axtarış və mürəkkəb klinik iş axınlarında daha az maneə."],
+    ["Sİ ilə maliyyə monitorinqi", "Daha aydın hesabatlar, avtomatlaşdırılmış uzlaşdırma və maliyyə göstəricilərinin daim aktual mənzərəsi."],
+    ["Bazar təhlili", "Canlı bazar siqnallarına əsaslanan araşdırma, kommunikasiya və qərar dəstəyi."],
+    ["Aktiv satış (outbound) sistemləri", "Siqnallara əsaslanan potensial müştəri axtarışı, məlumatların zənginləşdirilməsi, uyğunluğun qiymətləndirilməsi və əlaqə, rutin iş olmadan."],
+    ["SaaS məhsullarının qurulması", "İlkin iş axını ideyasından istifadəyə hazır platformaya qədər aparılmış məqsədyönlü proqram məhsulları."],
+    ["Daxili əməliyyatlar", "Təkrarlanan iş ötürmələrini aradan qaldıran və komandalara vahid etibarlı məlumat mənbəyi verən fərdi sistemlər."],
+    ["Marketinq agentlikləri üçün sistemlər", "İnsan mühakiməsini nəzərə alan, brendə uyğun kontent, yayım və kampaniya sistemləri."],
+    ["PR agentlikləri üçün sistemlər", "Yaxşı hekayələri irəliləyişə çevirən araşdırma, əlaqə, təqdimat və hesabat iş axınları."]
+  ],
+  "products": [
+    {"status": "Bazarda", "line": "Öyrənənlərin real istifadə etdiyi materiallara əsaslanan adaptiv Sİ tədris ekosistemi."},
+    {"status": "Bazarda", "line": "Görüşlərə hazırlıq, potensial müştəri haqqında kontekst və daha yaxşı söhbətlər üçün satış analitikası."},
+    {"status": "Konsepsiya", "line": "Biznes məlumatının daha yaxşı suallar verməyə necə kömək edə biləcəyini araşdıran Sİ əsaslı CRM konsepsiyası."}
+  ]
+}

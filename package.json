@@ -12,9 +12,7 @@
     "dev": "node scripts/dev.mjs",
     "start": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm run build && npm test",
-    "assets:sync": "node scripts/sync-assets.mjs",
-    "publish:site": "bash scripts/publish.sh"
+    "check": "npm run build && npm test"
   },
   "license": "UNLICENSED"
 }

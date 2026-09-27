@@ -1,0 +1,9 @@
+[
+  ["Do our people need a technical background?", "No. We start from the tasks people already do. Most of the people who build workflows during a pilot have never written code."],
+  ["Which AI models and tools do you use?", "Whatever fits your data and your rules. Low-sensitivity work can use leading commercial models under enterprise terms; sensitive work can run on models inside your own environment. You are not locked into our choices."],
+  ["Where does our data go?", "Only where you have approved. We agree data boundaries before anything is built, and we can deploy on your own infrastructure or in UK or EU hosting."],
+  ["How do we know it worked?", "We agree a baseline and two or three measures before we start, such as hours spent on a task or review effort, and we report against them. Attendance is not an outcome."],
+  ["Do you guarantee results?", "No. Outcomes depend on your data, approvals and people, which we do not control. We price the first steps so you can see value before committing to more."],
+  ["What does it cost?", "The diagnostic is a fixed fee, credited against the pilot if you continue. Pilot and ongoing fees depend on scope and team size, and are set out in a written proposal."],
+  ["Do you work outside London?", "Yes. We work across the UK and Europe from London, and across Azerbaijan from Baku, where we can deliver in Azerbaijani."]
+]

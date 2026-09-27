@@ -42,4 +42,4 @@ Then test the entire path, including review and correction, not just the moment 
 
 The handoff is part of the product. It is also part of the training. People need to understand where a useful output belongs and what they remain responsible for doing with it.
 
-[Explore Workflow Design](/solutions/workflow-design/) for a focused review of one process and the conditions needed to make it workable.
+[Explore Workflow Design](/approach/) for a focused review of one process and the conditions needed to make it workable.
