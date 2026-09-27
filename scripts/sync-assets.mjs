@@ -4,8 +4,7 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 // Public-source photography only. No keys or private repository contents are fetched.
 const assets=[
- {name:'amir-gulubayli.jpg',urls:['https://ragmedium.com/images/amir-gulubayli.jpg','https://www.ragmedium.com/images/amir-gulubayli.jpg'],source:'Existing founder portrait referenced by RAGmedium website source; verify the downloaded image before launch.'},
- {name:'library.jpg',urls:['https://images.unsplash.com/photo-1507842217343-583bb7270b66?fit=crop&w=1600&q=85&fm=jpg'],source:'Unsplash editorial photograph. Not an Enamplify location.'}
+ {name:'amir-gulubayli.jpg',urls:['https://ragmedium.com/images/amir-gulubayli.jpg','https://www.ragmedium.com/images/amir-gulubayli.jpg'],source:'Existing founder portrait referenced by RAGmedium website source; verify the downloaded image before launch.'}
 ];
 export async function syncAssets(){
  await fs.mkdir(path.join(root,'public/images'),{recursive:true});
