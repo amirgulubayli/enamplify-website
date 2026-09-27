@@ -12,29 +12,50 @@ const readJson = async rel => JSON.parse(await fs.readFile(path.join(root, 'cont
 const readOptional = async (rel, read) => { try { return await read(rel); } catch (e) { if (e.code === 'ENOENT') return undefined; throw e; } };
 const isObject = v => v !== null && typeof v === 'object' && !Array.isArray(v);
 
+/** The translatable keys each AZ content overlay must supply (per item for the slugged lists). */
+export const REQUIRED = {
+  site: ['description', 'definition', 'nav', 'cities'],
+  work: ['delivered', 'products'],
+  faqs: [],
+  articles: ['title', 'summary', 'category', 'date'],
+  resources: ['name', 'short', 'description', 'time', 'audience', 'intro', 'fields', 'checks', 'closing']
+};
+
 /**
- * Overlay translated values onto base content. Objects merge key by key; arrays of objects merge
- * item by item (matched by `slug` when the items have one, otherwise by position); any other value,
- * including arrays of strings or pairs, is replaced whole. Anything absent keeps its base value.
- * Absent array items are recorded in `missing`; with `strict` (the copy dictionaries, where every
- * value is translatable) absent object keys are recorded too.
+ * Overlay translated values onto base content; the result always has the base's shape.
+ * - Objects merge key by key. Keys the base lacks are ignored and reported as unknown (typos).
+ * - Arrays of objects merge item by item: by `slug` when every base item has one, else by position.
+ *   Items the base lacks are reported as unknown.
+ * - Any other array (strings, pairs) is replaced whole; a different length is reported.
+ * - `null` counts as absent. Absent values keep the base value; absent array items are always
+ *   reported, absent keys when `strict` (every key, as in the copy dictionaries) or listed in
+ *   `required` (checked on the root object, or on each item when the root is a list).
+ * Reports go to `missing` as `path`, `path (unknown key)`, `path (unknown item)`,
+ * `path (N items, expected M)` or `path (expected …)`.
  */
-export function overlay(base, over, missing = [], {strict = false} = {}, at = '') {
-  if (over === undefined) { missing.push(at); return base; }
-  if (isObject(base) && isObject(over)) {
-    return Object.fromEntries(Object.keys({...base, ...over}).map(k => {
-      const where = at ? `${at}.${k}` : k;
-      if (k in over) return [k, overlay(base[k], over[k], missing, {strict}, where)];
-      if (strict) missing.push(where);
+export function overlay(base, over, missing = [], {strict = false, required = []} = {}, at = '') {
+  const here = at || '(root)';
+  if (over === undefined || over === null) { missing.push(here); return base; }
+  if (isObject(base)) {
+    if (!isObject(over)) { missing.push(`${here} (expected an object)`); return base; }
+    const join = k => (at ? `${at}.${k}` : k);
+    for (const k of Object.keys(over)) if (!(k in base)) missing.push(`${join(k)} (unknown key)`);
+    return Object.fromEntries(Object.keys(base).map(k => {
+      if (over[k] !== undefined && over[k] !== null) return [k, overlay(base[k], over[k], missing, {strict}, join(k))];
+      if (strict || required.includes(k)) missing.push(join(k));
       return [k, base[k]];
     }));
   }
-  if (Array.isArray(base) && Array.isArray(over) && base.some(isObject)) {
-    const bySlug = base.every(b => isObject(b) && b.slug);
-    return base.map((b, i) => {
-      const o = bySlug ? over.find(x => x?.slug === b.slug) : over[i];
-      return overlay(b, o, missing, {strict}, `${at}[${bySlug ? b.slug : i}]`);
-    });
+  if (Array.isArray(base)) {
+    if (!Array.isArray(over)) { missing.push(`${here} (expected a list)`); return base; }
+    if (base.some(isObject)) {
+      const bySlug = base.every(b => isObject(b) && b.slug);
+      const extras = bySlug ? over.filter(o => !base.some(b => b.slug === o?.slug)).map(o => o?.slug) : over.slice(base.length).map((_, i) => base.length + i);
+      for (const x of extras) missing.push(`${at}[${x}] (unknown item)`);
+      return base.map((b, i) => overlay(b, bySlug ? over.find(o => o?.slug === b.slug) : over[i], missing, {strict, required}, `${at}[${bySlug ? b.slug : i}]`));
+    }
+    if (over.length !== base.length) missing.push(`${here} (${over.length} items, expected ${base.length})`);
+    return over;
   }
   return over;
 }
@@ -54,11 +75,14 @@ export async function loadContent(localeCode = defaultLocale) {
     const over = await readOptional(rel, readJson);
     if (over === undefined) { missing.push(`content/${rel}`); return baseContent[i]; }
     const gaps = [];
-    const merged = overlay(baseContent[i], over, gaps);
+    const merged = overlay(baseContent[i], over, gaps, {required: REQUIRED[name]});
     missing.push(...gaps.map(g => `content/${rel}#${g}`));
     return merged;
   }));
-  const [site, articles, guides, work, faqs] = localised;
+  const [localSite, articles, guides, work, faqs] = localised;
+  // Nav hrefs always come from the base site.json; an overlay only supplies the labels, so a
+  // translator writing `/az/…` hrefs can never double-prefix or break a link.
+  const site = {...localSite, nav: baseContent[0].nav.map(([label, href], i) => [localSite.nav[i]?.[0] ?? label, href])};
 
   const enCopy = await readJson(`copy/${defaultLocale}.json`);
   let copy = enCopy;

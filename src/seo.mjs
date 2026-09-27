@@ -18,7 +18,7 @@ export function jsonLd({base, site, route, copy}) {
     {'@type': 'WebSite', '@id': `${base}/#website`, url: `${base}/`, name: site.name, inLanguage: Object.values(locales).map(l => l.lang), publisher: {'@id': `${base}/#practice`}}
   ];
   if (!route.notFound) graph.push({'@type': 'WebPage', '@id': canonical, url: canonical, name: route.title, inLanguage: lang, isPartOf: {'@id': `${base}/#website`}});
-  if (route.crumbs) graph.push({'@type': 'BreadcrumbList', inLanguage: lang, itemListElement: [[home, '/'], ...route.crumbs].map(([name, url], i) => ({'@type': 'ListItem', position: i + 1, name, item: base + (url ? localePath(route.locale, url) : route.url)}))});
+  if (route.crumbs) graph.push({'@type': 'BreadcrumbList', itemListElement: [[home, '/'], ...route.crumbs].map(([name, url], i) => ({'@type': 'ListItem', position: i + 1, name, item: base + (url ? localePath(route.locale, url) : route.url)}))});
   if (route.faqs) graph.push({'@type': 'FAQPage', inLanguage: lang, mainEntity: route.faqs.map(([q, a]) => ({'@type': 'Question', name: q, acceptedAnswer: {'@type': 'Answer', text: a}}))});
   if (route.article) {
     const a = route.article;

@@ -58,8 +58,8 @@ test('Azerbaijani pages link within /az/ apart from shared files and counterpart
     for (const m of withoutCounterparts(h).matchAll(/(?:href|src)="(\/[^"#?]*)/g)) assert.ok(m[1].startsWith('/az/') || SHARED.test(m[1]), `${routes[i].url} links ${m[1]}`);
   }
 });
-test('English pages never link into /az/ outside the toggle and hreflang', () => {
-  for (const [i, h] of all.entries()) if (routes[i].locale === 'en') assert.ok(!/(?:href|src)="\/az\//.test(withoutCounterparts(h)), routes[i].url);
+test('English pages (bar the bilingual 404) never link into /az/ outside the toggle and hreflang', () => {
+  for (const [i, h] of all.entries()) if (routes[i].locale === 'en' && routes[i].key !== 'notFound') assert.ok(!/(?:href|src)="\/az\//.test(withoutCounterparts(h)), routes[i].url);
 });
 test('client strings are valid JSON on every page', () => {
   for (const [i, h] of all.entries()) {
