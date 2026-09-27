@@ -12,7 +12,7 @@ export function contact({site, enquiryMode = 'email'}) {
 <h2>What happens after</h2><p>If there’s a fit, you get a short written proposal for a diagnostic. If there isn’t, we’ll say so and point you somewhere useful.</p>
 <div class="actions">${button('Choose a time', site.bookingUrl, 'primary', 'target="_blank" rel="noopener noreferrer"')}</div><p class="small">Opens our booking calendar in a new tab.</p></div>
 <div class="contact__form"><h2>Prefer to write?</h2>
-<form id="enquiry-form" data-mode="${enquiryMode}" data-email="${esc(site.email)}" novalidate>
+<form id="enquiry-form" action="mailto:${esc(site.email)}" method="post" enctype="text/plain" data-mode="${enquiryMode}" data-email="${esc(site.email)}" novalidate>
 <div class="form-row"><label for="name">Your name<input id="name" name="name" autocomplete="name" required maxlength="100"></label><label for="email">Work email<input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></label></div>
 <label for="organisation">Organisation<input id="organisation" name="organisation" autocomplete="organization" maxlength="160"></label>
 <label for="interest">What would you like to talk about?<select id="interest" name="interest"><option value="Not sure yet">Not sure yet</option>${interests.map(i => `<option value="${esc(i)}">${esc(i)}</option>`).join('')}</select></label>
