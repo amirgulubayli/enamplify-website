@@ -31,3 +31,15 @@ test('document preloads fonts, uses no third-party stylesheet and sets robots', 
   assert.ok(html.includes('content="noindex,follow"'));
   assert.ok(html.includes('<link rel="canonical" href="https://enamplify.com/work/">'));
 });
+test('document injects the Turnstile widget when the contact page has the form-errors anchor', () => {
+  const html = renderDocument({base, site, route: {url: '/contact/', title: 'Contact', description: 'D', html: '<form><div id="form-errors"></div></form>', contact: true}, cssName: 's.css', jsName: 's.js', indexable: true, turnstileKey: 'key123'});
+  assert.ok(html.includes('class="cf-turnstile"'));
+  assert.ok(html.includes('challenges.cloudflare.com/turnstile'));
+});
+test('document throws when the contact page is missing the form-errors anchor', () => {
+  assert.throws(() => renderDocument({base, site, route: {url: '/contact/', title: 'Contact', description: 'D', html: '<form></form>', contact: true}, cssName: 's.css', jsName: 's.js', indexable: true, turnstileKey: 'key123'}), /form-errors anchor/);
+});
+test('document emits the literal title for the home route', () => {
+  const html = renderDocument({base, site, route: {home: true, url: '/', title: 'Enamplify · AI enablement', description: 'D', html: '<h1>Home</h1>'}, cssName: 's.css', jsName: 's.js', indexable: true});
+  assert.ok(html.includes('<title>Enamplify · AI enablement</title>'));
+});

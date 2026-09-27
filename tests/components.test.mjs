@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {esc, header, footer, exhibit, breadcrumb, closeBand} from '../src/components.mjs';
 
-const site = {name: 'Enamplify', email: 'a@b.co', linkedin: 'https://example.com/in', cities: ['London', 'Baku'], definition: 'Enamplify is an AI enablement consultancy.', nav: [['Approach', '/approach/'], ['Work', '/work/']]};
+const site = {name: 'Enamplify', email: 'a@b.co', linkedin: 'https://example.com/in', cities: ['London', 'Baku'], definition: 'Enamplify is an AI enablement consultancy.', nav: [['Approach', '/approach/'], ['Work', '/work/'], ['Insights', '/insights/']]};
 
 test('esc escapes markup', () => assert.equal(esc('<a "b">'), '&lt;a &quot;b&quot;&gt;'));
 test('header marks the current section and offers a quiet booking link', () => {
@@ -11,6 +11,18 @@ test('header marks the current section and offers a quiet booking link', () => {
   assert.ok(!html.includes('<a href="/approach/" aria-current'));
   assert.ok(html.includes('Book a call'));
   assert.ok(html.includes('Skip to content'));
+});
+test('header marks nothing on the home page', () => {
+  const html = header(site, '/');
+  assert.ok(!html.includes('aria-current'));
+});
+test('header marks a section match with aria-current="true"', () => {
+  const html = header(site, '/insights/x/');
+  assert.ok(html.includes('<a href="/insights/" aria-current="true">Insights</a>'));
+});
+test('header marks Book a call current on the contact page', () => {
+  const html = header(site, '/contact/');
+  assert.ok(html.includes('aria-current="page">Book a call</a>'));
 });
 test('footer carries the definition sentence and both cities', () => {
   const html = footer(site);
