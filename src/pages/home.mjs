@@ -29,15 +29,15 @@ const outcomes = () => [
     source: 'Illustrative. Weekly hours on recurring admin for one role.'}),
   exhibit({n: 3, title: 'Owned in-house', cls: 'exhibit--outcome',
     chart: lineChart({xLabels: ['Month 1', 'Month 12'], max: 12, series: [
-      {label: 'Maintained by your team', tone: 'signal', values: [0, 1, 3, 5, 8, 10, 12]},
-      {label: 'Maintained by Enamplify', tone: 'navy', values: [3, 4, 4, 3, 2, 1, 1]}]}),
+      {label: 'Workflows maintained by your team', tone: 'signal', values: [0, 1, 3, 5, 8, 10, 12]},
+      {label: 'Workflows maintained by Enamplify', tone: 'navy', values: [3, 4, 4, 3, 2, 1, 1]}]}),
     note: 'Your people learn to build and run their own workflows. When we step back, the capability stays.',
     source: 'Illustrative.'}),
   exhibit({n: 4, title: 'In control', cls: 'exhibit--outcome',
     chart: ledger({caption: 'Example workflow ledger', columns: ['Workflow', 'Owner', 'Reviewed', 'Data stays in'], rows: [
       ['Monthly board report', 'Finance', 'Yes', 'Your environment'],
       ['Client enquiry triage', 'Operations', 'Yes', 'Your environment'],
-      ['Contract first read', 'Legal', 'Yes', 'Your environment']]}),
+      ['Contract first-read', 'Legal', 'Yes', 'Your environment']]}),
     note: 'Every workflow is visible, reviewed before it goes live, and runs inside limits you set.',
     source: 'Example ledger.'})
 ].join('');
