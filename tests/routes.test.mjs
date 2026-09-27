@@ -34,3 +34,11 @@ test('every retired section redirects, and vercel.json matches', async () => {
   const vercel = JSON.parse(await fs.readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
   assert.deepEqual(vercel.redirects, redirects.map(r => ({...r, permanent: true})));
 });
+test('no redirect destination matches a redirect source pattern (no loops)', () => {
+  const toRegExp = source => new RegExp(`^${source.replace(/:slug/g, '[^/]+')}$`);
+  for (const r of redirects) {
+    for (const other of redirects) {
+      assert.ok(!toRegExp(other.source).test(r.destination), `${r.source} -> ${r.destination} matches ${other.source}`);
+    }
+  }
+});

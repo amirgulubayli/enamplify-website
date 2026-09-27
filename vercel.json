@@ -11,7 +11,9 @@
     {"source": "/solutions/:slug/", "destination": "/approach/", "permanent": true},
     {"source": "/for/:slug/", "destination": "/", "permanent": true},
     {"source": "/start/:slug/", "destination": "/contact/", "permanent": true},
-    {"source": "/work/:slug/", "destination": "/work/", "permanent": true},
+    {"source": "/work/pripitch/", "destination": "/work/", "permanent": true},
+    {"source": "/work/grademy/", "destination": "/work/", "permanent": true},
+    {"source": "/work/rag-x/", "destination": "/work/", "permanent": true},
     {"source": "/perspectives/", "destination": "/insights/", "permanent": true},
     {"source": "/perspectives/:slug/", "destination": "/insights/:slug/", "permanent": true},
     {"source": "/resources/", "destination": "/insights/", "permanent": true},
@@ -73,7 +75,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=2592000"
         }
       ]
     }

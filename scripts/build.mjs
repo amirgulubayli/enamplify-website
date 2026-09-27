@@ -19,7 +19,9 @@ export async function build() {
   const content = await loadContent();
   const {site, articles} = content;
   const supplied = process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-  const base = new URL(supplied).origin;
+  const normalised = /^https?:\/\//i.test(supplied) ? supplied : `https://${supplied}`;
+  let base;
+  try { base = new URL(normalised).origin; } catch { throw new Error(`SITE_URL is not a valid URL: ${supplied}`); }
   const isLive = (process.env.VERCEL_ENV === 'production' || process.env.INDEX_SITE === 'true') && !base.includes('localhost');
   const env = process.env;
   const enquiryMode = env.ENQUIRY_MODE === 'server' && env.RESEND_API_KEY && env.CONTACT_FROM && env.CONTACT_TO && env.CONTACT_ALLOWED_ORIGIN && env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY ? 'server' : 'email';
