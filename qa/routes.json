@@ -247,8 +247,8 @@
       "en": "/",
       "az": "/az/"
     },
-    "title": "Enamplify · Orta ölçülü komandalar üçün Sİ bacarığı",
-    "description": "Satın aldığınız deyil, komandanızın qurduğu Sİ. Orta ölçülü təşkilatlarda Sİ-ni əməkdaşların gündəlik işinə daxil edirik: daha çox iş, daxili bacarıq, nəzarət.",
+    "title": "Enamplify · Orta ölçülü şirkətlərdə süni intellekt bacarıqları",
+    "description": "Orta ölçülü təşkilatlara süni intellekti əməkdaşlarının gündəlik işinin bir hissəsinə çevirməyə kömək edirik: daha çox iş, daxili bacarıq, tam nəzarət.",
     "index": true
   },
   {
@@ -259,8 +259,8 @@
       "en": "/approach/",
       "az": "/az/approach/"
     },
-    "title": "Sİ bacarığı: diaqnostika, sübut, genişləndirmə",
-    "description": "Kiçikdən başlayın, sübut edin, sonra genişləndirin. Enamplify komandalara yoxlama, idarəetmə və məlumat nəzarəti ilə öz Sİ iş axınlarını qurmağa kömək edir.",
+    "title": "Süni intellekt bacarıqları: diaqnoz, sübut, genişləndirmə",
+    "description": "Kiçikdən başlayın, sübut edin, genişləndirin. Komandalar yoxlama və idarəetmə ilə, məlumatları lazımi yerdə saxlayaraq öz süni intellekt iş axınlarını qurur.",
     "index": true
   },
   {
@@ -271,8 +271,8 @@
       "en": "/work/",
       "az": "/az/work/"
     },
-    "title": "Qurduğumuz Sİ sistemləri və idarə etdiyimiz məhsullar",
-    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş Sİ sistemləri, Google hakatonunda qələbə və özümüzün qurub idarə etdiyimiz Sİ məhsulları.",
+    "title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız",
+    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri, Google hakatonunda qələbə və öz məhsullarımız.",
     "index": true
   },
   {
@@ -283,8 +283,8 @@
       "en": "/about/",
       "az": "/az/about/"
     },
-    "title": "Enamplify haqqında: təsisçi şirkəti, London və Bakı",
-    "description": "Enamplify London və Bakıda fəaliyyət göstərən, təsisçinin rəhbərlik etdiyi Sİ bacarığı üzrə məsləhət şirkətidir. Amir Gulubayli və iş prinsiplərimiz.",
+    "title": "Təsisçinin rəhbərlik etdiyi şirkət, London və Bakı",
+    "description": "Enamplify London və Bakıda təsisçinin rəhbərlik etdiyi süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Amir Gulubayli və iş prinsiplərimiz.",
     "index": true
   },
   {
@@ -295,8 +295,8 @@
       "en": "/insights/",
       "az": "/az/insights/"
     },
-    "title": "Əməliyyat rəhbərləri üçün Sİ-nin tətbiqinə dair təhlillər",
-    "description": "Əməliyyat rəhbərləri üçün Sİ-nin tətbiqi, pilot layihələr, ölçmə və idarəetmə haqqında praktik esselər və pulsuz bələdçilər.",
+    "title": "Rəhbərlər üçün süni intellektin tətbiqinə dair təhlillər",
+    "description": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik esselər və pulsuz bələdçilər: pilot layihələr, ölçmə və idarəetmə.",
     "index": true
   },
   {
@@ -307,7 +307,7 @@
       "en": "/insights/beyond-the-ai-demo/",
       "az": "/az/insights/beyond-the-ai-demo/"
     },
-    "title": "İşləyən Sİ demosu hələ işlək iş axını deyil.",
+    "title": "Süni intellekt demosu hələ gündəlik iş axını deyil.",
     "description": "Faydalı cavab sahiblik, yoxlama, giriş və sonrakı addım məsələlərini həll etmir.",
     "index": true
   },
@@ -331,7 +331,7 @@
       "en": "/insights/what-to-measure-after-ai-training/",
       "az": "/az/insights/what-to-measure-after-ai-training/"
     },
-    "title": "Sİ təlimindən sonra nə dəyişməlidir?",
+    "title": "Süni intellekt təlimindən sonra nə dəyişməlidir?",
     "description": "İştirakı saymaq asandır. Bacarığı qiymətləndirmək daha diqqətli baxış tələb edir.",
     "index": true
   },
@@ -355,7 +355,7 @@
       "en": "/insights/when-not-to-automate/",
       "az": "/az/insights/when-not-to-automate/"
     },
-    "title": "Yaxşı Sİ məsləhəti nəyi avtomatlaşdırmamağı da bilir.",
+    "title": "Yaxşı məsləhət nəyi avtomatlaşdırmamağı da bilir.",
     "description": "Bəzən növbəti faydalı addım yeni sistem deyil, daha aydın prosesdir.",
     "index": true
   },
@@ -379,7 +379,7 @@
       "en": "/insights/guides/ai-pilot-acceptance-checklist/",
       "az": "/az/insights/guides/ai-pilot-acceptance-checklist/"
     },
-    "title": "Sİ pilot layihəsinin qəbul yoxlama siyahısı",
+    "title": "Süni intellekt pilot layihəsinin qəbul yoxlama siyahısı",
     "description": "Sahibliyi, keyfiyyəti və növbəti qərarı aydınlaşdırmaq üçün altı praktik yoxlama.",
     "index": true
   },
@@ -391,8 +391,8 @@
       "en": "/insights/guides/ai-opportunity-canvas/",
       "az": "/az/insights/guides/ai-opportunity-canvas/"
     },
-    "title": "Sİ imkanları kanvası",
-    "description": "Faydalı və hüdudları bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
+    "title": "Süni intellekt imkanları kanvası",
+    "description": "Faydalı və sərhədləri bəlli növbəti addımı seçmək üçün bir iş axınına həsr olunmuş kanvas.",
     "index": true
   },
   {
@@ -403,8 +403,8 @@
       "en": "/insights/guides/team-ai-readiness/",
       "az": "/az/insights/guides/team-ai-readiness/"
     },
-    "title": "Komandanın Sİ-yə hazırlıq bələdçisi",
-    "description": "İnsanları Sİ balına endirmədən komandanın başlanğıc nöqtəsini anlayın.",
+    "title": "Komandanın süni intellektə hazırlıq bələdçisi",
+    "description": "İnsanları tək bir süni intellekt balı ilə qiymətləndirmədən komandanın başlanğıc nöqtəsini anlayın.",
     "index": true
   },
   {
@@ -416,7 +416,7 @@
       "az": "/az/contact/"
     },
     "title": "Diaqnostik görüş təyin edin",
-    "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız və onun işi haqqında söhbət.",
+    "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız, onun işi və süni intellekt haqqında söhbət.",
     "index": true
   },
   {
