@@ -57,7 +57,7 @@ Every outcome is presented as a numbered exhibit, the way a COO already reads a 
 - Lede: Enamplify helps mid-sized organisations make AI part of how their own people work. More gets done each week, the capability stays in-house, and every workflow is visible to the people accountable for it.
 - Primary: **Book a diagnostic call** → `/contact/` · Secondary text link: **How we work** → `/approach/`
 - Note: A 30-minute conversation with the founder. No pitch deck.
-- Exhibit 1, "Where an operations team's week goes": horizontal 100% stacked bar. Judgement and client work 41% (navy), Recurring reporting 21% (signal), Finding information 16% (signal), Handoffs and chasing 13% (signal), Other 9% (rule). Caption: "The blue share is where AI workflows usually start." Source: "Illustrative composite for explanation. A diagnostic replaces it with your own numbers."
+- Exhibit 1, "Where an operations team's week goes": horizontal 100% stacked bar. Judgement and client work 41% (navy), Recurring reporting 21% (signal), Finding information 16% (signal), Handoffs and chasing 13% (signal), Other 9% (rule). Caption: "Reporting, finding information and handoffs, shown in blue, are where AI workflows usually start." (names the segments so the point doesn't depend on colour) Source: "Illustrative composite for explanation. A diagnostic replaces it with your own numbers."
 
 **The situation** (H2: *Your people are already using AI. The question is whether it's working for the organisation.*)
 1. **Tools were bought. The work didn't change.** Licences go unused when nobody is given the permission, or the method, to change how the work is done.
@@ -85,7 +85,7 @@ Every outcome is presented as a numbered exhibit, the way a COO already reads a 
 - We will leave you with something your team runs without us.
 
 **Track record** (H2: *Built by people who ship.*)
-- Figures: "Google hackathon winners" / "$10,000 winning build"; "10+ years" / "building software, automation and AI systems"; "2 products" / "of our own in market: grademy and pripitch".
+- Figures (bold figure / label): "$10,000" / "Google hackathon winning build"; "10+ years" / "Building software, automation and AI systems"; "2 products" / "Of our own in market: grademy and pripitch".
 - Delivered: AI clinical trial management software · AI finance tracking and reconciliation · Market intelligence and trading systems · Outbound growth systems · SaaS product builds · Internal operations systems · Marketing and PR agency systems.
 - Link: "See the work" → `/work/`
 
@@ -119,7 +119,7 @@ Every outcome is presented as a numbered exhibit, the way a COO already reads a 
 
 ## 8. Redirects (301, in `vercel.json`)
 
-`/solutions/` and `/solutions/:slug/` → `/approach/` · `/for/:slug/` → `/` · `/start/:slug/` → `/contact/` · `/work/:slug/` → `/work/` · `/perspectives/` → `/insights/` · `/perspectives/:slug/` → `/insights/:slug/` · `/resources/` → `/insights/` · `/resources/:slug/` → `/insights/guides/:slug/` · `/credits/` → `/` · `/thank-you/` → `/`
+`/solutions/` and `/solutions/:slug/` → `/approach/` · `/for/:slug/` → `/` · `/start/:slug/` → `/contact/` · `/work/pripitch/`, `/work/grademy/`, `/work/rag-x/` → `/work/` · `/perspectives/` → `/insights/` · `/perspectives/:slug/` → `/insights/:slug/` · `/resources/` → `/insights/` · `/resources/:slug/` → `/insights/guides/:slug/` · `/credits/` → `/` · `/thank-you/` → `/`
 
 ## 9. Core Web Vitals
 
