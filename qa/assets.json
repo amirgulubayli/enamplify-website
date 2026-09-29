@@ -5,7 +5,6 @@
     "bytes": 33114,
     "width": 304,
     "height": 380,
-    "source": "Cropped from the founder-supplied original (489x550) with PIL box (90, 60, 410, 460) on 2026-09-29: 4:5, face centred horizontally, eyes about 30% from the top. JPEG quality 90. Displayed at no more than 320px wide so it is never upscaled. A professional headshot is still to replace it.",
-    "url": "https://ragmedium.com/images/amir-gulubayli.jpg"
+    "source": "Founder-supplied headshot (1471x1808), cropped 4:5 with PIL box (30, 80, 1350, 1730) centred on the face, resized to 640x800 for sharp display at 320px, JPEG quality 86. 2026-09-30."
   }
 ]
