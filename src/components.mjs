@@ -16,14 +16,14 @@ export const breadcrumb = (crumbs, ctx) => `<nav class="crumbs wrap" aria-label=
 /** Page head: breadcrumb, H1 and lede; with `band`, the page's full-width city photograph follows. */
 export const pageHead = ({title, lede = '', crumbs, band = ''}, ctx) => `${breadcrumb(crumbs, ctx)}<header class="page-head page-head--split wrap"><h1>${esc(title)}</h1>${lede ? `<p class="lede">${esc(lede)}</p>` : ''}</header>${band ? photo(band, ctx, {sizes: '100vw', cls: 'band'}) : ''}`;
 
-export const exhibit = ({n, topic, title, chart, source, note = '', cls = ''}, ctx) => `<figure class="exhibit${cls ? ` ${cls}` : ''}"><figcaption class="exhibit__cap"><span class="exhibit__label">${esc(fill(ctx.copy.common.exhibitLabel, {n, topic}))}</span> <span class="exhibit__title">${esc(title)}</span></figcaption><div class="exhibit__chart">${chart}</div>${note ? `<p class="exhibit__note">${esc(note)}</p>` : ''}<p class="exhibit__source">${esc(fill(ctx.copy.common.exhibitSource, {source}))}</p></figure>`;
+export const exhibit = ({n, topic, title, chart, note = '', cls = ''}, ctx) => `<figure class="exhibit${cls ? ` ${cls}` : ''}"><figcaption class="exhibit__cap"><span class="exhibit__label">${esc(fill(ctx.copy.common.exhibitLabel, {n, topic}))}</span> <span class="exhibit__title">${esc(title)}</span></figcaption><div class="exhibit__chart">${chart}</div>${note ? `<p class="exhibit__note">${esc(note)}</p>` : ''}</figure>`;
 
 export const closeBand = (ctx, {title = ctx.copy.common.closeTitle, body = ctx.copy.common.closeBody} = {}) => `<section class="close" aria-labelledby="close-title"><div class="wrap close__inner"><h2 id="close-title">${esc(title)}</h2><div class="close__body"><p>${esc(body)}</p>${button(ctx.copy.common.bookDiagnostic, L(ctx, '/contact/'), 'inverse')}</div></div></section>`;
 
 export const articleCard = (a, ctx) => `<article class="card"><h3 class="card__title"><a href="${L(ctx, `/insights/${esc(a.slug)}/`)}">${esc(a.title)}</a></h3><p class="card__meta">${esc(a.category)} · ${esc(fill(ctx.copy.common.minRead, {n: a.readingTime}))}</p><p>${esc(a.summary)}</p></article>`;
 export const guideCard = (g, ctx) => `<article class="card card--guide"><h3 class="card__title"><a href="${L(ctx, `/insights/guides/${esc(g.slug)}/`)}">${esc(g.name)}</a></h3><p class="card__meta">${esc(ctx.copy.common.fieldGuide)} · ${esc(g.time)}</p><p>${esc(g.description)}</p></article>`;
 
-export const portrait = (ctx, {caption = true, eager = false} = {}) => `<figure class="portrait"><img class="remote-image" src="${esc(ctx.site.portrait)}" alt="${esc(ctx.copy.common.portraitAlt)}" width="304" height="380" loading="${eager ? 'eager' : 'lazy'}" decoding="async">${caption ? `<figcaption>${esc(ctx.copy.common.portraitCaption)}</figcaption>` : ''}</figure>`;
+export const portrait = (ctx, {caption = true, eager = false} = {}) => `<figure class="portrait"><img class="remote-image" src="${esc(ctx.site.portrait)}" alt="${esc(ctx.copy.common.portraitAlt)}" width="320" height="400" loading="${eager ? 'eager' : 'lazy'}" decoding="async">${caption ? `<figcaption>${esc(ctx.copy.common.portraitCaption)}</figcaption>` : ''}</figure>`;
 
 /**
  * A graded city photograph from content/images.json. `id` names the entry in `ctx.images`; the

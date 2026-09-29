@@ -26,7 +26,7 @@ Praktikada bu, birlikdə işləyən üç şeydir:
 
 ## Niyə bu modeli seçdik
 
-Enamplify komandası illər boyu RAG Medium adı altında fərdi Sİ sistemləri qurub: [səyahət startapı üçün distribyutorlarla əlaqə sistemi](/work/travel-distributor-outreach/), [marketinq](/work/marketing-agency-workflows/) və [PR agentlikləri](/work/pr-agency-workflows/) üçün daxili iş axınları, həmçinin [klinik sınaqların idarə olunması üçün proqram təminatı](/work/clinical-trial-operations/). Sistemlər işlədi. Diqqətimizi çəkən isə bu oldu: onlardan ən çox fayda götürən təşkilatlar öz əməkdaşları sistemləri başa düşən və inkişaf etdirən təşkilatlar idi.
+Enamplify komandası illər boyu fərdi Sİ sistemləri qurub: [səyahət startapı üçün distribyutorlarla əlaqə sistemi](/work/travel-distributor-outreach/), [marketinq](/work/marketing-agency-workflows/) və [PR agentlikləri](/work/pr-agency-workflows/) üçün daxili iş axınları, həmçinin [klinik sınaqların idarə olunması üçün proqram təminatı](/work/clinical-trial-operations/). Sistemlər işlədi. Diqqətimizi çəkən isə bu oldu: onlardan ən çox fayda götürən təşkilatlar öz əməkdaşları sistemləri başa düşən və inkişaf etdirən təşkilatlar idi.
 
 Ona görə də şirkətimizi bunun üzərində qurduk. Düzgün cavab bu olduqda hələ də sistemlər qururuq. Amma standart yanaşmamız komandanızı növbəti sistemi bizsiz qura biləcək vəziyyətdə qoymaqdır.
 

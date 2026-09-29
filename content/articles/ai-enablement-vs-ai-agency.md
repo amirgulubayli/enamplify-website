@@ -26,7 +26,7 @@ In practice, that is three things working together:
 
 ## Why we chose this model
 
-Enamplify’s team built custom AI systems for years under the RAG Medium name: [distributor outreach for a travel startup](/work/travel-distributor-outreach/), internal workflows for [marketing](/work/marketing-agency-workflows/) and [PR agencies](/work/pr-agency-workflows/), and [clinical trial management software](/work/clinical-trial-operations/). The systems worked. What we noticed was that the organisations that got the most from them were the ones whose own people understood and extended them.
+Enamplify’s team has built custom AI systems for years: [distributor outreach for a travel startup](/work/travel-distributor-outreach/), internal workflows for [marketing](/work/marketing-agency-workflows/) and [PR agencies](/work/pr-agency-workflows/), and [clinical trial management software](/work/clinical-trial-operations/). The systems worked. What we noticed was that the organisations that got the most from them were the ones whose own people understood and extended them.
 
 So we built the practice around that. We still build systems when that is the right answer. But the default is to leave your team able to build the next one without us.
 

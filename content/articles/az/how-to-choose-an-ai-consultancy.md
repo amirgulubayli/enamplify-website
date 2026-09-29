@@ -36,7 +36,7 @@ Hər iş axınının adı bəlli məsul şəxsi və yoxlama mərhələsi olmalı
 
 Slaydları deyil, konkret sistemləri soruşun. Müştəri adları çox vaxt məxfi olur, amma işin növü məxfi olmamalıdır.
 
-*Bizim cavabımız: komandamız [səyahət startapı üçün distribyutorlarla əlaqə sistemi](/work/travel-distributor-outreach/), marketinq və PR agentlikləri üçün daxili iş axınları, klinik sınaqların idarə edilməsi üçün proqram təminatı və maliyyə uzlaşdırması sistemi qurub, həmçinin $10,000 mükafatlı layihə ilə Google hakatonunda qalib gəlib. [İşlərimizə baxın](/work/).*
+*Bizim cavabımız: komandamız [səyahət startapı üçün distribyutorlarla əlaqə sistemi](/work/travel-distributor-outreach/), marketinq və PR agentlikləri üçün daxili iş axınları, klinik sınaqların idarə edilməsi üçün proqram təminatı və maliyyə uzlaşdırması sistemi qurub. [İşlərimizə baxın](/work/).*
 
 ## 7. Sizə ehtiyacımız olmadıqda bunu bizə deyəcəksinizmi?
 

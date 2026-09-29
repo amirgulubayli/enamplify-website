@@ -207,3 +207,12 @@ test('proof is an exhibit ledger on home and work, with no kicker lines above ti
   assert.ok(!/class="(?:figures|delivered|recognition|numbered__n|grid-list grid-list--four)"/.test(home + work));
   for (const [i, h] of all.entries()) assert.ok(!/<p class="card__meta">[^<]*<\/p>\s*<(?:h1|h2|h3)/.test(h), routes[i].url);
 });
+
+test('client copy rules: no source footnotes, never the old brand, hackathon only on About', () => {
+  for (const [i, h] of all.entries()) {
+    const text = h.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<[^>]+>/g, ' ');
+    assert.ok(!/Source:|Mənbə:/.test(text), `${routes[i].url} shows a source line`);
+    assert.ok(!/RAG Medium|RAG-X/i.test(text), `${routes[i].url} mentions the old brand`);
+    if (!/^\/(az\/)?about\/$/.test(routes[i].url)) assert.ok(!/hackathon|hakaton/i.test(text), `${routes[i].url} mentions the hackathon`);
+  }
+});

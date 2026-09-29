@@ -10,7 +10,7 @@
   --paper:#f3eee5;--paper-light:#faf7f1;--paper-deep:#e9e2d7;--ink:#242321;--ink-soft:#4a433d;
   --wine:#502d36;--wine-deep:#3c2229;--wine-light:#67424a;--wine-mist:#e3d3d0;
   --bronze:#9b8269;--stone:#d8cec0;--line:#d6ccbf;--muted:#696058;--control:#857869;--error:#a1261c;
-  --display:"Libre Caslon Display",Georgia,"Times New Roman",serif;--italic:"Libre Caslon Text",Georgia,"Times New Roman",serif;--text:"DM Sans",Arial,Helvetica,sans-serif;
+  --display:"Libre Caslon Display","Times New Roman","Noto Serif",serif;--italic:"Libre Caslon Text","Times New Roman","Noto Serif",serif;--text:"DM Sans","Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif;
   --gutter:20px;--section:clamp(80px,10vw,144px);--head:64px;--ease:cubic-bezier(.2,.7,.2,1)
 }
 @media (min-width:720px){:root{--gutter:32px}}
@@ -368,3 +368,17 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--wine);outline-of
   .exhibit.is-pending .mark{transform:none}
   .exhibit.is-pending .mark-line{stroke-dashoffset:0}
 }
+
+/* Round-two copy pass: one-line deks, plain control lines, commitments as statements */
+.section__title:has(+.section__dek){margin-bottom:16px}
+.section__dek{max-width:46ch;margin:0 0 clamp(40px,5vw,64px);font-size:clamp(1.0625rem,1rem + .35vw,1.3125rem);line-height:1.5;color:var(--muted);text-wrap:pretty}
+.split .section__dek,.section__row .section__dek{margin-bottom:0}
+.control-lines{display:grid;margin:0}
+.control-lines div{display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.control-lines div:last-child{border-bottom:1px solid var(--line)}
+.control-lines dt{font:italic 400 1.25rem/1.3 var(--italic);color:var(--wine)}
+.control-lines dd{margin:0;color:var(--ink)}
+.commitments h3{font:italic 400 clamp(1.5rem,1.2rem + 1vw,2rem)/1.2 var(--italic);color:var(--wine);margin-bottom:12px}
+.commitments .ticks li{padding:22px 0 22px 40px;font:400 clamp(1.25rem,1.05rem + .7vw,1.75rem)/1.28 var(--display);letter-spacing:-.008em;color:var(--ink);text-wrap:pretty}
+.commitments .ticks li::before{top:calc(22px + .5em)}
+.commitments .ticks--no li::before{top:calc(22px + .62em)}

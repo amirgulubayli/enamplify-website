@@ -8,7 +8,7 @@
   "base": "http://localhost:3000",
   "indexing": false,
   "enquiryMode": "email",
-  "cssBytes": 26385,
+  "cssBytes": 27579,
   "jsBytes": 10905,
   "fontsSelfHosted": true
 }

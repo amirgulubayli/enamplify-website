@@ -31,8 +31,8 @@
       "en": "/work/",
       "az": "/az/work/"
     },
-    "title": "AI systems we’ve built and products we run",
-    "description": "Delivered AI systems across clinical, finance, growth and operations, a Google hackathon win, and the AI products we build and run ourselves.",
+    "title": "AI systems we build for clients and run ourselves",
+    "description": "AI systems delivered across clinical, finance, growth and operations, and two AI products we build and run ourselves.",
     "index": true
   },
   {
@@ -392,7 +392,7 @@
       "az": "/az/work/"
     },
     "title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız",
-    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri, Google hakatonunda qələbə və öz məhsullarımız.",
+    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri və özümüzün iki süni intellekt məhsulu.",
     "index": true
   },
   {

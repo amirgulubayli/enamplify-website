@@ -20,7 +20,7 @@ test('articles only link to routes that still exist', () => {
 });
 test('work and faqs are present', () => {
   assert.equal(c.work.delivered.length, 8);
-  assert.equal(c.work.products.length, 3);
+  assert.equal(c.work.products.length, 2);
   assert.ok(c.faqs.length >= 6);
   for (const [q, a] of c.faqs) { assert.ok(q.endsWith('?')); assert.ok(a.length > 40); }
 });

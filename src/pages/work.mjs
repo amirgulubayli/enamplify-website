@@ -8,8 +8,7 @@ export function work(ctx) {
   return `${pageHead({title: c.title, lede: c.lede, crumbs: [[copy.routes.work.crumb]], band: 'band-work'}, ctx)}
 <section class="section wrap" aria-label="${esc(c.deliveredLabel)}">
 ${exhibit({n: 1, topic: c.delivered.topic, title: c.delivered.title, cls: 'exhibit--record',
-  chart: ledger({caption: c.delivered.caption, columns: c.delivered.columns, rows: work.delivered}),
-  source: c.delivered.source}, ctx)}
+  chart: ledger({caption: c.delivered.caption, columns: c.delivered.columns, rows: work.delivered})}, ctx)}
 </section>
 <section id="case-studies" class="section section--wash" aria-labelledby="cases-title"><div class="wrap">
 <h2 id="cases-title" class="section__title">${esc(c.casesTitle)}</h2><p class="lede">${esc(c.casesLede)}</p>

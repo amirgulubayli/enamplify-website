@@ -36,7 +36,7 @@ Every workflow should have a named owner and a review step. If nobody can tell y
 
 Ask for specific systems, not slides. Client names are often confidential, but the kind of work should not be.
 
-*Our answer: our team has built [distributor outreach for a travel startup](/work/travel-distributor-outreach/), internal workflows for marketing and PR agencies, clinical trial management software and finance reconciliation, and won a Google hackathon with a $10,000 winning build. [See the work](/work/).*
+*Our answer: our team has built [distributor outreach for a travel startup](/work/travel-distributor-outreach/), internal workflows for marketing and PR agencies, clinical trial management software and finance reconciliation. [See the work](/work/).*
 
 ## 7. Will you tell us if we don’t need you?
 
