@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "travel-distributor-outreach",
+    "sector": "Travel startup",
+    "title": "AI distributor outreach for a travel startup.",
+    "summary": "An internal system that finds, assesses and contacts distributors, freeing five people from work that had filled their weeks.",
+    "client": "A growing travel startup. Name withheld.",
+    "scope": "Internal system for distributor research, assessment and outreach",
+    "situation": [
+      "The company grew through distributors: agencies, operators and resellers in the markets it wanted to reach. Finding them, checking whether they were a fit and making first contact was done by hand.",
+      "Five people spent a large part of their week on it. They searched directories and websites, copied details into spreadsheets, judged each distributor against criteria that lived mostly in their heads, and wrote outreach one message at a time."
+    ],
+    "built": [
+      ["Distributor research", "The system gathers candidate distributors for a target market and pulls their public details into one consistent record."],
+      ["Assessment against agreed criteria", "The team wrote down what makes a good distributor. Each record is scored against those criteria, with the reasons shown next to the score."],
+      ["Drafted, reviewed outreach", "First messages are drafted from each distributor’s details. A person reviews and approves before anything is sent."],
+      ["One shared pipeline", "Every distributor, its assessment and its contact history sit in one place the whole team can see."]
+    ],
+    "changed": [
+      "Five people were freed from the research, assessment and first-contact work.",
+      "Assessment follows written criteria instead of individual judgement calls.",
+      "The team spends its time on the conversations that follow, not the lists that come before them."
+    ],
+    "principle": "The system took on the searching and sorting. The relationships stayed with people.",
+    "note": "Details are shared with the client’s agreement. The client’s name is withheld.",
+    "related": "automate-the-work-not-the-relationship"
+  },
+  {
+    "slug": "marketing-agency-workflows",
+    "sector": "Marketing agency",
+    "title": "AI workflow automation for a marketing agency.",
+    "summary": "Internal automations and pipelines that take briefs, content and reporting off people’s desks while keeping creative judgement where it belongs.",
+    "client": "An independent marketing agency. Name withheld.",
+    "scope": "Internal workflows, automations and content pipelines",
+    "situation": [
+      "The agency’s best people were spending their days on the work between the work: turning client briefs into tasks, reformatting content for each channel, chasing approvals and assembling the same reports every month.",
+      "None of it needed their judgement, and all of it came before the work that did."
+    ],
+    "built": [
+      ["Brief intake", "Client briefs arrive in one format, are checked for missing information and become structured tasks with owners and dates."],
+      ["Content pipelines", "Approved content is adapted for each channel against the client’s brand guidance, then queued for a person to check."],
+      ["Approval routing", "Drafts move to the right reviewer automatically, with reminders, so nothing waits in an inbox."],
+      ["Reporting automation", "Monthly client reports are assembled from the agency’s data sources, ready for an account lead to add the commentary."]
+    ],
+    "changed": [
+      "Recurring admin moved off the desks of the people clients pay for.",
+      "Every brief, draft and approval follows the same visible path.",
+      "Brand and creative decisions stay with the team, supported rather than replaced."
+    ],
+    "principle": "Automate the handoffs and the formatting. Keep the ideas human.",
+    "note": "Details are shared with the client’s agreement. The client’s name is withheld.",
+    "related": "ai-automation-for-marketing-agencies"
+  },
+  {
+    "slug": "pr-agency-workflows",
+    "sector": "PR agency",
+    "title": "AI workflow automation for a PR agency.",
+    "summary": "Automated media research, pitch preparation and coverage reporting, so the agency’s people spend their time on stories and relationships.",
+    "client": "A PR agency. Name withheld.",
+    "scope": "Research, outreach preparation and reporting workflows",
+    "situation": [
+      "Good PR depends on knowing which journalist cares about what, this week. Keeping that knowledge current, building media lists, tailoring pitches and proving results afterwards took up most of the team’s time.",
+      "The work was repetitive, but mistakes were costly: the wrong pitch to the wrong journalist damages a relationship that took years to build."
+    ],
+    "built": [
+      ["Media research", "The system tracks what journalists and outlets are covering and keeps the agency’s contact knowledge current."],
+      ["Pitch preparation", "For each story, it proposes a shortlist of relevant journalists with the reasons, and drafts tailored angles for a person to refine."],
+      ["Human sign-off", "Nothing goes to a journalist without a named person approving it."],
+      ["Coverage reporting", "Coverage is collected and assembled into client reports, ready for the account team to interpret."]
+    ],
+    "changed": [
+      "Research and reporting stopped consuming the team’s week.",
+      "Pitches start from current, specific context rather than old lists.",
+      "Relationships with journalists stay personal and accountable."
+    ],
+    "principle": "Automate the research. Never automate the relationship.",
+    "note": "Details are shared with the client’s agreement. The client’s name is withheld.",
+    "related": "ai-for-pr-agencies"
+  },
+  {
+    "slug": "clinical-trial-operations",
+    "sector": "Clinical trials",
+    "title": "Clinical trial workflows that are easy to learn.",
+    "summary": "Automated clinical trial workflows and guided processes that make it simpler to train and onboard new users in a regulated setting.",
+    "client": "A clinical technology organisation. Under NDA.",
+    "scope": "Clinical trial management workflows, training and onboarding",
+    "situation": [
+      "Clinical trial operations run on detailed procedures, and every step has to be done correctly and on the record. New users faced a steep learning curve, and experienced staff spent a lot of time teaching the same steps.",
+      "The organisation needed its workflows to be faster, and just as importantly, easier for a new person to learn and follow correctly."
+    ],
+    "built": [
+      ["Automated workflow steps", "Repetitive steps in trial operations were automated, with each action logged."],
+      ["Guided processes", "Users are walked through each procedure in order, with the right information in front of them at each step."],
+      ["Grounded search", "People can ask questions of the organisation’s own procedures and documents and see the source of every answer."],
+      ["Built-in onboarding", "New users learn the work inside the system itself rather than from separate manuals."]
+    ],
+    "changed": [
+      "Routine steps in trial operations run automatically and on the record.",
+      "New users can be trained and onboarded far more easily.",
+      "Experienced staff spend less time repeating the same explanations."
+    ],
+    "principle": "In regulated work, the easiest way to do a task should also be the correct way.",
+    "note": "This work is covered by a non-disclosure agreement, so we describe it in general terms only.",
+    "related": "ai-onboarding-regulated-work"
+  }
+]

@@ -67,7 +67,7 @@ test('shape mismatches keep the base value', () => {
 });
 
 test('required keys are declared for every AZ content overlay', () => {
-  assert.deepEqual(Object.keys(REQUIRED).sort(), ['articles', 'faqs', 'resources', 'site', 'work']);
+  assert.deepEqual(Object.keys(REQUIRED).sort(), ['articles', 'cases', 'faqs', 'resources', 'site', 'work']);
 });
 
 test('site.js English defaults match the client strings in the English copy', async () => {

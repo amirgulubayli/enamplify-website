@@ -10,7 +10,7 @@ test('site config carries booking, definition and nav', () => {
   assert.deepEqual(c.site.nav.map(([, h]) => h), ['/approach/', '/work/', '/insights/', '/about/']);
 });
 test('articles are rendered, timed and newest first', () => {
-  assert.equal(c.articles.length, 6);
+  assert.equal(c.articles.length, 11);
   for (const a of c.articles) { assert.ok(a.html.includes('<p>')); assert.ok(a.readingTime >= 1); }
   const dates = c.articles.map(a => a.isoDate);
   assert.deepEqual(dates, [...dates].sort().reverse());

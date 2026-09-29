@@ -22,6 +22,8 @@
     "closeBody": "Thirty minutes about your team and the work you’d like to change. If we’re not the right fit, we’ll say so.",
     "minRead": "{n} min read",
     "fieldGuide": "Field guide",
+    "caseStudy": "Case study",
+    "careersLink": "Careers",
     "exhibitLabel": "Exhibit {n} · {topic}.",
     "exhibitSource": "Source: {source}",
     "lineSummary": "{label}: {first} at {start}, {last} at {end}",
@@ -75,6 +77,7 @@
     "about": {"title": "About Enamplify: founder-led, London and Baku", "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.", "crumb": "About"},
     "insights": {"title": "Insights on AI adoption for operations leaders", "description": "Practical essays and free field guides on AI adoption, pilots, measurement and governance for operations leaders.", "crumb": "Insights"},
     "contact": {"title": "Book a diagnostic call", "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.", "crumb": "Book a call"},
+    "careers": {"title": "Careers: AI operations internship", "description": "Join Enamplify as an AI operations intern. Build real AI workflows with a founder-led team working across London and Baku.", "crumb": "Careers"},
     "notFound": {"title": "Page not found", "description": "This page has moved. Find your way back to Enamplify."}
   },
   "home": {
@@ -173,7 +176,19 @@
       "columns": ["System", "What it does"],
       "source": "RAG Medium and Enamplify delivery record. Client names withheld; references available in conversation."
     },
-    "productsTitle": "Products we build and run."
+    "productsTitle": "Products we build and run.",
+    "casesTitle": "Case studies.",
+    "casesLede": "How we helped a travel startup, a marketing agency, a PR agency and a clinical trials organisation automate their work.",
+    "readCase": "Read the case study",
+    "capabilitiesTitle": "What we build.",
+    "capabilities": [
+      ["Internal workflow automation", "Recurring steps such as intake, routing, formatting and approvals, run automatically with a person reviewing what matters."],
+      ["Data and content pipelines", "Information gathered from many sources, cleaned, checked against agreed rules and delivered where the team works."],
+      ["Research and assessment", "Systems that find, enrich and score records, from distributors and prospects to journalists and suppliers, with the reasons shown."],
+      ["Grounded search over your documents", "Answers drawn from your own procedures and files, with the source shown, so people can check before they act."],
+      ["Guided processes and onboarding", "Procedures built into the tools people use, so new colleagues learn the work while doing it correctly."],
+      ["Reporting", "Recurring client and management reports assembled automatically, ready for a person to add the judgement."]
+    ]
   },
   "about": {
     "title": "Founder-led, between London and Baku.",
@@ -196,6 +211,42 @@
     "essays": "Essays",
     "guides": "Field guides",
     "guidesLede": "Free worksheets to use with your team. No email required."
+  },
+  "case": {
+    "facts": "At a glance",
+    "sector": "Sector",
+    "client": "Client",
+    "scope": "Scope",
+    "situationTitle": "The situation.",
+    "builtTitle": "What we built.",
+    "changedTitle": "What changed.",
+    "relatedTitle": "Related reading.",
+    "moreTitle": "More case studies.",
+    "closeTitle": "Want the same for your team?",
+    "closeBody": "Thirty minutes about the work your team would like to hand over. If we’re not the right fit, we’ll say so."
+  },
+  "careers": {
+    "title": "Work with us.",
+    "lede": "Enamplify is a small, founder-led team helping organisations make AI part of how their people work. We hire rarely, and carefully.",
+    "whyTitle": "What it’s like here.",
+    "why": ["You work directly with the founder on real client work, not practice projects.", "We care about specific, careful work more than volume. Every workflow we ship has an owner, a review and a reason to exist.", "We work across London and Baku, and between English and Azerbaijani."],
+    "openTitle": "Open roles.",
+    "role": {
+      "title": "AI Operations Intern",
+      "type": "Internship",
+      "location": "London or Baku, with remote work",
+      "summary": "Help design, build and test AI workflows for client teams, and learn how AI enablement works from the inside.",
+      "doTitle": "What you’ll do",
+      "do": ["Map how client teams spend their time and where AI can help.", "Build and test AI workflows and automations alongside the founder.", "Write clear documentation and training material so client teams can run what we build.", "Research tools, models and good practice, and share what you find."],
+      "youTitle": "Who you are",
+      "you": ["Curious about AI and how organisations actually work.", "A clear writer who explains things simply.", "Careful with detail, and comfortable asking questions.", "Studying or recently graduated. Technical experience helps but is not required."],
+      "getTitle": "What you’ll get",
+      "get": ["Hands-on experience of real AI projects, from diagnosis to delivery.", "Direct mentoring from the founder.", "A reference and portfolio work you can point to."],
+      "apply": "Book an introductory call",
+      "applyNote": "Opens our booking calendar in a new tab. Pick a time and tell us a little about yourself."
+    },
+    "otherTitle": "No other roles are open right now.",
+    "other": "If you think you should work with us anyway, write to {email} and tell us what you would bring."
   },
   "article": {
     "by": "By",

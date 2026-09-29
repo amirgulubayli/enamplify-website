@@ -22,6 +22,8 @@
     "closeBody": "Komandanız və dəyişmək istədiyiniz iş haqqında otuz dəqiqəlik söhbət. Uyğun tərəfdaş olmasaq, bunu açıq deyəcəyik.",
     "minRead": "{n} dəqiqəyə oxunur",
     "fieldGuide": "Praktik bələdçi",
+    "caseStudy": "Real layihə nümunəsi",
+    "careersLink": "Karyera",
     "exhibitLabel": "Qrafik {n} · {topic}.",
     "exhibitSource": "Mənbə: {source}",
     "lineSummary": "{label}: {start}: {first}; {end}: {last}",
@@ -75,6 +77,7 @@
     "about": {"title": "Təsisçinin rəhbərlik etdiyi şirkət, London və Bakı", "description": "Enamplify London və Bakıda təsisçinin rəhbərlik etdiyi süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Amir Gulubayli və iş prinsiplərimiz.", "crumb": "Haqqımızda"},
     "insights": {"title": "Rəhbərlər üçün süni intellektin tətbiqinə dair təhlillər", "description": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik esselər və pulsuz bələdçilər: pilot layihələr, ölçmə və idarəetmə.", "crumb": "Təhlillər"},
     "contact": {"title": "Diaqnostik görüş təyin edin", "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız, onun işi və süni intellekt haqqında söhbət.", "crumb": "Görüş təyin edin"},
+    "careers": {"title": "Karyera: süni intellekt əməliyyatları üzrə təcrübə", "description": "Süni intellekt əməliyyatları üzrə təcrübəçi kimi Enamplify komandasına qoşulun. London və Bakıda real süni intellekt iş axınları qurun.", "crumb": "Karyera"},
     "notFound": {"title": "Səhifə tapılmadı", "description": "Bu səhifənin ünvanı dəyişib. Ana səhifədən davam edin."}
   },
   "home": {
@@ -173,7 +176,19 @@
       "columns": ["Sistem", "Nə edir"],
       "source": "RAG Medium və Enamplify-ın icra təcrübəsi. Müştəri adları açıqlanmır; referanslar görüş zamanı təqdim oluna bilər."
     },
-    "productsTitle": "Qurduğumuz və idarə etdiyimiz məhsullar."
+    "productsTitle": "Qurduğumuz və idarə etdiyimiz məhsullar.",
+    "casesTitle": "Real layihə nümunələri.",
+    "casesLede": "Turizm startapına, marketinq agentliyinə, PR agentliyinə və klinik sınaqlar təşkilatına işlərini avtomatlaşdırmağa necə kömək etdiyimiz.",
+    "readCase": "Real layihə nümunəsini oxuyun",
+    "capabilitiesTitle": "Nə qururuq.",
+    "capabilities": [
+      ["Daxili iş axınlarının avtomatlaşdırılması", "Müraciətlərin qəbulu, yönləndirmə, formatlaşdırma və təsdiqlər kimi təkrarlanan addımlar avtomatik icra olunur, vacib məqamları isə insan yoxlayır."],
+      ["Məlumat və kontent axınları", "Çoxsaylı mənbələrdən toplanan məlumat təmizlənir, razılaşdırılmış qaydalarla yoxlanılır və komandanın işlədiyi yerə çatdırılır."],
+      ["Araşdırma və qiymətləndirmə", "Distribyutor və potensial müştərilərdən jurnalist və təchizatçılara qədər qeydləri tapan, zənginləşdirən və səbəbləri göstərməklə qiymətləndirən sistemlər."],
+      ["Sənədləriniz üzrə mənbəyə əsaslanan axtarış", "Cavablar sizin öz prosedur və fayllarınızdan götürülür və mənbə göstərilir ki, insanlar hərəkət etməzdən əvvəl yoxlaya bilsinlər."],
+      ["Yönləndirilən proseslər və işə uyğunlaşma", "Prosedurlar insanların istifadə etdiyi alətlərə daxil edilir ki, yeni həmkarlar işi düzgün görərək öyrənsinlər."],
+      ["Hesabatlar", "Müştərilər və rəhbərlik üçün təkrarlanan hesabatlar avtomatik hazırlanır, insanın öz mühakiməsini əlavə etməsinə hazır olur."]
+    ]
   },
   "about": {
     "title": "Təsisçinin rəhbərliyi ilə, London və Bakı arasında.",
@@ -196,6 +211,42 @@
     "essays": "Esselər",
     "guides": "Praktik bələdçilər",
     "guidesLede": "Komandanızla istifadə üçün pulsuz iş vərəqləri. E-poçt ünvanı tələb olunmur."
+  },
+  "case": {
+    "facts": "Qısa məlumat",
+    "sector": "Sahə",
+    "client": "Müştəri",
+    "scope": "Əhatə dairəsi",
+    "situationTitle": "Vəziyyət.",
+    "builtTitle": "Nə qurduq.",
+    "changedTitle": "Nə dəyişdi.",
+    "relatedTitle": "Əlaqəli yazı.",
+    "moreTitle": "Digər real layihə nümunələri.",
+    "closeTitle": "Komandanız üçün də eynisini istəyirsiniz?",
+    "closeBody": "Komandanızın başqasına həvalə etmək istədiyi iş haqqında otuz dəqiqəlik söhbət. Uyğun tərəfdaş olmasaq, bunu açıq deyəcəyik."
+  },
+  "careers": {
+    "title": "Bizimlə işləyin.",
+    "lede": "Enamplify təşkilatlara süni intellekti (Sİ) əməkdaşlarının iş üsulunun bir hissəsinə çevirməyə kömək edən, təsisçinin rəhbərlik etdiyi kiçik komandadır. İşə nadir hallarda və diqqətlə qəbul edirik.",
+    "whyTitle": "Burada iş necədir.",
+    "why": ["Məşq layihələri üzərində deyil, real müştəri işi üzərində birbaşa təsisçi ilə işləyirsiniz.", "Həcmdən çox, dəqiq və diqqətli işə önəm veririk. Təhvil verdiyimiz hər iş axınının məsul şəxsi, yoxlaması və mövcud olmaq üçün səbəbi var.", "London və Bakı arasında, ingilis və Azərbaycan dillərində işləyirik."],
+    "openTitle": "Açıq vakansiyalar.",
+    "role": {
+      "title": "Sİ əməliyyatları üzrə təcrübəçi",
+      "type": "Təcrübə proqramı",
+      "location": "London və ya Bakı, uzaqdan iş imkanı ilə",
+      "summary": "Müştəri komandaları üçün Sİ iş axınlarının dizaynına, qurulmasına və sınaqdan keçirilməsinə kömək edin, Sİ bacarıqlarının necə işlədiyini içəridən öyrənin.",
+      "doTitle": "Nə edəcəksiniz",
+      "do": ["Müştəri komandalarının vaxtını necə sərf etdiyini və Sİ-nin harada kömək edə biləcəyini xəritələyəcəksiniz.", "Təsisçi ilə birlikdə Sİ iş axınları və avtomatlaşdırmalar quracaq və sınaqdan keçirəcəksiniz.", "Müştəri komandalarının qurduğumuz sistemləri idarə edə bilməsi üçün aydın sənədlər və təlim materialları yazacaqsınız.", "Alətləri, modelləri və yaxşı təcrübələri araşdıracaq, tapdıqlarınızı komanda ilə bölüşəcəksiniz."],
+      "youTitle": "Siz kimsiniz",
+      "you": ["Sİ-yə və təşkilatların əslində necə işlədiyinə maraq göstərirsiniz.", "Aydın yazırsınız və mürəkkəb şeyləri sadə izah edirsiniz.", "Detallara diqqətlisiniz və sual verməkdən çəkinmirsiniz.", "Təhsil alırsınız və ya bu yaxınlarda məzun olmusunuz. Texniki təcrübə üstünlükdür, lakin tələb olunmur."],
+      "getTitle": "Nə əldə edəcəksiniz",
+      "get": ["Diaqnostikadan təhvilə qədər real Sİ layihələrində praktik təcrübə.", "Təsisçidən birbaşa mentorluq.", "Göstərə biləcəyiniz tövsiyə məktubu və portfolio işləri."],
+      "apply": "Tanışlıq görüşü təyin edin",
+      "applyNote": "Görüş təqvimimiz yeni vərəqdə açılır. Vaxt seçin və özünüz haqqında bir az məlumat yazın."
+    },
+    "otherTitle": "Hazırda başqa açıq vakansiya yoxdur.",
+    "other": "Yenə də bizimlə işləməli olduğunuzu düşünürsünüzsə, {email} ünvanına yazın və nə töhfə verə biləcəyinizi bizə bildirin."
   },
   "article": {
     "by": "Müəllif:",

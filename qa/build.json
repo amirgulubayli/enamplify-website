@@ -1,5 +1,5 @@
 {
-  "pages": 39,
+  "pages": 59,
   "locales": [
     "en",
     "az"
@@ -8,7 +8,7 @@
   "base": "http://localhost:3000",
   "indexing": false,
   "enquiryMode": "email",
-  "cssBytes": 25413,
+  "cssBytes": 26385,
   "jsBytes": 10905,
   "fontsSelfHosted": true
 }

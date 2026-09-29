@@ -53,7 +53,7 @@ export async function build() {
   }
 
   const indexable = routes.filter(r => r.index !== false);
-  const lastmod = r => r.article?.isoDate || site.launchDate;
+  const lastmod = r => r.article?.isoDate || r.job?.posted || site.launchDate;
   const hreflang = r => [...Object.values(locales).map(l => [l.hreflang, r.alternates[l.code]]), ['x-default', r.alternates[defaultLocale]]]
     .map(([lang, url]) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${xml(base + url)}"/>`).join('');
   await fs.writeFile(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${indexable.map(r => `<url><loc>${xml(base + r.url)}</loc><lastmod>${lastmod(r)}</lastmod>${hreflang(r)}</url>`).join('')}</urlset>`);
@@ -71,9 +71,10 @@ export async function build() {
   const inLocale = code => indexable.filter(r => r.locale === code);
   const isLegal = r => r.key.startsWith('legal:');
   const isGuide = r => r.key.startsWith('guide:');
+  const isCase = r => r.key.startsWith('case:');
   const en = inLocale(defaultLocale);
   const otherSections = localeCodes.filter(c => c !== defaultLocale).map(c => `\n${section(locales[c].name, inLocale(c).filter(r => !isLegal(r)))}`).join('');
-  await fs.writeFile(path.join(out, 'llms.txt'), `# ${site.name}\n\n> ${site.definition}\n\n${section('Pages', en.filter(r => !r.article && !isGuide(r) && !isLegal(r)))}\n${section('Insights', en.filter(r => r.article))}\n${section('Field guides', en.filter(isGuide))}${otherSections}\n## Contact\n\n- Book a call: ${site.bookingUrl}\n- Email: ${site.email}\n`);
+  await fs.writeFile(path.join(out, 'llms.txt'), `# ${site.name}\n\n> ${site.definition}\n\n${section('Pages', en.filter(r => !r.article && !isGuide(r) && !isCase(r) && !isLegal(r)))}\n${section('Case studies', en.filter(isCase))}\n${section('Insights', en.filter(r => r.article))}\n${section('Field guides', en.filter(isGuide))}${otherSections}\n## Contact\n\n- Book a call: ${site.bookingUrl}\n- Email: ${site.email}\n`);
 
   await fs.writeFile(path.join(root, 'qa/routes.json'), JSON.stringify(routes.map(({url, key, locale, alternates, title, description, index}) => ({url, key, locale, alternates, title, description, index: index !== false})), null, 2));
   await fs.writeFile(path.join(root, 'qa/build.json'), JSON.stringify({pages: routes.length, locales: localeCodes, missing, base, indexing: isLive, enquiryMode, cssBytes: Buffer.byteLength(css), jsBytes: Buffer.byteLength(js), fontsSelfHosted: true}, null, 2));
