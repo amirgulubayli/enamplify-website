@@ -31,8 +31,56 @@
       "en": "/work/",
       "az": "/az/work/"
     },
-    "title": "AI systems we’ve built and products we run",
-    "description": "Delivered AI systems across clinical, finance, growth and operations, a Google hackathon win, and the AI products we build and run ourselves.",
+    "title": "AI systems we build for clients and run ourselves",
+    "description": "AI systems delivered across clinical, finance, growth and operations, and two AI products we build and run ourselves.",
+    "index": true
+  },
+  {
+    "url": "/work/travel-distributor-outreach/",
+    "key": "case:travel-distributor-outreach",
+    "locale": "en",
+    "alternates": {
+      "en": "/work/travel-distributor-outreach/",
+      "az": "/az/work/travel-distributor-outreach/"
+    },
+    "title": "AI distributor outreach for a travel startup.",
+    "description": "An internal system that finds, assesses and contacts distributors, freeing five people from work that had filled their weeks.",
+    "index": true
+  },
+  {
+    "url": "/work/marketing-agency-workflows/",
+    "key": "case:marketing-agency-workflows",
+    "locale": "en",
+    "alternates": {
+      "en": "/work/marketing-agency-workflows/",
+      "az": "/az/work/marketing-agency-workflows/"
+    },
+    "title": "AI workflow automation for a marketing agency.",
+    "description": "Internal automations and pipelines that take briefs, content and reporting off people’s desks while keeping creative judgement where it belongs.",
+    "index": true
+  },
+  {
+    "url": "/work/pr-agency-workflows/",
+    "key": "case:pr-agency-workflows",
+    "locale": "en",
+    "alternates": {
+      "en": "/work/pr-agency-workflows/",
+      "az": "/az/work/pr-agency-workflows/"
+    },
+    "title": "AI workflow automation for a PR agency.",
+    "description": "Automated media research, pitch preparation and coverage reporting, so the agency’s people spend their time on stories and relationships.",
+    "index": true
+  },
+  {
+    "url": "/work/clinical-trial-operations/",
+    "key": "case:clinical-trial-operations",
+    "locale": "en",
+    "alternates": {
+      "en": "/work/clinical-trial-operations/",
+      "az": "/az/work/clinical-trial-operations/"
+    },
+    "title": "Clinical trial workflows that are easy to learn.",
+    "description": "Automated clinical trial workflows and guided processes that make it simpler to train and onboard new users in a regulated setting.",
     "index": true
   },
   {
@@ -57,6 +105,66 @@
     },
     "title": "Insights on AI adoption for operations leaders",
     "description": "Practical essays and free field guides on AI adoption, pilots, measurement and governance for operations leaders.",
+    "index": true
+  },
+  {
+    "url": "/insights/how-to-choose-an-ai-consultancy/",
+    "key": "article:how-to-choose-an-ai-consultancy",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/how-to-choose-an-ai-consultancy/",
+      "az": "/az/insights/how-to-choose-an-ai-consultancy/"
+    },
+    "title": "How to choose an AI consultancy: seven questions.",
+    "description": "Seven questions that separate a partner who leaves your team stronger from one who leaves you dependent, and how we answer them.",
+    "index": true
+  },
+  {
+    "url": "/insights/ai-enablement-vs-ai-agency/",
+    "key": "article:ai-enablement-vs-ai-agency",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/ai-enablement-vs-ai-agency/",
+      "az": "/az/insights/ai-enablement-vs-ai-agency/"
+    },
+    "title": "AI enablement or an AI agency: what’s the difference?",
+    "description": "An agency sells a system, a workshop sells awareness. AI enablement leaves your own people able to build and run AI workflows.",
+    "index": true
+  },
+  {
+    "url": "/insights/ai-automation-for-marketing-agencies/",
+    "key": "article:ai-automation-for-marketing-agencies",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/ai-automation-for-marketing-agencies/",
+      "az": "/az/insights/ai-automation-for-marketing-agencies/"
+    },
+    "title": "AI automation for marketing agencies starts inside.",
+    "description": "The biggest time drain in a marketing agency is not writing. It is briefs, formatting, approvals and reporting. Start there.",
+    "index": true
+  },
+  {
+    "url": "/insights/ai-for-pr-agencies/",
+    "key": "article:ai-for-pr-agencies",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/ai-for-pr-agencies/",
+      "az": "/az/insights/ai-for-pr-agencies/"
+    },
+    "title": "AI for PR agencies: automate the research, not the pitch.",
+    "description": "How PR agencies can use AI for media research, pitch preparation and coverage reporting while keeping journalist relationships human.",
+    "index": true
+  },
+  {
+    "url": "/insights/ai-onboarding-regulated-work/",
+    "key": "article:ai-onboarding-regulated-work",
+    "locale": "en",
+    "alternates": {
+      "en": "/insights/ai-onboarding-regulated-work/",
+      "az": "/az/insights/ai-onboarding-regulated-work/"
+    },
+    "title": "AI workflows make onboarding easier in regulated work.",
+    "description": "In clinical and other regulated work, putting guidance inside the workflow makes new users easier to train and onboard.",
     "index": true
   },
   {
@@ -168,6 +276,18 @@
     "index": true
   },
   {
+    "url": "/careers/",
+    "key": "careers",
+    "locale": "en",
+    "alternates": {
+      "en": "/careers/",
+      "az": "/az/careers/"
+    },
+    "title": "Careers: AI operations internship",
+    "description": "Join Enamplify as an AI operations intern. Build real AI workflows with a founder-led team working across London and Baku.",
+    "index": true
+  },
+  {
     "url": "/contact/",
     "key": "contact",
     "locale": "en",
@@ -272,7 +392,55 @@
       "az": "/az/work/"
     },
     "title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız",
-    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri, Google hakatonunda qələbə və öz məhsullarımız.",
+    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri və özümüzün iki süni intellekt məhsulu.",
+    "index": true
+  },
+  {
+    "url": "/az/work/travel-distributor-outreach/",
+    "key": "case:travel-distributor-outreach",
+    "locale": "az",
+    "alternates": {
+      "en": "/work/travel-distributor-outreach/",
+      "az": "/az/work/travel-distributor-outreach/"
+    },
+    "title": "Turizm startapı üçün süni intellektlə distribyutor seçimi.",
+    "description": "Distribyutorları tapan, qiymətləndirən və onlarla əlaqə quran daxili sistem beş nəfəri həftələrini dolduran işdən azad etdi.",
+    "index": true
+  },
+  {
+    "url": "/az/work/marketing-agency-workflows/",
+    "key": "case:marketing-agency-workflows",
+    "locale": "az",
+    "alternates": {
+      "en": "/work/marketing-agency-workflows/",
+      "az": "/az/work/marketing-agency-workflows/"
+    },
+    "title": "Marketinq agentliyində süni intellektlə avtomatlaşdırma.",
+    "description": "Brifləri, kontenti və hesabatları insanların üzərindən götürən, yaradıcı mühakiməni isə yerində saxlayan daxili avtomatlaşdırmalar və iş axınları.",
+    "index": true
+  },
+  {
+    "url": "/az/work/pr-agency-workflows/",
+    "key": "case:pr-agency-workflows",
+    "locale": "az",
+    "alternates": {
+      "en": "/work/pr-agency-workflows/",
+      "az": "/az/work/pr-agency-workflows/"
+    },
+    "title": "PR agentliyində süni intellektlə avtomatlaşdırma.",
+    "description": "Avtomatlaşdırılmış media araşdırması, təqdimat hazırlığı və işıqlandırma hesabatları: agentliyin əməkdaşları vaxtını hekayələrə və münasibətlərə sərf edir.",
+    "index": true
+  },
+  {
+    "url": "/az/work/clinical-trial-operations/",
+    "key": "case:clinical-trial-operations",
+    "locale": "az",
+    "alternates": {
+      "en": "/work/clinical-trial-operations/",
+      "az": "/az/work/clinical-trial-operations/"
+    },
+    "title": "Öyrənilməsi asan klinik sınaq iş axınları.",
+    "description": "Tənzimlənən mühitdə yeni istifadəçilərin təlimini və işə uyğunlaşmasını asanlaşdıran avtomatlaşdırılmış klinik sınaq iş axınları və yönləndirilən proseslər.",
     "index": true
   },
   {
@@ -297,6 +465,66 @@
     },
     "title": "Rəhbərlər üçün süni intellektin tətbiqinə dair təhlillər",
     "description": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik esselər və pulsuz bələdçilər: pilot layihələr, ölçmə və idarəetmə.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/how-to-choose-an-ai-consultancy/",
+    "key": "article:how-to-choose-an-ai-consultancy",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/how-to-choose-an-ai-consultancy/",
+      "az": "/az/insights/how-to-choose-an-ai-consultancy/"
+    },
+    "title": "Süni intellekt üzrə konsaltinq şirkətini necə seçməli?",
+    "description": "Komandanızı gücləndirən tərəfdaşı sizi asılı vəziyyətə salan tərəfdaşdan ayıran yeddi sual və bizim bu suallara cavablarımız.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/ai-enablement-vs-ai-agency/",
+    "key": "article:ai-enablement-vs-ai-agency",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/ai-enablement-vs-ai-agency/",
+      "az": "/az/insights/ai-enablement-vs-ai-agency/"
+    },
+    "title": "Süni intellekt bacarıqları, yoxsa agentlik: fərq nədir?",
+    "description": "Agentlik sistem satır, seminar məlumatlılıq verir. Süni intellekt bacarıqları isə öz komandanızın iş axınlarını qurub idarə etməsinə imkan yaradır.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/ai-automation-for-marketing-agencies/",
+    "key": "article:ai-automation-for-marketing-agencies",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/ai-automation-for-marketing-agencies/",
+      "az": "/az/insights/ai-automation-for-marketing-agencies/"
+    },
+    "title": "Marketinq agentliyində süni intellekt daxildən başlayır.",
+    "description": "Marketinq agentliyində ən çox vaxt mətn yazmağa deyil, briflərə, formatlamaya, təsdiqlərə və hesabatlara gedir. Süni intellektlə oradan başlayın.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/ai-for-pr-agencies/",
+    "key": "article:ai-for-pr-agencies",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/ai-for-pr-agencies/",
+      "az": "/az/insights/ai-for-pr-agencies/"
+    },
+    "title": "PR işində süni intellekt: araşdırmanı avtomatlaşdırın.",
+    "description": "PR agentlikləri jurnalistlərlə münasibətləri insani saxlayaraq media araşdırması, təqdimata hazırlıq və hesabat üçün süni intellektdən necə istifadə edə bilər.",
+    "index": true
+  },
+  {
+    "url": "/az/insights/ai-onboarding-regulated-work/",
+    "key": "article:ai-onboarding-regulated-work",
+    "locale": "az",
+    "alternates": {
+      "en": "/insights/ai-onboarding-regulated-work/",
+      "az": "/az/insights/ai-onboarding-regulated-work/"
+    },
+    "title": "Süni intellekt tənzimlənən işdə adaptasiyanı asanlaşdırır.",
+    "description": "Klinik və digər tənzimlənən işlərdə təlimatları iş axınının içinə yerləşdirmək yeni əməkdaşların təlimini və adaptasiyasını asanlaşdırır.",
     "index": true
   },
   {
@@ -405,6 +633,18 @@
     },
     "title": "Komandanın süni intellektə hazırlıq bələdçisi",
     "description": "İnsanları tək bir süni intellekt balı ilə qiymətləndirmədən komandanın başlanğıc nöqtəsini anlayın.",
+    "index": true
+  },
+  {
+    "url": "/az/careers/",
+    "key": "careers",
+    "locale": "az",
+    "alternates": {
+      "en": "/careers/",
+      "az": "/az/careers/"
+    },
+    "title": "Karyera: süni intellekt əməliyyatları üzrə təcrübə",
+    "description": "Süni intellekt əməliyyatları üzrə təcrübəçi kimi Enamplify komandasına qoşulun. London və Bakıda real süni intellekt iş axınları qurun.",
     "index": true
   },
   {

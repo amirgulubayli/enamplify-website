@@ -5,8 +5,7 @@ import {ledger} from '../exhibits.mjs';
 export const trackRecord = (ctx, {n, cls = ''} = {}) => {
   const t = ctx.copy.common.trackRecord;
   return exhibit({n, topic: t.topic, title: t.title, cls,
-    chart: ledger({caption: t.caption, columns: t.columns, rows: t.rows}),
-    source: t.source}, ctx);
+    chart: ledger({caption: t.caption, columns: t.columns, rows: t.rows})}, ctx);
 };
 
 /** "We won't / We will", shared by home and about. */

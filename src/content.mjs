@@ -6,7 +6,7 @@ import {locales, defaultLocale, localePath, basePath} from './i18n.mjs';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const CONTENT = ['site', 'articles', 'resources', 'work', 'faqs'];
+const CONTENT = ['site', 'articles', 'resources', 'work', 'faqs', 'cases'];
 
 const readJson = async rel => JSON.parse(await fs.readFile(path.join(root, 'content', rel), 'utf8'));
 const readOptional = async (rel, read) => { try { return await read(rel); } catch (e) { if (e.code === 'ENOENT') return undefined; throw e; } };
@@ -18,7 +18,8 @@ export const REQUIRED = {
   work: ['delivered', 'products'],
   faqs: [],
   articles: ['title', 'summary', 'category', 'date'],
-  resources: ['name', 'short', 'description', 'time', 'audience', 'intro', 'fields', 'checks', 'closing']
+  resources: ['name', 'short', 'description', 'time', 'audience', 'intro', 'fields', 'checks', 'closing'],
+  cases: ['sector', 'title', 'summary', 'client', 'scope', 'situation', 'built', 'changed', 'principle', 'note']
 };
 
 /**
@@ -79,7 +80,7 @@ export async function loadContent(localeCode = defaultLocale) {
     missing.push(...gaps.map(g => `content/${rel}#${g}`));
     return merged;
   }));
-  const [localSite, articles, guides, work, faqs] = localised;
+  const [localSite, articles, guides, work, faqs, cases] = localised;
   // Nav hrefs always come from the base site.json; an overlay only supplies the labels, so a
   // translator writing `/az/…` hrefs can never double-prefix or break a link.
   const site = {...localSite, nav: baseContent[0].nav.map(([label, href], i) => [localSite.nav[i]?.[0] ?? label, href])};
@@ -93,7 +94,7 @@ export async function loadContent(localeCode = defaultLocale) {
     else { const gaps = []; copy = overlay(enCopy, over, gaps, {strict: true}); missing.push(...gaps.map(g => `content/${rel}#${g}`)); }
   }
 
-  for (const item of [...articles, ...guides]) if (!SLUG.test(item.slug)) throw new Error(`Invalid content slug: ${item.slug}`);
+  for (const item of [...articles, ...guides, ...cases]) if (!SLUG.test(item.slug)) throw new Error(`Invalid content slug: ${item.slug}`);
   for (const a of articles) {
     const own = isDefault ? undefined : await readOptional(`articles/${localeCode}/${a.slug}.md`, rel => fs.readFile(path.join(root, 'content', rel), 'utf8'));
     if (!isDefault && own === undefined) missing.push(`content/articles/${localeCode}/${a.slug}.md`);
@@ -103,7 +104,8 @@ export async function loadContent(localeCode = defaultLocale) {
     a.readingTime = Math.max(1, Math.ceil(md.split(/\s+/).length / 220));
   }
   articles.sort((x, y) => y.isoDate.localeCompare(x.isoDate));
+  for (const c of cases) if (c.related && !articles.some(a => a.slug === c.related)) throw new Error(`Case ${c.slug} relates to unknown article ${c.related}`);
   // City photography: files, alt text and captions for every locale live together in one manifest.
   const images = await readJson('images.json');
-  return {locale: localeCode, site, articles, guides, work, faqs, copy, images, missing, href: p => localePath(localeCode, p)};
+  return {locale: localeCode, site, articles, guides, work, faqs, cases, copy, images, missing, href: p => localePath(localeCode, p)};
 }

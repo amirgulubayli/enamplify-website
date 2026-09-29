@@ -26,6 +26,19 @@ export function jsonLd({base, site, route, copy}) {
     const a = route.article;
     graph.push({'@type': 'Article', headline: a.title, description: a.summary, datePublished: a.isoDate, dateModified: a.isoDate, author: {'@id': `${base}/#founder`}, publisher: {'@id': `${base}/#practice`}, mainEntityOfPage: canonical, image: `${base}${socialCard(localeOf(route).code)}`, inLanguage: lang});
   }
+  if (route.caseStudy) {
+    const c = route.caseStudy;
+    graph.push({'@type': 'Article', articleSection: copy?.common.caseStudy ?? 'Case study', headline: c.title, description: c.summary, about: c.sector, author: {'@id': `${base}/#practice`}, publisher: {'@id': `${base}/#practice`}, mainEntityOfPage: canonical, image: `${base}${socialCard(localeOf(route).code)}`, inLanguage: lang});
+  }
+  if (route.job) {
+    const j = route.job;
+    const list = items => `<ul>${items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+    graph.push({'@type': 'JobPosting', title: j.title, description: `<p>${esc(j.summary)}</p><h3>${esc(j.doTitle)}</h3>${list(j.do)}<h3>${esc(j.youTitle)}</h3>${list(j.you)}<h3>${esc(j.getTitle)}</h3>${list(j.get)}`,
+      datePosted: j.posted, employmentType: 'INTERN', hiringOrganization: {'@type': 'Organization', name: site.name, sameAs: `${base}/`, logo: `${base}/favicon.png`},
+      jobLocationType: 'TELECOMMUTE', applicantLocationRequirements: [{'@type': 'Country', name: 'United Kingdom'}, {'@type': 'Country', name: 'Azerbaijan'}],
+      jobLocation: [{'@type': 'Place', address: {'@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB'}}, {'@type': 'Place', address: {'@type': 'PostalAddress', addressLocality: 'Baku', addressCountry: 'AZ'}}],
+      directApply: false, url: canonical, inLanguage: lang});
+  }
   return safeJson({'@context': 'https://schema.org', '@graph': graph});
 }
 

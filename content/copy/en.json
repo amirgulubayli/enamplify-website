@@ -17,13 +17,19 @@
     "linkedin": "Amir on LinkedIn",
     "feedLink": "Insights feed",
     "legalNav": "Legal",
-    "legalLinks": {"privacy": "Privacy", "cookies": "Cookies", "terms": "Terms", "accessibility": "Accessibility"},
+    "legalLinks": {
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "terms": "Terms",
+      "accessibility": "Accessibility"
+    },
     "closeTitle": "When the timing is right, start with a conversation.",
     "closeBody": "Thirty minutes about your team and the work you’d like to change. If we’re not the right fit, we’ll say so.",
     "minRead": "{n} min read",
     "fieldGuide": "Field guide",
+    "caseStudy": "Case study",
+    "careersLink": "Careers",
     "exhibitLabel": "Exhibit {n} · {topic}.",
-    "exhibitSource": "Source: {source}",
     "lineSummary": "{label}: {first} at {start}, {last} at {end}",
     "portraitAlt": "Amir Gulubayli, founder of Enamplify",
     "portraitCaption": "Amir Gulubayli, Founder",
@@ -34,154 +40,306 @@
     "wontTitle": "We won’t",
     "willTitle": "We will",
     "commitments": {
-      "wont": ["Promise percentages we can’t evidence.", "Lock you into our tools.", "Move your data anywhere you haven’t approved.", "Frame this as replacing your people."],
-      "will": ["Agree how success is measured before we start.", "Leave you with something your team runs without us."]
+      "wont": [
+        "Sell you a tool your team stops using.",
+        "Promise a percentage we can’t prove.",
+        "Lock you into our platform or our people.",
+        "Move your data anywhere you haven’t approved."
+      ],
+      "will": [
+        "Agree how we’ll measure success before we start.",
+        "Hand over something your team runs without us.",
+        "Tell you when AI isn’t the answer."
+      ]
     },
     "stages": [
-      {"n": "01", "name": "Diagnose", "time": "2–3 weeks",
-        "short": "We map where your team’s time goes and choose the few workflows worth doing first. The fee is credited if you continue.",
+      {
+        "n": "01",
+        "name": "Diagnose",
+        "time": "2–3 weeks",
+        "short": "We find where your team’s time goes and pick the few workflows worth doing first. Fee credited if you continue.",
         "what": "We talk to the people who do the work, map where their time goes, and check what your data, systems and policies allow.",
-        "get": ["A baseline of where time goes today", "Three to five workflows ranked by value and risk", "A pilot plan with the measures agreed up front"],
-        "note": "Fixed fee, credited against the pilot if you continue."},
-      {"n": "02", "name": "Prove", "time": "8–12 weeks",
+        "get": [
+          "A baseline of where time goes today",
+          "Three to five workflows ranked by value and risk",
+          "A pilot plan with the measures agreed up front"
+        ],
+        "note": "Fixed fee, credited against the pilot if you continue."
+      },
+      {
+        "n": "02",
+        "name": "Prove",
+        "time": "8–12 weeks",
         "short": "One or two teams build real workflows with us, measured against numbers agreed up front.",
         "what": "Ten to fifteen people from one or two teams build real workflows with us, in a governed environment set up for your organisation.",
-        "get": ["Workflows in daily use, not demos", "People who can build the next ones themselves", "Results measured against the baseline"],
-        "note": "Scoped and priced in a written proposal after the diagnostic."},
-      {"n": "03", "name": "Scale", "time": "Ongoing",
-        "short": "Roll out on your terms, with governance, new use cases and a quarterly report on what changed.",
+        "get": [
+          "Workflows in daily use, not demos",
+          "People who can build the next ones themselves",
+          "Results measured against the baseline"
+        ],
+        "note": "Scoped and priced in a written proposal after the diagnostic."
+      },
+      {
+        "n": "03",
+        "name": "Scale",
+        "time": "Ongoing",
+        "short": "Roll out on your terms, with a quarterly report on what changed.",
         "what": "Extend to more teams at the pace you choose. We keep the environment governed, add new workflow templates, and report on what changed each quarter.",
-        "get": ["A growing library of workflows your team owns", "Governance that keeps pace with use", "A quarterly impact report for leadership"],
-        "note": "A subscription you can scale up, down or end."}
+        "get": [
+          "A growing library of workflows your team owns",
+          "Governance that keeps pace with use",
+          "A quarterly impact report for leadership"
+        ],
+        "note": "A subscription you can scale up, down or end."
+      }
     ],
     "trackRecord": {
       "topic": "Track record",
       "title": "What we can point to today.",
       "caption": "Track record",
-      "columns": ["Area", "Evidence"],
-      "rows": [
-        ["Recognition", "Google hackathon winners, with a $10,000 winning build"],
-        ["Experience", "10+ years building software, automation and AI systems"],
-        ["Our own products", "grademy and pripitch, both in market"],
-        ["Client systems", "Eight kinds delivered, from clinical trial management to finance reconciliation"]
+      "columns": [
+        "Area",
+        "Evidence"
       ],
-      "source": "Enamplify and RAG Medium delivery record. Client names withheld."
+      "rows": [
+        [
+          "Experience",
+          "10+ years building software, automation and AI"
+        ],
+        [
+          "Client systems",
+          "Eight kinds delivered, from clinical trials to finance"
+        ],
+        [
+          "Our products",
+          "grademy and pripitch, both live"
+        ]
+      ]
     }
   },
   "routes": {
-    "home": {"title": "Enamplify · AI enablement for mid-sized teams"},
-    "approach": {"title": "How AI enablement works: diagnose, prove, scale", "description": "Start small, prove it, then scale. How Enamplify helps teams build their own AI workflows with review, governance and data kept where it belongs.", "crumb": "Approach"},
-    "work": {"title": "AI systems we’ve built and products we run", "description": "Delivered AI systems across clinical, finance, growth and operations, a Google hackathon win, and the AI products we build and run ourselves.", "crumb": "Work"},
-    "about": {"title": "About Enamplify: founder-led, London and Baku", "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.", "crumb": "About"},
-    "insights": {"title": "Insights on AI adoption for operations leaders", "description": "Practical essays and free field guides on AI adoption, pilots, measurement and governance for operations leaders.", "crumb": "Insights"},
-    "contact": {"title": "Book a diagnostic call", "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.", "crumb": "Book a call"},
-    "notFound": {"title": "Page not found", "description": "This page has moved. Find your way back to Enamplify."}
+    "home": {
+      "title": "Enamplify · AI enablement for mid-sized teams"
+    },
+    "approach": {
+      "title": "How AI enablement works: diagnose, prove, scale",
+      "description": "Start small, prove it, then scale. How Enamplify helps teams build their own AI workflows with review, governance and data kept where it belongs.",
+      "crumb": "Approach"
+    },
+    "work": {
+      "title": "AI systems we build for clients and run ourselves",
+      "description": "AI systems delivered across clinical, finance, growth and operations, and two AI products we build and run ourselves.",
+      "crumb": "Work"
+    },
+    "about": {
+      "title": "About Enamplify: founder-led, London and Baku",
+      "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.",
+      "crumb": "About"
+    },
+    "insights": {
+      "title": "Insights on AI adoption for operations leaders",
+      "description": "Practical essays and free field guides on AI adoption, pilots, measurement and governance for operations leaders.",
+      "crumb": "Insights"
+    },
+    "contact": {
+      "title": "Book a diagnostic call",
+      "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.",
+      "crumb": "Book a call"
+    },
+    "careers": {
+      "title": "Careers: AI operations internship",
+      "description": "Join Enamplify as an AI operations intern. Build real AI workflows with a founder-led team working across London and Baku.",
+      "crumb": "Careers"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "This page has moved. Find your way back to Enamplify."
+    }
   },
   "home": {
     "heroTitle": "AI your team builds.",
     "heroTitleAlt": "Not AI you buy.",
-    "lede": "Enamplify helps mid-sized organisations make AI part of how their own people work. More gets done each week, the capability stays in-house, and every workflow is visible to the people accountable for it.",
+    "lede": "We train your people to build AI into the work they already do. They get hours back. You keep control.",
     "howWeWork": "How we work",
-    "note": "A 30-minute conversation with the founder. No pitch deck.",
+    "note": "30 minutes with the founder. No pitch deck.",
     "week": {
       "topic": "The week",
-      "title": "Half an operations week goes on work AI can take on.",
-      "segments": ["Judgement and client work", "Recurring reporting", "Finding information", "Handoffs and chasing", "Other"],
-      "note": "Reporting, finding information and handoffs, highlighted, are where AI workflows usually start.",
-      "source": "Illustrative composite for explanation. A diagnostic replaces it with your own numbers."
+      "title": "In a typical operations week, about half the work is the kind AI can take on.",
+      "segments": [
+        "Judgement and client work",
+        "Recurring reporting",
+        "Finding information",
+        "Handoffs and chasing",
+        "Other"
+      ],
+      "note": "The highlighted work is where teams usually start."
     },
-    "situationTitle": "Your people are already using AI. The question is whether it’s working for the organisation.",
+    "situationTitle": "AI is already in your building.",
     "situation": [
-      ["Tools were bought. The work didn’t change.", "Licences go unused when nobody is given the permission, or the method, to change how the work is done."],
-      ["The real use is out of sight.", "People paste work into personal accounts because the approved route is slower. Leadership can’t see it, so it can’t improve it."],
-      ["Pilots stall in month two.", "The demo worked. Ownership, review and handoffs were never designed."]
+      [
+        "Tools were bought. The work didn’t change.",
+        "Licences sit unused when nobody shows people how to change the work."
+      ],
+      [
+        "The real use is out of sight.",
+        "People paste work into personal accounts. You can’t see it, so you can’t improve it."
+      ],
+      [
+        "Pilots stall in month two.",
+        "The demo worked. Nobody designed who owns it next."
+      ]
     ],
-    "marked": "Most AI rollouts don’t fail on technology. They fail on who owns the work afterwards.",
-    "outcomesTitle": "Three things you can take to the board.",
+    "marked": "Most AI rollouts don’t fail on technology. They fail on ownership.",
+    "outcomesTitle": "Three results for the board.",
     "moreDone": {
       "topic": "More done",
-      "title": "Recurring admin falls from 14 hours a week to 6.",
+      "title": "For example: recurring admin down from 14 hours a week to 6.",
       "unit": "hours",
       "before": "Before",
       "after": "After",
-      "note": "Hours come back from the work nobody chose: reporting, searching, re-keying, chasing.",
-      "source": "Illustrative. One role, weekly."
+      "note": "Time comes back from reporting, searching and chasing."
     },
     "ownedInHouse": {
       "topic": "Owned in-house",
-      "title": "By month 12, your team runs most of its own workflows.",
+      "title": "Within a year, your team runs its own workflows.",
       "start": "Month 1",
       "end": "Month 12",
       "team": "Workflows maintained by your team",
       "teamShort": "Your team",
       "us": "Workflows maintained by Enamplify",
       "usShort": "Enamplify",
-      "note": "Your people learn to build and run their own workflows. When we step back, the capability stays.",
-      "source": "Illustrative."
+      "note": "When we step back, the skills stay."
     },
     "inControl": {
       "topic": "In control",
       "title": "Every workflow has an owner, a review and a boundary.",
-      "caption": "Example workflow ledger",
-      "columns": ["Workflow", "Owner", "Reviewed", "Data stays in"],
-      "rows": [
-        ["Monthly board report", "Finance", "Yes", "Your finance system"],
-        ["Client enquiry triage", "Operations", "Yes", "Your CRM"],
-        ["Contract first‑read", "Legal", "Yes", "Your document store"]
-      ],
-      "note": "Every workflow is visible, reviewed before it goes live, and runs inside limits you set.",
-      "source": "Example ledger."
+      "lines": [
+        [
+          "Owner",
+          "A named person answers for it."
+        ],
+        [
+          "Review",
+          "Nothing goes live unchecked."
+        ],
+        [
+          "Boundary",
+          "Data stays where you decide."
+        ]
+      ]
     },
-    "startTitle": "Start small. Prove it. Then decide.",
+    "startTitle": "Start small. Scale on evidence.",
     "moreApproach": "More on our approach",
-    "commitTitle": "What we will and won’t do.",
-    "recordTitle": "Built by people who ship.",
+    "commitTitle": "Our terms, in writing.",
+    "recordTitle": "Built, shipped, in use.",
     "seeWork": "See the work",
-    "founderTitle": "Founder-led, between London and Baku.",
+    "founderTitle": "One founder. Two cities.",
     "quote": "“The organisations getting real value from AI aren’t the ones with the biggest budgets. They’re the ones whose own people know how to use it.”",
     "quoteBy": "Amir Gulubayli, Founder",
     "aboutLink": "About Enamplify",
-    "insightsTitle": "Recent thinking.",
-    "allInsights": "All insights"
+    "insightsTitle": "Field notes.",
+    "allInsights": "All insights",
+    "situationDek": "The question is whether it works for you, or around you.",
+    "outcomesDek": "Agreed with you before we start. Measured after.",
+    "startDek": "A fixed diagnostic, a measured pilot, then your decision.",
+    "commitDek": "What most firms won’t put on paper.",
+    "recordDek": "Real systems for real teams, and two products of our own.",
+    "founderDek": "London and Baku, held to one standard.",
+    "insightsDek": "Short, practical essays on making AI work inside real teams."
   },
   "approach": {
     "title": "Start small. Prove it. Then scale.",
-    "lede": "Every engagement begins with a small, fixed piece of work and a clear decision point. You only go further when the evidence says it’s worth it.",
+    "lede": "Every engagement starts with a small, fixed step. You only go further when the evidence says so.",
     "stagesLabel": "Stages",
     "whatYouGet": "What you get",
-    "controlTitle": "What “in control” means in practice.",
+    "controlTitle": "Control, in practice.",
     "control": [
-      ["Your sign-in, your roles", "People sign in with their company accounts. Roles decide who can build, who approves and who uses."],
-      ["Reviewed before it runs", "No workflow goes live without a named owner and a review step."],
-      ["A complete record", "Every run is logged, so you can see what happened, when, and on whose authority."],
-      ["Data routed by sensitivity", "Sensitive information only goes to models that run in your environment. Nobody has to make that call by hand."],
-      ["Spending you can see", "Usage limits per team, and a clear view of what AI is costing you."],
-      ["Hosted where you decide", "On your own infrastructure, or in UK or EU hosting."]
+      [
+        "Your sign-in, your roles",
+        "People sign in with their company accounts. Roles decide who can build, who approves and who uses."
+      ],
+      [
+        "Reviewed before it runs",
+        "No workflow goes live without a named owner and a review step."
+      ],
+      [
+        "A complete record",
+        "Every run is logged, so you can see what happened, when, and on whose authority."
+      ],
+      [
+        "Data routed by sensitivity",
+        "Sensitive information only goes to models that run in your environment. Nobody has to make that call by hand."
+      ],
+      [
+        "Spending you can see",
+        "Usage limits per team, and a clear view of what AI is costing you."
+      ],
+      [
+        "Hosted where you decide",
+        "On your own infrastructure, or in UK or EU hosting."
+      ]
     ],
-    "leavesTitle": "What your team is left with.",
-    "leaves": ["Workflows your people use every week", "People who can build the next ones", "A playbook for how your organisation uses AI", "A measured baseline, and the evidence of what changed"],
-    "faqTitle": "Questions leaders ask."
+    "leavesTitle": "What stays when we leave.",
+    "leaves": [
+      "Workflows your people use every week",
+      "People who can build the next ones",
+      "A playbook for how your organisation uses AI",
+      "A measured baseline, and the evidence of what changed"
+    ],
+    "faqTitle": "Before you ask."
   },
   "work": {
-    "title": "Systems we’ve built. Products we run.",
-    "lede": "Before Enamplify, we built AI systems for clients under the RAG Medium name, and won a Google hackathon with a $10,000 winning build. The same people now help your team build its own.",
+    "title": "Built for clients. Run as our own.",
+    "lede": "Eight kinds of AI system delivered for clients, and two products we run ourselves.",
     "deliveredLabel": "Delivered systems",
     "delivered": {
       "topic": "Delivered",
-      "title": "Eight kinds of client system, shipped.",
+      "title": "Eight kinds of client system, in production.",
       "caption": "Delivered client systems",
-      "columns": ["System", "What it does"],
-      "source": "RAG Medium and Enamplify delivery record. Client names withheld; references available in conversation."
+      "columns": [
+        "System",
+        "What it does"
+      ]
     },
-    "productsTitle": "Products we build and run."
+    "productsTitle": "Products we build and run.",
+    "casesTitle": "Case studies.",
+    "casesLede": "How we helped a travel startup, a marketing agency, a PR agency and a clinical trials organisation automate their work.",
+    "readCase": "Read the case study",
+    "capabilitiesTitle": "What we build.",
+    "capabilities": [
+      [
+        "Internal workflow automation",
+        "Recurring steps such as intake, routing, formatting and approvals, run automatically with a person reviewing what matters."
+      ],
+      [
+        "Data and content pipelines",
+        "Information gathered from many sources, cleaned, checked against agreed rules and delivered where the team works."
+      ],
+      [
+        "Research and assessment",
+        "Systems that find, enrich and score records, from distributors and prospects to journalists and suppliers, with the reasons shown."
+      ],
+      [
+        "Grounded search over your documents",
+        "Answers drawn from your own procedures and files, with the source shown, so people can check before they act."
+      ],
+      [
+        "Guided processes and onboarding",
+        "Procedures built into the tools people use, so new colleagues learn the work while doing it correctly."
+      ],
+      [
+        "Reporting",
+        "Recurring client and management reports assembled automatically, ready for a person to add the judgement."
+      ]
+    ]
   },
   "about": {
-    "title": "Founder-led, between London and Baku.",
+    "title": "One founder. Two cities. One standard.",
     "bio": [
       "Amir advises leadership teams on where AI can create measurable value, how it should reshape workflows, and what people need to adopt it successfully. His work spans AI strategy, operating model design, implementation and capability building across travel, marketing, education, finance and clinical technology.",
-      "Before Enamplify, Amir built AI systems for clients under the RAG Medium name, from outbound growth engines to clinical trial management software, and launched two AI products of his own, grademy and pripitch. His team won a Google hackathon with a $10,000 winning build."
+      "Amir has built AI systems for clients, from outbound growth engines to clinical trial management software, and launched two AI products of his own, grademy and pripitch. His team’s work won a Google hackathon."
     ],
-    "whyTitle": "Why Enamplify exists.",
+    "whyTitle": "Why we exist.",
     "why": [
       "Most organisations don’t need another AI tool. They need their own people to be able to use the ones they have, safely, on the work that matters.",
       "Enamplify exists to make that normal: AI your team builds, not AI you buy."
@@ -196,6 +354,60 @@
     "essays": "Essays",
     "guides": "Field guides",
     "guidesLede": "Free worksheets to use with your team. No email required."
+  },
+  "case": {
+    "facts": "At a glance",
+    "sector": "Sector",
+    "client": "Client",
+    "scope": "Scope",
+    "situationTitle": "The situation.",
+    "builtTitle": "What we built.",
+    "changedTitle": "What changed.",
+    "relatedTitle": "Related reading.",
+    "moreTitle": "More case studies.",
+    "closeTitle": "Want the same for your team?",
+    "closeBody": "Thirty minutes about the work your team would like to hand over. If we’re not the right fit, we’ll say so."
+  },
+  "careers": {
+    "title": "Work with us.",
+    "lede": "Enamplify is a small, founder-led team helping organisations make AI part of how their people work. We hire rarely, and carefully.",
+    "whyTitle": "What it’s like here.",
+    "why": [
+      "You work directly with the founder on real client work, not practice projects.",
+      "We care about specific, careful work more than volume. Every workflow we ship has an owner, a review and a reason to exist.",
+      "We work across London and Baku, and between English and Azerbaijani."
+    ],
+    "openTitle": "Open roles.",
+    "role": {
+      "title": "AI Operations Intern",
+      "type": "Internship",
+      "location": "London or Baku, with remote work",
+      "summary": "Help design, build and test AI workflows for client teams, and learn how AI enablement works from the inside.",
+      "doTitle": "What you’ll do",
+      "do": [
+        "Map how client teams spend their time and where AI can help.",
+        "Build and test AI workflows and automations alongside the founder.",
+        "Write clear documentation and training material so client teams can run what we build.",
+        "Research tools, models and good practice, and share what you find."
+      ],
+      "youTitle": "Who you are",
+      "you": [
+        "Curious about AI and how organisations actually work.",
+        "A clear writer who explains things simply.",
+        "Careful with detail, and comfortable asking questions.",
+        "Studying or recently graduated. Technical experience helps but is not required."
+      ],
+      "getTitle": "What you’ll get",
+      "get": [
+        "Hands-on experience of real AI projects, from diagnosis to delivery.",
+        "Direct mentoring from the founder.",
+        "A reference and portfolio work you can point to."
+      ],
+      "apply": "Book an introductory call",
+      "applyNote": "Opens our booking calendar in a new tab. Pick a time and tell us a little about yourself."
+    },
+    "otherTitle": "No other roles are open right now.",
+    "other": "If you think you should work with us anyway, write to {email} and tell us what you would bring."
   },
   "article": {
     "by": "By",
@@ -221,7 +433,11 @@
     "title": "Book a diagnostic call.",
     "lede": "Thirty minutes with Amir, the founder, about your team and the work you’d like to change. No pitch deck, and no automated follow-up sequence.",
     "coverTitle": "What we’ll cover",
-    "cover": ["Where your team’s time goes today", "Where AI is already being used, officially or not", "Whether a diagnostic would be worth it, and what it would look at"],
+    "cover": [
+      "Where your team’s time goes today",
+      "Where AI is already being used, officially or not",
+      "Whether a diagnostic would be worth it, and what it would look at"
+    ],
     "afterTitle": "What happens after",
     "after": "If there’s a fit, you get a short written proposal for a diagnostic. If there isn’t, we’ll say so and point you somewhere useful.",
     "chooseTime": "Choose a time",
@@ -231,7 +447,13 @@
     "email": "Work email",
     "organisation": "Organisation",
     "interest": "What would you like to talk about?",
-    "interests": ["Not sure yet", "A diagnostic call", "Team AI enablement", "A custom AI build", "Something else"],
+    "interests": [
+      "Not sure yet",
+      "A diagnostic call",
+      "Team AI enablement",
+      "A custom AI build",
+      "Something else"
+    ],
     "message": "A little about the work",
     "honeypot": "Leave this blank",
     "confidential": "Please don’t include confidential information. Read our {link}.",
@@ -245,30 +467,117 @@
   "legal": {
     "lastUpdated": "Last updated {date}.",
     "pages": {
-      "privacy": {"title": "Privacy", "description": "How the Enamplify website handles the information you share, in plain English.", "lede": "What this website collects, why, and how to reach us.", "sections": [
-        ["Who we are", "Enamplify is an AI enablement practice led by Amir Gulubayli. For any question about your information, email {email}."],
-        ["Your enquiry", {"server": "The contact form sends your details and message through Resend to our inbox, and Cloudflare Turnstile checks the form for automated abuse. We use your enquiry only to reply to you.", "email": "The contact form prepares a message in your own email app. Nothing you type is sent to an Enamplify server; your email provider handles the message when you choose to send it."}],
-        ["Booking a call", "Booking opens our scheduling provider in a new tab. The details you enter there are handled under that provider’s privacy policy and used by us only to hold the call."],
-        ["Field guide notes", "Notes typed into a field guide stay in the page. They are not sent to us or saved."],
-        ["Technical information", "Our hosting provider processes technical information such as IP addresses to deliver and protect the site. We do not use advertising trackers or marketing analytics."],
-        ["Fonts and images", "Fonts and images are served from this website."],
-        ["Your rights", "You can ask what we hold about you, and ask us to correct or delete it, by emailing {email}."]]},
-      "cookies": {"title": "Cookies", "description": "Enamplify sets no advertising or analytics cookies. What the website stores, and what it does not.", "lede": "A short answer: we don’t set any.", "sections": [
-        ["No cookies from us", "This website does not set advertising, analytics or preference cookies, and does not use browser storage to follow you."],
-        ["Other services", "Our booking provider and LinkedIn set their own cookies when you visit them. Their policies apply there."],
-        ["If this changes", "If we ever add analytics or embedded services, we will update this page and ask for consent where the law requires it, before they run."]]},
-      "terms": {"title": "Terms", "description": "The terms that apply to using the Enamplify website and its free field guides.", "lede": "The ground rules for this website.", "sections": [
-        ["General information", "This website describes Enamplify and how we work. It is general information, not an offer to provide a particular service."],
-        ["Engagements", "Every engagement is governed by its own written agreement setting out scope, fees and responsibilities. An enquiry or call does not create one."],
-        ["Not professional advice", "Articles and field guides are educational. They are not legal, regulatory or financial advice."],
-        ["No guaranteed outcomes", "Examples and exhibits marked illustrative explain a pattern; they are not a promise of results."],
-        ["Using the field guides", "You may use the field guides within your organisation and share links to them. Please keep the Enamplify attribution."],
-        ["Questions", "Email {email}."]]},
-      "accessibility": {"title": "Accessibility", "description": "How the Enamplify website is built to be usable by as many people as possible, and how to report a problem.", "lede": "We aim to meet WCAG 2.2 AA across the site.", "sections": [
-        ["How the site is built", "Pages use semantic HTML, visible focus states, sufficient colour contrast and a skip link. Every page works without JavaScript, and motion is switched off if you ask your device to reduce it."],
-        ["Charts", "Every exhibit has a text equivalent: a readable legend, a table, or a description for screen readers."],
-        ["Known limitations", "The booking calendar is provided by a third party and may not meet the same standard. If it gives you trouble, email us and we will arrange a time directly."],
-        ["Report a problem", "Email {email} and we will reply within five working days."]]}
+      "privacy": {
+        "title": "Privacy",
+        "description": "How the Enamplify website handles the information you share, in plain English.",
+        "lede": "What this website collects, why, and how to reach us.",
+        "sections": [
+          [
+            "Who we are",
+            "Enamplify is an AI enablement practice led by Amir Gulubayli. For any question about your information, email {email}."
+          ],
+          [
+            "Your enquiry",
+            {
+              "server": "The contact form sends your details and message through Resend to our inbox, and Cloudflare Turnstile checks the form for automated abuse. We use your enquiry only to reply to you.",
+              "email": "The contact form prepares a message in your own email app. Nothing you type is sent to an Enamplify server; your email provider handles the message when you choose to send it."
+            }
+          ],
+          [
+            "Booking a call",
+            "Booking opens our scheduling provider in a new tab. The details you enter there are handled under that provider’s privacy policy and used by us only to hold the call."
+          ],
+          [
+            "Field guide notes",
+            "Notes typed into a field guide stay in the page. They are not sent to us or saved."
+          ],
+          [
+            "Technical information",
+            "Our hosting provider processes technical information such as IP addresses to deliver and protect the site. We do not use advertising trackers or marketing analytics."
+          ],
+          [
+            "Fonts and images",
+            "Fonts and images are served from this website."
+          ],
+          [
+            "Your rights",
+            "You can ask what we hold about you, and ask us to correct or delete it, by emailing {email}."
+          ]
+        ]
+      },
+      "cookies": {
+        "title": "Cookies",
+        "description": "Enamplify sets no advertising or analytics cookies. What the website stores, and what it does not.",
+        "lede": "A short answer: we don’t set any.",
+        "sections": [
+          [
+            "No cookies from us",
+            "This website does not set advertising, analytics or preference cookies, and does not use browser storage to follow you."
+          ],
+          [
+            "Other services",
+            "Our booking provider and LinkedIn set their own cookies when you visit them. Their policies apply there."
+          ],
+          [
+            "If this changes",
+            "If we ever add analytics or embedded services, we will update this page and ask for consent where the law requires it, before they run."
+          ]
+        ]
+      },
+      "terms": {
+        "title": "Terms",
+        "description": "The terms that apply to using the Enamplify website and its free field guides.",
+        "lede": "The ground rules for this website.",
+        "sections": [
+          [
+            "General information",
+            "This website describes Enamplify and how we work. It is general information, not an offer to provide a particular service."
+          ],
+          [
+            "Engagements",
+            "Every engagement is governed by its own written agreement setting out scope, fees and responsibilities. An enquiry or call does not create one."
+          ],
+          [
+            "Not professional advice",
+            "Articles and field guides are educational. They are not legal, regulatory or financial advice."
+          ],
+          [
+            "No guaranteed outcomes",
+            "Examples and exhibits marked illustrative explain a pattern; they are not a promise of results."
+          ],
+          [
+            "Using the field guides",
+            "You may use the field guides within your organisation and share links to them. Please keep the Enamplify attribution."
+          ],
+          [
+            "Questions",
+            "Email {email}."
+          ]
+        ]
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "How the Enamplify website is built to be usable by as many people as possible, and how to report a problem.",
+        "lede": "We aim to meet WCAG 2.2 AA across the site.",
+        "sections": [
+          [
+            "How the site is built",
+            "Pages use semantic HTML, visible focus states, sufficient colour contrast and a skip link. Every page works without JavaScript, and motion is switched off if you ask your device to reduce it."
+          ],
+          [
+            "Charts",
+            "Every exhibit has a text equivalent: a readable legend, a table, or a description for screen readers."
+          ],
+          [
+            "Known limitations",
+            "The booking calendar is provided by a third party and may not meet the same standard. If it gives you trouble, email us and we will arrange a time directly."
+          ],
+          [
+            "Report a problem",
+            "Email {email} and we will reply within five working days."
+          ]
+        ]
+      }
     }
   },
   "notFound": {

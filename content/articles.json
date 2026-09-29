@@ -1,5 +1,65 @@
 [
   {
+    "slug": "how-to-choose-an-ai-consultancy",
+    "category": "Buying AI",
+    "title": "How to choose an AI consultancy: seven questions.",
+    "summary": "Seven questions that separate a partner who leaves your team stronger from one who leaves you dependent, and how we answer them.",
+    "art": "signal",
+    "resource": "ai-pilot-acceptance-checklist",
+    "readingTime": 4,
+    "date": "29 September 2026",
+    "isoDate": "2026-09-29",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "ai-enablement-vs-ai-agency",
+    "category": "Leadership",
+    "title": "AI enablement or an AI agency: what’s the difference?",
+    "summary": "An agency sells a system, a workshop sells awareness. AI enablement leaves your own people able to build and run AI workflows.",
+    "art": "signal",
+    "resource": "team-ai-readiness",
+    "readingTime": 4,
+    "date": "29 September 2026",
+    "isoDate": "2026-09-29",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "ai-automation-for-marketing-agencies",
+    "category": "Agencies",
+    "title": "AI automation for marketing agencies starts inside.",
+    "summary": "The biggest time drain in a marketing agency is not writing. It is briefs, formatting, approvals and reporting. Start there.",
+    "art": "signal",
+    "resource": "ai-opportunity-canvas",
+    "readingTime": 4,
+    "date": "28 September 2026",
+    "isoDate": "2026-09-28",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "ai-for-pr-agencies",
+    "category": "Agencies",
+    "title": "AI for PR agencies: automate the research, not the pitch.",
+    "summary": "How PR agencies can use AI for media research, pitch preparation and coverage reporting while keeping journalist relationships human.",
+    "art": "signal",
+    "resource": "ai-opportunity-canvas",
+    "readingTime": 4,
+    "date": "28 September 2026",
+    "isoDate": "2026-09-28",
+    "author": "Amir Gulubayli"
+  },
+  {
+    "slug": "ai-onboarding-regulated-work",
+    "category": "Regulated work",
+    "title": "AI workflows make onboarding easier in regulated work.",
+    "summary": "In clinical and other regulated work, putting guidance inside the workflow makes new users easier to train and onboard.",
+    "art": "signal",
+    "resource": "ai-pilot-acceptance-checklist",
+    "readingTime": 4,
+    "date": "27 September 2026",
+    "isoDate": "2026-09-27",
+    "author": "Amir Gulubayli"
+  },
+  {
     "slug": "beyond-the-ai-demo",
     "category": "Implementation",
     "title": "A working AI demo is not an operating workflow.",

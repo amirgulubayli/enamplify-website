@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "travel-distributor-outreach",
+    "sector": "Turizm startapı",
+    "title": "Turizm startapı üçün süni intellektlə distribyutor seçimi.",
+    "summary": "Distribyutorları tapan, qiymətləndirən və onlarla əlaqə quran daxili sistem beş nəfəri həftələrini dolduran işdən azad etdi.",
+    "client": "Böyüməkdə olan turizm startapı. Adı açıqlanmır.",
+    "scope": "Distribyutorların araşdırılması, qiymətləndirilməsi və onlarla əlaqə üçün daxili sistem",
+    "situation": [
+      "Şirkət distribyutorlar vasitəsilə böyüyürdü: çıxmaq istədiyi bazarlardakı agentliklər, operatorlar və satıcılar. Onları tapmaq, uyğun olub-olmadıqlarını yoxlamaq və ilk əlaqəni qurmaq əl ilə görülürdü.",
+      "Beş nəfər həftəsinin böyük hissəsini buna sərf edirdi. Onlar kataloqlarda və saytlarda axtarış aparır, məlumatları cədvəllərə köçürür, hər distribyutoru əsasən öz yaddaşlarında saxladıqları meyarlarla qiymətləndirir və müraciət məktublarını bir-bir yazırdılar."
+    ],
+    "built": [
+      ["Distribyutor araşdırması", "Sistem hədəf bazar üçün namizəd distribyutorları toplayır və onların açıq məlumatlarını vahid formatlı bir qeydə çevirir."],
+      ["Razılaşdırılmış meyarlar üzrə qiymətləndirmə", "Komanda yaxşı distribyutoru nəyin fərqləndirdiyini yazılı şəkildə müəyyən etdi. Hər qeyd bu meyarlarla qiymətləndirilir, səbəblər isə balın yanında göstərilir."],
+      ["Hazırlanmış və yoxlanılmış müraciətlər", "İlk məktubların qaralaması hər distribyutorun məlumatları əsasında hazırlanır. Heç nə göndərilməzdən əvvəl insan onu yoxlayır və təsdiqləyir."],
+      ["Vahid ümumi axın", "Hər distribyutor, onun qiymətləndirməsi və əlaqə tarixçəsi bütün komandanın görə bildiyi bir yerdə saxlanılır."]
+    ],
+    "changed": [
+      "Beş nəfər araşdırma, qiymətləndirmə və ilk əlaqə işindən azad oldu.",
+      "Qiymətləndirmə fərdi mülahizələrə deyil, yazılı meyarlara əsaslanır.",
+      "Komanda vaxtını siyahılara deyil, onlardan sonra gələn söhbətlərə sərf edir."
+    ],
+    "principle": "Axtarışı və çeşidləməni sistem öz üzərinə götürdü. Münasibətlər insanlarda qaldı.",
+    "note": "Təfərrüatlar müştərinin razılığı ilə paylaşılır. Müştərinin adı açıqlanmır."
+  },
+  {
+    "slug": "marketing-agency-workflows",
+    "sector": "Marketinq agentliyi",
+    "title": "Marketinq agentliyində süni intellektlə avtomatlaşdırma.",
+    "summary": "Brifləri, kontenti və hesabatları insanların üzərindən götürən, yaradıcı mühakiməni isə yerində saxlayan daxili avtomatlaşdırmalar və iş axınları.",
+    "client": "Müstəqil marketinq agentliyi. Adı açıqlanmır.",
+    "scope": "Daxili iş axınları, avtomatlaşdırmalar və kontent axınları",
+    "situation": [
+      "Agentliyin ən yaxşı mütəxəssisləri günlərini əsas işin arasındakı işlərə sərf edirdi: müştəri briflərini tapşırıqlara çevirmək, kontenti hər kanal üçün yenidən formatlaşdırmaq, təsdiqlərin ardınca düşmək və hər ay eyni hesabatları toplamaq.",
+      "Bunların heç biri onların mühakiməsini tələb etmirdi, amma hamısı mühakimə tələb edən işdən əvvəl gəlirdi."
+    ],
+    "built": [
+      ["Briflərin qəbulu", "Müştəri brifləri vahid formatda daxil olur, çatışmayan məlumat baxımından yoxlanılır və məsul şəxsləri və tarixləri olan strukturlaşdırılmış tapşırıqlara çevrilir."],
+      ["Kontent axınları", "Təsdiqlənmiş kontent müştərinin brend qaydalarına uyğun olaraq hər kanal üçün uyğunlaşdırılır, sonra insanın yoxlaması üçün növbəyə qoyulur."],
+      ["Təsdiqlərin yönləndirilməsi", "Qaralamalar xatırlatmalarla birlikdə avtomatik olaraq lazımi yoxlayıcıya ötürülür, beləliklə, heç nə poçt qutusunda gözləmir."],
+      ["Hesabatların avtomatlaşdırılması", "Aylıq müştəri hesabatları agentliyin məlumat mənbələrindən toplanır və müştəri üzrə məsul menecerin şərh əlavə etməsinə hazır olur."]
+    ],
+    "changed": [
+      "Təkrarlanan inzibati iş müştərilərin pul ödədiyi mütəxəssislərin üzərindən götürüldü.",
+      "Hər brif, qaralama və təsdiq eyni, görünən yolla keçir.",
+      "Brend və yaradıcı qərarlar komandada qalır: onlar əvəz olunmur, dəstəklənir."
+    ],
+    "principle": "Ötürmələri və formatlaşdırmanı avtomatlaşdırın. İdeyalar insanlarda qalsın.",
+    "note": "Təfərrüatlar müştərinin razılığı ilə paylaşılır. Müştərinin adı açıqlanmır."
+  },
+  {
+    "slug": "pr-agency-workflows",
+    "sector": "PR agentliyi",
+    "title": "PR agentliyində süni intellektlə avtomatlaşdırma.",
+    "summary": "Avtomatlaşdırılmış media araşdırması, təqdimat hazırlığı və işıqlandırma hesabatları: agentliyin əməkdaşları vaxtını hekayələrə və münasibətlərə sərf edir.",
+    "client": "PR agentliyi. Adı açıqlanmır.",
+    "scope": "Araşdırma, müraciət hazırlığı və hesabat iş axınları",
+    "situation": [
+      "Yaxşı PR bu həftə hansı jurnalistin nə ilə maraqlandığını bilməkdən asılıdır. Bu bilgini aktual saxlamaq, media siyahıları hazırlamaq, təqdimatları uyğunlaşdırmaq və sonra nəticələri sübut etmək komandanın vaxtının çox hissəsini alırdı.",
+      "İş təkrarlanan idi, amma səhvlər baha başa gəlirdi: yanlış jurnalistə göndərilən yanlış təqdimat illərlə qurulmuş münasibətə zərər vurur."
+    ],
+    "built": [
+      ["Media araşdırması", "Sistem jurnalistlərin və nəşrlərin nəyi işıqlandırdığını izləyir və agentliyin əlaqələr barədə biliyini aktual saxlayır."],
+      ["Təqdimat hazırlığı", "Hər hekayə üçün səbəbləri ilə birlikdə müvafiq jurnalistlərin qısa siyahısını təklif edir və insanın təkmilləşdirməsi üçün uyğunlaşdırılmış yanaşmaların qaralamasını hazırlayır."],
+      ["İnsan təsdiqi", "Adı bəlli şəxs təsdiqləmədən heç nə jurnalistə göndərilmir."],
+      ["İşıqlandırma hesabatları", "Mediada çıxan materiallar toplanır və müştəri hesabatlarına çevrilir, müştəri komandasının şərhinə hazır olur."]
+    ],
+    "changed": [
+      "Araşdırma və hesabatlar artıq komandanın həftəsini tutmur.",
+      "Təqdimatlar köhnə siyahılardan deyil, aktual və konkret kontekstdən başlayır.",
+      "Jurnalistlərlə münasibətlər şəxsi və məsuliyyətli olaraq qalır."
+    ],
+    "principle": "Araşdırmanı avtomatlaşdırın. Münasibətləri heç vaxt avtomatlaşdırmayın.",
+    "note": "Təfərrüatlar müştərinin razılığı ilə paylaşılır. Müştərinin adı açıqlanmır."
+  },
+  {
+    "slug": "clinical-trial-operations",
+    "sector": "Klinik sınaqlar",
+    "title": "Öyrənilməsi asan klinik sınaq iş axınları.",
+    "summary": "Tənzimlənən mühitdə yeni istifadəçilərin təlimini və işə uyğunlaşmasını asanlaşdıran avtomatlaşdırılmış klinik sınaq iş axınları və yönləndirilən proseslər.",
+    "client": "Klinik texnologiyalar təşkilatı. Məxfilik müqaviləsi (NDA) ilə qorunur.",
+    "scope": "Klinik sınaqların idarə olunması üzrə iş axınları, təlim və işə uyğunlaşma",
+    "situation": [
+      "Klinik sınaq əməliyyatları ətraflı prosedurlara əsaslanır və hər addım düzgün və qeydiyyatla icra olunmalıdır. Yeni istifadəçilər üçün öyrənmə prosesi çətin idi, təcrübəli əməkdaşlar isə eyni addımları öyrətməyə çox vaxt sərf edirdi.",
+      "Təşkilatın iş axınları daha sürətli olmalı, eyni dərəcədə vacib olaraq, yeni insanın öyrənməsi və düzgün izləməsi üçün daha asan olmalı idi."
+    ],
+    "built": [
+      ["Avtomatlaşdırılmış iş axını addımları", "Sınaq əməliyyatlarındakı təkrarlanan addımlar avtomatlaşdırıldı və hər hərəkət qeydə alınır."],
+      ["Yönləndirilən proseslər", "İstifadəçilər hər prosedurdan ardıcıllıqla keçirilir, hər addımda lazımi məlumat qarşılarında olur."],
+      ["Mənbəyə əsaslanan axtarış", "İnsanlar təşkilatın öz prosedur və sənədlərinə sual verə və hər cavabın mənbəyini görə bilirlər."],
+      ["Daxili işə uyğunlaşma", "Yeni istifadəçilər işi ayrıca təlimatlardan deyil, sistemin özündə öyrənirlər."]
+    ],
+    "changed": [
+      "Sınaq əməliyyatlarındakı rutin addımlar avtomatik və qeydiyyatla icra olunur.",
+      "Yeni istifadəçilərin təlimi və işə uyğunlaşması xeyli asanlaşıb.",
+      "Təcrübəli əməkdaşlar eyni izahları təkrarlamağa daha az vaxt sərf edir."
+    ],
+    "principle": "Tənzimlənən işdə tapşırığı yerinə yetirməyin ən asan yolu həm də düzgün yol olmalıdır.",
+    "note": "Bu iş məxfilik müqaviləsi ilə qorunur, buna görə onu yalnız ümumi şəkildə təsvir edirik."
+  }
+]

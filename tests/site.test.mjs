@@ -21,10 +21,10 @@ const exists = url => fs.access(path.join(root, 'dist', url, url.endsWith('/') ?
 const SHARED = /^\/(?:assets|fonts|images|downloads)\/|^\/(?:favicon|apple-touch-icon)[^/]*$/;
 const withoutCounterparts = h => h.replace(/<nav class="lang"[\s\S]*?<\/nav>/g, '').replace(/<link rel="alternate" hreflang="[^"]+" href="[^"]*">/g, '');
 
-test('40 pages are built: 20 English (with the bilingual 404) and 19 Azerbaijani, plus 404.html', async () => {
-  assert.equal(routes.length, 39);
-  assert.equal(routes.filter(r => r.locale === 'en').length, 20);
-  assert.equal(routes.filter(r => r.locale === 'az').length, 19);
+test('60 pages are built: 30 English (with the bilingual 404) and 29 Azerbaijani, plus 404.html', async () => {
+  assert.equal(routes.length, 59);
+  assert.equal(routes.filter(r => r.locale === 'en').length, 30);
+  assert.equal(routes.filter(r => r.locale === 'az').length, 29);
   assert.ok(await fs.access(path.join(root, 'dist/404.html')).then(() => true));
   assert.ok(!(await exists('/az/404/')), 'no Azerbaijani 404');
 });
@@ -206,4 +206,13 @@ test('proof is an exhibit ledger on home and work, with no kicker lines above ti
   assert.ok(!work.includes('Track record'), 'work does not repeat the home proof exhibit');
   assert.ok(!/class="(?:figures|delivered|recognition|numbered__n|grid-list grid-list--four)"/.test(home + work));
   for (const [i, h] of all.entries()) assert.ok(!/<p class="card__meta">[^<]*<\/p>\s*<(?:h1|h2|h3)/.test(h), routes[i].url);
+});
+
+test('client copy rules: no source footnotes, never the old brand, hackathon only on About', () => {
+  for (const [i, h] of all.entries()) {
+    const text = h.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<[^>]+>/g, ' ');
+    assert.ok(!/Source:|Mənbə:/.test(text), `${routes[i].url} shows a source line`);
+    assert.ok(!/RAG Medium|RAG-X/i.test(text), `${routes[i].url} mentions the old brand`);
+    if (!/^\/(az\/)?about\/$/.test(routes[i].url)) assert.ok(!/hackathon|hakaton/i.test(text), `${routes[i].url} mentions the hackathon`);
+  }
 });

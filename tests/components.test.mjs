@@ -55,14 +55,14 @@ test('footer carries the definition sentence and both cities', () => {
   assert.ok(footer(az).includes('href="/az/feed.xml"'));
 });
 test('exhibit caption is a run-in heading: bold label, then the action title', () => {
-  const html = exhibit({n: 2, topic: 'More done', title: 'Admin falls from 14 hours to 6.', chart: '<svg></svg>', source: 'Illustrative.'}, ctx);
+  const html = exhibit({n: 2, topic: 'More done', title: 'Admin falls from 14 hours to 6.', chart: '<svg></svg>'}, ctx);
   assert.match(html, /^<figure class="exhibit/);
   assert.ok(html.includes('<figcaption class="exhibit__cap"><span class="exhibit__label">Exhibit 2 · More done.</span> <span class="exhibit__title">Admin falls from 14 hours to 6.</span></figcaption>'));
-  assert.ok(html.includes('Source: Illustrative.'));
+  assert.ok(!html.includes('exhibit__source'), 'exhibits carry no source footnotes');
 });
 test('portrait caption can be left out where a quote already attributes', () => {
   assert.ok(portrait(ctx).includes(`<figcaption>${copy.common.portraitCaption}</figcaption>`));
-  assert.ok(portrait(ctx).includes('width="304" height="380"'), 'never declared larger than the source');
+  assert.ok(portrait(ctx).includes('width="320" height="400"'), 'never declared larger than the source');
   assert.ok(!portrait(ctx, {caption: false}).includes('<figcaption'));
 });
 test('article card puts its meta line below the title, not above it', () => {
