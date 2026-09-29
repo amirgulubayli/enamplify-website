@@ -203,7 +203,7 @@ main:focus{outline:none}
 .ticks--large li::before{top:28px}
 .founder{display:grid;gap:48px;align-items:center}
 @media (min-width:900px){.founder{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:96px}}
-.portrait{position:relative;max-width:340px}
+.portrait{position:relative;width:100%;max-width:340px;margin-inline:auto;justify-self:center}
 .portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--paper-deep);filter:saturate(.72) sepia(.08)}
 .portrait figcaption{margin-top:12px;font-size:.8125rem;color:var(--muted)}
 .portrait.image-unavailable img{visibility:hidden}
