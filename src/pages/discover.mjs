@@ -36,7 +36,7 @@ export function discover(ctx) {
   const book = `<div class="flow__step flow__book" data-step="book" hidden><h2 tabindex="-1">${esc(b.q)}</h2><p class="lede">${esc(b.body)}</p><a class="btn btn--primary" href="${esc(site.bookingUrl)}" target="_blank" rel="noopener noreferrer" data-flow-book>${esc(b.cta)}${arrow}</a><h3>${esc(b.summary)}</h3><ul class="flow__summary" data-flow-summary></ul></div>`;
 
   return `${breadcrumb([[copy.routes.discover.crumb]], ctx)}
-<section class="flow wrap" data-flow data-endpoint="/api/discover" data-count="${esc(d.count)}">
+<section class="flow wrap" data-flow data-endpoint="/api/discover/" data-count="${esc(d.count)}">
 <h1 class="sr-only">${esc(d.title)}</h1>
 <div class="flow__top" hidden data-flow-top><p class="flow__count" data-flow-count aria-live="polite"></p><div class="flow__bar" aria-hidden="true"><i data-flow-bar></i></div></div>
 <form class="flow__form" novalidate hidden data-flow-form>
