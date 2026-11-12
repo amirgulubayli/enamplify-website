@@ -1,4 +1,4 @@
-import {esc, arrowNE, button, textLink, pageHead, breadcrumb, closeBand, articleCard, guideCard} from '../components.mjs';
+import {esc, arrowNE, button, textLink, pageHead, breadcrumb, closeBand, kitBand, articleCard, guideCard} from '../components.mjs';
 import {fill} from '../i18n.mjs';
 
 export function insights(ctx) {
@@ -7,6 +7,7 @@ export function insights(ctx) {
   return `${pageHead({title: c.title, lede: c.lede, crumbs: [[copy.routes.insights.crumb]], band: 'band-insights'}, ctx)}
 <section class="section wrap" aria-labelledby="essays-title"><h2 id="essays-title" class="section__title">${esc(c.essays)}</h2><div class="cards">${articles.map(a => articleCard(a, ctx)).join('')}</div></section>
 <section id="guides" class="section section--wash" aria-labelledby="guides-title"><div class="wrap"><h2 id="guides-title" class="section__title">${esc(c.guides)}</h2><p class="lede">${esc(c.guidesLede)}</p><div class="cards">${guides.map(g => guideCard(g, ctx)).join('')}</div></div></section>
+${kitBand(ctx, 'insights-kit')}
 ${closeBand(ctx)}`;
 }
 
@@ -23,6 +24,7 @@ export function article(a, ctx) {
 <div class="wrap article-body"><article class="prose">${html}</article>
 <aside class="article-aside">${guide ? `<div class="aside-box"><h2>${esc(fill(c.guideTitle, {name: guide.name}))}</h2><p>${esc(guide.description)}</p>${textLink(c.openGuide, L(`/insights/guides/${guide.slug}/`))}</div>` : ''}<button class="link-arrow" type="button" data-copy-link>${esc(c.copyLink)} ${arrowNE}</button></aside></div>
 <section class="section section--wash" aria-labelledby="more-title"><div class="wrap"><h2 id="more-title" class="section__title">${esc(c.keepReading)}</h2><div class="cards">${articles.filter(x => x.slug !== a.slug).slice(0, 3).map(x => articleCard(x, ctx)).join('')}</div></div></section>
+${kitBand(ctx, 'article-kit')}
 ${closeBand(ctx)}`;
 }
 

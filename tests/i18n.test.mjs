@@ -69,7 +69,9 @@ test('Azerbaijani routes mirror English routes under /az', () => {
 test('missing translations fall back to English and are recorded', () => {
   assert.deepEqual(en.missing, []);
   assert.ok(Array.isArray(az.missing));
-  for (const m of az.missing) assert.match(m, /^content\/(az\/|copy\/az\.json|articles\/az\/)/);
+  for (const m of az.missing) assert.match(m, /^content\/(az\/|copy\/az\.json|articles\/az\/|workspace-concepts\.json#)/);
+  assert.equal(en.concepts.length, 32);
+  assert.deepEqual(az.concepts.map(c => c.id), en.concepts.map(c => c.id));
   assert.equal(az.copy.common.menu.length > 0, true);
 });
 
@@ -96,7 +98,9 @@ const enLeaves = leaves(enCopy);
 const azLeaves = leaves(azCopy);
 const placeholders = s => (String(s).match(/\{[a-zA-Z]+\}/g) || []).sort();
 // Values that are legitimately identical in both languages: stage numbers, a brand-only label, the print rule.
-const SAME_ALLOWED = new Set(['common.stages[0].n', 'common.stages[1].n', 'common.stages[2].n', 'home.ownedInHouse.usShort', 'client.printPlaceholder']);
+const SAME_ALLOWED = new Set(['routes.meNew.crumb', 'common.stages[0].n', 'common.stages[1].n', 'common.stages[2].n', 'client.printPlaceholder']);
+
+const SHARED_PRODUCT_NAMES = new Set(['CRM', 'API', 'OpenAI', 'Anthropic', 'Claude', 'GPT', 'Gemini', 'DeepSeek', 'Qwen']);
 
 test('az copy has exactly the English keys, with the same array lengths', () => {
   assert.deepEqual(Object.keys(azLeaves).sort(), Object.keys(enLeaves).sort());
@@ -108,7 +112,7 @@ test('az copy keeps every placeholder, and no value is empty or left in English'
     assert.equal(typeof azValue, 'string', k);
     assert.ok(azValue.trim(), `${k} is empty`);
     assert.deepEqual(placeholders(azValue), placeholders(en), `${k} placeholders`);
-    if (SAME_ALLOWED.has(k)) assert.equal(azValue, en, k);
+    if (SAME_ALLOWED.has(k) || /^(home|me)\.visual\.extension\.examples\.items\[\d+\]\.id$/.test(k) || (k.includes('.visual.') && SHARED_PRODUCT_NAMES.has(en))) assert.equal(azValue, en, k);
     else assert.notEqual(azValue, en, `${k} is untranslated`);
   }
 });

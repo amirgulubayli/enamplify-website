@@ -6,8 +6,33 @@
     "mobileNav": "Mobile",
     "noscriptNav": "Main without JavaScript",
     "menu": "Menu",
-    "bookCall": "Book a call",
-    "bookDiagnostic": "Book a diagnostic call",
+    "bookCall": "Book a conversation",
+    "bookDiagnostic": "Discuss your priorities",
+    "audienceNav": "Enamplify for teams or for one person",
+    "us": "Us",
+    "usHint": "Enamplify for teams and businesses",
+    "me": "Me",
+    "meHint": "Enamplify Me, for one person",
+    "usCta": "Wire up your team",
+    "meCta": "Get me wired up",
+    "teamsLink": "Enamplify for teams",
+    "meLink": "Enamplify Me",
+    "gallery": {
+      "stageFor": "A workspace for {role}",
+      "alt": "Illustrative workspace concept for {role}: {title} Views include {tabs}. All sample data is fictional.",
+      "full": "View full size",
+      "count": "{n} of {total} shown",
+      "none": "No concept matches that search.",
+      "reset": "Show all",
+      "loadError": "Preview unavailable. Choose another workspace.",
+      "previous": "Previous workspace",
+      "next": "Next workspace",
+      "pause": "Pause automatic browsing",
+      "play": "Resume automatic browsing",
+      "railLabel": "Workspace previews",
+      "searchPlaceholder": "Search by role or view",
+      "automaticNote": "Previews change automatically. Pause at any time."
+    },
     "breadcrumb": "Breadcrumb",
     "home": "Home",
     "language": "Language",
@@ -23,8 +48,8 @@
       "terms": "Terms",
       "accessibility": "Accessibility"
     },
-    "closeTitle": "When the timing is right, start with a conversation.",
-    "closeBody": "Thirty minutes about your team and the work you’d like to change. If we’re not the right fit, we’ll say so.",
+    "closeTitle": "What would you like to change?",
+    "closeBody": "Start with a 30-minute conversation about your priorities, the work involved and where we could help.",
     "minRead": "{n} min read",
     "fieldGuide": "Field guide",
     "caseStudy": "Case study",
@@ -34,22 +59,22 @@
     "portraitAlt": "Amir Gulubayli, founder of Enamplify",
     "portraitCaption": "Amir Gulubayli, Founder",
     "photographyCredits": "Photography: {names}",
-    "ogImageAlt": "Enamplify. AI your team builds, not AI you buy.",
+    "ogImageAlt": "Enamplify. Build your team’s AI capability.",
     "feedTitle": "Enamplify Insights",
     "feedDescription": "Practical thinking on AI adoption for operations leaders.",
-    "wontTitle": "We won’t",
-    "willTitle": "We will",
+    "wontTitle": "Your ownership",
+    "willTitle": "Our responsibilities",
     "commitments": {
       "wont": [
-        "Sell you a tool your team stops using.",
-        "Promise a percentage we can’t prove.",
-        "Lock you into our platform or our people.",
-        "Move your data anywhere you haven’t approved."
+        "Your choice of tools and hosting.",
+        "Your team’s judgement on important decisions.",
+        "Your approval of how data is used.",
+        "Your decision about the next stage."
       ],
       "will": [
-        "Agree how we’ll measure success before we start.",
-        "Hand over something your team runs without us.",
-        "Tell you when AI isn’t the answer."
+        "Agree the scope and measures before we start.",
+        "Document the work and support the handover.",
+        "Explain the limitations alongside the opportunities."
       ]
     },
     "stages": [
@@ -57,83 +82,65 @@
         "n": "01",
         "name": "Diagnose",
         "time": "2–3 weeks",
-        "short": "We find where your team’s time goes and pick the few workflows worth doing first. Fee credited if you continue.",
-        "what": "We talk to the people who do the work, map where their time goes, and check what your data, systems and policies allow.",
+        "short": "We map the work the workspace has to fit and agree where to start. Fee credited if you continue.",
+        "what": "We talk to the people who do the work, map the processes the workspace has to fit, and check which accounts, tools and information it can use.",
         "get": [
-          "A baseline of where time goes today",
-          "Three to five workflows ranked by value and risk",
-          "A pilot plan with the measures agreed up front"
+          "A map of the work and where the workspace fits",
+          "The first workflows and agent responsibilities, ranked by value and risk",
+          "A written implementation scope, with the measures agreed up front"
         ],
-        "note": "Fixed fee, credited against the pilot if you continue."
+        "note": "Fixed fee, credited against the implementation if you continue."
       },
       {
         "n": "02",
-        "name": "Prove",
+        "name": "Implement",
         "time": "8–12 weeks",
-        "short": "One or two teams build real workflows with us, measured against numbers agreed up front.",
-        "what": "Ten to fifteen people from one or two teams build real workflows with us, in a governed environment set up for your organisation.",
+        "short": "We set up the workspace for one or two teams and adjust it with them on real work.",
+        "what": "We set up the workspace for one or two teams: their projects and files, the supported accounts and tools they rely on, permissions, and the jobs given to agents. People use it on real work while we adjust it with them.",
         "get": [
-          "Workflows in daily use, not demos",
-          "People who can build the next ones themselves",
-          "Results measured against the baseline"
+          "A workspace in daily use, not a demonstration",
+          "People who can reshape their own views and workflows",
+          "Results reviewed against the starting point"
         ],
         "note": "Scoped and priced in a written proposal after the diagnostic."
       },
       {
         "n": "03",
-        "name": "Scale",
+        "name": "Support",
         "time": "Ongoing",
-        "short": "Roll out on your terms, with a quarterly report on what changed.",
-        "what": "Extend to more teams at the pace you choose. We keep the environment governed, add new workflow templates, and report on what changed each quarter.",
+        "short": "Extend to more teams at your pace, with advice as the work changes.",
+        "what": "Extend the workspace to more teams at the pace you choose. We keep permissions and agent responsibilities in step with use, add workflows as your processes change, and advise on what to do next.",
         "get": [
-          "A growing library of workflows your team owns",
-          "Governance that keeps pace with use",
-          "A quarterly impact report for leadership"
+          "Workflows your teams own and can change",
+          "Controls that keep pace with use",
+          "A regular review of what has changed"
         ],
         "note": "A subscription you can scale up, down or end."
       }
-    ],
-    "trackRecord": {
-      "topic": "Track record",
-      "title": "What we can point to today.",
-      "caption": "Track record",
-      "columns": [
-        "Area",
-        "Evidence"
-      ],
-      "rows": [
-        [
-          "Experience",
-          "10+ years building software, automation and AI"
-        ],
-        [
-          "Client systems",
-          "Eight kinds delivered, from clinical trials to finance"
-        ],
-        [
-          "Our products",
-          "grademy and pripitch, both live"
-        ]
-      ]
-    }
+    ]
   },
   "routes": {
     "home": {
-      "title": "Enamplify · AI enablement for mid-sized teams"
+      "title": "Enamplify · An adaptive AI workspace, implemented for your team"
+    },
+    "me": {
+      "title": "Enamplify Me · An adaptive AI workspace for one person",
+      "description": "Your own adaptive AI workspace and agent team for projects, learning and everyday planning. In development. Register your interest.",
+      "crumb": "Enamplify Me"
     },
     "approach": {
-      "title": "How AI enablement works: diagnose, prove, scale",
-      "description": "Start small, prove it, then scale. How Enamplify helps teams build their own AI workflows with review, governance and data kept where it belongs.",
+      "title": "How we implement Enamplify for teams",
+      "description": "How we scope, set up and support the Enamplify workspace around a team’s existing processes, from a paid diagnostic to ongoing advice.",
       "crumb": "Approach"
     },
     "work": {
-      "title": "AI systems we build for clients and run ourselves",
-      "description": "AI systems delivered across clinical, finance, growth and operations, and two AI products we build and run ourselves.",
+      "title": "Selected AI systems and client projects",
+      "description": "Explore AI systems and workflow projects across professional services, travel, finance and clinical operations.",
       "crumb": "Work"
     },
     "about": {
       "title": "About Enamplify: founder-led, London and Baku",
-      "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.",
+      "description": "Meet Amir Gulubayli, founder of Enamplify, and our approach to AI advisory, systems delivery and practical team capability in London and Baku.",
       "crumb": "About"
     },
     "insights": {
@@ -142,9 +149,9 @@
       "crumb": "Insights"
     },
     "contact": {
-      "title": "Book a diagnostic call",
-      "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.",
-      "crumb": "Book a call"
+      "title": "Book an introductory conversation",
+      "description": "A 30-minute introduction with Enamplify founder Amir Gulubayli about your priorities and how we could help.",
+      "crumb": "Book a conversation"
     },
     "careers": {
       "title": "Careers: AI operations internship",
@@ -154,147 +161,1702 @@
     "notFound": {
       "title": "Page not found",
       "description": "This page has moved. Find your way back to Enamplify."
+    },
+    "briefing": {
+      "title": "Structuring AI and agent work in a company",
+      "description": "An unlisted executive briefing on structuring context, specialist agent lanes and approval gates so company teams get reliable work from AI.",
+      "crumb": "Executive briefing"
+    },
+    "homeNew": {
+      "title": "Enamplify · Custom AI command system and implementation consulting",
+      "description": "A custom, adaptive AI operating system and parallel agent team, engineered from scratch and implemented hands-on with your company in London and Baku.",
+      "crumb": "System and consulting"
+    },
+    "discover": {
+      "title": "Start a conversation",
+      "description": "Answer a few questions about your team and the work you want moved, then pick a time to talk.",
+      "crumb": "Start"
+    },
+    "meNew": {
+      "title": "Enamplify Me · Your right hand for everyday life",
+      "description": "A personal AI workspace that plans your week, trips, study and home with a team of agents. In development. Register your interest.",
+      "crumb": "Enamplify Me"
     }
   },
   "home": {
-    "heroTitle": "AI your team builds.",
-    "heroTitleAlt": "Not AI you buy.",
-    "lede": "We train your people to build AI into the work they already do. They get hours back. You keep control.",
-    "howWeWork": "How we work",
-    "note": "30 minutes with the founder. No pitch deck.",
-    "week": {
-      "topic": "The week",
-      "title": "In a typical operations week, about half the work is the kind AI can take on.",
-      "segments": [
-        "Judgement and client work",
-        "Recurring reporting",
-        "Finding information",
-        "Handoffs and chasing",
-        "Other"
-      ],
-      "note": "The highlighted work is where teams usually start."
-    },
-    "situationTitle": "AI is already in your building.",
-    "situation": [
-      [
-        "Tools were bought. The work didn’t change.",
-        "Licences sit unused when nobody shows people how to change the work."
-      ],
-      [
-        "The real use is out of sight.",
-        "People paste work into personal accounts. You can’t see it, so you can’t improve it."
-      ],
-      [
-        "Pilots stall in month two.",
-        "The demo worked. Nobody designed who owns it next."
-      ]
+    "heroTitle": "Move the work.",
+    "heroTitleAlt": "Free up your team.",
+    "lede": "Custom AI workspaces and automations, implemented for your business. We scope, build and support the setup.",
+    "cross": "Working on your own? See Enamplify Me.",
+    "galleryTitle": "Twenty ways of working.",
+    "galleryHint": "Choose a role to see its workspace large.",
+    "findLabel": "Find your kind of work",
+    "conceptNote": "Workspace concept. Fictional data.",
+    "implTitle": "Implemented around your team.",
+    "implBody": "You decide who sees what, which tools connect and what each agent does. Changes are previewed before they apply.",
+    "stageNotes": [
+      "Map the work and agree a written scope.",
+      "Set up the workspace with one or two teams, on real work.",
+      "Extend at your pace, with support as the work changes."
     ],
-    "marked": "Most AI rollouts don’t fail on technology. They fail on ownership.",
-    "outcomesTitle": "Three results for the board.",
-    "moreDone": {
-      "topic": "More done",
-      "title": "For example: recurring admin down from 14 hours a week to 6.",
-      "unit": "hours",
-      "before": "Before",
-      "after": "After",
-      "note": "Time comes back from reporting, searching and chasing."
+    "approachLink": "How implementation works",
+    "seeWork": "See selected work",
+    "closeTitle": "Start with the work you want off your plate.",
+    "closeBody": "Tell us the outcome. We’ll scope a tailored implementation and support plan.",
+    "visual": {
+      "concept": "Concept",
+      "adapt": {
+        "title": "Ask for the view. Watch it take shape.",
+        "sub": "A typed request rebuilds the workspace around the next job.",
+        "prompt": "Add a bank reconciliation view.",
+        "proposed": "Proposed view",
+        "demo": {
+          "label": "Illustrative workspace rebuilding demonstration",
+          "you": "You",
+          "pause": "Pause workspace demonstration",
+          "resume": "Resume workspace demonstration",
+          "replay": "Replay workspace changes",
+          "building": "Rebuilding the workspace",
+          "ready": "Preview ready for review",
+          "nav": [
+            "Overview",
+            "Files",
+            "Agents"
+          ],
+          "workspace": "Team workspace",
+          "scenes": [
+            {
+              "label": "Client reporting",
+              "prompt": "Prepare this week’s client reports.",
+              "title": "Client reporting",
+              "primaryTitle": "Client briefs",
+              "primaryItems": [
+                "Campaign review",
+                "Content summary",
+                "Account update"
+              ],
+              "secondaryTitle": "Working from",
+              "secondaryItems": [
+                "Campaign data",
+                "Client brief"
+              ],
+              "result": "Reports prepared for your team to review.",
+              "details": [
+                "Campaign summary prepared from the selected reporting period.",
+                "Content updates grouped into a short client brief.",
+                "Account activity and open questions collected for review."
+              ],
+              "calendarSource": {
+                "name": "Client review calendar",
+                "body": "Monday: client check-in. Thursday: draft review. Friday: reporting handover."
+              },
+              "fileSources": [
+                {
+                  "name": "Campaign results.csv",
+                  "body": "Search activity needs the account lead’s commentary. Email activity is ready for review."
+                },
+                {
+                  "name": "Client brief.md",
+                  "body": "This week: campaign performance, the content calendar, and questions for Friday’s client review."
+                }
+              ]
+            },
+            {
+              "label": "Follow-ups",
+              "prompt": "Build a follow-up board from our meetings.",
+              "title": "Meeting follow-ups",
+              "primaryTitle": "Follow-up board",
+              "primaryItems": [
+                "Prepare the proposal",
+                "Confirm the next step",
+                "Review the client draft"
+              ],
+              "secondaryTitle": "Working from",
+              "secondaryItems": [
+                "Meeting notes",
+                "Client context"
+              ],
+              "result": "A follow-up board with the next action in view.",
+              "details": [
+                "A proposal draft is ready for an account lead to check.",
+                "The next action is linked to the meeting notes.",
+                "The client draft stays here until someone approves it."
+              ],
+              "calendarSource": {
+                "name": "Team meeting calendar",
+                "body": "Tuesday: proposal review. Thursday: client catch-up. Owner: the account lead."
+              },
+              "fileSources": [
+                {
+                  "name": "Client call notes.md",
+                  "body": "The client asked for a revised proposal and a clear owner for the next step. Check the wording before sharing."
+                },
+                {
+                  "name": "Proposal outline.md",
+                  "body": "Include the agreed scope, open questions, and a proposed date for the next conversation."
+                }
+              ]
+            },
+            {
+              "label": "Delivery",
+              "prompt": "Show delivery risks for the weekly review.",
+              "title": "Delivery review",
+              "primaryTitle": "Upcoming work",
+              "primaryItems": [
+                "Brief",
+                "Review",
+                "Handover"
+              ],
+              "secondaryTitle": "Needs attention",
+              "secondaryItems": [
+                "Confirm the review owner",
+                "Check the handover notes"
+              ],
+              "result": "A delivery view ready for the weekly discussion.",
+              "details": [
+                "The brief needs a named reviewer before work proceeds.",
+                "Check the open questions before the review meeting.",
+                "Handover notes bring decisions and next steps together."
+              ],
+              "calendarSource": {
+                "name": "Delivery milestones",
+                "body": "Monday: brief review. Wednesday: internal review. Friday: client handover."
+              },
+              "fileSources": [
+                {
+                  "name": "Review register.md",
+                  "body": "Open item: confirm the review owner before handover. No approval has been recorded."
+                },
+                {
+                  "name": "Handover notes.md",
+                  "body": "Include the current brief, unresolved questions, the reviewer, and the next agreed action."
+                }
+              ]
+            }
+          ],
+          "paused": "Demonstration paused",
+          "ui": {
+            "preview": "Preview",
+            "selected": "Selected",
+            "reviewed": "Reviewed",
+            "review": "Mark reviewed",
+            "draft": "Draft",
+            "detail": "Draft preview",
+            "sources": "Selected sources",
+            "schedule": "Example routine",
+            "scheduleOn": "Preparation enabled",
+            "scheduleOff": "Preparation paused",
+            "agent": "Preparation agent",
+            "agentNote": "Uses the selected sources to prepare a draft for review.",
+            "filesNote": "Choose an example source to inspect it.",
+            "fileDetail": "Example source selected. Its content stays within this demonstration.",
+            "setupApplied": "Setup preview applied",
+            "interactive": "Interactive example. Changes stay on this page.",
+            "adaptive": {
+              "lanes": [
+                "To prepare",
+                "In progress",
+                "For review"
+              ],
+              "days": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri"
+              ],
+              "mealDays": [
+                "Tuesday",
+                "Thursday",
+                "Saturday"
+              ],
+              "ingredients": [
+                "Vegetables · herbs",
+                "Chicken · lemon",
+                "Mushrooms · pasta"
+              ],
+              "questions": [
+                "Which ideas connect these topics?",
+                "Can you explain the steps?",
+                "Which part needs another pass?"
+              ],
+              "reveal": "Reveal explanation",
+              "hide": "Back to the question",
+              "move": "Move to review",
+              "document": "Weekly brief",
+              "milestones": "Project milestones",
+              "card": "Study card",
+              "focus": "Current focus",
+              "task": "Selected task",
+              "milestone": "Selected milestone"
+            }
+          }
+        }
+      },
+      "connect": {
+        "title": "Your tools, around the work.",
+        "sub": "With the access you set.",
+        "core": "Shared with your team",
+        "groups": [
+          {
+            "name": "Communication",
+            "items": [
+              "Calendar",
+              "Email",
+              "Alerts"
+            ]
+          },
+          {
+            "name": "Files",
+            "items": [
+              "Documents",
+              "Folders",
+              "Drives"
+            ]
+          },
+          {
+            "name": "Records",
+            "items": [
+              "CRM",
+              "Reports",
+              "Systems"
+            ]
+          },
+          {
+            "name": "AI models",
+            "items": [
+              "Assistants",
+              "Models",
+              "API keys"
+            ]
+          }
+        ],
+        "note": "Examples only. Connections are agreed during implementation."
+      },
+      "accounts": {
+        "title": "Many AI accounts, each with a job.",
+        "sub": "Work goes by task, with a fallback at the limit.",
+        "cols": [
+          "Account",
+          "Job",
+          "Usage",
+          "Status"
+        ],
+        "kinds": [
+          "Organisation account",
+          "API key",
+          "API key",
+          "API key"
+        ],
+        "jobs": [
+          "Research",
+          "Drafting fallback",
+          "Drafting",
+          "Data checks"
+        ],
+        "states": [
+          "Ready",
+          "At limit"
+        ],
+        "more": "Others where supported",
+        "note": "Illustrative. Logos are examples; plans and limits vary."
+      },
+      "context": {
+        "title": "Context that stays with the work.",
+        "sub": "Files, chosen chats and project memory, with sources.",
+        "project": "Northwind renewal",
+        "rail": [
+          "Files",
+          "Conversations",
+          "Project memory",
+          "Shared with team"
+        ],
+        "doc": "Renewal summary",
+        "sources": [
+          "Policy schedule.pdf",
+          "Call notes",
+          "Imported chat"
+        ],
+        "status": "Draft, sources linked",
+        "io": [
+          "Selected chats imported",
+          "Exportable"
+        ],
+        "note": "Signing in alone imports no history."
+      },
+      "agents": {
+        "title": "A team of agents, one objective.",
+        "sub": "Specialists work in parallel, then hand off to you.",
+        "objectiveLabel": "Objective",
+        "objective": "Client brief for Thursday",
+        "lanes": [
+          [
+            "Research",
+            "Market sources"
+          ],
+          [
+            "Browser",
+            "Public filings"
+          ],
+          [
+            "Files",
+            "Engagement notes"
+          ],
+          [
+            "Code",
+            "Pricing model"
+          ]
+        ],
+        "states": [
+          "Done",
+          "Done",
+          "Working",
+          "Queued"
+        ],
+        "handoff": "One merged draft",
+        "result": "Client brief ready for review"
+      },
+      "operate": {
+        "title": "Work that starts itself, then waits for you.",
+        "sub": "Events, schedules or requests start runs. People approve.",
+        "cols": [
+          "Starts",
+          "Run queue",
+          "Review"
+        ],
+        "triggers": [
+          [
+            "Event",
+            "Contract filed"
+          ],
+          [
+            "Schedule",
+            "Mondays 07:00"
+          ],
+          [
+            "Request",
+            "Any teammate"
+          ]
+        ],
+        "runs": [
+          [
+            "Contract summary",
+            "Running"
+          ],
+          [
+            "Pipeline brief",
+            "Awaiting approval"
+          ],
+          [
+            "Supplier check",
+            "Paused"
+          ]
+        ],
+        "result": "Pipeline brief ready for approval",
+        "approver": "Sales lead approves",
+        "controls": [
+          "Approvals",
+          "Permissions",
+          "Budget",
+          "Pause"
+        ]
+      },
+      "place": {
+        "title": "Built between London and Baku.",
+        "sub": "A founder-led practice, working across both cities."
+      },
+      "extension": {
+        "replay": "Replay this demonstration",
+        "cta": [
+          "Shape your workspace",
+          "Connect your AI accounts",
+          "Explore your agent setup",
+          "Talk through your workflow"
+        ],
+        "sandbox": {
+          "title": "A persistent sandbox for the work.",
+          "sub": "Browser, code and files, with access you choose and work retained between runs.",
+          "task": "Research the brief. Prepare the files.",
+          "views": [
+            "Browser",
+            "Code",
+            "Files"
+          ],
+          "browser": [
+            "Sources collected",
+            "Details checked",
+            "References saved"
+          ],
+          "code": [
+            "Read sources",
+            "Prepare summary",
+            "Write draft"
+          ],
+          "files": [
+            "Brief.md",
+            "Sources.csv",
+            "Draft ready for review"
+          ],
+          "states": [
+            "Pause a run",
+            "Keep the work",
+            "Resume from here"
+          ],
+          "note": "Illustrative environment. Access and execution are scoped to each setup."
+        },
+        "examples": {
+          "title": "Work off your team’s plate.",
+          "sub": "Explore the outcomes a tailored workspace can prepare for your team.",
+          "label": "Illustrative workspace examples",
+          "proof": "Selected client work",
+          "proofLink": "Read the case study",
+          "concept": "Illustrative scenario. Fictional data.",
+          "items": [
+            {
+              "id": "pr-agency",
+              "label": "PR & communications",
+              "request": "Turn coverage into a client briefing.",
+              "steps": [
+                "Collect mentions",
+                "Check relevance",
+                "Draft briefing"
+              ],
+              "result": "A client briefing ready for review."
+            },
+            {
+              "id": "recruitment-hiring",
+              "label": "Recruitment",
+              "request": "Bring the hiring pipeline into view.",
+              "steps": [
+                "Review roles",
+                "Match profiles",
+                "Prepare shortlist"
+              ],
+              "result": "A shortlist with context."
+            },
+            {
+              "id": "insurance-broker",
+              "label": "Insurance",
+              "request": "Prepare the next renewal review.",
+              "steps": [
+                "Read policies",
+                "Compare cover",
+                "Flag changes"
+              ],
+              "result": "Renewal questions ready for a broker."
+            },
+            {
+              "id": "clinical-research",
+              "label": "Clinical operations",
+              "request": "See documents and deadlines together.",
+              "steps": [
+                "Gather records",
+                "Check gaps",
+                "Prepare actions"
+              ],
+              "result": "A reviewable operations checklist."
+            },
+            {
+              "id": "ecommerce-merchant",
+              "label": "Ecommerce",
+              "request": "Put trading and fulfilment in context.",
+              "steps": [
+                "Review orders",
+                "Find exceptions",
+                "Prepare actions"
+              ],
+              "result": "An exception brief for the team."
+            },
+            {
+              "id": "legal-lawyer",
+              "label": "Legal",
+              "request": "Find the terms that need review.",
+              "steps": [
+                "Read matters",
+                "Compare terms",
+                "Prepare notes"
+              ],
+              "result": "A source-linked matter brief."
+            }
+          ]
+        }
+      },
+      "setup": {
+        "title": "A few choices. A clear starting point.",
+        "steps": [
+          "Choose sources",
+          "Choose work",
+          "Review controls"
+        ],
+        "sourceTitle": "What should the workspace work from?",
+        "sourceHint": "Select at least one example source.",
+        "tools": [
+          "Calendar",
+          "Files"
+        ],
+        "jobTitle": "Which work comes first?",
+        "reviewTitle": "Your example setup",
+        "reviewNote": "Anything sent to another person waits for review.",
+        "pause": "Pause automatic preparation",
+        "next": "Continue",
+        "back": "Back",
+        "apply": "Apply to the demo",
+        "reset": "Start again",
+        "applied": "Applied to the workspace example.",
+        "note": "Interactive setup example. No accounts are connected and nothing is saved.",
+        "sourcesLabel": "Sources",
+        "jobLabel": "First workflow",
+        "sub": "We configure your first workflow with you, as part of the implementation."
+      }
     },
-    "ownedInHouse": {
-      "topic": "Owned in-house",
-      "title": "Within a year, your team runs its own workflows.",
-      "start": "Month 1",
-      "end": "Month 12",
-      "team": "Workflows maintained by your team",
-      "teamShort": "Your team",
-      "us": "Workflows maintained by Enamplify",
-      "usShort": "Enamplify",
-      "note": "When we step back, the skills stay."
-    },
-    "inControl": {
-      "topic": "In control",
-      "title": "Every workflow has an owner, a review and a boundary.",
-      "lines": [
+    "system": {
+      "navLabel": "On this page",
+      "title": "How the workspace works.",
+      "lede": "A stable home for your team’s work, with a centre that changes when you ask. What it holds, how agents work inside it, and where people stay in control.",
+      "note": "Examples show the workspace design with fictional data. Capabilities and supported connections are agreed for each implementation.",
+      "illustrative": "Illustrative concept with fictional data.",
+      "faqNav": "Questions",
+      "faqTitle": "Questions teams ask.",
+      "home": {
+        "title": "A stable home with an adaptive centre.",
+        "body": "Conversations, context, projects, files, accounts and permissions keep fixed, familiar places. The centre shows the view the work needs, and your team can ask for a new one.",
+        "centre": "Adaptive centre",
+        "centreNote": "Boards, pages, metric views and briefings, made on request",
+        "frame": [
+          [
+            "Conversations",
+            "With colleagues and agents"
+          ],
+          [
+            "Context",
+            "What the workspace knows"
+          ],
+          [
+            "Projects",
+            "Clients, matters, programmes"
+          ],
+          [
+            "Files",
+            "Attached to the work"
+          ],
+          [
+            "Accounts",
+            "Supported tools and AI providers"
+          ],
+          [
+            "Permissions",
+            "Who sees and changes what"
+          ]
+        ]
+      },
+      "change": {
+        "nav": "Changing a view",
+        "title": "Describe it, preview it, apply it.",
+        "body": "Describe the view your team needs. The workspace prepares a preview from the material selected for the work. Someone with permission reviews the change, then applies it privately or shares it with the team.",
+        "dialogueLabel": "Illustrative exchange",
+        "turns": [
+          [
+            "Describe",
+            "Renewals lead",
+            "Make a board of renewals due in the next 60 days, grouped by account manager. Flag any policy without a signed schedule."
+          ],
+          [
+            "Preview",
+            "Workspace",
+            "Preview ready: one column per account manager, with two policies flagged. It uses the policy register in Files and the connected client records. Apply it for you, or for the renewals team?"
+          ],
+          [
+            "Apply",
+            "Renewals lead",
+            "For the team. Put the flagged ones first."
+          ]
+        ],
+        "imageCaption": "The applied view sits beside the team’s clients and documents."
+      },
+      "context": {
+        "nav": "Context",
+        "title": "What the workspace knows, and who can see it.",
+        "body": "Answers draw on material deliberately brought in and selected for the work, with sources shown. Signing in to an account does not give the workspace that account’s history; what comes in, and from where, is agreed first.",
+        "columns": [
+          "Material",
+          "How it arrives",
+          "Who can see it"
+        ],
+        "rows": [
+          [
+            "Documents and files",
+            "Uploaded, or attached to a project or task",
+            "The project’s members"
+          ],
+          [
+            "Earlier conversations and records",
+            "Imported from supported tools, or from exports you provide",
+            "Agreed during implementation"
+          ],
+          [
+            "Live business data",
+            "Read through a supported connection, within its access",
+            "People and agents granted that connection"
+          ],
+          [
+            "Selected context",
+            "Notes, decisions and preferences someone chose to keep",
+            "Its owner, or a team it is shared with"
+          ]
+        ]
+      },
+      "connections": {
+        "nav": "Connections",
+        "title": "Your tools and AI accounts, grouped and visible.",
+        "body": "Connections are grouped by the work they serve. For each one you decide which people and agents may use it, and see its status and, where the provider exposes it, its usage. Teams can bring existing AI provider accounts or plans where the provider allows, through an API key or a supported account connection. Availability and limits depend on each provider. Where supported, keep multiple accounts for the same provider, with access and available limits shown per connection.",
+        "core": "Your team’s workspace",
+        "accessLabel": "Access",
+        "statusLabel": "Status",
+        "groups": [
+          {
+            "name": "Communication",
+            "examples": "Email and calendar, for example Microsoft 365 or Google Workspace",
+            "access": "Read for the client team; drafting for one agent",
+            "status": "Connected"
+          },
+          {
+            "name": "Business records",
+            "examples": "CRM, practice or policy systems, accounting software",
+            "access": "Read only, for agents with that job",
+            "status": "Awaiting approval"
+          },
+          {
+            "name": "AI providers",
+            "examples": "Your organisation’s provider accounts or API keys, where permitted",
+            "access": "Assigned per team, with a usage limit",
+            "status": "Connected, usage shown"
+          }
+        ],
+        "foot": "Named products are examples to scope, not a list of finished connectors. Which tools connect, and how, is agreed for each implementation.",
+        "exampleLabel": "Illustrative connections and statuses, shown with fictional data."
+      },
+      "agents": {
+        "nav": "Agents",
+        "title": "Agents with a clear job.",
+        "body": "Each agent has a role, an objective and only the connections it needs. Agents hand work to one another and return results a person can review, with progress visible as the work moves.",
+        "imageCaption": "Results return to the project with their evidence attached, ready for review.",
+        "exampleTitle": "Illustrative: after a client meeting",
+        "returnsLabel": "Returns",
+        "steps": [
+          [
+            "Research",
+            "Notes agent",
+            "Reads the meeting notes and the client’s project.",
+            "Decisions and open actions"
+          ],
+          [
+            "Verify",
+            "Records agent",
+            "Checks the actions against the CRM and current deadlines.",
+            "Conflicts and gaps, flagged"
+          ],
+          [
+            "Prepare",
+            "Drafting agent",
+            "Drafts the follow-up email and updates the task list.",
+            "A draft, not sent"
+          ],
+          [
+            "Review",
+            "Account manager",
+            "Edits, approves and sends from their own account.",
+            "A record of what was agreed"
+          ]
+        ]
+      },
+      "recurring": {
+        "nav": "Recurring work",
+        "title": "Work that runs on schedule, with a record.",
+        "body": "Some work should happen without being asked each time. Recurring jobs are set up per team: what starts them, where they wait for a person, what they may spend and when they should speak up.",
+        "points": [
+          [
+            "Triggers",
+            "A schedule, a new file or a change in a connected tool."
+          ],
+          [
+            "Checkpoints",
+            "Steps that wait for a named person."
+          ],
+          [
+            "Budgets",
+            "Usage limits per job and per team, shown as they are used."
+          ],
+          [
+            "Errors",
+            "A failed run stops, says what went wrong, and can be retried or ended."
+          ],
+          [
+            "Updates",
+            "A message when something needs attention, not after every run."
+          ]
+        ],
+        "note": "Recurring work is part of the product direction; which jobs run is scoped with each team.",
+        "logTitle": "Illustrative run history",
+        "columns": [
+          "When",
+          "Job",
+          "Status"
+        ],
+        "rows": [
+          [
+            "Mon 07:00",
+            "Daily pipeline briefing",
+            "Completed"
+          ],
+          [
+            "Mon 09:40",
+            "New contract filed: summary",
+            "Waiting for review"
+          ],
+          [
+            "Mon 11:15",
+            "Supplier price check",
+            "Stopped: connection expired"
+          ],
+          [
+            "Tue 07:00",
+            "Daily pipeline briefing",
+            "Scheduled"
+          ]
+        ]
+      },
+      "control": {
+        "nav": "Control",
+        "title": "People decide. The workspace shows its work.",
+        "body": "Controls are set up with your team during implementation and stay adjustable afterwards.",
+        "decideTitle": "You decide",
+        "decide": [
+          "Who joins the workspace, and in which role",
+          "Which tools and information each person and agent can reach",
+          "What stays private and what is shared with a team",
+          "Which actions need approval before they happen"
+        ],
+        "seeTitle": "You can see and stop",
+        "see": [
+          "What an agent did, when and on whose authority",
+          "Changes to views and workflows, before they apply",
+          "Running and recurring work, with pause and stop",
+          "Usage against the limits you set"
+        ],
+        "who": [
+          {
+            "name": "Us, for teams",
+            "body": "Several people with scoped roles and private and shared context, implemented around your processes with advice and support."
+          },
+          {
+            "name": "Me, for one person",
+            "body": "One person and their own agents, with the same design and controls. In development."
+          }
+        ]
+      },
+      "faq": [
         [
-          "Owner",
-          "A named person answers for it."
+          "Can we use AI subscriptions we already have?",
+          "Where the provider allows it, through an API key or a supported account connection. Some plans cannot be used this way, and each provider sets its own limits. We check what applies before scoping."
         ],
         [
-          "Review",
-          "Nothing goes live unchecked."
+          "Can it import our existing history?",
+          "From supported tools, or from exports you provide. It does not read an account’s history because someone signs in. What comes in, and who can see it, is agreed first."
         ],
         [
-          "Boundary",
-          "Data stays where you decide."
+          "What can agents actually do?",
+          "Research, check, draft, summarise and update records within the connections they are given. Actions that reach clients or other people, such as sending, wait for approval unless you decide otherwise."
+        ],
+        [
+          "Can the interface really change for our team?",
+          "Yes, on request. Someone describes a board, page or metric view, the workspace previews it, and a person with permission applies it. Your team keeps reshaping it after implementation."
+        ],
+        [
+          "Is it available now?",
+          "For teams, as a tailored implementation scoped in writing, with capabilities and connections agreed for your work. Me, the personal version, is in development."
+        ],
+        [
+          "How do permissions work across a team?",
+          "People sign in with their own accounts. Roles decide who reshapes the workspace, who approves, and what each person and agent can see. Private and shared context is set up during implementation."
         ]
       ]
     },
-    "startTitle": "Start small. Scale on evidence.",
-    "moreApproach": "More on our approach",
-    "commitTitle": "Our terms, in writing.",
-    "recordTitle": "Built, shipped, in use.",
-    "seeWork": "See the work",
-    "founderTitle": "One founder. Two cities.",
-    "quote": "“The organisations getting real value from AI aren’t the ones with the biggest budgets. They’re the ones whose own people know how to use it.”",
-    "quoteBy": "Amir Gulubayli, Founder",
-    "aboutLink": "About Enamplify",
-    "insightsTitle": "Field notes.",
-    "allInsights": "All insights",
-    "situationDek": "The question is whether it works for you, or around you.",
-    "outcomesDek": "Agreed with you before we start. Measured after.",
-    "startDek": "A fixed diagnostic, a measured pilot, then your decision.",
-    "commitDek": "What most firms won’t put on paper.",
-    "recordDek": "Real systems for real teams, and two products of our own.",
-    "founderDek": "London and Baku, held to one standard.",
-    "insightsDek": "Short, practical essays on making AI work inside real teams."
+    "note": "A tailored implementation, starting with a conversation.",
+    "delivery": {
+      "title": "Scoped. Built. Supported.",
+      "sub": "A tailored implementation, from the first workflow to the wider team.",
+      "steps": [
+        [
+          "Scope",
+          "Agree the outcome, tools and approval points."
+        ],
+        [
+          "Build",
+          "Implement the workspace around real work."
+        ],
+        [
+          "Support",
+          "Help the team use it, then refine the setup."
+        ]
+      ],
+      "link": "Explore the implementation process"
+    }
+  },
+  "me": {
+    "heroTitle": "Your day, organised.",
+    "heroTitleAlt": "Your projects, moving.",
+    "lede": "Your personal AI workspace: plans, projects and agents in one adaptable place.",
+    "note": "Enamplify Me is in development. Personal AI software; registering interest does not create an account.",
+    "cross": "Looking to wire up your whole team?",
+    "galleryTitle": "Twelve everyday worlds.",
+    "galleryHint": "Choose one to see it large.",
+    "findLabel": "Find your everyday world",
+    "conceptNote": "Workspace concept. Fictional data.",
+    "controlTitle": "Your agents work for you.",
+    "controlIntro": "They act inside limits you set, and you can change those limits at any time.",
+    "control": [
+      [
+        "Access",
+        "Agents see only the projects and files you allow."
+      ],
+      [
+        "Agents",
+        "Each agent has one clear job, which you can change or end."
+      ],
+      [
+        "Changes",
+        "New layouts are proposed first. You decide whether to keep them."
+      ]
+    ],
+    "closeTitle": "Register interest in Enamplify Me.",
+    "closeBody": "Personal AI software, in development. Tell us how you would use it.",
+    "visual": {
+      "concept": "Concept",
+      "adapt": {
+        "title": "Ask for the view. Watch it take shape.",
+        "sub": "A typed request rebuilds the workspace around the next job.",
+        "prompt": "Plan three dinners from my saved recipes.",
+        "proposed": "Proposed view",
+        "demo": {
+          "label": "Illustrative workspace rebuilding demonstration",
+          "you": "You",
+          "pause": "Pause workspace demonstration",
+          "resume": "Resume workspace demonstration",
+          "replay": "Replay workspace changes",
+          "building": "Rebuilding the workspace",
+          "ready": "Preview ready for review",
+          "nav": [
+            "Overview",
+            "Files",
+            "Agents"
+          ],
+          "workspace": "Personal workspace",
+          "scenes": [
+            {
+              "label": "Plan my day",
+              "prompt": "Plan my day around my calendar and tasks.",
+              "title": "My day",
+              "primaryTitle": "Today’s focus",
+              "primaryItems": [
+                "Prepare for the meeting",
+                "Make time for the project",
+                "Leave room for a break"
+              ],
+              "secondaryTitle": "Working from",
+              "secondaryItems": [
+                "My calendar",
+                "My task list"
+              ],
+              "result": "A day plan you can change.",
+              "details": [
+                "Meeting notes and preparation stay beside the event.",
+                "A focused block keeps the project moving.",
+                "A break remains part of the plan."
+              ],
+              "calendarSource": {
+                "name": "Personal calendar",
+                "body": "09:00 planning. 11:00 meeting. Keep the afternoon available for project work."
+              },
+              "fileSources": [
+                {
+                  "name": "Today.md",
+                  "body": "Prepare meeting notes. Work on the project. Keep a break after lunch."
+                },
+                {
+                  "name": "Project notes.md",
+                  "body": "Draft the outline before polishing the details. Leave time to review the result."
+                }
+              ]
+            },
+            {
+              "label": "Study",
+              "prompt": "Build a revision board from my course notes.",
+              "title": "Revision workspace",
+              "primaryTitle": "My revision board",
+              "primaryItems": [
+                "Review key topics",
+                "Practise the questions",
+                "Revisit difficult areas"
+              ],
+              "secondaryTitle": "Working from",
+              "secondaryItems": [
+                "Course notes",
+                "Saved questions"
+              ],
+              "result": "A revision plan shaped around your materials.",
+              "details": [
+                "The key topics are grouped from your course notes.",
+                "Practice questions sit beside the material they refer to.",
+                "Difficult topics stay on the list for another pass."
+              ],
+              "calendarSource": {
+                "name": "Revision calendar",
+                "body": "Monday: key topics. Wednesday: practice questions. Friday: another pass through difficult material."
+              },
+              "fileSources": [
+                {
+                  "name": "Course notes.md",
+                  "body": "Focus on definitions, worked examples, and links between topics. Mark uncertain steps for review."
+                },
+                {
+                  "name": "Practice questions.md",
+                  "body": "Explain the core terms in your own words. Work through an example, then check your reasoning."
+                }
+              ]
+            },
+            {
+              "label": "Meals",
+              "prompt": "Plan three dinners from my saved recipes.",
+              "title": "My meal week",
+              "primaryTitle": "Three dinners",
+              "primaryItems": [
+                "Roasted vegetables",
+                "Lemon chicken",
+                "Mushroom pasta"
+              ],
+              "secondaryTitle": "Shopping list",
+              "secondaryItems": [
+                "Vegetables and herbs",
+                "Chicken and pasta"
+              ],
+              "result": "Three dinners and a shopping list, together.",
+              "details": [
+                "A simple dinner using the vegetables in your saved recipes.",
+                "The ingredients are included in the shopping list.",
+                "The meal plan and shopping list stay together."
+              ],
+              "calendarSource": {
+                "name": "Meal week",
+                "body": "Tuesday: roasted vegetables. Thursday: lemon chicken. Saturday: mushroom pasta."
+              },
+              "fileSources": [
+                {
+                  "name": "Saved recipes.md",
+                  "body": "Roast vegetables until tender. Serve lemon chicken with greens. Finish the pasta with mushrooms."
+                },
+                {
+                  "name": "Pantry notes.md",
+                  "body": "Check pasta, olive oil and dried herbs before shopping. Buy fresh vegetables and the remaining ingredients."
+                }
+              ]
+            }
+          ],
+          "paused": "Demonstration paused",
+          "ui": {
+            "preview": "Preview",
+            "selected": "Selected",
+            "reviewed": "Reviewed",
+            "review": "Mark reviewed",
+            "draft": "Draft",
+            "detail": "Draft preview",
+            "sources": "Selected sources",
+            "schedule": "Example routine",
+            "scheduleOn": "Preparation enabled",
+            "scheduleOff": "Preparation paused",
+            "agent": "Preparation agent",
+            "agentNote": "Uses the selected sources to prepare a draft for review.",
+            "filesNote": "Choose an example source to inspect it.",
+            "fileDetail": "Example source selected. Its content stays within this demonstration.",
+            "setupApplied": "Setup preview applied",
+            "interactive": "Interactive example. Changes stay on this page.",
+            "adaptive": {
+              "lanes": [
+                "To prepare",
+                "In progress",
+                "For review"
+              ],
+              "days": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri"
+              ],
+              "mealDays": [
+                "Tuesday",
+                "Thursday",
+                "Saturday"
+              ],
+              "ingredients": [
+                "Vegetables · herbs",
+                "Chicken · lemon",
+                "Mushrooms · pasta"
+              ],
+              "questions": [
+                "Which ideas connect these topics?",
+                "Can you explain the steps?",
+                "Which part needs another pass?"
+              ],
+              "reveal": "Reveal explanation",
+              "hide": "Back to the question",
+              "move": "Move to review",
+              "document": "Weekly brief",
+              "milestones": "Project milestones",
+              "card": "Study card",
+              "focus": "Current focus",
+              "task": "Selected task",
+              "milestone": "Selected milestone"
+            }
+          }
+        }
+      },
+      "connect": {
+        "title": "Your tools, around the work.",
+        "sub": "With the access you choose.",
+        "core": "Private to you",
+        "groups": [
+          {
+            "name": "Communication",
+            "items": [
+              "Calendar",
+              "Email",
+              "Reminders"
+            ]
+          },
+          {
+            "name": "Files",
+            "items": [
+              "Documents",
+              "Folders",
+              "Drives"
+            ]
+          },
+          {
+            "name": "Web",
+            "items": [
+              "Websites",
+              "Search",
+              "Articles"
+            ]
+          },
+          {
+            "name": "AI models",
+            "items": [
+              "Assistants",
+              "Models",
+              "API keys"
+            ]
+          }
+        ],
+        "note": "Examples only. Me is in development."
+      },
+      "accounts": {
+        "title": "Several AI accounts, each with a job.",
+        "sub": "Work goes by task, with a fallback at the limit.",
+        "cols": [
+          "Account",
+          "Job",
+          "Usage",
+          "Status"
+        ],
+        "kinds": [
+          "Personal account",
+          "API key",
+          "API key",
+          "API key"
+        ],
+        "jobs": [
+          "Planning",
+          "Writing fallback",
+          "Writing",
+          "Research"
+        ],
+        "states": [
+          "Ready",
+          "At limit"
+        ],
+        "more": "Others where supported",
+        "note": "Illustrative. Logos are examples; plans and limits vary."
+      },
+      "context": {
+        "title": "Context that stays with the work.",
+        "sub": "Files, chosen chats and project memory, with sources.",
+        "project": "Job search",
+        "rail": [
+          "Files",
+          "Conversations",
+          "Project memory",
+          "Private to you"
+        ],
+        "doc": "Interview notes",
+        "sources": [
+          "Job description.pdf",
+          "My CV",
+          "Imported chat"
+        ],
+        "status": "Draft, sources linked",
+        "io": [
+          "Selected chats imported",
+          "Exportable"
+        ],
+        "note": "Signing in alone imports no history."
+      },
+      "agents": {
+        "title": "Your own team of agents.",
+        "sub": "Specialists work in parallel, then hand off to you.",
+        "objectiveLabel": "Objective",
+        "objective": "Application due Friday",
+        "lanes": [
+          [
+            "Research",
+            "Company news"
+          ],
+          [
+            "Browser",
+            "Job listing"
+          ],
+          [
+            "Files",
+            "CV and portfolio"
+          ],
+          [
+            "Code",
+            "Portfolio page"
+          ]
+        ],
+        "states": [
+          "Done",
+          "Done",
+          "Working",
+          "Queued"
+        ],
+        "handoff": "One merged draft",
+        "result": "Cover letter ready for review"
+      },
+      "operate": {
+        "title": "Work that starts itself, then waits for you.",
+        "sub": "Events, schedules or requests start runs. You approve.",
+        "cols": [
+          "Starts",
+          "Run queue",
+          "Review"
+        ],
+        "triggers": [
+          [
+            "Event",
+            "New job alert"
+          ],
+          [
+            "Schedule",
+            "Sundays 18:00"
+          ],
+          [
+            "Request",
+            "Ask in chat"
+          ]
+        ],
+        "runs": [
+          [
+            "Role summary",
+            "Running"
+          ],
+          [
+            "Weekly plan",
+            "Waiting for you"
+          ],
+          [
+            "Reading digest",
+            "Paused"
+          ]
+        ],
+        "result": "Weekly plan ready for review",
+        "approver": "Only you approve",
+        "controls": [
+          "Approvals",
+          "Permissions",
+          "Budget",
+          "Pause"
+        ]
+      },
+      "place": {
+        "title": "Built between London and Baku.",
+        "sub": "A founder-led practice, working across both cities."
+      },
+      "extension": {
+        "replay": "Replay this demonstration",
+        "cta": [
+          "Shape your workspace",
+          "Connect your AI accounts",
+          "Explore your agent setup",
+          "Talk through your workflow"
+        ],
+        "sandbox": {
+          "title": "A persistent sandbox for the work.",
+          "sub": "Browser, code and files, with access you choose and work retained between runs.",
+          "task": "Research the brief. Prepare the files.",
+          "views": [
+            "Browser",
+            "Code",
+            "Files"
+          ],
+          "browser": [
+            "Sources collected",
+            "Details checked",
+            "References saved"
+          ],
+          "code": [
+            "Read sources",
+            "Prepare summary",
+            "Write draft"
+          ],
+          "files": [
+            "Brief.md",
+            "Sources.csv",
+            "Draft ready for review"
+          ],
+          "states": [
+            "Pause a run",
+            "Keep the work",
+            "Resume from here"
+          ],
+          "note": "Illustrative environment. Access and execution are scoped to each setup."
+        },
+        "examples": {
+          "title": "Different work. A different workspace.",
+          "sub": "Choose a scenario. See the view, the handoff and the result.",
+          "label": "Illustrative workspace examples",
+          "proof": "Selected client work",
+          "proofLink": "Read the case study",
+          "concept": "Illustrative scenario. Fictional data.",
+          "items": [
+            {
+              "id": "me-daily-focus",
+              "label": "Daily focus",
+              "request": "Turn scattered tasks into a clear day.",
+              "steps": [
+                "Gather tasks",
+                "Check calendar",
+                "Propose plan"
+              ],
+              "result": "A day plan you can adjust."
+            },
+            {
+              "id": "me-exam-student",
+              "label": "Study",
+              "request": "Prepare revision around your materials.",
+              "steps": [
+                "Read notes",
+                "Find topics",
+                "Prepare practice"
+              ],
+              "result": "A focused revision session."
+            },
+            {
+              "id": "me-meals",
+              "label": "Meals",
+              "request": "Plan three dinners from saved recipes.",
+              "steps": [
+                "Read recipes",
+                "Check week",
+                "Prepare list"
+              ],
+              "result": "Three dinners and a shopping list."
+            },
+            {
+              "id": "me-travel",
+              "label": "Travel",
+              "request": "Bring the trip into one view.",
+              "steps": [
+                "Collect ideas",
+                "Compare options",
+                "Prepare itinerary"
+              ],
+              "result": "A trip plan ready for your choice."
+            },
+            {
+              "id": "me-creative-journal",
+              "label": "Creative work",
+              "request": "Give ideas somewhere to develop.",
+              "steps": [
+                "Collect references",
+                "Group ideas",
+                "Prepare brief"
+              ],
+              "result": "A creative brief from your context."
+            },
+            {
+              "id": "me-career",
+              "label": "Career",
+              "request": "Keep opportunities and preparation together.",
+              "steps": [
+                "Track roles",
+                "Read requirements",
+                "Prepare drafts"
+              ],
+              "result": "Application drafts for you to review."
+            }
+          ]
+        }
+      },
+      "setup": {
+        "title": "A few choices. A clear starting point.",
+        "steps": [
+          "Choose sources",
+          "Choose work",
+          "Review controls"
+        ],
+        "sourceTitle": "What should the workspace work from?",
+        "sourceHint": "Select at least one example source.",
+        "tools": [
+          "Calendar",
+          "Files"
+        ],
+        "jobTitle": "Which work comes first?",
+        "reviewTitle": "Your example setup",
+        "reviewNote": "Anything sent to another person waits for review.",
+        "pause": "Pause automatic preparation",
+        "next": "Continue",
+        "back": "Back",
+        "apply": "Apply to the demo",
+        "reset": "Start again",
+        "applied": "Applied to the workspace example.",
+        "note": "Interactive setup example. No accounts are connected and nothing is saved.",
+        "sourcesLabel": "Sources",
+        "jobLabel": "First workflow",
+        "sub": "Preview the guided setup being designed for Me."
+      }
+    },
+    "system": {
+      "navLabel": "On this page",
+      "title": "How your workspace works.",
+      "lede": "One place for your projects, plans and agents, with a centre that changes when you ask. What it holds, what agents do and how you stay in charge.",
+      "note": "Enamplify Me is in development. Examples show its design with fictional data; supported connections will be confirmed as it becomes available.",
+      "illustrative": "Illustrative concept with fictional data.",
+      "faqNav": "Questions",
+      "faqTitle": "Questions about Me.",
+      "home": {
+        "title": "A stable home with an adaptive centre.",
+        "body": "Your conversations, context, projects, files, accounts and permissions keep familiar places. The centre shows the view that helps today, and you can ask for a new one.",
+        "centre": "Adaptive centre",
+        "centreNote": "Plans, boards, trackers and briefings, made on request",
+        "frame": [
+          [
+            "Conversations",
+            "With you and your agents"
+          ],
+          [
+            "Context",
+            "What you chose to keep"
+          ],
+          [
+            "Projects",
+            "Study, home, work, plans"
+          ],
+          [
+            "Files",
+            "Attached where they belong"
+          ],
+          [
+            "Accounts",
+            "Supported tools and AI providers"
+          ],
+          [
+            "Permissions",
+            "What each agent may use"
+          ]
+        ]
+      },
+      "change": {
+        "nav": "Changing a view",
+        "title": "Describe it, preview it, keep it.",
+        "body": "Describe the board, page or tracker you need. The workspace prepares a preview from your selected material; you decide whether to keep it.",
+        "dialogueLabel": "Illustrative exchange",
+        "turns": [
+          [
+            "Describe",
+            "You",
+            "Add a meal week: five dinners from recipes I’ve saved, and a shopping list for what’s missing."
+          ],
+          [
+            "Preview",
+            "Workspace",
+            "Preview ready: five dinners from your saved recipes and a list grouped by shop section, using the pantry note you kept last week. Keep it?"
+          ],
+          [
+            "Keep",
+            "You",
+            "Keep it, and leave Friday free."
+          ]
+        ],
+        "imageCaption": "The kept view sits beside your recipes and shopping list."
+      },
+      "context": {
+        "nav": "Context",
+        "title": "What your workspace knows.",
+        "body": "Answers draw on material you chose to bring in, with sources shown. Signing in to another account does not hand over its history; you decide what comes in.",
+        "columns": [
+          "Material",
+          "How it arrives",
+          "Who can see it"
+        ],
+        "rows": [
+          [
+            "Documents and files",
+            "Uploaded, or attached to a project",
+            "You, and agents you allow"
+          ],
+          [
+            "Earlier chats and notes",
+            "Imported from supported tools, or from exports you provide",
+            "Only you"
+          ],
+          [
+            "Connected accounts",
+            "Read through a supported connection, within its limits",
+            "Agents you assign to it"
+          ],
+          [
+            "Kept context",
+            "Preferences and decisions you asked it to remember",
+            "You; edit or remove at any time"
+          ]
+        ]
+      },
+      "connections": {
+        "nav": "Connections",
+        "title": "Your tools and AI accounts, in one place.",
+        "body": "Connections are grouped by use. You choose which agents may use each one, and see its status and, where the provider exposes it, its usage. Where a provider allows it, you may bring an AI plan or account you already have, through an API key or a supported account connection. Availability and limits depend on each provider. Where supported, add more than one account for the same provider and see the available usage for each.",
+        "core": "Your workspace",
+        "accessLabel": "Access",
+        "statusLabel": "Status",
+        "groups": [
+          {
+            "name": "Everyday",
+            "examples": "Calendar, email and notes, for example a Google or Microsoft account",
+            "access": "Calendar read for the planning agent",
+            "status": "Connected"
+          },
+          {
+            "name": "Learning and projects",
+            "examples": "Cloud storage, reading lists and course material",
+            "access": "Read only",
+            "status": "Awaiting your approval"
+          },
+          {
+            "name": "AI providers",
+            "examples": "An existing provider account or API key, where permitted",
+            "access": "Shared by your agents, with a monthly limit",
+            "status": "Connected, usage shown"
+          }
+        ],
+        "foot": "Named products are examples, not a confirmed list of connections for Me.",
+        "exampleLabel": "Illustrative connections and statuses, shown with fictional data."
+      },
+      "agents": {
+        "nav": "Agents",
+        "title": "Your own team of agents.",
+        "body": "Each agent has a role, an objective and only the tools you give it. They hand work to one another and bring back something you can check, with progress visible.",
+        "imageCaption": "Drafts stay with the role they belong to until you are ready.",
+        "exampleTitle": "Illustrative: preparing a job application",
+        "returnsLabel": "Returns",
+        "steps": [
+          [
+            "Research",
+            "Research agent",
+            "Reads the saved role and the organisation’s public material.",
+            "Key requirements and questions"
+          ],
+          [
+            "Verify",
+            "Checking agent",
+            "Compares them with your CV and past projects.",
+            "Matches and gaps, with sources"
+          ],
+          [
+            "Prepare",
+            "Writing agent",
+            "Drafts a cover letter and an application checklist.",
+            "A draft in your workspace"
+          ],
+          [
+            "Review",
+            "You",
+            "Edit, decide and send it yourself.",
+            "An application you stand behind"
+          ]
+        ]
+      },
+      "recurring": {
+        "nav": "Routines",
+        "title": "Plans that keep themselves current.",
+        "body": "Some help should arrive without asking. You choose what starts a routine, where it waits for you, what it may spend and when it should tell you something.",
+        "points": [
+          [
+            "Triggers",
+            "A time, a new file or a change in a connected calendar."
+          ],
+          [
+            "Checkpoints",
+            "Steps that wait for your yes."
+          ],
+          [
+            "Budgets",
+            "A limit for each routine, shown as it is used."
+          ],
+          [
+            "Errors",
+            "A failed run stops and says why; retry or end it."
+          ],
+          [
+            "Updates",
+            "A note when something needs you, not after every run."
+          ]
+        ],
+        "note": "Routines show how Me is being designed, and will be confirmed as it becomes available.",
+        "logTitle": "Illustrative run history",
+        "columns": [
+          "When",
+          "Routine",
+          "Status"
+        ],
+        "rows": [
+          [
+            "Sun 18:00",
+            "Weekly plan from calendar and tasks",
+            "Completed"
+          ],
+          [
+            "Mon 08:00",
+            "Revision schedule refresh",
+            "Waiting for you"
+          ],
+          [
+            "Mon 12:30",
+            "Reading list summary",
+            "Stopped: limit reached"
+          ],
+          [
+            "Sun 18:00",
+            "Weekly plan from calendar and tasks",
+            "Scheduled"
+          ]
+        ]
+      },
+      "control": {
+        "nav": "Control",
+        "title": "You stay in charge.",
+        "body": "You set these limits, and you can change them at any time.",
+        "decideTitle": "You decide",
+        "decide": [
+          "Which projects, files and accounts each agent can reach",
+          "What it remembers, and what it forgets",
+          "Which actions need your approval, including anything sent to another person",
+          "When a routine runs, pauses or ends"
+        ],
+        "seeTitle": "You can see and stop",
+        "see": [
+          "What each agent did, and when",
+          "New layouts, before you keep them",
+          "Running routines, with pause and stop",
+          "Usage against the limits you set"
+        ],
+        "who": [
+          {
+            "name": "Us, for teams",
+            "body": "A whole team with scoped roles and shared context, implemented around its processes."
+          },
+          {
+            "name": "Me, for one person",
+            "body": "Just you and your agents, in a workspace private to you. In development: registering interest starts a conversation, not an account."
+          }
+        ]
+      },
+      "faq": [
+        [
+          "Can I use AI subscriptions I already pay for?",
+          "Where the provider allows it, through an API key or a supported account connection. Not every plan can be used this way, and each provider sets its own limits."
+        ],
+        [
+          "Will it know my past chats?",
+          "Only what you bring in: imports from supported tools, or exports you upload. Signing in to an account does not give Me that account’s history."
+        ],
+        [
+          "Will agents act for me without asking?",
+          "They research, check, draft and organise within the access you give them. Anything sent to another person waits for your approval."
+        ],
+        [
+          "Can I change how it looks?",
+          "Yes. Describe a page, board or tracker; you see a preview first and keep it only if you want it."
+        ],
+        [
+          "When can I use Me?",
+          "Me is in development. Registering interest through the enquiry form starts a conversation; it does not create an account."
+        ],
+        [
+          "What if I want this for my team?",
+          "That is Enamplify for teams: several people, scoped roles, shared context and an implementation tailored to your processes."
+        ]
+      ]
+    }
   },
   "approach": {
-    "title": "Start small. Prove it. Then scale.",
-    "lede": "Every engagement starts with a small, fixed step. You only go further when the evidence says so.",
+    "title": "From the way you work to a workspace that fits it.",
+    "lede": "We implement Enamplify around your team’s existing processes and agree the scope in writing. An implementation starts with a paid diagnostic, followed by a set-up for one or two teams and a decision about extending it.",
     "stagesLabel": "Stages",
     "whatYouGet": "What you get",
     "controlTitle": "Control, in practice.",
     "control": [
       [
         "Your sign-in, your roles",
-        "People sign in with their company accounts. Roles decide who can build, who approves and who uses."
+        "People sign in with their own accounts. Roles decide who can reshape the workspace, who approves and who uses it."
       ],
       [
-        "Reviewed before it runs",
-        "No workflow goes live without a named owner and a review step."
+        "Previewed before it changes",
+        "New views and workflows are shown first, and applied when the right person agrees."
       ],
       [
-        "A complete record",
-        "Every run is logged, so you can see what happened, when, and on whose authority."
+        "Agents with named owners",
+        "Every agent has a defined responsibility and a person accountable for it."
       ],
       [
-        "Data routed by sensitivity",
-        "Sensitive information only goes to models that run in your environment. Nobody has to make that call by hand."
+        "A visible record",
+        "You can see what an agent did, when, and on whose authority."
       ],
       [
         "Spending you can see",
         "Usage limits per team, and a clear view of what AI is costing you."
       ],
       [
-        "Hosted where you decide",
-        "On your own infrastructure, or in UK or EU hosting."
+        "Boundaries agreed first",
+        "Before anything is connected, we agree with you which information the workspace may use."
       ]
     ],
-    "leavesTitle": "What stays when we leave.",
+    "leavesTitle": "The handover is part of the work.",
     "leaves": [
-      "Workflows your people use every week",
-      "People who can build the next ones",
-      "A playbook for how your organisation uses AI",
-      "A measured baseline, and the evidence of what changed"
+      "A workspace your people use every week",
+      "People who can reshape it themselves",
+      "Clear roles, permissions and agent responsibilities",
+      "A measured starting point, and the evidence of what changed"
     ],
-    "faqTitle": "Before you ask."
+    "faqTitle": "Questions about working together."
   },
   "work": {
-    "title": "Built for clients. Run as our own.",
-    "lede": "Eight kinds of AI system delivered for clients, and two products we run ourselves.",
+    "title": "Systems shaped around the work.",
+    "lede": "Selected projects across professional services, travel and clinical operations, alongside products we build and run.",
     "deliveredLabel": "Delivered systems",
     "delivered": {
       "topic": "Delivered",
-      "title": "Eight kinds of client system, in production.",
+      "title": "Delivery experience across different kinds of system.",
       "caption": "Delivered client systems",
       "columns": [
         "System",
@@ -302,10 +1864,10 @@
       ]
     },
     "productsTitle": "Products we build and run.",
-    "casesTitle": "Case studies.",
-    "casesLede": "How we helped a travel startup, a marketing agency, a PR agency and a clinical trials organisation automate their work.",
+    "casesTitle": "Selected client work.",
+    "casesLede": "The problem, our contribution and the workflow behind each project. Client identities are withheld where the work is confidential.",
     "readCase": "Read the case study",
-    "capabilitiesTitle": "What we build.",
+    "capabilitiesTitle": "Where we put AI to work.",
     "capabilities": [
       [
         "Internal workflow automation",
@@ -334,15 +1896,15 @@
     ]
   },
   "about": {
-    "title": "One founder. Two cities. One standard.",
+    "title": "Advice grounded in building.",
     "bio": [
       "Amir advises leadership teams on where AI can create measurable value, how it should reshape workflows, and what people need to adopt it successfully. His work spans AI strategy, operating model design, implementation and capability building across travel, marketing, education, finance and clinical technology.",
       "Amir has built AI systems for clients, from outbound growth engines to clinical trial management software, and launched two AI products of his own, grademy and pripitch. His team’s work won a Google hackathon."
     ],
-    "whyTitle": "Why we exist.",
+    "whyTitle": "How we approach the work.",
     "why": [
-      "Most organisations don’t need another AI tool. They need their own people to be able to use the ones they have, safely, on the work that matters.",
-      "Enamplify exists to make that normal: AI your team builds, not AI you buy."
+      "Enamplify is a product and a practice. The workspace keeps a team’s context, accounts, tools and agents connected; the practice implements it around the way the team already works, and advises as that work changes.",
+      "The right starting point might be a focused build, a clearer plan or practical support for an existing team. We agree the scope, the responsibilities and how progress will be assessed before moving ahead."
     ],
     "marketsTitle": "Two markets, one standard.",
     "markets": "We work from London across the UK and Europe, and from Baku across Azerbaijan. The standard is the same in both: your data stays where you decide, and the capability stays with your people.",
@@ -365,8 +1927,8 @@
     "changedTitle": "What changed.",
     "relatedTitle": "Related reading.",
     "moreTitle": "More case studies.",
-    "closeTitle": "Want the same for your team?",
-    "closeBody": "Thirty minutes about the work your team would like to hand over. If we’re not the right fit, we’ll say so."
+    "closeTitle": "What could this look like in your team?",
+    "closeBody": "Start with a 30-minute conversation about your priorities, the work involved and where we could help."
   },
   "careers": {
     "title": "Work with us.",
@@ -430,27 +1992,30 @@
     "closeBody": "Bring the completed guide to a conversation about your team’s work."
   },
   "contact": {
-    "title": "Book a diagnostic call.",
-    "lede": "Thirty minutes with Amir, the founder, about your team and the work you’d like to change. No pitch deck, and no automated follow-up sequence.",
+    "title": "Let’s talk about the work.",
+    "lede": "A 30-minute introductory conversation with Amir about your priorities and where we could help.",
     "coverTitle": "What we’ll cover",
     "cover": [
-      "Where your team’s time goes today",
-      "Where AI is already being used, officially or not",
-      "Whether a diagnostic would be worth it, and what it would look at"
+      "What you want to change and where the work gets stuck",
+      "Your current systems, team and constraints",
+      "Whether the workspace, advice or a custom build would be useful"
     ],
     "afterTitle": "What happens after",
-    "after": "If there’s a fit, you get a short written proposal for a diagnostic. If there isn’t, we’ll say so and point you somewhere useful.",
-    "chooseTime": "Choose a time",
-    "calendarNote": "Opens our booking calendar in a new tab.",
+    "after": "If there’s a fit, we’ll set out a proposed scope and fees. For a broader team programme, that may start with a paid diagnostic.",
+    "chooseTime": "Book a 30-minute introduction",
+    "calendarNote": "Choose a time in our booking calendar. This is an introductory call, separate from a paid diagnostic.",
     "formTitle": "Prefer to write?",
+    "offerNote": "For Enamplify for your team, or Enamplify Me for yourself, choose it under “What would you like to talk about?”. Me is in development: a note about it registers your interest and does not create an account.",
     "name": "Your name",
-    "email": "Work email",
-    "organisation": "Organisation",
+    "email": "Email",
+    "organisation": "Organisation (optional)",
     "interest": "What would you like to talk about?",
     "interests": [
       "Not sure yet",
-      "A diagnostic call",
-      "Team AI enablement",
+      "Enamplify for my team or business",
+      "Enamplify Me: register interest",
+      "An introductory call",
+      "AI advisory and team capability",
       "A custom AI build",
       "Something else"
     ],
@@ -614,5 +2179,878 @@
     "timeout": "The request timed out. Please email us directly rather than submitting twice.",
     "unconfirmed": "The enquiry could not be confirmed as sent.",
     "reachDirect": "You can reach Amir directly at {email}."
+  },
+  "popup": {
+    "ariaLabel": "Free executive briefing on structuring AI agents",
+    "pillTag": "Free briefing",
+    "pillText": "Get more out of AI agents",
+    "kicker": "Free executive briefing",
+    "title": "Get real work out of AI agents.",
+    "lede": "Unlock our private guide on moving beyond isolated chat logins:",
+    "bullets": [
+      "Automate prep and handoffs with specialist agent lanes",
+      "Keep human sign-off on every external action",
+      "Includes 4-layer blueprint + printable PDF worksheet"
+    ],
+    "emailLabel": "Work email",
+    "emailPlaceholder": "Work email",
+    "submit": "Read now",
+    "privacyNote": "Instant access + occasional field notes. Unsubscribe anytime."
+  },
+  "briefing": {
+    "title": "Structuring AI and agent work inside a company.",
+    "lede": "Why individual chat accounts plateau, and how operations leaders organise shared context, specialist agent lanes, approval gates and adaptive workspaces so teams get reliable work out of AI.",
+    "download": "Download the PDF briefing",
+    "meta": "Unlisted executive briefing · 25 minutes · For COOs, Heads of Operations and transformation leads",
+    "gapTitle": "Why most company AI rollouts stall at the chat box.",
+    "gapProse": [
+      "Most organisations begin by handing out individual chat logins and running a short prompting workshop. People use the tool to rewrite emails or summarise isolated notes, while core operational work stays manual.",
+      "The bottleneck is rarely the model. It is the operating structure around the model. When an agent cannot see the current project brief, does not know which folder holds the approved template, tries to do five jobs in one prompt, or has no clear human review gate, teams stop trusting the output.",
+      "Getting real operational capacity from agents requires moving from isolated personal chats to a structured working environment where context, narrow responsibilities, permissions and review points are built into the workflow."
+    ],
+    "contrasts": [
+      [
+        "Isolated chat logins",
+        "Every person pastes fragments from memory; context is lost when the tab closes and nobody else can review the trail."
+      ],
+      [
+        "Grounded workspace context",
+        "Projects, live calendars, approved folders and operating rules sit around the workspace so agents read current company truth."
+      ],
+      [
+        "One vague generalist prompt",
+        "A single prompt is asked to research, check numbers, draft copy and format the deliverable all at once."
+      ],
+      [
+        "Specialist agent lanes",
+        "Narrow roles handle source gathering, verification, drafting and formatting in parallel, then hand one draft to a named owner."
+      ]
+    ],
+    "layersTitle": "The four-layer structure for company agents.",
+    "layersDek": "Treat agent capability as an operating design problem: what the workspace holds, how jobs are divided, where people approve, and how accounts are routed.",
+    "inPractice": "What to put in place",
+    "layers": [
+      {
+        "name": "Shared context and grounded sources",
+        "role": "Foundation · What the workspace knows",
+        "what": "Agents fail when they guess missing context. Before automating a task, gather the recurring inputs around a shared project space so every run starts from the same approved material.",
+        "points": [
+          "Connect read-only project folders, calendars, briefs and reference documents to the workspace",
+          "Keep every generated line linked back to the source file or meeting note it came from",
+          "Separate approved company templates and style rules from ad-hoc personal notes"
+        ]
+      },
+      {
+        "name": "Specialist agent lanes and handoffs",
+        "role": "Execution · How the work is divided",
+        "what": "Replace monolithic prompts with a small team of narrow specialists. Each lane has one clear input, one job and a visible status before the merged draft reaches a person.",
+        "points": [
+          "Split recurring workflows into distinct lanes: source extraction, policy or data checking, drafting, and formatting",
+          "Run independent lanes in parallel so preparation finishes before the team review window",
+          "Require each lane to flag missing inputs or exceptions rather than inventing plausible filler"
+        ]
+      },
+      {
+        "name": "Permission boundaries and approval gates",
+        "role": "Governance · What stays with a person",
+        "what": "Senior leaders need to defend how AI is used to a board, a client or a regulator. Make the boundary between autonomous preparation and human sign-off explicit inside the interface.",
+        "points": [
+          "Allow scheduled or triggered runs to prepare drafts, boards and packs inside the workspace",
+          "Hold external actions, client communications and system updates behind a named human approver",
+          "Keep an auditable record of what sources were used, what was changed and who approved the output"
+        ]
+      },
+      {
+        "name": "Account routing and retained sandboxes",
+        "role": "Resilience · How capacity stays dependable",
+        "what": "Operational workflows cannot stop because one provider account hits a usage cap or a browser tab closes mid-task. Route jobs deliberately and retain the working environment.",
+        "points": [
+          "Match tasks to model accounts by complexity and data sensitivity, with automatic fallback when a limit is reached",
+          "Run browser research, code checks and file assembly inside a retained sandbox that can pause and resume",
+          "Adapt the visible workspace view (report shelf, kanban board, schedule or review table) to fit the job in front of the team"
+        ]
+      }
+    ],
+    "playbooksTitle": "Three company workflows to structure first.",
+    "playbooksDek": "Start where recurring preparation, checking and coordination consume skilled time every week.",
+    "playbooks": [
+      [
+        "Weekly client and board reporting",
+        "Trigger on the reporting calendar. One lane pulls campaign or operational metrics, a second checks commentary against the brief, and a third assembles the review pack for the account or operations lead to approve."
+      ],
+      [
+        "Meeting intake to follow-up execution",
+        "After a client or leadership call, extract agreed actions, match each item to an owner on the team board, and draft the proposal or follow-up note against the current project folder before anyone has to chase."
+      ],
+      [
+        "Regulated onboarding and compliance checks",
+        "Embed standard operating procedures and acceptance criteria directly into the workspace view so new staff and reviewers check documents against grounded rules with every exception recorded."
+      ]
+    ],
+    "wsTitle": "The Company Agent Structuring Worksheet",
+    "wsIntro": "Use this six-point diagnostic with your operations or functional leads to scope your first structured agent workflow before building.",
+    "fields": [
+      "Department or function",
+      "Executive sponsor",
+      "Target recurring workflow",
+      "Named human review owner"
+    ],
+    "checks": [
+      [
+        "Context and source readiness",
+        "Which live calendars, folders, briefs and templates must sit inside the workspace so agents do not rely on pasted prompt memory?"
+      ],
+      [
+        "Specialist lane decomposition",
+        "How will we divide this workflow into narrow agent responsibilities (gathering, checking, drafting, formatting) instead of one general prompt?"
+      ],
+      [
+        "Human approval gate",
+        "Where does the prepared draft stop and wait for a named person? Which actions must never run without explicit sign-off?"
+      ],
+      [
+        "Account routing and data boundaries",
+        "Which model accounts and permissions apply to this data, and what is the fallback path when an account reaches its limit?"
+      ],
+      [
+        "Adaptive workspace view",
+        "What view does the team actually need on screen to review this work quickly: a report shelf, a follow-up board, a delivery timeline or a checklist?"
+      ],
+      [
+        "Measure of returned capacity",
+        "What observable change in preparation time, review quality and team follow-through will tell us this structure is working after 8 to 12 weeks?"
+      ]
+    ],
+    "closing": "Choose one real workflow with clear inputs and a named owner. Prove the structure on live work before extending it across the wider organisation.",
+    "closeTitle": "Want this structure built around your team?",
+    "closeBody": "Tell us the workflow you want off your plate. We will scope a tailored Enamplify workspace, agent structure and support plan."
+  },
+  "homeNew": {
+    "heroTitle": "Your own operating intelligence,",
+    "heroTitleAlt": "and a full agent team built from scratch.",
+    "lede": "Fully customizable and adaptive from day one. Enamplify combines a bespoke command environment and parallel specialist agents with hands-on implementation consulting, engineered around how your organisation actually runs.",
+    "secondaryCta": "System + consulting model",
+    "cross": "Working on your own? See Enamplify Me.",
+    "command": {
+      "ariaLabel": "Conceptual command and parallel agent architecture",
+      "tabsLabel": "Select an operating directive",
+      "play": "Resume automatic mission cycle",
+      "pause": "Pause automatic mission cycle",
+      "sourcesLabel": "Connected company context",
+      "colTeam": "Parallel specialist team",
+      "colSurface": "Adaptive view shaped live",
+      "colGate": "Human gate and verified output",
+      "surfaceTag": "Custom view · Moulded to task",
+      "takeaway": "One operating intelligence at the top. A coordinated agent team underneath. Custom-wired around your stack.",
+      "note": "Conceptual architecture. Every workspace, connector and approval gate is engineered around each client.",
+      "missions": [
+        {
+          "tab": "Executive operations",
+          "mode": "Scheduled + conversational directive",
+          "directive": "“Prepare Monday’s leadership brief, isolate regional margin exceptions and stage owner follow-ups before 08:30.”",
+          "sources": [
+            "Leadership calendar",
+            "Shared finance drive",
+            "CRM & billing records",
+            "Operating rules"
+          ],
+          "lanes": [
+            [
+              "Research agent",
+              "Pulls regional commentary and prior board commitments",
+              "Done"
+            ],
+            [
+              "Systems & data agent",
+              "Reconciles margin lines against billing records",
+              "Done"
+            ],
+            [
+              "Verification agent",
+              "Cross-checks figures and links source rows [1][2]",
+              "Working"
+            ],
+            [
+              "Drafting agent",
+              "Assembles executive memo and owner action cards",
+              "Working"
+            ]
+          ],
+          "viewName": "Executive brief & exception ledger",
+          "modules": [
+            [
+              "Regional variance table",
+              "4 exceptions isolated from 190 routine lines [1]"
+            ],
+            [
+              "Source-cited briefing memo",
+              "Every claim linked to finance files and call notes [2]"
+            ],
+            [
+              "Staged follow-up queue",
+              "Draft nudges assigned to regional leads in unsent state"
+            ]
+          ],
+          "artifact": "Monday leadership pack + 4 staged follow-ups",
+          "approver": "Managing partner reviews and approves",
+          "boundary": "External messages and ledger writes stay locked until approved."
+        },
+        {
+          "tab": "Commercial scale",
+          "mode": "High-volume research & outreach directive",
+          "directive": "“Screen 140 regional distributors against our qualification criteria, rank fit and prepare tailored partner outreach.”",
+          "sources": [
+            "Market directories",
+            "Partner CRM",
+            "Qualification rubric",
+            "Brand & pitch deck"
+          ],
+          "lanes": [
+            [
+              "Browser agent",
+              "Inspects distributor catalogues, territories and filings",
+              "Done"
+            ],
+            [
+              "Scoring agent",
+              "Evaluates every candidate against 9 fit criteria",
+              "Done"
+            ],
+            [
+              "Context agent",
+              "Matches product lines to each distributor’s portfolio",
+              "Working"
+            ],
+            [
+              "Outreach agent",
+              "Writes bespoke first-touch drafts per commercial lead",
+              "Working"
+            ]
+          ],
+          "viewName": "Partner qualification matrix & outreach desk",
+          "modules": [
+            [
+              "Scored target matrix",
+              "28 priority partners ranked with transparent evidence [1]"
+            ],
+            [
+              "Company dossier drawer",
+              "Territory overlap, leadership notes and source links [2]"
+            ],
+            [
+              "Reviewed outreach batch",
+              "Individualised drafts staged per regional director"
+            ]
+          ],
+          "artifact": "28 qualified partner dossiers + outreach batch",
+          "approver": "Commercial director approves recipient batch",
+          "boundary": "Zero automated spam: no outreach leaves without human sign-off."
+        },
+        {
+          "tab": "Regulated delivery",
+          "mode": "Event-triggered compliance directive",
+          "directive": "“Compare Protocol Amendment 2 against v1.0 across all 14 sites, update checklists and flag overdue filings.”",
+          "sources": [
+            "Trial master folder",
+            "Site milestone tracker",
+            "Approved SOPs",
+            "Audit log"
+          ],
+          "lanes": [
+            [
+              "Document diff agent",
+              "Isolates clause changes between v1.0 and Amendment 2",
+              "Done"
+            ],
+            [
+              "Records agent",
+              "Checks current readiness and filings across 14 sites",
+              "Done"
+            ],
+            [
+              "Compliance agent",
+              "Verifies section and page citations against SOPs",
+              "Working"
+            ],
+            [
+              "Operations agent",
+              "Prepares site-specific Week 12 task checklists",
+              "Working"
+            ]
+          ],
+          "viewName": "Multi-site compliance board & clause diff",
+          "modules": [
+            [
+              "Clause-by-clause diff view",
+              "Highlights Section 4.3 blood-draw window change [1]"
+            ],
+            [
+              "14-site readiness matrix",
+              "Flags 3 sites missing updated consent forms [2]"
+            ],
+            [
+              "Drafted site checklists",
+              "Structured tasks with exact protocol page citations"
+            ]
+          ],
+          "artifact": "14 site action checklists + immutable audit entry",
+          "approver": "Lead trial coordinator signs off",
+          "boundary": "Regulated site updates hold in Draft until coordinator sign-off."
+        },
+        {
+          "tab": "Client & agency",
+          "mode": "Multi-account delivery directive",
+          "directive": "“Turn this week’s coverage, campaign performance and call notes into client packs and tailored journalist angles.”",
+          "sources": [
+            "Client shared folders",
+            "Campaign exports",
+            "Press & beat index",
+            "Review calendar"
+          ],
+          "lanes": [
+            [
+              "Media research agent",
+              "Tracks 90-day journalist coverage across target beats",
+              "Done"
+            ],
+            [
+              "Analytics agent",
+              "Compiles campaign movement and anomalies per client",
+              "Done"
+            ],
+            [
+              "Memory agent",
+              "Pulls open actions and tone preferences from call notes",
+              "Working"
+            ],
+            [
+              "Briefing agent",
+              "Builds client packs and bespoke pitch drafts",
+              "Working"
+            ]
+          ],
+          "viewName": "Account pack shelf & beat intelligence board",
+          "modules": [
+            [
+              "Weekly client pack shelf",
+              "Performance, coverage and next-week priorities [1]"
+            ],
+            [
+              "Journalist beat map",
+              "Recent articles paired with tailored story angles [2]"
+            ],
+            [
+              "Approval-ready drafts",
+              "Client summaries and pitches held for account leads"
+            ]
+          ],
+          "artifact": "Reviewed client packs + tailored pitch queue",
+          "approver": "Account director edits and approves",
+          "boundary": "Nothing reaches a client or journalist without lead approval."
+        }
+      ],
+      "cols": [
+        "Agents work in parallel",
+        "A view built for the job",
+        "You sign off"
+      ],
+      "live": {
+        "approve": "Approve",
+        "approved": "Approved",
+        "ready": "Ready for review",
+        "ask": "Ask for the work",
+        "suggest": [
+          "Run this every Monday at 07:00?",
+          "Add new distributors as they register?",
+          "Alert site leads when a clause changes?",
+          "Track these beats every week?"
+        ],
+        "add": "Add",
+        "added": "Added"
+      }
+    },
+    "halves": {
+      "title": "Half custom operating system.",
+      "titleAlt": "Half implementation consulting.",
+      "lede": "Software vendors hand you an empty login and leave your team to figure it out. Traditional consultancies hand you a slide deck and leave before anything runs. Enamplify is built and delivered as one unified practice.",
+      "items": [
+        {
+          "label": "Custom adaptive system",
+          "title": "Engineered from scratch around how you operate.",
+          "sub": "Adaptive from day one · Built for parallel scale",
+          "body": "You never squeeze your business into someone else’s rigid software template. Your environment starts shaped around your workflows, terminology and permissions, and keeps reshaping through plain conversation.",
+          "points": [
+            "Custom boards, exception ledgers, briefs and apps instead of fixed SaaS screens",
+            "A full team of specialist agents working in parallel across browser, code, files and systems",
+            "Continuous initiative on schedules and events, pausing cleanly at human approval gates",
+            "Your own Anthropic, OpenAI, Gemini or private model accounts, routed by task with fallback"
+          ]
+        },
+        {
+          "label": "Implementation consulting",
+          "title": "Diagnosed, wired and scaled with our engineers.",
+          "sub": "Founder-led practice · London and Baku",
+          "body": "You work directly with the engineers and operators building your system. We audit where skilled people lose their week, wire the integrations around real governance and stay embedded as it scales.",
+          "points": [
+            "Operational diagnostic first: we map real bottlenecks, data boundaries and measurable outcomes",
+            "Hands-on wiring of your calendars, shared drives, CRMs, databases and sign-off rules",
+            "Live rollout with one or two core teams in weeks, tuned on real day-to-day work",
+            "Ongoing engineering and advisory stewardship as new teams and capabilities come online"
+          ]
+        }
+      ],
+      "contrasts": [
+        [
+          "Off-the-shelf SaaS",
+          "Gives everyone the same static template and leaves integration, adoption and workflow design to you."
+        ],
+        [
+          "Advisory slide decks",
+          "Maps recommendations on paper without shipping a working system into daily operations."
+        ],
+        [
+          "Enamplify",
+          "Custom-builds your command system and agent team, wires it into your stack and scales it alongside your people."
+        ]
+      ],
+      "approachLink": "See how our diagnostic, build and support stages work",
+      "short": "One practice builds the system and gets your team using it. You are never left with an empty login or a slide deck.",
+      "chips": [
+        [
+          "Custom boards",
+          "Parallel agents",
+          "Scheduled runs",
+          "Your own AI accounts"
+        ],
+        [
+          "Diagnostic first",
+          "Hands-on wiring",
+          "Live rollout",
+          "Ongoing support"
+        ]
+      ]
+    },
+    "adapt": {
+      "title": "No fixed templates.",
+      "titleAlt": "Views reshape around the job.",
+      "lede": "Conversation sits alongside real working surfaces. Ask for a weekly reporting shelf, a follow-up board or a delivery timeline, and the centre restructures while keeping files, agents and permissions in place."
+    },
+    "practice": {
+      "title": "Scoped on real bottlenecks.",
+      "titleAlt": "Scaled across your organisation.",
+      "lede": "Every engagement begins with a focused operational diagnostic, moves a custom workspace into daily use within weeks, and expands across departments at the pace your team chooses.",
+      "approachLink": "Explore our implementation approach",
+      "governanceTitle": "What always stays under your control",
+      "governanceBody": "Your choice of models and hosting, explicit permissions over every connected folder or system, and human sign-off on consequential decisions."
+    },
+    "proof": {
+      "title": "Already operating inside live businesses.",
+      "lede": "Before you take our word on custom agent systems, inspect the operational platforms and workflows we have already put into daily use.",
+      "allWork": "See all client work and products",
+      "caseAction": "Read case study",
+      "trust": "Already trusted in regulated industries.",
+      "learn": "Learn more"
+    },
+    "kit": {
+      "kicker": "Executive briefing and field notes",
+      "title": "Not ready for a call yet? Read our company agent architecture guide.",
+      "lede": "Enter your work email to open our unlisted executive briefing and two-page PDF worksheet on structuring context, specialist agent lanes and approval gates, plus occasional notes from live implementations.",
+      "emailPlaceholder": "Work email address",
+      "submit": "Open the briefing",
+      "note": "Opens the unlisted briefing immediately and joins our occasional dispatch via Kit. Unsubscribe anytime."
+    },
+    "closeTitle": "Tell us where your team loses its week.",
+    "closeBody": "Start with a direct conversation with our engineering practice. We will map how a custom command environment and agent team would fit your operations.",
+    "features": {
+      "hand": {
+        "title": "Not another AI employee.",
+        "titleAlt": "Your right hand.",
+        "lede": "An employee does what it is told. A right hand knows the work, sees what is coming and has it ready.",
+        "left": "An AI employee",
+        "right": "Your right hand",
+        "rows": [
+          [
+            "Waits to be asked",
+            "Notices what needs doing"
+          ],
+          [
+            "Handles one task",
+            "Runs a team in parallel"
+          ],
+          [
+            "Stops when you stop",
+            "Keeps working overnight"
+          ],
+          [
+            "Acts on its own",
+            "Checks with you first"
+          ]
+        ]
+      },
+      "observe": {
+        "title": "It notices",
+        "titleAlt": "before you ask.",
+        "sub": "With the access you set, it watches your inbox, calendar, files and records, and brings you what matters.",
+        "status": "Observing",
+        "feed": [
+          "Client asked to move Thursday’s call",
+          "Board pack due Friday",
+          "Invoice 114 does not match the order",
+          "Contract v3 uploaded"
+        ],
+        "flagTitle": "Flagged for you",
+        "flag": "Invoice 114 is over the purchase order. A query to the supplier is drafted."
+      },
+      "team": {
+        "title": "One request.",
+        "titleAlt": "A whole team.",
+        "sub": "Specialist agents split the job, work in parallel and hand back one result."
+      },
+      "always": {
+        "title": "Working",
+        "titleAlt": "while you are not.",
+        "sub": "Schedules and events start the work. You come back to it finished.",
+        "away": "While you were away"
+      },
+      "gate": {
+        "title": "Nothing leaves",
+        "titleAlt": "without you.",
+        "sub": "It prepares and proposes. You approve anything that sends, spends or changes a record.",
+        "steps": [
+          "Draft the report",
+          "Update the client record",
+          "Send to the client"
+        ],
+        "done": "Done",
+        "waiting": "Waiting for you",
+        "ask": "Send the report to the client?",
+        "hold": "Hold"
+      }
+    },
+    "me": {
+      "adapt": {
+        "title": "Built around your life.",
+        "titleAlt": "Reshaped when it changes."
+      },
+      "command": {
+        "ariaLabel": "Illustrative personal workspace demonstration",
+        "tabsLabel": "Choose an example",
+        "suggest": [
+          "Keep Friday evening free every week?",
+          "Watch flight prices until you book?",
+          "Quiz you each morning at 08:00?",
+          "Reorder the basics every Sunday?"
+        ],
+        "missions": [
+          {
+            "tab": "My week",
+            "directive": "Plan my week around the gym, Thursday’s deadline and dinner with Sam.",
+            "lanes": [
+              [
+                "Calendar agent"
+              ],
+              [
+                "Tasks agent"
+              ],
+              [
+                "Inbox agent"
+              ],
+              [
+                "Wellbeing agent"
+              ]
+            ],
+            "viewName": "Your week, planned",
+            "modules": [
+              [
+                "Week at a glance"
+              ],
+              [
+                "Top three today"
+              ],
+              [
+                "Reminders set"
+              ]
+            ],
+            "artifact": "Week planned, 3 clashes moved",
+            "approver": "You confirm the changes"
+          },
+          {
+            "tab": "A trip",
+            "directive": "Plan a long weekend in Lisbon for two, under €600.",
+            "lanes": [
+              [
+                "Flights agent"
+              ],
+              [
+                "Stays agent"
+              ],
+              [
+                "Plans agent"
+              ],
+              [
+                "Budget agent"
+              ]
+            ],
+            "viewName": "Lisbon, 3 days",
+            "modules": [
+              [
+                "Day-by-day plan"
+              ],
+              [
+                "Budget"
+              ],
+              [
+                "Packing list"
+              ]
+            ],
+            "artifact": "Trip plan ready, €560 in total",
+            "approver": "Nothing is booked until you approve"
+          },
+          {
+            "tab": "Study",
+            "directive": "Get me ready for Thursday’s biology exam.",
+            "lanes": [
+              [
+                "Notes agent"
+              ],
+              [
+                "Quiz agent"
+              ],
+              [
+                "Schedule agent"
+              ],
+              [
+                "Coach agent"
+              ]
+            ],
+            "viewName": "Exam prep, 4 days",
+            "modules": [
+              [
+                "Topics covered"
+              ],
+              [
+                "Study sessions"
+              ],
+              [
+                "Flashcards"
+              ]
+            ],
+            "artifact": "Study plan and 40 flashcards ready",
+            "approver": "You start when you are ready"
+          },
+          {
+            "tab": "Home",
+            "directive": "Sort dinners for the week and the shopping list.",
+            "lanes": [
+              [
+                "Recipes agent"
+              ],
+              [
+                "Pantry agent"
+              ],
+              [
+                "Shopping agent"
+              ],
+              [
+                "Budget agent"
+              ]
+            ],
+            "viewName": "Dinners this week",
+            "modules": [
+              [
+                "Seven dinners"
+              ],
+              [
+                "Shopping list"
+              ],
+              [
+                "This week’s spend"
+              ]
+            ],
+            "artifact": "Meal plan and shopping list ready",
+            "approver": "You approve the order"
+          }
+        ],
+        "ask": "Ask for anything"
+      },
+      "features": {
+        "hand": {
+          "title": "Not another chatbot.",
+          "titleAlt": "Your right hand.",
+          "lede": "A chatbot answers. A right hand knows your week, sees what is coming and has it ready.",
+          "left": "A chatbot",
+          "right": "Your right hand",
+          "rows": [
+            [
+              "Answers questions",
+              "Gets things done"
+            ],
+            [
+              "Forgets you each time",
+              "Knows your week"
+            ],
+            [
+              "Waits for a prompt",
+              "Reminds you first"
+            ],
+            [
+              "Acts without asking",
+              "Checks before it books or pays"
+            ]
+          ]
+        },
+        "observe": {
+          "title": "It remembers",
+          "titleAlt": "so you don’t have to.",
+          "sub": "With the access you give it, it keeps an eye on your calendar, inbox and bills, and tells you what matters.",
+          "status": "Keeping watch",
+          "feed": [
+            "Dentist moved to 3pm Thursday",
+            "Mum’s birthday on Saturday",
+            "Car insurance renews Friday",
+            "Passport expires in 4 months"
+          ],
+          "flagTitle": "Worth a look",
+          "flag": "Car insurance renews Friday. Three cheaper quotes are ready to compare."
+        },
+        "team": {
+          "title": "One ask.",
+          "titleAlt": "Everything arranged.",
+          "sub": "Your agents split the job, work at the same time and bring back one plan.",
+          "scene": {
+            "objectiveLabel": "You asked",
+            "objective": "Long weekend in Lisbon",
+            "lanes": [
+              [
+                "Flights",
+                "2 options"
+              ],
+              [
+                "Stay",
+                "Near the centre"
+              ],
+              [
+                "Plans",
+                "3 days"
+              ],
+              [
+                "Budget",
+                "Under €600"
+              ]
+            ],
+            "result": "Trip plan ready for you"
+          }
+        },
+        "always": {
+          "title": "Sorted",
+          "titleAlt": "while you sleep.",
+          "sub": "It tidies, checks and plans overnight. You wake up to a clear day.",
+          "away": "While you slept",
+          "runs": [
+            [
+              "Inbox tidied"
+            ],
+            [
+              "Bills checked"
+            ],
+            [
+              "Today planned"
+            ]
+          ],
+          "result": "Your morning brief is ready",
+          "approver": "Three things need you today"
+        },
+        "gate": {
+          "title": "Nothing booked",
+          "titleAlt": "without you.",
+          "sub": "It finds, compares and prepares. You say yes before anything is booked, sent or paid.",
+          "steps": [
+            "Find the best flights",
+            "Hold two seats",
+            "Pay for the trip"
+          ],
+          "done": "Done",
+          "waiting": "Waiting for you",
+          "ask": "Book the 09:40 flight for two?",
+          "hold": "Not yet"
+        }
+      }
+    }
+  },
+  "discover": {
+    "title": "Tell us about the work",
+    "count": "Step {n} of {total}",
+    "next": "Continue",
+    "back": "Back",
+    "required": "Please choose an option to continue.",
+    "detailsError": "Please add your name and a valid email.",
+    "noscript": "This short form needs JavaScript. You can also {link}.",
+    "noscriptLink": "send an enquiry",
+    "privacy": "We use your answers to prepare for the call. {link}.",
+    "privacyLink": "Privacy policy",
+    "steps": {
+      "work": {
+        "q": "What do you want off your team’s plate?",
+        "hint": "Choose any that apply.",
+        "options": [
+          "Reporting and packs",
+          "Follow-ups and outreach",
+          "Document review",
+          "Client delivery",
+          "Internal operations",
+          "Something else"
+        ]
+      },
+      "size": {
+        "q": "How big is the team?",
+        "options": [
+          "1 to 10",
+          "11 to 50",
+          "51 to 200",
+          "201 to 2,000",
+          "More than 2,000"
+        ]
+      },
+      "stage": {
+        "q": "Where are you with AI today?",
+        "options": [
+          "Not started",
+          "Individual chat logins",
+          "A few pilots",
+          "Tools in daily use"
+        ]
+      },
+      "data": {
+        "q": "Anything we should plan around?",
+        "hint": "Choose any that apply.",
+        "options": [
+          "Regulated data",
+          "Client-confidential work",
+          "Must run on our own infrastructure",
+          "None of these"
+        ]
+      },
+      "timing": {
+        "q": "When do you want to start?",
+        "options": [
+          "This quarter",
+          "In 3 to 6 months",
+          "Just exploring"
+        ]
+      },
+      "details": {
+        "q": "Where should we send the follow-up?",
+        "name": "Name",
+        "email": "Work email",
+        "company": "Company",
+        "note": "Anything else we should know (optional)"
+      },
+      "book": {
+        "q": "Thanks. Pick a time to talk.",
+        "body": "We will have your answers in front of us, so the call starts with your work.",
+        "cta": "Choose a time",
+        "summary": "Your answers"
+      }
+    }
   }
 }

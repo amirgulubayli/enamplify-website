@@ -1,0 +1,368 @@
+{
+  "ui": {
+    "en": {
+      "title": "Selected projects",
+      "description": "Selected AI systems, automation and software projects across clinical technology, communications, travel, investment, fintech and education.",
+      "heading": "Different industries. Systems built around the work.",
+      "intro": "A closer look at the platforms, internal systems and automations we have worked on. Different organisations, different constraints, and software shaped around the people using it.",
+      "indexTitle": "Explore the industries we’ve worked in.",
+      "indexIntro": "A project example from each industry, showing the systems, automations and platforms we’ve helped build. Choose an industry to explore the detail.",
+      "details": "Scope and deliverables",
+      "website": "Visit website",
+      "back": "Back to industries",
+      "nda": "Identity withheld under NDA",
+      "ndaMark": "Under NDA",
+      "clinicalName": "Clinical trial management",
+      "moreTitle": "And more.",
+      "moreBody": "The work extends beyond this selection: bespoke software, internal operations, research systems and AI workflows for teams with very different needs. Tell us what your people are trying to do, and where the current process gets in their way.",
+      "contact": "Discuss your project",
+      "note": "Selected project experience. Descriptions focus on the scope of the work; confidential client information and commercially sensitive implementation details are omitted."
+    },
+    "az": {
+      "title": "Seçilmiş layihələr",
+      "description": "Klinik texnologiya, kommunikasiya, turizm, investisiya, maliyyə və təhsil sahələrində süni intellekt, avtomatlaşdırma və proqram layihələri.",
+      "heading": "Fərqli sahələr. İşə uyğun qurulmuş sistemlər.",
+      "intro": "Üzərində işlədiyimiz platformalar, daxili sistemlər və avtomatlaşdırmalara daha yaxından baxış. Fərqli təşkilatlar, fərqli tələblər və istifadəçilərin işinə uyğun hazırlanmış proqramlar.",
+      "indexTitle": "İşlədiyimiz sahələrlə tanış olun.",
+      "indexIntro": "Hər sahədən bir layihə nümunəsi: qurulmasına töhfə verdiyimiz sistemlər, avtomatlaşdırmalar və platformalar. Təfərrüatlara baxmaq üçün bir sahə seçin.",
+      "details": "İşin əhatəsi və nəticələri",
+      "website": "Sayta keçin",
+      "back": "Sahələrə qayıdın",
+      "nda": "Məxfilik müqaviləsinə əsasən ad açıqlanmır",
+      "ndaMark": "Məxfi layihə",
+      "clinicalName": "Klinik sınaqların idarə edilməsi",
+      "moreTitle": "Və daha çox.",
+      "moreBody": "Bu seçimdən əlavə, fərqli ehtiyacları olan komandalar üçün xüsusi proqramlar, daxili əməliyyat sistemləri, araşdırma alətləri və süni intellekt iş axınları üzərində işləyirik. Komandanızın nə etmək istədiyini və hazırkı prosesin buna harada mane olduğunu bizimlə bölüşün.",
+      "contact": "Layihənizi müzakirə edək",
+      "note": "Seçilmiş layihə təcrübəsi. Təsvirlər görülən işin əhatəsinə yönəlib; məxfi müştəri məlumatları və kommersiya baxımından həssas texniki təfərrüatlar paylaşılmır."
+    }
+  },
+  "projects": [
+    {
+      "slug": "clinical-trials", "name": "Clinical trial management", "logo": null, "url": null,
+      "en": {
+        "sector": "Clinical technology · AI-powered CTMS",
+        "headline": "AI support inside complex clinical trial operations.",
+        "intro": "An AI-powered clinical trial management system for a confidential clinical technology organisation. The work brings automation, guided processes and document-grounded assistance into a setting where access, traceability and human responsibility matter.",
+        "bullets": [
+          ["Clinical workflow automation", "Repetitive operational steps are supported within the trial workflow, keeping the action and its record together rather than creating another disconnected administrative task."],
+          ["Guided processes", "Clear sequences help users understand what to do next and which information belongs at each stage, reducing the friction of navigating detailed procedures."],
+          ["Grounded knowledge support", "Questions about procedures and internal documentation can be answered with reference to the underlying material, giving users a way to check the basis of an answer."],
+          ["Training within the workflow", "Onboarding and procedural guidance sit alongside the work itself, so learning a system and following a process are connected."],
+          ["Controlled implementation", "The emphasis is on bounded AI assistance, accountable actions and appropriate access. Confidential trial information and client-specific implementation details remain private."]
+        ]
+      },
+      "az": {
+        "sector": "Klinik texnologiya · Süni intellekt dəstəkli CTMS",
+        "headline": "Mürəkkəb klinik sınaq əməliyyatlarında süni intellekt dəstəyi.",
+        "intro": "Məxfi klinik texnologiya təşkilatı üçün sınaqların idarə edilməsi sistemi. Avtomatlaşdırma, addım-addım istiqamətləndirmə və sənədlərə əsaslanan dəstək giriş nəzarəti və insan məsuliyyətinin vacib olduğu iş mühitinə inteqrasiya edilir.",
+        "bullets": [
+          ["İş axınlarının avtomatlaşdırılması", "Təkrarlanan əməliyyat addımları sınağın iş axını daxilində dəstəklənir. Əməliyyat və onun qeydi bir yerdə saxlanılır."],
+          ["Addım-addım proseslər", "Aydın ardıcıllıq istifadəçiyə növbəti addımı və həmin mərhələdə tələb olunan məlumatları göstərir."],
+          ["Sənədlərə əsaslanan dəstək", "Daxili prosedurlar haqqında cavablar ilkin materiala istinad edir və istifadəçi cavabın əsasını yoxlaya bilir."],
+          ["İş zamanı öyrənmə", "Yeni istifadəçilərin təlimi və prosedur izahları gündəlik işin yanında təqdim olunur."],
+          ["Nəzarətli tətbiq", "Diqqət məhdud səlahiyyətli süni intellekt dəstəyinə, məsuliyyətin aydınlığına və uyğun giriş hüquqlarına yönəlir. Məxfi təfərrüatlar paylaşılmır."]
+        ]
+      }
+    },
+    {
+      "slug": "unitas", "name": "Unitas Communications", "logo": "unitas.webp", "logoTheme": "dark", "url": "https://unitascommunications.com/",
+      "en": {
+        "sector": "Global PR · Communications and public affairs",
+        "headline": "A connected working environment for a global communications firm.",
+        "intro": "Systems work for Unitas Communications, now presented publicly as Unitas Global Advisory. The project connects the research, media and opportunity workflows behind a firm working across international communications and public affairs.",
+        "bullets": [
+          ["A shared platform", "A central portal brings the operational tools together, giving the team a coherent place to access media work and opportunity management."],
+          ["Media workflows", "Research, contact context and pitch preparation support the work that happens before a journalist conversation, while the team retains editorial and relationship judgement."],
+          ["Opportunity management", "A dedicated workspace organises relevant opportunities and the preparation around them, helping turn incoming information into work the team can assess."],
+          ["Reusable preparation", "Structured briefs and drafting workflows make recurring preparation easier to repeat without treating every new assignment as a blank page."],
+          ["Accountable access", "Account boundaries and controlled connections between tools support shared work while keeping responsibility for the next action clear."]
+        ]
+      },
+      "az": {
+        "sector": "Qlobal PR · Kommunikasiya və ictimai əlaqələr",
+        "headline": "Qlobal kommunikasiya şirkəti üçün vahid iş mühiti.",
+        "intro": "Hazırda Unitas Global Advisory adı ilə təqdim olunan Unitas Communications üçün sistem işi. Layihə beynəlxalq kommunikasiya şirkətinin araşdırma, media və imkanların idarə edilməsi işlərini əlaqələndirir.",
+        "bullets": [
+          ["Vahid platforma", "Mərkəzi portal media işi və imkanların idarə edilməsi alətlərinə vahid giriş yaradır."],
+          ["Media iş axınları", "Araşdırma, əlaqə məlumatları və təklif hazırlığı jurnalistlə söhbətdən əvvəlki işi dəstəkləyir. Redaksiya qərarları komandada qalır."],
+          ["İmkanların idarə edilməsi", "Ayrıca iş mühiti uyğun imkanları və onlar üçün hazırlığı təşkil edir."],
+          ["Təkrar istifadə olunan hazırlıq", "Strukturlaşdırılmış briflər və mətn hazırlığı hər yeni tapşırıqda işi sıfırdan başlamaq ehtiyacını azaldır."],
+          ["Məsuliyyətli giriş", "Hesab sərhədləri və alətlər arasındakı nəzarətli bağlantılar ortaq işi və aydın məsuliyyəti dəstəkləyir."]
+        ]
+      }
+    },
+    {
+      "slug": "concordia", "name": "The Concordia Forum", "logo": "concordia.png", "url": "https://www.concordiaforum.com/",
+      "en": {
+        "sector": "Events · Leadership gatherings and retreats",
+        "headline": "Bringing structure to the work behind an event.",
+        "intro": "Event operations systemisation for The Concordia Forum. The focus is the coordination behind the gathering: making recurring work clearer, more consistent and easier for the people delivering it to manage.",
+        "bullets": [
+          ["Process systemisation", "Breaking recurring event operations into a clear working structure, so the team can distinguish the stages of preparation and the decisions each stage requires."],
+          ["Operational consistency", "Turning repeated coordination into a more repeatable process, carrying useful structure from one gathering to the next."],
+          ["Clearer handoffs", "Making the movement of work between people easier to understand, with less reliance on someone remembering every detail of the process."],
+          ["Practical team workflows", "Shaping the system around the way an events team actually works, including preparation, changes and the need to keep multiple moving parts aligned."],
+          ["Room for human judgement", "Systemising the administrative work while keeping the decisions about people, relationships and the event experience with the organisers."]
+        ]
+      },
+      "az": {
+        "sector": "Tədbirlər · Liderlik görüşləri və toplantılar",
+        "headline": "Tədbirin arxasındakı işə aydın struktur.",
+        "intro": "The Concordia Forum üçün tədbir əməliyyatlarının sistemləşdirilməsi. Məqsəd hazırlıq və koordinasiya işlərini daha aydın, ardıcıl və komanda üçün idarəolunan etməkdir.",
+        "bullets": [
+          ["Proseslərin sistemləşdirilməsi", "Təkrarlanan əməliyyatların aydın mərhələlərə və hər mərhələdə tələb olunan qərarlara ayrılması."],
+          ["Əməliyyat ardıcıllığı", "Faydalı iş strukturunun bir tədbirdən digərinə daşınması və təkrar istifadə edilməsi."],
+          ["Aydın iş ötürülməsi", "İşin insanlar arasında keçidinin daha aydın olması və tək bir şəxsin yaddaşından asılılığın azaldılması."],
+          ["Praktik komanda işi", "Hazırlıq, dəyişikliklər və paralel işlərin uzlaşdırılması daxil olmaqla sistemin tədbir komandasının işinə uyğunlaşdırılması."],
+          ["İnsan qərarlarına yer", "İnzibati iş sistemləşdirilir, insanlar və tədbir təcrübəsi ilə bağlı qərarlar təşkilatçılarda qalır."]
+        ]
+      }
+    },
+    {
+      "slug": "imamconnect", "name": "ImamConnect", "logo": "imamconnect.svg", "url": "https://www.imamconnect.com/",
+      "en": {
+        "sector": "Marketplace · Community and professional services",
+        "headline": "Automation around a service marketplace.",
+        "intro": "Marketplace platform and automation work for ImamConnect, which connects people with Islamic service providers. The scope centres on making the service journey and the operational work behind the platform easier to manage.",
+        "bullets": [
+          ["Marketplace workflows", "Supporting the steps that connect a person seeking a service with the professionals offering it, within the context of a dedicated marketplace."],
+          ["Operational automation", "Identifying recurring platform administration that can follow a consistent process, reducing dependence on repeated manual handling."],
+          ["Provider and customer journeys", "Considering both sides of the marketplace together, so changes to one part of the experience make sense for the people on the other side."],
+          ["Administrative tooling", "Working on the platform behind the public experience, where the team needs to oversee services and keep day-to-day operations moving."],
+          ["Service-sensitive design", "Keeping the experience understandable and respectful in a marketplace where users may be seeking personal, family or community support."]
+        ]
+      },
+      "az": {
+        "sector": "Xidmət platforması · İcma və peşəkar xidmətlər",
+        "headline": "Xidmət platformasının iş axınlarının avtomatlaşdırılması.",
+        "intro": "İnsanları İslami xidmət təminatçıları ilə birləşdirən ImamConnect üçün platforma və avtomatlaşdırma işi. Diqqət xidmət yolunun və arxadakı əməliyyatların daha rahat idarə edilməsinə yönəlir.",
+        "bullets": [
+          ["Platforma iş axınları", "Xidmət axtaran şəxsi onu təklif edən mütəxəssislərlə əlaqələndirən mərhələlərin dəstəklənməsi."],
+          ["Əməliyyat avtomatlaşdırması", "Təkrarlanan idarəetmə işlərinin ardıcıl prosesə çevrilməsi və əl əməyindən asılılığın azaldılması."],
+          ["Hər iki tərəfin təcrübəsi", "Xidmət təminatçısının və müştərinin yolunun birlikdə nəzərdən keçirilməsi."],
+          ["İdarəetmə alətləri", "Komandanın xidmətlərə nəzarət etdiyi və gündəlik işi davam etdirdiyi daxili platforma üzərində iş."],
+          ["Həssas xidmətlərə uyğun dizayn", "Şəxsi, ailəvi və icma dəstəyi axtaran insanlar üçün anlaşılan və hörmətli istifadə təcrübəsi."]
+        ]
+      }
+    },
+    {
+      "slug": "waterspring", "name": "Waterspring Ventures", "logo": "waterspring.png", "url": null,
+      "en": {
+        "sector": "Venture capital · Investor and portfolio intelligence",
+        "headline": "An AI-assisted platform for investment operations.",
+        "intro": "A bespoke investor relationship and portfolio intelligence platform for Waterspring Ventures. It brings investment context, company information and recurring preparation into a shared working environment for the fund team.",
+        "bullets": [
+          ["Portfolio intelligence", "Company records, reporting context and portfolio information provide a consistent starting point for reviewing the businesses the team works with."],
+          ["Document-led analysis", "Board packs and selected documents become context for research and analysis, keeping the work connected to the material being reviewed."],
+          ["Investor relationships", "Investor information and relationship context sit alongside the operational work, helping the team prepare with a clearer picture of the relevant people and organisations."],
+          ["Meeting preparation and follow-up", "Preparation, meeting context and subsequent tasks connect the conversation to the work that needs to happen afterwards."],
+          ["Private knowledge boundaries", "Personal connected information is kept distinct from shared fund knowledge, with explicit sharing rather than treating every connected document as team-wide material."]
+        ]
+      },
+      "az": {
+        "sector": "Vençur kapitalı · İnvestor və portfel məlumatları",
+        "headline": "İnvestisiya əməliyyatları üçün süni intellekt dəstəkli platforma.",
+        "intro": "Waterspring Ventures üçün investor münasibətləri və portfel məlumatlarının idarə edilməsi platforması. Şirkət məlumatları, investisiya konteksti və təkrarlanan hazırlıq işləri ortaq mühitdə birləşir.",
+        "bullets": [
+          ["Portfel məlumatları", "Şirkət qeydləri və hesabat məlumatları portfelin nəzərdən keçirilməsi üçün vahid başlanğıc yaradır."],
+          ["Sənədlərə əsaslanan təhlil", "İdarə heyəti hesabatları və seçilmiş sənədlər araşdırma və təhlil üçün kontekst olur."],
+          ["İnvestor münasibətləri", "İnvestor və əlaqə məlumatları əməliyyat işi ilə yanaşı saxlanılır."],
+          ["Görüş hazırlığı və sonrakı işlər", "Görüş konteksti və tapşırıqlar söhbəti sonrakı fəaliyyətlə əlaqələndirir."],
+          ["Şəxsi məlumat sərhədləri", "Şəxsi mənbələr ortaq fond məlumatından ayrılır. Sənədlər yalnız açıq paylaşma qərarı ilə komanda üçün əlçatan olur."]
+        ]
+      }
+    },
+    {
+      "slug": "pearl-lemon", "name": "Pearl Lemon", "logo": "pearl-lemon.webp", "url": "https://pearllemon.com/",
+      "en": {
+        "sector": "SEO and marketing · Custom SaaS development",
+        "headline": "Custom software shaped around an agency’s work.",
+        "intro": "Custom SaaS buildout work for Pearl Lemon, a London-based SEO and marketing agency. The engagement focuses on translating a business workflow into dedicated software, with the agency’s practical operating needs guiding the build.",
+        "bullets": [
+          ["Workflow-to-product translation", "Taking the work the business needs to carry out and expressing it as a focused software experience, with clear steps and a useful destination for the user."],
+          ["Bespoke SaaS buildout", "Developing dedicated product functionality around the brief rather than making the organisation fit the assumptions of an unrelated off-the-shelf tool."],
+          ["Operational usability", "Keeping the recurring user journey in view as the product takes shape, so the software supports the real task as well as the underlying functionality."],
+          ["Iterative development", "Refining the build through the practical details that emerge when a business process becomes a usable application."],
+          ["A business-led scope", "Keeping the focus on the agency’s required capability and the work the product supports, with commercially sensitive product details omitted from this overview."]
+        ]
+      },
+      "az": {
+        "sector": "SEO və marketinq · Xüsusi SaaS hazırlanması",
+        "headline": "Agentliyin işinə uyğun hazırlanmış proqram.",
+        "intro": "Londonda yerləşən SEO və marketinq agentliyi Pearl Lemon üçün xüsusi SaaS hazırlanması. Biznesin iş axını əməliyyat ehtiyaclarına uyğun proqram məhsuluna çevrilir.",
+        "bullets": [
+          ["İş axınından məhsula", "Biznes tapşırıqlarının aydın addımları və nəticəsi olan proqram təcrübəsinə çevrilməsi."],
+          ["Xüsusi SaaS hazırlanması", "Təşkilatı hazır alətin məhdudiyyətlərinə uyğunlaşdırmaq əvəzinə brifə uyğun funksionallığın qurulması."],
+          ["Gündəlik istifadənin rahatlığı", "Funksionallıqla yanaşı təkrarlanan istifadəçi yolunun da nəzərə alınması."],
+          ["Mərhələli inkişaf", "Biznes prosesinin tətbiqə çevrilməsi zamanı ortaya çıxan praktiki tələblər əsasında məhsulun təkmilləşdirilməsi."],
+          ["Biznesə əsaslanan əhatə", "Diqqət agentliyin ehtiyac duyduğu imkanlara yönəlir. Kommersiya baxımından həssas məhsul təfərrüatları paylaşılmır."]
+        ]
+      }
+    },
+    {
+      "slug": "halalbooking", "name": "HalalBooking", "logo": "halalbooking.svg", "url": "https://halalbooking.com/",
+      "en": {
+        "sector": "Travel · Internal process automation",
+        "headline": "Helping a travel team work through complex information.",
+        "intro": "Internal process automation and team delivery for HalalBooking, a travel booking platform. The work includes structured research and review around accommodation information, where small differences in source material can change an operational decision.",
+        "bullets": [
+          ["Structured information processing", "Turning long accommodation notes and related information into consistent records that an operations team can review and compare."],
+          ["Capacity assessment support", "Helping distinguish accommodation capacity, guest conditions and conflicting information, with the relevant context available for a reviewer."],
+          ["Evidence-backed research", "Keeping research findings connected to consulted sources, so a conclusion can be checked against the underlying material."],
+          ["Exception triage", "Separating clear cases from inconsistencies and unresolved questions, directing human attention to the work that needs judgement."],
+          ["Team-level delivery", "Combining automation with reviewable outputs and quality checks. The emphasis is on useful operational work for the team, with outcomes attributed to the wider delivery effort."]
+        ]
+      },
+      "az": {
+        "sector": "Turizm · Daxili proseslərin avtomatlaşdırılması",
+        "headline": "Turizm komandasına mürəkkəb məlumatlarla işləməkdə dəstək.",
+        "intro": "HalalBooking səyahət platforması üçün daxili proses avtomatlaşdırması və komanda işi. Yaşayış məlumatlarının strukturlaşdırılması və nəzərdən keçirilməsi əməliyyat qərarlarını dəstəkləyir.",
+        "bullets": [
+          ["Məlumatın strukturlaşdırılması", "Uzun yerləşmə qeydlərinin komandanın müqayisə edə biləcəyi ardıcıl qeydlərə çevrilməsi."],
+          ["Tutumun qiymətləndirilməsi", "Yerləşmə tutumu, qonaq şərtləri və ziddiyyətli məlumatların müvafiq kontekstlə birlikdə nəzərdən keçirilməsi."],
+          ["Sübutlara əsaslanan araşdırma", "Nəticələrin istifadə olunan mənbələrlə əlaqəsinin saxlanılması və yoxlanıla bilməsi."],
+          ["İstisnaların ayrılması", "Aydın halların ziddiyyətlərdən və açıq suallardan ayrılması, insan diqqətinin qərar tələb edən işə yönəldilməsi."],
+          ["Komanda səviyyəsində nəticə", "Avtomatlaşdırmanın yoxlanıla bilən nəticələr və keyfiyyət nəzarəti ilə birləşdirilməsi. Nəticələr ümumi komanda işinin bir hissəsi kimi təqdim olunur."]
+        ]
+      }
+    },
+    {
+      "slug": "karmawolf", "name": "Karma Wolf", "logo": "karmawolf.png", "url": "https://www.karmawolf.com/",
+      "en": {
+        "sector": "Social media marketing · Agency systems",
+        "headline": "Systems support for a social media agency.",
+        "intro": "Agency systems and workflow work for Karma Wolf, a social media marketing business. The focus is the operational structure around service delivery, giving recurring work a clearer path while preserving the team’s creative and client judgement.",
+        "bullets": [
+          ["Workflow structure", "Organising recurring agency work into a process that is easier to follow, with clearer progression between preparation and delivery."],
+          ["Repetitive process support", "Identifying the administrative steps that repeat across assignments and shaping systems around that recurring work."],
+          ["Consistent working information", "Giving the team a more structured basis for handling the information involved in a piece of client work."],
+          ["Delivery coordination", "Supporting the handoffs around agency services, where work moves between people and needs to stay connected to the original requirement."],
+          ["Creative responsibility", "Keeping decisions about the message, the client and the quality of the finished work with the people responsible for it."]
+        ]
+      },
+      "az": {
+        "sector": "Sosial media marketinqi · Agentlik sistemləri",
+        "headline": "Sosial media agentliyi üçün sistem dəstəyi.",
+        "intro": "Karma Wolf üçün agentlik sistemləri və iş axınları. Xidmətin göstərilməsi ətrafındakı əməliyyatlar strukturlaşdırılır, yaradıcı və müştəri ilə bağlı qərarlar komandada qalır.",
+        "bullets": [
+          ["İş axını strukturu", "Hazırlıq və çatdırılma arasında daha aydın keçidi olan təkrarlanan iş prosesi."],
+          ["Təkrarlanan proseslərə dəstək", "Tapşırıqlar arasında təkrarlanan inzibati addımların müəyyənləşdirilməsi və sistemləşdirilməsi."],
+          ["Ardıcıl iş məlumatları", "Müştəri işi üçün lazım olan məlumatların daha strukturlaşdırılmış əsasda idarə edilməsi."],
+          ["İşin koordinasiyası", "İnsanlar arasında ötürülən işin ilkin tələb ilə əlaqəsinin qorunması."],
+          ["Yaradıcı məsuliyyət", "Mesaj, müştəri və işin keyfiyyəti haqqında qərarların məsul şəxslərdə qalması."]
+        ]
+      }
+    },
+    {
+      "slug": "dealsphere", "name": "Dealsphere", "logo": "dealsphere.png", "url": "https://dealsphere.co.uk/",
+      "en": {
+        "sector": "Mergers and acquisitions · Platform tooling",
+        "headline": "Purpose-built tooling for the work around a deal.",
+        "intro": "M&A platform tooling for Dealsphere. The project applies custom software to a business where company information, transaction context and the next piece of work need to remain connected throughout a considered decision-making process.",
+        "bullets": [
+          ["A focused M&A tool", "Translating a deal-related business process into dedicated software, with the working requirements of the M&A team guiding the product."],
+          ["Structured deal context", "Giving the information involved in the workflow a consistent shape, so the next task starts from a clearer basis."],
+          ["Process visibility", "Making the progression of work easier to understand across the stages covered by the platform, rather than relying entirely on informal coordination."],
+          ["Practical decision support", "Supporting how the team organises and works with information while keeping transaction assessment and commercial decisions with the professionals involved."],
+          ["Bespoke implementation", "Building around the organisation’s brief and terminology. Individual transactions, counterparties and commercially sensitive details are excluded from this description."]
+        ]
+      },
+      "az": {
+        "sector": "Birləşmə və satınalmalar · Platforma alətləri",
+        "headline": "Sövdələşmə ətrafındakı iş üçün xüsusi alətlər.",
+        "intro": "Dealsphere üçün birləşmə və satınalma platforması alətləri. Şirkət məlumatları, sövdələşmə konteksti və növbəti tapşırıq qərar prosesi boyunca əlaqəli saxlanılır.",
+        "bullets": [
+          ["İxtisaslaşmış alət", "Sövdələşmə ilə bağlı biznes prosesinin komandanın tələblərinə uyğun proqrama çevrilməsi."],
+          ["Strukturlaşdırılmış kontekst", "İş axınındakı məlumatların növbəti tapşırıq üçün aydın və ardıcıl formaya salınması."],
+          ["Prosesin görünməsi", "Platformanın əhatə etdiyi mərhələlər üzrə işin irəliləyişinin daha asan başa düşülməsi."],
+          ["Qərar üçün praktiki dəstək", "Məlumatlarla işi dəstəkləməklə yanaşı qiymətləndirmə və kommersiya qərarlarının mütəxəssislərdə saxlanılması."],
+          ["Xüsusi tətbiq", "Təşkilatın brifinə və terminologiyasına uyğun quruluş. Ayrı-ayrı sövdələşmələr və həssas təfərrüatlar paylaşılmır."]
+        ]
+      }
+    },
+    {
+      "slug": "optimax", "name": "Optimax Software", "logo": "optimax.png", "url": "https://optimaxsoftware.com/",
+      "en": {
+        "sector": "Software studio · Product engineering",
+        "headline": "Product-focused software development.",
+        "intro": "Software development work with Optimax Software, a London-based studio with a background in financial technology and business applications. The focus is turning product requirements into usable software with a clear relationship between the interface and the underlying workflow.",
+        "bullets": [
+          ["Product engineering", "Connecting the desired user capability to the application behaviour needed to support it, keeping the purpose of the product visible through implementation."],
+          ["Workflow-led interfaces", "Working from the tasks people need to perform, so information, controls and the next action fit into a coherent experience."],
+          ["Connected application behaviour", "Considering the interface alongside the data and service interactions behind it, rather than treating the screen as a separate piece of the product."],
+          ["Iterative refinement", "Developing and improving the practical details that determine whether a feature is useful in everyday work."],
+          ["Studio collaboration", "Contributing within a wider software delivery environment, with the scope shaped by the product and the team responsible for it."]
+        ]
+      },
+      "az": {
+        "sector": "Proqram studiyası · Məhsul mühəndisliyi",
+        "headline": "Məhsula yönəlmiş proqram hazırlanması.",
+        "intro": "Maliyyə texnologiyaları və biznes tətbiqləri təcrübəsi olan London studiyası Optimax Software ilə proqram işi. Məhsul tələbləri interfeys və iş axını arasında aydın əlaqəsi olan tətbiqə çevrilir.",
+        "bullets": [
+          ["Məhsul mühəndisliyi", "İstifadəçinin ehtiyac duyduğu imkanla onu təmin edən tətbiq davranışının əlaqələndirilməsi."],
+          ["İşə uyğun interfeyslər", "Məlumat, idarəetmə elementləri və növbəti addımın istifadəçinin tapşırığı ətrafında təşkili."],
+          ["Əlaqəli tətbiq davranışı", "İnterfeysin arxadakı məlumat və xidmət qarşılıqlı əlaqələri ilə birlikdə nəzərdən keçirilməsi."],
+          ["Mərhələli təkmilləşdirmə", "Funksiyanı gündəlik işdə faydalı edən praktiki təfərrüatların inkişaf etdirilməsi."],
+          ["Studiya əməkdaşlığı", "Məhsulun və məsul komandanın ehtiyaclarına uyğun daha geniş proqram hazırlama işinə töhfə."]
+        ]
+      }
+    },
+    {
+      "slug": "lamatrader", "name": "LamaTrader", "logo": "lamatrader.webp", "url": "https://lamatrader.com/",
+      "en": {
+        "sector": "Fintech · Trading and market intelligence",
+        "headline": "Research, trading tools and AI in one workspace.",
+        "intro": "LamaTrader is a trading workstation that brings market research, charts, watchlists, orders and portfolio context together. Its AI layer helps users explore information and develop more systematic workflows while retaining explicit control over trading actions.",
+        "bullets": [
+          ["A configurable trading workspace", "Charts, market views, watchlists and portfolio information can be organised around the way the user works, from a focused daily view to a more detailed terminal."],
+          ["AI-assisted research", "An assistant helps explore market context and questions within the workspace, keeping research close to the information the trader is already reviewing."],
+          ["Strategy development", "Code-based strategy workflows connect an idea to explicit rules and reproducible backtests, making assumptions and results available for inspection."],
+          ["Paper trading and progression", "Simulation and paper workflows provide a place to test behaviour before considering a move to live operation."],
+          ["Visible user control", "Manual trading remains directly usable. AI suggestions, platform checks and brokerage interactions have distinct roles, with review and permissions around consequential actions."]
+        ]
+      },
+      "az": {
+        "sector": "Maliyyə texnologiyaları · Ticarət və bazar məlumatları",
+        "headline": "Araşdırma, ticarət alətləri və süni intellekt bir mühitdə.",
+        "intro": "LamaTrader bazar araşdırması, qrafiklər, izləmə siyahıları, sifarişlər və portfel kontekstini birləşdirən ticarət iş mühitidir. Süni intellekt məlumat araşdırmasını və sistemli işi dəstəkləyir, əməliyyatlara nəzarət istifadəçidə qalır.",
+        "bullets": [
+          ["Fərdiləşdirilən iş mühiti", "Qrafiklər, bazar görünüşləri və portfel məlumatları istifadəçinin iş üsuluna uyğun təşkil edilir."],
+          ["Araşdırma köməkçisi", "Süni intellekt mövcud iş mühitində bazar kontekstini və sualları araşdırmağa kömək edir."],
+          ["Strategiya hazırlanması", "Kod əsaslı iş axınları ideyanı açıq qaydalara və təkrar yoxlanıla bilən tarixi sınaqlara bağlayır."],
+          ["Sınaq ticarəti", "Simulyasiya və sınaq hesabları canlı əməliyyata keçidi nəzərdən keçirmədən əvvəl davranışı yoxlamağa imkan verir."],
+          ["İstifadəçi nəzarəti", "Əl ilə ticarət əlçatan qalır. Süni intellekt təklifləri, platforma yoxlamaları və broker əməliyyatları ayrı rollara malikdir."]
+        ]
+      }
+    },
+    {
+      "slug": "grademy", "name": "Grademy", "logo": "grademy.png", "url": "https://grademy.work/",
+      "en": {
+        "sector": "Edtech · Adaptive AI tutoring",
+        "headline": "A tutor that carries understanding into the next lesson.",
+        "intro": "Grademy is an adaptive learning platform centred on a persistent AI tutor. It connects explanation, practice, marking and review, using what the learner actually attempts to shape the next teaching move.",
+        "bullets": [
+          ["Continuity between sessions", "The tutor keeps context about learning difficulties and useful teaching approaches, so the next session can build on the previous one."],
+          ["Teaching from real attempts", "Questions and feedback respond to the learner’s working and mistakes, with fresh checks to distinguish understanding from following a hint."],
+          ["Visual explanation", "Worked steps and visual teaching support the conversation, giving the learner another way to follow an explanation when words alone are insufficient."],
+          ["Course-aware learning", "Selected curriculum and uploaded materials provide context for teaching and practice, with coverage depending on the course and available material."],
+          ["Connected practice and review", "What happens in a lesson informs what needs revisiting, helping turn isolated questions into an ongoing learning plan."],
+          ["Appropriate visibility", "Learners, families and educators have different needs. Progress evidence and next steps can be shared within consent boundaries while private tutor conversations remain private by default."]
+        ]
+      },
+      "az": {
+        "sector": "Təhsil texnologiyaları · Adaptiv süni intellekt müəllimi",
+        "headline": "Öyrəndiklərini növbəti dərsə daşıyan müəllim.",
+        "intro": "Grademy davamlı süni intellekt müəllimi ətrafında qurulmuş adaptiv təhsil platformasıdır. İzah, məşq, qiymətləndirmə və təkrarı birləşdirir, növbəti tədris addımını öyrənənin cəhdləri əsasında seçir.",
+        "bullets": [
+          ["Dərslər arasında davamlılıq", "Müəllim çətinlikləri və faydalı izah üsullarını yadda saxlayır ki, növbəti dərs əvvəlkinə əsaslansın."],
+          ["Real cəhdlərdən öyrətmə", "Əks əlaqə öyrənənin işinə və səhvlərinə uyğunlaşır. Yeni yoxlamalar müstəqil anlayışı ayırd etməyə kömək edir."],
+          ["Vizual izah", "Həll addımları və vizual tədris söhbəti tamamlayaraq mövzunu izləmək üçün əlavə yol yaradır."],
+          ["Kursa uyğun öyrənmə", "Seçilmiş kurikulum və yüklənmiş materiallar kontekst yaradır. Əhatə kursdan və mövcud materialdan asılıdır."],
+          ["Məşq və təkrarın əlaqəsi", "Dərsdə baş verənlər nəyin təkrar edilməli olduğunu müəyyənləşdirməyə kömək edir."],
+          ["Uyğun məlumat paylaşımı", "Öyrənən, ailə və müəllim üçün irəliləyiş məlumatları razılıq sərhədləri daxilində paylaşılır. Şəxsi söhbətlər standart olaraq məxfi qalır."]
+        ]
+      }
+    }
+  ]
+}

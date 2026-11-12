@@ -1,0 +1,14 @@
+Enamplify palette
+
+Wine (primary ground)   #502d36   rgb(80,45,54)
+Wine deep               #3c2229   rgb(60,34,41)
+Paper (letter / light)  #f3eee5   rgb(243,238,229)
+Ink (text)              #242321   rgb(36,35,33)
+Bronze (rules, accents) #9b8269   rgb(155,130,105)
+
+Type: Libre Caslon Display (mark, wordmark, headlines), Libre Caslon Text Italic (accents),
+DM Sans (body). All SIL Open Font License; files in public/fonts/.
+
+Mark: primary is the paper E on a wine square; inverted is the wine E on paper.
+Square corners. Keep clear space of at least a quarter of the square on every side.
+The E is centred inside a circle crop, so the square files work as round avatars.

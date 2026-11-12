@@ -1,0 +1,902 @@
+[
+  {
+    "id": "legal-lawyer",
+    "collection": "us",
+    "role": {
+      "en": "a lawyer",
+      "az": "hüquqşünas"
+    },
+    "category": {
+      "en": "Professional services",
+      "az": "Peşəkar xidmətlər"
+    },
+    "title": {
+      "en": "Every matter, in context.",
+      "az": "Hər iş öz konteksti ilə."
+    },
+    "tabs": {
+      "en": [
+        "Matters",
+        "Documents",
+        "Deadlines"
+      ],
+      "az": [
+        "İşlər",
+        "Sənədlər",
+        "Son tarixlər"
+      ]
+    }
+  },
+  {
+    "id": "accounting-accountant",
+    "collection": "us",
+    "role": {
+      "en": "an accountant",
+      "az": "mühasib"
+    },
+    "category": {
+      "en": "Professional services",
+      "az": "Peşəkar xidmətlər"
+    },
+    "title": {
+      "en": "Close the books with a clearer view.",
+      "az": "Hesabları daha aydın mənzərə ilə bağlayın."
+    },
+    "tabs": {
+      "en": [
+        "Clients",
+        "Reconciliation",
+        "Review notes"
+      ],
+      "az": [
+        "Müştərilər",
+        "Uzlaşdırma",
+        "Yoxlama qeydləri"
+      ]
+    }
+  },
+  {
+    "id": "real-estate-agent",
+    "collection": "us",
+    "role": {
+      "en": "a property agent",
+      "az": "daşınmaz əmlak agenti"
+    },
+    "category": {
+      "en": "Property & places",
+      "az": "Əmlak və məkanlar"
+    },
+    "title": {
+      "en": "A property’s whole story, together.",
+      "az": "Əmlakın bütün hekayəsi bir yerdə."
+    },
+    "tabs": {
+      "en": [
+        "Properties",
+        "Viewings",
+        "Offers"
+      ],
+      "az": [
+        "Obyektlər",
+        "Baxışlar",
+        "Təkliflər"
+      ]
+    }
+  },
+  {
+    "id": "pr-agency",
+    "collection": "us",
+    "role": {
+      "en": "a PR team",
+      "az": "PR komandası"
+    },
+    "category": {
+      "en": "Creative & communications",
+      "az": "Yaradıcılıq və kommunikasiya"
+    },
+    "title": {
+      "en": "From the news cycle to the right story.",
+      "az": "Xəbər axınından doğru hekayəyə."
+    },
+    "tabs": {
+      "en": [
+        "Clients",
+        "Coverage",
+        "Press room"
+      ],
+      "az": [
+        "Müştərilər",
+        "Mediada işıqlandırma",
+        "Mətbuat otağı"
+      ]
+    }
+  },
+  {
+    "id": "marketing-creative",
+    "collection": "us",
+    "role": {
+      "en": "a creative team",
+      "az": "yaradıcı komanda"
+    },
+    "category": {
+      "en": "Creative & communications",
+      "az": "Yaradıcılıq və kommunikasiya"
+    },
+    "title": {
+      "en": "Give the brief room to become something.",
+      "az": "Tapşırığa böyüməyə yer verin."
+    },
+    "tabs": {
+      "en": [
+        "Briefs",
+        "Campaigns",
+        "Assets"
+      ],
+      "az": [
+        "Tapşırıqlar",
+        "Kampaniyalar",
+        "Materiallar"
+      ]
+    }
+  },
+  {
+    "id": "clinical-research",
+    "collection": "us",
+    "role": {
+      "en": "a research coordinator",
+      "az": "tədqiqat koordinatoru"
+    },
+    "category": {
+      "en": "Health & research",
+      "az": "Səhiyyə və tədqiqat"
+    },
+    "title": {
+      "en": "Keep the study picture connected.",
+      "az": "Tədqiqatın mənzərəsini bütöv saxlayın."
+    },
+    "tabs": {
+      "en": [
+        "Studies",
+        "Sites",
+        "Document review"
+      ],
+      "az": [
+        "Tədqiqatlar",
+        "Mərkəzlər",
+        "Sənədlərin yoxlanması"
+      ]
+    }
+  },
+  {
+    "id": "founder-operator",
+    "collection": "us",
+    "role": {
+      "en": "a founder",
+      "az": "təsisçi"
+    },
+    "category": {
+      "en": "Business & operations",
+      "az": "Biznes və əməliyyatlar"
+    },
+    "title": {
+      "en": "A little less scattered. A little more yours.",
+      "az": "Bir az az dağınıq. Bir az daha sizin."
+    },
+    "tabs": {
+      "en": [
+        "Today",
+        "Customers",
+        "Decisions"
+      ],
+      "az": [
+        "Bu gün",
+        "Müştərilər",
+        "Qərarlar"
+      ]
+    }
+  },
+  {
+    "id": "recruitment-hiring",
+    "collection": "us",
+    "role": {
+      "en": "a recruiter",
+      "az": "işə qəbul mütəxəssisi"
+    },
+    "category": {
+      "en": "Professional services",
+      "az": "Peşəkar xidmətlər"
+    },
+    "title": {
+      "en": "Keep the person behind the process.",
+      "az": "Prosesin arxasındakı insanı unutmayın."
+    },
+    "tabs": {
+      "en": [
+        "Roles",
+        "Candidates",
+        "Interviews"
+      ],
+      "az": [
+        "Vakansiyalar",
+        "Namizədlər",
+        "Müsahibələr"
+      ]
+    }
+  },
+  {
+    "id": "ecommerce-merchant",
+    "collection": "us",
+    "role": {
+      "en": "an ecommerce team",
+      "az": "e-ticarət komandası"
+    },
+    "category": {
+      "en": "Business & operations",
+      "az": "Biznes və əməliyyatlar"
+    },
+    "title": {
+      "en": "Make the trading day easier to read.",
+      "az": "Satış gününü daha asan oxuyun."
+    },
+    "tabs": {
+      "en": [
+        "Products",
+        "Orders",
+        "Trading notes"
+      ],
+      "az": [
+        "Məhsullar",
+        "Sifarişlər",
+        "Satış qeydləri"
+      ]
+    }
+  },
+  {
+    "id": "architecture-practice",
+    "collection": "us",
+    "role": {
+      "en": "an architect",
+      "az": "memar"
+    },
+    "category": {
+      "en": "Property & places",
+      "az": "Əmlak və məkanlar"
+    },
+    "title": {
+      "en": "Carry the brief through every iteration.",
+      "az": "Tapşırığı hər versiyada qoruyun."
+    },
+    "tabs": {
+      "en": [
+        "Projects",
+        "Drawings",
+        "Decisions"
+      ],
+      "az": [
+        "Layihələr",
+        "Çertyojlar",
+        "Qərarlar"
+      ]
+    }
+  },
+  {
+    "id": "construction-project",
+    "collection": "us",
+    "role": {
+      "en": "a project manager",
+      "az": "layihə meneceri"
+    },
+    "category": {
+      "en": "Property & places",
+      "az": "Əmlak və məkanlar"
+    },
+    "title": {
+      "en": "A clearer picture of what needs attention.",
+      "az": "Diqqət tələb edən işlərin daha aydın mənzərəsi."
+    },
+    "tabs": {
+      "en": [
+        "Programme",
+        "Site notes",
+        "RFIs"
+      ],
+      "az": [
+        "İş qrafiki",
+        "Obyekt qeydləri",
+        "Məlumat sorğuları"
+      ]
+    }
+  },
+  {
+    "id": "hospitality-hotel",
+    "collection": "us",
+    "role": {
+      "en": "a hotel operator",
+      "az": "otel rəhbəri"
+    },
+    "category": {
+      "en": "Business & operations",
+      "az": "Biznes və əməliyyatlar"
+    },
+    "title": {
+      "en": "Make a thoughtful handover part of the day.",
+      "az": "Diqqətli növbə təhvilini günün bir hissəsinə çevirin."
+    },
+    "tabs": {
+      "en": [
+        "Today",
+        "Guest care",
+        "Maintenance"
+      ],
+      "az": [
+        "Bu gün",
+        "Qonaq qayğısı",
+        "Texniki xidmət"
+      ]
+    }
+  },
+  {
+    "id": "manufacturing-operations",
+    "collection": "us",
+    "role": {
+      "en": "an operations lead",
+      "az": "əməliyyatlar rəhbəri"
+    },
+    "category": {
+      "en": "Industry & logistics",
+      "az": "Sənaye və logistika"
+    },
+    "title": {
+      "en": "See the work around the production plan.",
+      "az": "İstehsal planı ətrafındakı işi görün."
+    },
+    "tabs": {
+      "en": [
+        "Production",
+        "Quality",
+        "Suppliers"
+      ],
+      "az": [
+        "İstehsal",
+        "Keyfiyyət",
+        "Təchizatçılar"
+      ]
+    }
+  },
+  {
+    "id": "logistics-dispatch",
+    "collection": "us",
+    "role": {
+      "en": "a dispatch team",
+      "az": "dispetçer komandası"
+    },
+    "category": {
+      "en": "Industry & logistics",
+      "az": "Sənaye və logistika"
+    },
+    "title": {
+      "en": "Give the next shift the context it needs.",
+      "az": "Növbəti növbəyə lazım olan konteksti ötürün."
+    },
+    "tabs": {
+      "en": [
+        "Shipments",
+        "Exceptions",
+        "Handover"
+      ],
+      "az": [
+        "Daşımalar",
+        "İstisnalar",
+        "Növbə təhvili"
+      ]
+    }
+  },
+  {
+    "id": "nonprofit-programme",
+    "collection": "us",
+    "role": {
+      "en": "a programme lead",
+      "az": "proqram rəhbəri"
+    },
+    "category": {
+      "en": "People & community",
+      "az": "İnsanlar və icma"
+    },
+    "title": {
+      "en": "Keep the mission close to the work.",
+      "az": "Missiyanı işə yaxın saxlayın."
+    },
+    "tabs": {
+      "en": [
+        "Programmes",
+        "Delivery",
+        "Funding"
+      ],
+      "az": [
+        "Proqramlar",
+        "İcra",
+        "Maliyyələşmə"
+      ]
+    }
+  },
+  {
+    "id": "financial-adviser",
+    "collection": "us",
+    "role": {
+      "en": "a financial adviser",
+      "az": "maliyyə məsləhətçisi"
+    },
+    "category": {
+      "en": "Professional services",
+      "az": "Peşəkar xidmətlər"
+    },
+    "title": {
+      "en": "Prepare carefully for a more useful conversation.",
+      "az": "Daha faydalı söhbət üçün diqqətlə hazırlaşın."
+    },
+    "tabs": {
+      "en": [
+        "Clients",
+        "Review meetings",
+        "Documents"
+      ],
+      "az": [
+        "Müştərilər",
+        "Dəyərləndirmə görüşləri",
+        "Sənədlər"
+      ]
+    }
+  },
+  {
+    "id": "insurance-broker",
+    "collection": "us",
+    "role": {
+      "en": "an insurance broker",
+      "az": "sığorta brokeri"
+    },
+    "category": {
+      "en": "Professional services",
+      "az": "Peşəkar xidmətlər"
+    },
+    "title": {
+      "en": "Bring the details into the renewal conversation.",
+      "az": "Təfərrüatları yenilənmə söhbətinə gətirin."
+    },
+    "tabs": {
+      "en": [
+        "Clients",
+        "Renewals",
+        "Policy review"
+      ],
+      "az": [
+        "Müştərilər",
+        "Yenilənmələr",
+        "Sığorta polisinin yoxlanması"
+      ]
+    }
+  },
+  {
+    "id": "media-producer",
+    "collection": "us",
+    "role": {
+      "en": "a producer",
+      "az": "prodüser"
+    },
+    "category": {
+      "en": "Creative & communications",
+      "az": "Yaradıcılıq və kommunikasiya"
+    },
+    "title": {
+      "en": "Keep the story and the production together.",
+      "az": "Hekayəni və istehsalı bir yerdə saxlayın."
+    },
+    "tabs": {
+      "en": [
+        "Productions",
+        "Rushes",
+        "Paper edit"
+      ],
+      "az": [
+        "İstehsallar",
+        "Xam çəkilişlər",
+        "Montaj ssenarisi"
+      ]
+    }
+  },
+  {
+    "id": "consulting-delivery",
+    "collection": "us",
+    "role": {
+      "en": "a consultant",
+      "az": "konsultant"
+    },
+    "category": {
+      "en": "Professional services",
+      "az": "Peşəkar xidmətlər"
+    },
+    "title": {
+      "en": "Let the evidence travel with the recommendation.",
+      "az": "Sübutlar tövsiyə ilə birlikdə getsin."
+    },
+    "tabs": {
+      "en": [
+        "Engagements",
+        "Evidence",
+        "Deliverables"
+      ],
+      "az": [
+        "Layihələr",
+        "Sübutlar",
+        "Təhvil sənədləri"
+      ]
+    }
+  },
+  {
+    "id": "fitness-coach",
+    "collection": "us",
+    "role": {
+      "en": "a coaching business",
+      "az": "kouçinq biznesi"
+    },
+    "category": {
+      "en": "People & community",
+      "az": "İnsanlar və icma"
+    },
+    "title": {
+      "en": "More context for the business of coaching.",
+      "az": "Kouçinq biznesi üçün daha çox kontekst."
+    },
+    "tabs": {
+      "en": [
+        "Clients",
+        "Sessions",
+        "Business"
+      ],
+      "az": [
+        "Müştərilər",
+        "Seanslar",
+        "Biznes"
+      ]
+    }
+  },
+  {
+    "id": "me-exam-student",
+    "collection": "me",
+    "role": {
+      "en": "an exam student",
+      "az": "imtahana hazırlaşan şagird"
+    },
+    "category": {
+      "en": "Learning",
+      "az": "Öyrənmə"
+    },
+    "title": {
+      "en": "Make room for the next question.",
+      "az": "Növbəti sual üçün yer açın."
+    },
+    "tabs": {
+      "en": [
+        "Learn",
+        "Practice",
+        "Revision"
+      ],
+      "az": [
+        "Öyrən",
+        "Məşq",
+        "Təkrar"
+      ]
+    }
+  },
+  {
+    "id": "me-university",
+    "collection": "me",
+    "role": {
+      "en": "a university student",
+      "az": "universitet tələbəsi"
+    },
+    "category": {
+      "en": "Learning",
+      "az": "Öyrənmə"
+    },
+    "title": {
+      "en": "Read closely. Keep the thread.",
+      "az": "Diqqətlə oxuyun. Fikrin ipini itirməyin."
+    },
+    "tabs": {
+      "en": [
+        "Modules",
+        "Notes",
+        "Essay"
+      ],
+      "az": [
+        "Fənlər",
+        "Qeydlər",
+        "Esse"
+      ]
+    }
+  },
+  {
+    "id": "me-language",
+    "collection": "me",
+    "role": {
+      "en": "a language learner",
+      "az": "dil öyrənən"
+    },
+    "category": {
+      "en": "Learning",
+      "az": "Öyrənmə"
+    },
+    "title": {
+      "en": "A conversation worth continuing.",
+      "az": "Davam etdirməyə dəyən söhbət."
+    },
+    "tabs": {
+      "en": [
+        "Dialogue",
+        "Vocabulary",
+        "Practice notes"
+      ],
+      "az": [
+        "Dialoq",
+        "Lüğət",
+        "Məşq qeydləri"
+      ]
+    }
+  },
+  {
+    "id": "me-fitness",
+    "collection": "me",
+    "role": {
+      "en": "a fitness enthusiast",
+      "az": "idman həvəskarı"
+    },
+    "category": {
+      "en": "Everyday wellbeing",
+      "az": "Gündəlik rifah"
+    },
+    "title": {
+      "en": "Give practice a place in your week.",
+      "az": "Məşqə həftənizdə yer ayırın."
+    },
+    "tabs": {
+      "en": [
+        "Training week",
+        "Routine notes",
+        "Session log"
+      ],
+      "az": [
+        "Məşq həftəsi",
+        "Rejim qeydləri",
+        "Məşq jurnalı"
+      ]
+    }
+  },
+  {
+    "id": "me-meals",
+    "collection": "me",
+    "role": {
+      "en": "a home cook",
+      "az": "evdə yemək bişirən"
+    },
+    "category": {
+      "en": "Everyday wellbeing",
+      "az": "Gündəlik rifah"
+    },
+    "title": {
+      "en": "What’s for dinner, made simpler.",
+      "az": "Axşam yeməyi seçimi, daha sadə."
+    },
+    "tabs": {
+      "en": [
+        "Recipes",
+        "Meal week",
+        "Shopping list"
+      ],
+      "az": [
+        "Reseptlər",
+        "Həftəlik menyu",
+        "Alış-veriş siyahısı"
+      ]
+    }
+  },
+  {
+    "id": "me-daily-focus",
+    "collection": "me",
+    "role": {
+      "en": "a daily planner",
+      "az": "gününü planlayan"
+    },
+    "category": {
+      "en": "Personal organisation",
+      "az": "Şəxsi təşkilatlanma"
+    },
+    "title": {
+      "en": "One useful next thing.",
+      "az": "Növbəti bir faydalı iş."
+    },
+    "tabs": {
+      "en": [
+        "Today",
+        "Conversation",
+        "Later"
+      ],
+      "az": [
+        "Bu gün",
+        "Söhbət",
+        "Sonra"
+      ]
+    }
+  },
+  {
+    "id": "me-home-life",
+    "collection": "me",
+    "role": {
+      "en": "a household organiser",
+      "az": "ev işlərini təşkil edən"
+    },
+    "category": {
+      "en": "Home & family",
+      "az": "Ev və ailə"
+    },
+    "title": {
+      "en": "A home with a little less chasing.",
+      "az": "Bir az daha az təlaşlı ev."
+    },
+    "tabs": {
+      "en": [
+        "This week",
+        "Rooms",
+        "Routines",
+        "Shopping",
+        "People"
+      ],
+      "az": [
+        "Bu həftə",
+        "Otaqlar",
+        "Rejimlər",
+        "Alış-veriş",
+        "İnsanlar"
+      ]
+    }
+  },
+  {
+    "id": "me-family",
+    "collection": "me",
+    "role": {
+      "en": "a family planner",
+      "az": "ailə həyatını planlayan"
+    },
+    "category": {
+      "en": "Home & family",
+      "az": "Ev və ailə"
+    },
+    "title": {
+      "en": "See the week together.",
+      "az": "Həftəni birlikdə görün."
+    },
+    "tabs": {
+      "en": [
+        "Family week",
+        "Plans",
+        "Notes"
+      ],
+      "az": [
+        "Ailə həftəsi",
+        "Planlar",
+        "Qeydlər"
+      ]
+    }
+  },
+  {
+    "id": "me-travel",
+    "collection": "me",
+    "role": {
+      "en": "a traveller",
+      "az": "səyyah"
+    },
+    "category": {
+      "en": "Exploration",
+      "az": "Kəşf"
+    },
+    "title": {
+      "en": "A journey with room to wander.",
+      "az": "Gəzib-dolaşmağa yer qoyan səyahət."
+    },
+    "tabs": {
+      "en": [
+        "Map",
+        "Itinerary",
+        "Saved places"
+      ],
+      "az": [
+        "Xəritə",
+        "Marşrut",
+        "Saxlanılan yerlər"
+      ]
+    }
+  },
+  {
+    "id": "me-creative-journal",
+    "collection": "me",
+    "role": {
+      "en": "a creative journal keeper",
+      "az": "yaradıcı gündəlik yazan"
+    },
+    "category": {
+      "en": "Creativity",
+      "az": "Yaradıcılıq"
+    },
+    "title": {
+      "en": "Follow an unfinished thought.",
+      "az": "Yarımçıq fikrin ardınca gedin."
+    },
+    "tabs": {
+      "en": [
+        "Writing canvas",
+        "Fragments",
+        "Notebook"
+      ],
+      "az": [
+        "Yazı lövhəsi",
+        "Fraqmentlər",
+        "Dəftər"
+      ]
+    }
+  },
+  {
+    "id": "me-career",
+    "collection": "me",
+    "role": {
+      "en": "a job seeker",
+      "az": "iş axtaran"
+    },
+    "category": {
+      "en": "Personal organisation",
+      "az": "Şəxsi təşkilatlanma"
+    },
+    "title": {
+      "en": "Keep each opportunity in context.",
+      "az": "Hər imkanı öz kontekstində saxlayın."
+    },
+    "tabs": {
+      "en": [
+        "Saved role",
+        "Cover draft",
+        "Applications"
+      ],
+      "az": [
+        "Saxlanılan vakansiya",
+        "Müraciət məktubu qaralaması",
+        "Müraciətlər"
+      ]
+    }
+  },
+  {
+    "id": "me-hobby",
+    "collection": "me",
+    "role": {
+      "en": "a music learner",
+      "az": "musiqi öyrənən"
+    },
+    "category": {
+      "en": "Creativity",
+      "az": "Yaradıcılıq"
+    },
+    "title": {
+      "en": "A little practice, with purpose.",
+      "az": "Bir az məşq, amma məqsədlə."
+    },
+    "tabs": {
+      "en": [
+        "Tablature",
+        "Lesson",
+        "Practice notes"
+      ],
+      "az": [
+        "Tabulatura",
+        "Dərs",
+        "Məşq qeydləri"
+      ]
+    }
+  }
+]

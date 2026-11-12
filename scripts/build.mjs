@@ -38,14 +38,29 @@ export async function build() {
   await fs.cp(path.join(root, 'public'), out, {recursive: true});
   const css = await fs.readFile(path.join(root, 'assets/styles.css'), 'utf8');
   const js = await fs.readFile(path.join(root, 'assets/site.js'), 'utf8');
+  const landingCss = (await Promise.all(['workspaces.css', 'story.css', 'workspace-demo.css', 'portal-polish.css', 'adaptive-layouts.css'].map(f => fs.readFile(path.join(root, 'assets', f), 'utf8')))).join('\n');
+  const landingJs = (await Promise.all(['workspaces.js', 'workspace-demo.js', 'portal-setup.js'].map(f => fs.readFile(path.join(root, 'assets', f), 'utf8')))).join('\n');
+  const newCss = await fs.readFile(path.join(root, 'assets/home-new.css'), 'utf8');
+  const newJs = await fs.readFile(path.join(root, 'assets/home-new.js'), 'utf8');
+  const flowCss = await fs.readFile(path.join(root, 'assets/discover.css'), 'utf8');
+  const flowJs = await fs.readFile(path.join(root, 'assets/discover.js'), 'utf8');
   const hash = v => createHash('sha256').update(v).digest('hex').slice(0, 10);
   const cssName = `styles.${hash(css)}.css`, jsName = `site.${hash(js)}.js`;
+  const landingCssName = `landing.${hash(landingCss)}.css`, landingJsName = `workspaces.${hash(landingJs)}.js`;
+  const newCssName = `new.${hash(newCss)}.css`, newJsName = `new.${hash(newJs)}.js`;
+  await fs.writeFile(path.join(out, 'assets', landingCssName), landingCss);
+  await fs.writeFile(path.join(out, 'assets', landingJsName), landingJs);
+  const flowCssName = `flow.${hash(flowCss)}.css`, flowJsName = `flow.${hash(flowJs)}.js`;
+  await fs.writeFile(path.join(out, 'assets', flowCssName), flowCss);
+  await fs.writeFile(path.join(out, 'assets', flowJsName), flowJs);
+  await fs.writeFile(path.join(out, 'assets', newCssName), newCss);
+  await fs.writeFile(path.join(out, 'assets', newJsName), newJs);
   await fs.writeFile(path.join(out, 'assets', cssName), css);
   await fs.writeFile(path.join(out, 'assets', jsName), js);
 
   for (const r of routes) {
     const {site, copy, images} = contexts[r.locale];
-    const html = renderDocument({base, site, copy, images, route: r, cssName, jsName, indexable: isLive && r.index !== false, turnstileKey: enquiryMode === 'server' ? env.TURNSTILE_SITE_KEY : ''});
+    const html = renderDocument({base, site, copy, images, route: r, cssName, jsName, landingCssName, landingJsName, newCssName, newJsName, flowCssName, flowJsName, indexable: isLive && r.index !== false, turnstileKey: enquiryMode === 'server' ? env.TURNSTILE_SITE_KEY : ''});
     const dest = path.join(out, r.url, 'index.html');
     await fs.mkdir(path.dirname(dest), {recursive: true});
     await fs.writeFile(dest, html);
@@ -77,7 +92,7 @@ export async function build() {
   await fs.writeFile(path.join(out, 'llms.txt'), `# ${site.name}\n\n> ${site.definition}\n\n${section('Pages', en.filter(r => !r.article && !isGuide(r) && !isCase(r) && !isLegal(r)))}\n${section('Case studies', en.filter(isCase))}\n${section('Insights', en.filter(r => r.article))}\n${section('Field guides', en.filter(isGuide))}${otherSections}\n## Contact\n\n- Book a call: ${site.bookingUrl}\n- Email: ${site.email}\n`);
 
   await fs.writeFile(path.join(root, 'qa/routes.json'), JSON.stringify(routes.map(({url, key, locale, alternates, title, description, index}) => ({url, key, locale, alternates, title, description, index: index !== false})), null, 2));
-  await fs.writeFile(path.join(root, 'qa/build.json'), JSON.stringify({pages: routes.length, locales: localeCodes, missing, base, indexing: isLive, enquiryMode, cssBytes: Buffer.byteLength(css), jsBytes: Buffer.byteLength(js), fontsSelfHosted: true}, null, 2));
+  await fs.writeFile(path.join(root, 'qa/build.json'), JSON.stringify({pages: routes.length, locales: localeCodes, missing, base, indexing: isLive, enquiryMode, cssBytes: Buffer.byteLength(css), jsBytes: Buffer.byteLength(js), landingCssBytes: Buffer.byteLength(landingCss), landingJsBytes: Buffer.byteLength(landingJs), newCssBytes: Buffer.byteLength(newCss), newJsBytes: Buffer.byteLength(newJs), fontsSelfHosted: true}, null, 2));
   console.log(`Built ${routes.length} pages. Enquiries: ${enquiryMode}. Indexing: ${isLive}. Base: ${base}`);
   if (missing.length) console.log(`Translation fallbacks (English used): ${missing.length}. See qa/build.json.`);
   return {routes, base, enquiryMode, missing};

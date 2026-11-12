@@ -107,5 +107,15 @@ export async function loadContent(localeCode = defaultLocale) {
   for (const c of cases) if (c.related && !articles.some(a => a.slug === c.related)) throw new Error(`Case ${c.slug} relates to unknown article ${c.related}`);
   // City photography: files, alt text and captions for every locale live together in one manifest.
   const images = await readJson('images.json');
-  return {locale: localeCode, site, articles, guides, work, faqs, cases, copy, images, missing, href: p => localePath(localeCode, p)};
+  // Workspace concepts for the Us and Me galleries: shared image ids, text per locale. A missing
+  // translation falls back to English and is recorded, like every other overlay.
+  const concepts = (await readJson('workspace-concepts.json')).map(x => {
+    if (!SLUG.test(x.id) || !['us', 'me'].includes(x.collection)) throw new Error(`Invalid workspace concept: ${x.id}`);
+    const pick = k => {
+      if (x[k]?.[localeCode] === undefined) missing.push(`content/workspace-concepts.json#${x.id}.${k}.${localeCode}`);
+      return x[k]?.[localeCode] ?? x[k].en;
+    };
+    return {id: x.id, collection: x.collection, role: pick('role'), category: pick('category'), title: pick('title'), tabs: pick('tabs')};
+  });
+  return {locale: localeCode, site, articles, guides, work, faqs, cases, copy, images, concepts, missing, href: p => localePath(localeCode, p)};
 }

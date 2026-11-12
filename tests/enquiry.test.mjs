@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {validateEnquiry,processEnquiry} from '../api/enquiry.js';
+import {validateSubscription,processSubscription} from '../api/subscribe.js';
 const now=1_800_000_000_000;
 const valid={name:'A Test',email:'test@example.com',organisation:'Example organisation',message:'We would like to discuss practical training for our team.',interest:'Team education',startedAt:now-10000,'cf-turnstile-response':'mock-token',website:''};
 const env={ENQUIRY_MODE:'server',RESEND_API_KEY:'test-not-a-key',CONTACT_FROM:'Sender <sender@example.com>',CONTACT_TO:'owner@example.com',CONTACT_ALLOWED_ORIGIN:'https://example.com',TURNSTILE_SECRET_KEY:'test-not-a-key'};
@@ -16,3 +17,16 @@ test('never trusts unsuccessful bot verification',async()=>{let calls=0;const r=
 test('successful provider acceptance returns 202, no PII',async()=>{const calls=[];const r=await processEnquiry(request(),{env,now,fetcher:async(url,options)=>{calls.push({url,options});return {ok:true,json:async()=>calls.length===1?{success:true,action:'enquiry',hostname:'example.com'}:{id:'test-receipt'}}}});assert.equal(r.status,202);assert.deepEqual(r.body,{ok:true});assert.equal(calls.length,2);assert.equal(JSON.parse(calls[1].options.body).reply_to,valid.email);assert.match(calls[1].options.headers['Idempotency-Key'],/^enquiry-/)});
 test('no success on provider error',async()=>{let calls=0;const r=await processEnquiry(request(),{env,now,fetcher:async()=>{calls++;return {ok:calls===1,json:async()=>calls===1?{success:true,action:'enquiry',hostname:'example.com'}:{message:'failure'}}}});assert.equal(r.status,502);assert.equal(r.body.ok,undefined)});
 test('wrong verification hostname cannot send mail',async()=>{let calls=0;const r=await processEnquiry(request(),{env,now,fetcher:async()=>{calls++;return {ok:true,json:async()=>({success:true,action:'enquiry',hostname:'bad.example'})}}});assert.equal(r.status,400);assert.equal(calls,1)});
+test('Kit newsletter subscription validates email, blocks honeypot, and calls Kit API v4',async()=>{
+  assert.ok(validateSubscription({email:'Reader@Example.com',locale:'en',source:'/'}).data.email==='reader@example.com');
+  assert.ok(validateSubscription({email:'bad'}).error);
+  assert.ok(validateSubscription({email:'a@b.com',website:'bot'}).error);
+  const calls=[];
+  const res=await processSubscription({method:'POST',headers:{origin:'https://example.com','content-type':'application/json'},body:{email:'ops@company.com',locale:'en',source:'/'}},{env:{KIT_API_KEY:'kit_v4_test',KIT_FORM_ID:'12345',KIT_TAG_ID:'67890',CONTACT_ALLOWED_ORIGIN:'https://example.com'},fetcher:async(url,opts)=>{calls.push({url,opts});return {ok:true,json:async()=>({subscriber:{id:1}})}}});
+  assert.equal(res.status,202);
+  assert.equal(calls.length,3);
+  assert.equal(calls[0].url,'https://api.kit.com/v4/subscribers');
+  assert.equal(calls[0].opts.headers['X-Kit-Api-Key'],'kit_v4_test');
+  assert.equal(calls[1].url,'https://api.kit.com/v4/forms/12345/subscribers');
+  assert.equal(calls[2].url,'https://api.kit.com/v4/tags/67890/subscribers');
+});

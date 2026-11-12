@@ -6,8 +6,33 @@
     "mobileNav": "Mobil menyu",
     "noscriptNav": "JavaScript olmadan əsas menyu",
     "menu": "Menyu",
-    "bookCall": "Görüş təyin edin",
-    "bookDiagnostic": "Diaqnostik görüş təyin edin",
+    "bookCall": "İlkin görüş təyin edin",
+    "bookDiagnostic": "Ehtiyaclarınızı müzakirə edək",
+    "audienceNav": "Komandalar və ya bir nəfər üçün Enamplify",
+    "us": "Biz",
+    "usHint": "komandalar və bizneslər üçün Enamplify",
+    "me": "Mən",
+    "meHint": "Enamplify Me, bir nəfər üçün",
+    "usCta": "Komandanızı qoşun",
+    "meCta": "Məni qoşun",
+    "teamsLink": "Komandalar üçün Enamplify",
+    "meLink": "Şəxsi istifadə üçün Enamplify Me",
+    "gallery": {
+      "stageFor": "{role} üçün iş mühiti",
+      "alt": "{role} üçün nümunəvi iş mühiti konsepsiyası: {title} Görünüşlər: {tabs}. Bütün nümunə məlumatlar uydurmadır.",
+      "full": "Tam ölçüdə baxın",
+      "count": "{total} konsepsiyadan {n} göstərilir",
+      "none": "Bu axtarışa uyğun konsepsiya tapılmadı.",
+      "reset": "Hamısını göstərin",
+      "loadError": "Önizləmə əlçatan deyil. Başqa iş məkanı seçin.",
+      "previous": "Əvvəlki iş mühiti",
+      "next": "Növbəti iş mühiti",
+      "pause": "Avtomatik baxışı dayandırın",
+      "play": "Avtomatik baxışı davam etdirin",
+      "railLabel": "İş mühitlərinin önizləmələri",
+      "searchPlaceholder": "Peşə və ya görünüşə görə axtarın",
+      "automaticNote": "Önizləmələr avtomatik dəyişir. İstənilən vaxt dayandıra bilərsiniz."
+    },
     "breadcrumb": "Naviqasiya zənciri",
     "home": "Ana səhifə",
     "language": "Dil",
@@ -23,8 +48,8 @@
       "terms": "Şərtlər",
       "accessibility": "Əlçatanlıq"
     },
-    "closeTitle": "Vaxtı çatanda, söhbətlə başlayın.",
-    "closeBody": "Komandanız və dəyişmək istədiyiniz iş haqqında otuz dəqiqəlik söhbət. Uyğun tərəfdaş olmasaq, bunu açıq deyəcəyik.",
+    "closeTitle": "İşinizdə nəyi dəyişmək istəyirsiniz?",
+    "closeBody": "Prioritetləriniz, görüləcək iş və sizə necə kömək edə biləcəyimiz barədə 30 dəqiqəlik söhbətlə başlayaq.",
     "minRead": "{n} dəqiqəyə oxunur",
     "fieldGuide": "Praktik bələdçi",
     "caseStudy": "Real layihə nümunəsi",
@@ -34,22 +59,22 @@
     "portraitAlt": "Amir Gulubayli, Enamplify-ın təsisçisi",
     "portraitCaption": "Amir Gulubayli, təsisçi",
     "photographyCredits": "Fotoşəkillər: {names}",
-    "ogImageAlt": "Enamplify. Satın aldığınız deyil, komandanızın qurduğu Sİ.",
+    "ogImageAlt": "Enamplify. Komandanızın süni intellekt bacarıqlarını inkişaf etdirin.",
     "feedTitle": "Enamplify təhlilləri",
     "feedDescription": "Əməliyyat rəhbərləri üçün süni intellektin tətbiqinə dair praktik düşüncələr.",
-    "wontTitle": "Etməyəcəyik",
-    "willTitle": "Edəcəyik",
+    "wontTitle": "Sizin qərarlarınız",
+    "willTitle": "Bizim məsuliyyətimiz",
     "commitments": {
       "wont": [
-        "Komandanızın istifadəni dayandıracağı alət satmaq.",
-        "Sübut edə bilmədiyimiz faiz vəd etmək.",
-        "Sizi platformamıza və ya əməkdaşlarımıza bağlı saxlamaq.",
-        "Məlumatlarınızı təsdiqləmədiyiniz yerə köçürmək."
+        "Alətlərin və yerləşdirmə mühitinin seçimi.",
+        "Vacib məsələlərdə komandanızın qərarı.",
+        "Məlumatların istifadəsinə razılığınız.",
+        "Növbəti mərhələyə keçmək qərarınız."
       ],
       "will": [
-        "Başlamazdan əvvəl uğuru necə ölçəcəyimizi razılaşdırmaq.",
-        "Komandanızın bizsiz idarə edə biləcəyi bir sistem təhvil vermək.",
-        "Sİ doğru həll olmadıqda bunu sizə açıq demək."
+        "Başlamazdan əvvəl işin əhatəsini və ölçüləri razılaşdırmaq.",
+        "İşi sənədləşdirmək və təhvil prosesinə dəstək vermək.",
+        "İmkanlarla yanaşı məhdudiyyətləri də izah etmək."
       ]
     },
     "stages": [
@@ -57,83 +82,65 @@
         "n": "01",
         "name": "Diaqnostika",
         "time": "2–3 həftə",
-        "short": "Komandanızın vaxtının hara getdiyini müəyyən edir və ilk növbədə görülməyə dəyər bir neçə iş axınını seçirik. Davam etsəniz, ödəniş nəzərə alınır.",
-        "what": "İşi görən insanlarla danışır, vaxtlarının hara getdiyini xəritələyir və məlumatlarınızın, sistemlərinizin və daxili qaydalarınızın nəyə imkan verdiyini yoxlayırıq.",
+        "short": "İş mühitinin uyğunlaşmalı olduğu işi xəritələyir və haradan başlayacağımızı razılaşdırırıq. Davam etsəniz, ödəniş nəzərə alınır.",
+        "what": "İşi görən insanlarla danışır, iş mühitinin uyğunlaşmalı olduğu prosesləri xəritələyir və onun hansı hesablardan, alətlərdən və məlumatlardan istifadə edə biləcəyini yoxlayırıq.",
         "get": [
-          "Bu gün vaxtın hara getdiyinə dair başlanğıc göstəricilər",
-          "Dəyər və riskə görə sıralanmış üç-beş iş axını",
-          "Göstəriciləri əvvəlcədən razılaşdırılmış pilot layihə planı"
+          "İşin xəritəsi və iş mühitinin ona necə uyğunlaşacağı",
+          "Dəyər və riskə görə sıralanmış ilk iş axınları və agent vəzifələri",
+          "Göstəriciləri əvvəlcədən razılaşdırılmış yazılı tətbiq planı"
         ],
-        "note": "Sabit ödəniş; davam etsəniz, pilot layihənin dəyərindən çıxılır."
+        "note": "Sabit ödəniş; davam etsəniz, tətbiqin dəyərindən çıxılır."
       },
       {
         "n": "02",
-        "name": "Sübut",
+        "name": "Tətbiq",
         "time": "8–12 həftə",
-        "short": "Bir və ya iki komanda bizimlə birlikdə real iş axınları qurur və nəticə əvvəlcədən razılaşdırılmış göstəricilərlə ölçülür.",
-        "what": "Bir və ya iki komandadan 10–15 nəfər təşkilatınız üçün qurulmuş idarəetmə qaydaları müəyyən edilmiş mühitdə bizimlə real iş axınları qurur.",
+        "short": "İş mühitini bir və ya iki komanda üçün qurur və real iş üzərində onlarla birlikdə tənzimləyirik.",
+        "what": "İş mühitini bir və ya iki komanda üçün qururuq: onların layihələri və faylları, istifadə etdikləri dəstəklənən hesablar və alətlər, icazələr və agentlərə verilən vəzifələr. İnsanlar ondan real işdə istifadə edir, biz isə onu onlarla birlikdə tənzimləyirik.",
         "get": [
-          "Nümayiş üçün deyil, gündəlik istifadədə olan iş axınları",
-          "Növbətiləri özləri qura bilən insanlar",
-          "Başlanğıc göstəricilərlə müqayisədə ölçülmüş nəticələr"
+          "Nümayiş üçün deyil, gündəlik istifadədə olan iş mühiti",
+          "Öz görünüşlərini və iş axınlarını özləri dəyişə bilən insanlar",
+          "Başlanğıc vəziyyətlə müqayisədə nəzərdən keçirilmiş nəticələr"
         ],
         "note": "Əhatə dairəsi və qiyməti diaqnostikadan sonra yazılı təklifdə müəyyənləşdirilir."
       },
       {
         "n": "03",
-        "name": "Genişləndirmə",
+        "name": "Dəstək",
         "time": "Davamlı",
-        "short": "Öz şərtlərinizlə genişləndirin; hər rüb nəyin dəyişdiyinə dair hesabat alırsınız.",
-        "what": "Seçdiyiniz tempdə daha çox komandaya genişləndirin. Biz mühitin idarəetməsini qoruyur, yeni iş axını şablonları əlavə edir və hər rüb nəyin dəyişdiyini hesabatla təqdim edirik.",
+        "short": "Öz tempinizlə daha çox komandaya genişləndirin; iş dəyişdikcə məsləhət veririk.",
+        "what": "İş mühitini seçdiyiniz tempdə daha çox komandaya genişləndirin. İcazələri və agent vəzifələrini istifadəyə uyğun saxlayır, proseslər dəyişdikcə iş axınları əlavə edir və növbəti addımlar barədə məsləhət veririk.",
         "get": [
-          "Komandanıza məxsus, getdikcə böyüyən iş axınları kitabxanası",
-          "İstifadə ilə ayaqlaşan idarəetmə",
-          "Rəhbərlik üçün rüblük təsir hesabatı"
+          "Komandalarınıza məxsus və dəyişə biləcəkləri iş axınları",
+          "İstifadə ilə ayaqlaşan nəzarət",
+          "Nəyin dəyişdiyinə dair müntəzəm baxış"
         ],
         "note": "Artıra, azalda və ya dayandıra biləcəyiniz abunə."
       }
-    ],
-    "trackRecord": {
-      "topic": "Görülmüş işlər",
-      "title": "Bu gün göstərə biləcəyimiz nəticələr.",
-      "caption": "Görülmüş işlər",
-      "columns": [
-        "Sahə",
-        "Sübut"
-      ],
-      "rows": [
-        [
-          "Təcrübə",
-          "Proqram təminatı, avtomatlaşdırma və Sİ sahəsində 10+ il"
-        ],
-        [
-          "Müştəri sistemləri",
-          "Klinik sınaqlardan maliyyəyə qədər səkkiz növ sistem"
-        ],
-        [
-          "Məhsullarımız",
-          "grademy və pripitch, hər ikisi istifadədədir"
-        ]
-      ]
-    }
+    ]
   },
   "routes": {
     "home": {
-      "title": "Enamplify · Orta ölçülü şirkətlərdə süni intellekt bacarıqları"
+      "title": "Enamplify · Komandanız üçün adaptiv AI iş mühiti"
+    },
+    "me": {
+      "title": "Enamplify Me · Bir nəfər üçün adaptiv süni intellekt iş mühiti",
+      "description": "Layihələr, öyrənmə və gündəlik planlar üçün şəxsi AI iş mühiti və agentlər komandası. Hazırlanma mərhələsindədir. Marağınızı bildirin.",
+      "crumb": "Enamplify Me: şəxsi iş mühiti"
     },
     "approach": {
-      "title": "Süni intellekt bacarıqları: diaqnoz, sübut, genişləndirmə",
-      "description": "Kiçikdən başlayın, sübut edin, genişləndirin. Komandalar yoxlama və idarəetmə ilə, məlumatları lazımi yerdə saxlayaraq öz süni intellekt iş axınlarını qurur.",
+      "title": "Enamplify-ı komandalar üçün necə tətbiq edirik",
+      "description": "Enamplify iş mühitini komandanın mövcud proseslərinə uyğun necə planlaşdırır, qurur və dəstəkləyirik: ödənişli diaqnostikadan davamlı məsləhətə qədər.",
       "crumb": "Yanaşma"
     },
     "work": {
-      "title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız",
-      "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri və özümüzün iki süni intellekt məhsulu.",
+      "title": "Seçilmiş süni intellekt layihələri",
+      "description": "Peşəkar xidmətlər, turizm, maliyyə və klinik əməliyyatlar üçün sistem və iş axını layihələri ilə tanış olun.",
       "crumb": "İşlərimiz"
     },
     "about": {
       "title": "Təsisçinin rəhbərlik etdiyi şirkət, London və Bakı",
-      "description": "Enamplify London və Bakıda təsisçinin rəhbərlik etdiyi süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Amir Gulubayli və iş prinsiplərimiz.",
+      "description": "Enamplify təsisçisi Amir Gulubayli və süni intellekt üzrə məsləhət, sistemlərin qurulması və komanda bacarıqlarına yanaşmamızla tanış olun.",
       "crumb": "Haqqımızda"
     },
     "insights": {
@@ -142,9 +149,9 @@
       "crumb": "Təhlillər"
     },
     "contact": {
-      "title": "Diaqnostik görüş təyin edin",
-      "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız, onun işi və süni intellekt haqqında söhbət.",
-      "crumb": "Görüş təyin edin"
+      "title": "İlkin görüş təyin edin",
+      "description": "Prioritetləriniz və sizə necə kömək edə biləcəyimiz barədə Enamplify təsisçisi Amir Gulubayli ilə 30 dəqiqəlik ilkin söhbət.",
+      "crumb": "İlkin görüş təyin edin"
     },
     "careers": {
       "title": "Karyera: süni intellekt əməliyyatları üzrə təcrübə",
@@ -154,147 +161,1702 @@
     "notFound": {
       "title": "Səhifə tapılmadı",
       "description": "Bu səhifənin ünvanı dəyişib. Ana səhifədən davam edin."
+    },
+    "briefing": {
+      "title": "Şirkətdə süni intellekt və agent işinin qurulması",
+      "description": "Şirkət komandalarının süni intellekt agentlərindən etibarlı nəticə alması üçün kontekst, ixtisaslaşmış zolaqlar və təsdiq mərhələləri üzrə bələdçi.",
+      "crumb": "İcraçı bələdçisi"
+    },
+    "homeNew": {
+      "title": "Enamplify · Fərdi süni intellekt sistemi və tətbiq konsaltinqi",
+      "description": "Sıfırdan şirkətiniz üçün qurulan adaptiv süni intellekt idarəetmə mühiti, paralel agent komandası və London-Bakı mühəndis tətbiqi.",
+      "crumb": "Sistem və konsaltinq"
+    },
+    "discover": {
+      "title": "Söhbətə başlayın",
+      "description": "Komandanız və ötürmək istədiyiniz iş barədə bir neçə suala cavab verin, sonra görüş vaxtı seçin.",
+      "crumb": "Başlanğıc"
+    },
+    "meNew": {
+      "title": "Enamplify Me · Gündəlik həyatda sağ əliniz",
+      "description": "Həftənizi, səyahətlərinizi, dərslərinizi və ev işlərinizi agentlər komandası ilə planlayan şəxsi AI iş məkanı. Hazırlanır. Marağınızı bildirin.",
+      "crumb": "Enamplify Me"
     }
   },
   "home": {
-    "heroTitle": "Komandanızın qurduğu Sİ.",
-    "heroTitleAlt": "Satın aldığınız Sİ deyil.",
-    "lede": "Əməkdaşlarınıza Sİ-ni artıq gördükləri işə daxil etməyi öyrədirik. Onlar vaxta qənaət edir. Nəzarət isə sizdə qalır.",
-    "howWeWork": "Necə işləyirik",
-    "note": "Təsisçi ilə 30 dəqiqə. Satış təqdimatı olmadan.",
-    "week": {
-      "topic": "Həftə",
-      "title": "Tipik əməliyyat həftəsində işin təxminən yarısı Sİ-nin öz üzərinə götürə biləcəyi işlərdir.",
-      "segments": [
-        "Peşəkar qərarlar və müştəri işi",
-        "Təkrarlanan hesabatlar",
-        "Məlumat axtarışı",
-        "İş ötürmələri və xatırlatmalar",
-        "Digər"
-      ],
-      "note": "Komandalar adətən vurğulanmış işlərdən başlayır."
-    },
-    "situationTitle": "Sİ artıq şirkətinizdədir.",
-    "situation": [
-      [
-        "Alətlər alındı. İş dəyişmədi.",
-        "İşi necə dəyişməyi heç kim göstərməyəndə lisenziyalar istifadəsiz qalır."
-      ],
-      [
-        "Real istifadə gözdən uzaqdır.",
-        "Əməkdaşlar işi şəxsi hesablara köçürür. Siz bunu görmürsünüz, deməli, yaxşılaşdıra da bilmirsiniz."
-      ],
-      [
-        "Pilot layihələr ikinci ayda dayanır.",
-        "Demo işlədi. Sonra ona kimin cavabdeh olacağını heç kim planlaşdırmadı."
-      ]
+    "heroTitle": "İşlər irəliləsin.",
+    "heroTitleAlt": "Komandanızın vaxtı açılsın.",
+    "lede": "Biznesinizə uyğun AI iş məkanları və avtomatlaşdırmalar. Əhatəni razılaşdırır, qurur və dəstək göstəririk.",
+    "cross": "Təkbaşına işləyirsiniz? Enamplify Me ilə tanış olun.",
+    "galleryTitle": "İyirmi iş üsulu.",
+    "galleryHint": "İş mühitini böyük ölçüdə görmək üçün peşə seçin.",
+    "findLabel": "Öz iş sahənizi tapın",
+    "conceptNote": "İş məkanı konsepsiyası. Uydurma məlumatlar.",
+    "implTitle": "Komandanıza uyğun tətbiq olunur.",
+    "implBody": "Kimin nəyi görəcəyinə, hansı alətlərin qoşulacağına və hər agentin nə edəcəyinə siz qərar verirsiniz. Dəyişikliklər tətbiq olunmazdan əvvəl ilkin baxışda göstərilir.",
+    "stageNotes": [
+      "İşi xəritələyir və əhatəni yazılı razılaşdırırıq.",
+      "İş mühitini bir və ya iki komanda ilə real iş üzərində qururuq.",
+      "Öz tempinizlə genişləndirirsiniz, iş dəyişdikcə dəstək veririk."
     ],
-    "marked": "Sİ layihələrinin çoxu texnologiya səbəbindən deyil, məsuliyyətin kimdə olduğu bəlli olmadığı üçün alınmır.",
-    "outcomesTitle": "Rəhbərlik üçün üç nəticə.",
-    "moreDone": {
-      "topic": "Daha çox iş",
-      "title": "Məsələn: təkrarlanan inzibati işlər həftədə 14 saatdan 6 saata enir.",
-      "unit": "saat",
-      "before": "Əvvəl",
-      "after": "Sonra",
-      "note": "Hesabat, axtarış və xatırlatmalara gedən vaxt azad olur."
+    "approachLink": "Tətbiq necə aparılır",
+    "seeWork": "Seçilmiş işlərə baxın",
+    "closeTitle": "Üzərinizdən götürmək istədiyiniz işdən başlayaq.",
+    "closeBody": "İstədiyiniz nəticəni deyin. Fərdi tətbiq və dəstək planını razılaşdıraq.",
+    "visual": {
+      "concept": "Konsepsiya",
+      "adapt": {
+        "title": "Görünüşü istəyin. Necə qurulduğunu görün.",
+        "sub": "Yazılan istək iş məkanını növbəti işə uyğun yenidən qurur.",
+        "prompt": "Bank əməliyyatları üçün üzləşdirmə görünüşü əlavə et.",
+        "proposed": "Təklif olunan görünüş",
+        "demo": {
+          "label": "İş məkanının yenidən qurulmasının nümunə nümayişi",
+          "you": "Siz",
+          "pause": "İş məkanı nümayişini dayandır",
+          "resume": "İş məkanı nümayişini davam etdir",
+          "replay": "Dəyişiklikləri yenidən göstər",
+          "building": "İş məkanı yenidən qurulur",
+          "ready": "Önizləmə baxışa hazırdır",
+          "nav": [
+            "İcmal",
+            "Fayllar",
+            "Agentlər"
+          ],
+          "workspace": "Komanda iş məkanı",
+          "scenes": [
+            {
+              "label": "Müştəri hesabatları",
+              "prompt": "Bu həftənin müştəri hesabatlarını hazırla.",
+              "title": "Müştəri hesabatları",
+              "primaryTitle": "Müştəri icmalları",
+              "primaryItems": [
+                "Kampaniya baxışı",
+                "Məzmun xülasəsi",
+                "Hesab yenilikləri"
+              ],
+              "secondaryTitle": "İstifadə olunan",
+              "secondaryItems": [
+                "Kampaniya məlumatları",
+                "Müştəri brifi"
+              ],
+              "result": "Komandanızın baxışı üçün hazırlanmış hesabatlar.",
+              "details": [
+                "Kampaniya xülasəsi seçilmiş hesabat dövründən hazırlanıb.",
+                "Məzmun yenilikləri qısa müştəri icmalında toplanıb.",
+                "Hesab fəaliyyəti və açıq suallar baxış üçün yığılıb."
+              ],
+              "calendarSource": {
+                "name": "Müştəri baxış təqvimi",
+                "body": "Bazar ertəsi: müştəri ilə görüş. Cümə axşamı: qaralama baxışı. Cümə: hesabatın təhvili."
+              },
+              "fileSources": [
+                {
+                  "name": "Kampaniya nəticələri.csv",
+                  "body": "Axtarış fəaliyyətinə hesab məsulunun şərhi lazımdır. E-poçt fəaliyyəti baxışa hazırdır."
+                },
+                {
+                  "name": "Müştəri brifi.md",
+                  "body": "Bu həftə: kampaniya nəticələri, məzmun təqvimi və cümə günü müştəri baxışı üçün suallar."
+                }
+              ]
+            },
+            {
+              "label": "Sonrakı addımlar",
+              "prompt": "Görüşlərimizdən sonrakı addımlar lövhəsi qur.",
+              "title": "Görüşdən sonrakı addımlar",
+              "primaryTitle": "Növbəti addımlar",
+              "primaryItems": [
+                "Təklifi hazırla",
+                "Növbəti addımı dəqiqləşdir",
+                "Müştəri qaralamasını yoxla"
+              ],
+              "secondaryTitle": "İstifadə olunan",
+              "secondaryItems": [
+                "Görüş qeydləri",
+                "Müştəri konteksti"
+              ],
+              "result": "Növbəti addımı göstərən iş lövhəsi.",
+              "details": [
+                "Təklif qaralaması hesab məsulunun baxışı üçün hazırdır.",
+                "Növbəti addım görüş qeydlərinə bağlıdır.",
+                "Müştəri qaralaması təsdiqə qədər burada qalır."
+              ],
+              "calendarSource": {
+                "name": "Komanda görüş təqvimi",
+                "body": "Çərşənbə axşamı: təklifə baxış. Cümə axşamı: müştəri görüşü. Məsul: hesab rəhbəri."
+              },
+              "fileSources": [
+                {
+                  "name": "Müştəri görüş qeydləri.md",
+                  "body": "Müştəri yenilənmiş təklif və növbəti addım üçün aydın məsul istədi. Paylaşmazdan əvvəl mətni yoxlayın."
+                },
+                {
+                  "name": "Təklif planı.md",
+                  "body": "Razılaşdırılmış əhatəni, açıq sualları və növbəti söhbət üçün təklif edilən tarixi daxil edin."
+                }
+              ]
+            },
+            {
+              "label": "Layihə icrası",
+              "prompt": "Həftəlik baxış üçün icra risklərini göstər.",
+              "title": "İcra baxışı",
+              "primaryTitle": "Qarşıdakı işlər",
+              "primaryItems": [
+                "Brif",
+                "Baxış",
+                "Təhvil"
+              ],
+              "secondaryTitle": "Diqqət tələb edir",
+              "secondaryItems": [
+                "Baxış məsulunu dəqiqləşdir",
+                "Təhvil qeydlərini yoxla"
+              ],
+              "result": "Həftəlik müzakirə üçün hazır icra görünüşü.",
+              "details": [
+                "İş davam etməzdən əvvəl brifə baxış məsulu seçilməlidir.",
+                "Baxış görüşündən əvvəl açıq sualları yoxlayın.",
+                "Təhvil qeydləri qərarları və növbəti addımları birləşdirir."
+              ],
+              "calendarSource": {
+                "name": "İcra mərhələləri",
+                "body": "Bazar ertəsi: brifə baxış. Çərşənbə: daxili baxış. Cümə: müştəriyə təhvil."
+              },
+              "fileSources": [
+                {
+                  "name": "Baxış reyestri.md",
+                  "body": "Açıq məsələ: təhvildən əvvəl baxış məsulunu dəqiqləşdirin. Təsdiq qeydə alınmayıb."
+                },
+                {
+                  "name": "Təhvil qeydləri.md",
+                  "body": "Cari brifi, açıq sualları, baxış məsulunu və növbəti razılaşdırılmış addımı daxil edin."
+                }
+              ]
+            }
+          ],
+          "paused": "Nümayiş dayandırılıb",
+          "ui": {
+            "preview": "Önizləmə",
+            "selected": "Seçilib",
+            "reviewed": "Yoxlanılıb",
+            "review": "Yoxlanmış kimi işarələ",
+            "draft": "Qaralama",
+            "detail": "Qaralama önizləməsi",
+            "sources": "Seçilmiş mənbələr",
+            "schedule": "Nümunə rutin",
+            "scheduleOn": "Hazırlıq aktivdir",
+            "scheduleOff": "Hazırlıq dayandırılıb",
+            "agent": "Hazırlıq agenti",
+            "agentNote": "Seçilmiş mənbələrdən baxış üçün qaralama hazırlayır.",
+            "filesNote": "Baxmaq üçün nümunə mənbə seçin.",
+            "fileDetail": "Nümunə mənbə seçildi. Məzmun bu nümayiş daxilində qalır.",
+            "setupApplied": "Quruluş önizləməsi tətbiq olundu",
+            "interactive": "İnteraktiv nümunə. Dəyişikliklər bu səhifədə qalır.",
+            "adaptive": {
+              "lanes": [
+                "Hazırlanacaq",
+                "Davam edir",
+                "Baxış üçün"
+              ],
+              "days": [
+                "B.e.",
+                "Ç.a.",
+                "Ç.",
+                "C.a.",
+                "C."
+              ],
+              "mealDays": [
+                "Çərşənbə axşamı",
+                "Cümə axşamı",
+                "Şənbə"
+              ],
+              "ingredients": [
+                "Tərəvəz · göyərti",
+                "Toyuq · limon",
+                "Göbələk · makaron"
+              ],
+              "questions": [
+                "Bu mövzuları hansı fikirlər birləşdirir?",
+                "Addımları izah edə bilərsiniz?",
+                "Hansı hissəyə yenidən baxmaq lazımdır?"
+              ],
+              "reveal": "İzahı göstər",
+              "hide": "Suala qayıt",
+              "move": "Baxışa keçir",
+              "document": "Həftəlik icmal",
+              "milestones": "Layihə mərhələləri",
+              "card": "Təkrar kartı",
+              "focus": "Cari fokus",
+              "task": "Seçilmiş tapşırıq",
+              "milestone": "Seçilmiş mərhələ"
+            }
+          }
+        }
+      },
+      "connect": {
+        "title": "Alətləriniz, işin ətrafında.",
+        "sub": "Çıxışı siz təyin edirsiniz.",
+        "core": "Komandanızla paylaşılır",
+        "groups": [
+          {
+            "name": "Kommunikasiya",
+            "items": [
+              "Təqvim",
+              "E-poçt",
+              "Bildirişlər"
+            ]
+          },
+          {
+            "name": "Fayllar",
+            "items": [
+              "Sənədlər",
+              "Qovluqlar",
+              "Disklər"
+            ]
+          },
+          {
+            "name": "Qeydlər",
+            "items": [
+              "CRM",
+              "Hesabatlar",
+              "Sistemlər"
+            ]
+          },
+          {
+            "name": "AI modelləri",
+            "items": [
+              "Köməkçilər",
+              "Modellər",
+              "API açarları"
+            ]
+          }
+        ],
+        "note": "Yalnız nümunələrdir. Qoşulmalar tətbiq zamanı razılaşdırılır."
+      },
+      "accounts": {
+        "title": "Bir neçə AI hesabı, hər birinin öz işi.",
+        "sub": "İş tapşırığa görə bölünür, limitdə ehtiyat hesaba keçir.",
+        "cols": [
+          "Hesab",
+          "İş",
+          "İstifadə",
+          "Vəziyyət"
+        ],
+        "kinds": [
+          "Təşkilat hesabı",
+          "API açarı",
+          "API açarı",
+          "API açarı"
+        ],
+        "jobs": [
+          "Araşdırma",
+          "Qaralama üçün ehtiyat",
+          "Qaralama",
+          "Məlumat yoxlaması"
+        ],
+        "states": [
+          "Hazırdır",
+          "Limitə çatıb"
+        ],
+        "more": "Dəstəklənən digər provayderlər",
+        "note": "Nümunəvi göstəricilər. Loqolar nümunədir; planlar və limitlər fərqlənir."
+      },
+      "context": {
+        "title": "İşlə birlikdə qalan kontekst.",
+        "sub": "Fayllar, seçilmiş söhbətlər və layihə yaddaşı, mənbələrlə.",
+        "project": "Northwind yenilənməsi",
+        "rail": [
+          "Fayllar",
+          "Söhbətlər",
+          "Layihə yaddaşı",
+          "Komanda ilə paylaşılır"
+        ],
+        "doc": "Yenilənmə xülasəsi",
+        "sources": [
+          "Sığorta cədvəli.pdf",
+          "Zəng qeydləri",
+          "İdxal olunmuş söhbət"
+        ],
+        "status": "Qaralama, mənbələr bağlıdır",
+        "io": [
+          "Seçilmiş söhbətlər idxal olunub",
+          "İxrac oluna bilər"
+        ],
+        "note": "Sadəcə daxil olmaq tarixçəni idxal etmir."
+      },
+      "agents": {
+        "title": "Agentlər komandası, bir məqsəd.",
+        "sub": "Mütəxəssislər paralel işləyir, sonra işi sizə ötürür.",
+        "objectiveLabel": "Məqsəd",
+        "objective": "Cümə axşamına müştəri brifinqi",
+        "lanes": [
+          [
+            "Araşdırma",
+            "Bazar mənbələri"
+          ],
+          [
+            "Brauzer",
+            "Açıq hesabatlar"
+          ],
+          [
+            "Fayllar",
+            "Layihə qeydləri"
+          ],
+          [
+            "Kod",
+            "Qiymət modeli"
+          ]
+        ],
+        "states": [
+          "Tamamlanıb",
+          "Tamamlanıb",
+          "İşləyir",
+          "Növbədədir"
+        ],
+        "handoff": "Vahid qaralama",
+        "result": "Müştəri brifinqi baxışa hazırdır"
+      },
+      "operate": {
+        "title": "Özü başlayan, sonra sizi gözləyən iş.",
+        "sub": "Hadisə, cədvəl və ya sorğu işi başladır. İnsanlar təsdiqləyir.",
+        "cols": [
+          "Başlanğıc",
+          "İş növbəsi",
+          "Baxış"
+        ],
+        "triggers": [
+          [
+            "Hadisə",
+            "Müqavilə yükləndi"
+          ],
+          [
+            "Cədvəl",
+            "Bazar ertəsi, 07:00"
+          ],
+          [
+            "Sorğu",
+            "İstənilən həmkar"
+          ]
+        ],
+        "runs": [
+          [
+            "Müqavilə xülasəsi",
+            "İcra olunur"
+          ],
+          [
+            "Satış brifinqi",
+            "Təsdiq gözləyir"
+          ],
+          [
+            "Təchizatçı yoxlaması",
+            "Dayandırılıb"
+          ]
+        ],
+        "result": "Satış brifinqi təsdiqə hazırdır",
+        "approver": "Satış rəhbəri təsdiqləyir",
+        "controls": [
+          "Təsdiqlər",
+          "İcazələr",
+          "Büdcə",
+          "Fasilə"
+        ]
+      },
+      "place": {
+        "title": "London ilə Bakı arasında qurulur.",
+        "sub": "Təsisçinin rəhbərliyi ilə, hər iki şəhərdə işləyirik."
+      },
+      "extension": {
+        "replay": "Nümayişi yenidən oynat",
+        "cta": [
+          "İş məkanınızı formalaşdırın",
+          "AI hesablarınızı birləşdirin",
+          "Agent quruluşunu araşdırın",
+          "İş axınınızı müzakirə edək"
+        ],
+        "sandbox": {
+          "title": "İş üçün davamlı icra mühiti.",
+          "sub": "Brauzer, kod və fayllar; çıxışı siz seçirsiniz, iş sessiyalar arasında saxlanır.",
+          "task": "Mövzunu araşdır. Faylları hazırla.",
+          "views": [
+            "Brauzer",
+            "Kod",
+            "Fayllar"
+          ],
+          "browser": [
+            "Mənbələr toplandı",
+            "Detallar yoxlandı",
+            "İstinadlar saxlandı"
+          ],
+          "code": [
+            "Mənbələri oxu",
+            "Xülasəni hazırla",
+            "Qaralamanı yaz"
+          ],
+          "files": [
+            "İcmal.md",
+            "Mənbələr.csv",
+            "Qaralama baxışa hazırdır"
+          ],
+          "states": [
+            "İşi dayandır",
+            "İşi saxla",
+            "Buradan davam et"
+          ],
+          "note": "Nümunə mühitdir. Çıxış və icra hər quruluş üçün razılaşdırılır."
+        },
+        "examples": {
+          "title": "Komandanızın üzərindən götürülən işlər.",
+          "sub": "Fərdi iş məkanının komandanız üçün hazırlaya biləcəyi nəticələrə baxın.",
+          "label": "Nümunə iş məkanları",
+          "proof": "Seçilmiş müştəri işləri",
+          "proofLink": "Layihəyə baxın",
+          "concept": "Uydurma məlumatlarla nümunə ssenari.",
+          "items": [
+            {
+              "id": "pr-agency",
+              "label": "İctimaiyyətlə əlaqələr",
+              "request": "Mediadakı qeydləri müştəri icmalına çevirin.",
+              "steps": [
+                "Qeydləri topla",
+                "Uyğunluğu yoxla",
+                "İcmalı hazırla"
+              ],
+              "result": "Baxışa hazır müştəri icmalı."
+            },
+            {
+              "id": "recruitment-hiring",
+              "label": "İşə qəbul",
+              "request": "İşə qəbul prosesini bir yerdə görün.",
+              "steps": [
+                "Rolları yoxla",
+                "Profilləri uyğunlaşdır",
+                "Siyahını hazırla"
+              ],
+              "result": "Kontekstli namizəd siyahısı."
+            },
+            {
+              "id": "insurance-broker",
+              "label": "Sığorta",
+              "request": "Növbəti yenilənmə baxışını hazırlayın.",
+              "steps": [
+                "Polisləri oxu",
+                "Əhatəni müqayisə et",
+                "Dəyişiklikləri işarələ"
+              ],
+              "result": "Brokerin baxışı üçün suallar."
+            },
+            {
+              "id": "clinical-research",
+              "label": "Klinik əməliyyatlar",
+              "request": "Sənədləri və son tarixləri birlikdə görün.",
+              "steps": [
+                "Qeydləri topla",
+                "Boşluqları yoxla",
+                "Addımları hazırla"
+              ],
+              "result": "Baxış üçün əməliyyat siyahısı."
+            },
+            {
+              "id": "ecommerce-merchant",
+              "label": "Elektron ticarət",
+              "request": "Satışı və sifariş icrasını kontekstdə görün.",
+              "steps": [
+                "Sifarişləri yoxla",
+                "İstisnaları tap",
+                "Addımları hazırla"
+              ],
+              "result": "Komanda üçün istisnalar icmalı."
+            },
+            {
+              "id": "legal-lawyer",
+              "label": "Hüquq",
+              "request": "Baxış tələb edən şərtləri tapın.",
+              "steps": [
+                "İşləri oxu",
+                "Şərtləri müqayisə et",
+                "Qeydləri hazırla"
+              ],
+              "result": "Mənbələrə bağlı iş icmalı."
+            }
+          ]
+        }
+      },
+      "setup": {
+        "title": "Bir neçə seçim. Aydın başlanğıc.",
+        "steps": [
+          "Mənbələri seçin",
+          "İşi seçin",
+          "Nəzarətə baxın"
+        ],
+        "sourceTitle": "İş məkanı hansı mənbələrlə işləsin?",
+        "sourceHint": "Ən azı bir nümunə mənbə seçin.",
+        "tools": [
+          "Təqvim",
+          "Fayllar"
+        ],
+        "jobTitle": "Əvvəlcə hansı iş görülsün?",
+        "reviewTitle": "Nümunə quruluşunuz",
+        "reviewNote": "Başqasına göndərilən hər şey baxış üçün gözləyir.",
+        "pause": "Avtomatik hazırlığı dayandır",
+        "next": "Davam et",
+        "back": "Geri",
+        "apply": "Nümayişə tətbiq et",
+        "reset": "Yenidən başla",
+        "applied": "İş məkanı nümunəsinə tətbiq olundu.",
+        "note": "İnteraktiv quruluş nümunəsidir. Hesab qoşulmur və heç nə saxlanmır.",
+        "sourcesLabel": "Mənbələr",
+        "jobLabel": "İlk iş axını",
+        "sub": "İlk iş axınını tətbiqin bir hissəsi kimi sizinlə birlikdə qururuq."
+      }
     },
-    "ownedInHouse": {
-      "topic": "Sizin komandanızda",
-      "title": "Bir il ərzində komandanız öz iş axınlarını özü idarə edir.",
-      "start": "1-ci ay",
-      "end": "12-ci ay",
-      "team": "Komandanızın dəstəklədiyi iş axınları",
-      "teamShort": "Komandanız",
-      "us": "Enamplify-ın dəstəklədiyi iş axınları",
-      "usShort": "Enamplify",
-      "note": "Biz geri çəkiləndə bacarıqlar sizdə qalır."
-    },
-    "inControl": {
-      "topic": "Nəzarət sizdədir",
-      "title": "Hər iş axınının məsul şəxsi, yoxlaması və sərhədi var.",
-      "lines": [
+    "system": {
+      "navLabel": "Bu səhifədə",
+      "title": "İş mühiti necə işləyir.",
+      "lede": "Komandanızın işi üçün sabit məkan və istəyinizlə dəyişən mərkəz. Aşağıda onun nələri saxladığını, agentlərin necə işlədiyini və nəzarətin harada insanlarda qaldığını görəcəksiniz.",
+      "note": "Nümunələr iş mühitinin dizaynını uydurma məlumatlarla göstərir. İmkanlar və dəstəklənən qoşulmalar hər tətbiq üçün ayrıca razılaşdırılır.",
+      "illustrative": "Uydurma məlumatlarla nümunəvi konsepsiya.",
+      "faqNav": "Suallar",
+      "faqTitle": "Komandaların verdiyi suallar.",
+      "home": {
+        "title": "Sabit məkan, adaptiv mərkəz.",
+        "body": "Söhbətlər, kontekst, layihələr, fayllar, hesablar və icazələr həmişə tanış yerlərində qalır. Mərkəz isə işin tələb etdiyi görünüşü göstərir və komandanız yenisini istəyə bilər.",
+        "centre": "Adaptiv mərkəz",
+        "centreNote": "İstəyə əsasən yaradılan lövhələr, səhifələr, göstərici görünüşləri və icmallar",
+        "frame": [
+          [
+            "Söhbətlər",
+            "Həmkarlar və agentlərlə"
+          ],
+          [
+            "Kontekst",
+            "İş mühitinin bildikləri"
+          ],
+          [
+            "Layihələr",
+            "Müştərilər, işlər, proqramlar"
+          ],
+          [
+            "Fayllar",
+            "İşə bağlı"
+          ],
+          [
+            "Hesablar",
+            "Dəstəklənən alətlər və AI provayderləri"
+          ],
+          [
+            "İcazələr",
+            "Kim nəyi görür və dəyişir"
+          ]
+        ]
+      },
+      "change": {
+        "nav": "Görünüşü dəyişmək",
+        "title": "Təsvir edin, baxın, tətbiq edin.",
+        "body": "Komandanıza lazım olan görünüşü təsvir edin. İş məkanı bu iş üçün seçilmiş materiallardan önizləmə hazırlayır. İcazəsi olan şəxs dəyişikliyi yoxlayır, sonra onu yalnız özü üçün tətbiq edir və ya komanda ilə paylaşır.",
+        "dialogueLabel": "Nümunəvi dialoq",
+        "turns": [
+          [
+            "Təsvir",
+            "Yenilənmələr üzrə rəhbər",
+            "Növbəti 60 gündə yenilənməli olan polisləri hesab menecerlərinə görə qruplaşdıran lövhə yarat. İmzalanmış cədvəli olmayan polisləri qeyd et."
+          ],
+          [
+            "İlkin baxış",
+            "İş mühiti",
+            "İlkin baxış hazırdır: hər hesab meneceri üçün bir sütun, iki polis qeyd olunub. Fayllardakı polis reyestrindən və qoşulmuş müştəri qeydlərindən istifadə olunur. Yalnız sizin üçün, yoxsa yenilənmələr komandası üçün tətbiq edim?"
+          ],
+          [
+            "Tətbiq",
+            "Yenilənmələr üzrə rəhbər",
+            "Komanda üçün. Qeyd olunanları əvvələ qoy."
+          ]
+        ],
+        "imageCaption": "Tətbiq olunmuş görünüş komandanın müştəriləri və sənədləri ilə yanaşı yerləşir."
+      },
+      "context": {
+        "nav": "Kontekst",
+        "title": "İş mühiti nəyi bilir və onu kim görə bilər.",
+        "body": "Cavablar iş üçün qəsdən gətirilmiş və seçilmiş materiala əsaslanır, mənbələr göstərilir. Hesaba daxil olmaq iş mühitinə həmin hesabın tarixçəsini vermir; nəyin, haradan gətiriləcəyi əvvəlcədən razılaşdırılır.",
+        "columns": [
+          "Məzmun",
+          "Necə daxil olur",
+          "Kim görə bilər"
+        ],
+        "rows": [
+          [
+            "Sənədlər və fayllar",
+            "Yüklənir və ya layihəyə, tapşırığa əlavə edilir",
+            "Layihənin üzvləri"
+          ],
+          [
+            "Əvvəlki söhbətlər və qeydlər",
+            "Dəstəklənən alətlərdən və ya təqdim etdiyiniz ixrac fayllarından idxal olunur",
+            "Tətbiq zamanı razılaşdırılır"
+          ],
+          [
+            "Canlı biznes məlumatları",
+            "Dəstəklənən qoşulma ilə, onun icazəsi daxilində oxunur",
+            "Həmin qoşulmaya icazəsi olan insanlar və agentlər"
+          ],
+          [
+            "Seçilmiş kontekst",
+            "Kiminsə saxlamağı seçdiyi qeydlər, qərarlar və üstünlüklər",
+            "Sahibi və ya onunla paylaşılan komanda"
+          ]
+        ]
+      },
+      "connections": {
+        "nav": "Qoşulmalar",
+        "title": "Alətləriniz və AI hesablarınız: qruplaşdırılmış və görünən.",
+        "body": "Qoşulmalar xidmət etdikləri işə görə qruplaşdırılır. Hər biri üçün ondan hansı insanların və agentlərin istifadə edə biləcəyinə siz qərar verirsiniz, onun vəziyyətini və provayder imkan verdikdə istifadə həcmini görürsünüz. Provayder icazə verdikdə komandalar mövcud AI hesablarını və ya planlarını API açarı və ya dəstəklənən hesab qoşulması ilə gətirə bilər. Əlçatanlıq və limitlər hər provayderdən asılıdır. Dəstəkləndiyi hallarda eyni provayderin bir neçə hesabını qoşun; hər bağlantının giriş hüquqları və mövcud limitləri ayrıca görünsün.",
+        "core": "Komandanızın iş mühiti",
+        "accessLabel": "Çıxış",
+        "statusLabel": "Vəziyyət",
+        "groups": [
+          {
+            "name": "Kommunikasiya",
+            "examples": "E-poçt və təqvim, məsələn, Microsoft 365 və ya Google Workspace",
+            "access": "Müştəri komandası üçün oxuma; bir agent üçün qaralama",
+            "status": "Qoşulub"
+          },
+          {
+            "name": "Biznes qeydləri",
+            "examples": "CRM, peşəkar və ya sığorta sistemləri, mühasibat proqramları",
+            "access": "Yalnız oxuma, bu vəzifəsi olan agentlər üçün",
+            "status": "Təsdiq gözləyir"
+          },
+          {
+            "name": "AI provayderləri",
+            "examples": "Təşkilatınızın provayder hesabları və ya API açarları, icazə verildikdə",
+            "access": "Hər komandaya istifadə limiti ilə ayrılır",
+            "status": "Qoşulub, istifadə göstərilir"
+          }
+        ],
+        "foot": "Adı çəkilən məhsullar hazır qoşulmaların siyahısı deyil, əhatəni müəyyənləşdirmək üçün nümunələrdir. Hansı alətlərin necə qoşulacağı hər tətbiq üçün razılaşdırılır.",
+        "exampleLabel": "Bağlantılar və statuslar uydurma məlumatlarla nümunə kimi göstərilir."
+      },
+      "agents": {
+        "nav": "Agentlər",
+        "title": "Dəqiq işi olan agentlər.",
+        "body": "Hər agentin rolu, məqsədi və yalnız ona lazım olan qoşulmaları var. Agentlər işi bir-birinə ötürür və insanın yoxlaya biləcəyi nəticə qaytarır; işin gedişi görünür.",
+        "imageCaption": "Nəticələr sübutları ilə birlikdə layihəyə qayıdır və yoxlanmağa hazır olur.",
+        "exampleTitle": "Nümunə: müştəri görüşündən sonra",
+        "returnsLabel": "Nəticə",
+        "steps": [
+          [
+            "Araşdırma",
+            "Qeydlər agenti",
+            "Görüş qeydlərini və müştərinin layihəsini oxuyur.",
+            "Qərarlar və açıq tapşırıqlar"
+          ],
+          [
+            "Doğrulama",
+            "Qeydiyyat agenti",
+            "Tapşırıqları CRM və cari son tarixlərlə tutuşdurur.",
+            "Qeyd olunmuş ziddiyyətlər və boşluqlar"
+          ],
+          [
+            "Hazırlıq",
+            "Qaralama agenti",
+            "Növbəti e-məktubun qaralamasını yazır və tapşırıq siyahısını yeniləyir.",
+            "Göndərilməmiş qaralama"
+          ],
+          [
+            "Nəzərdən keçirmə",
+            "Hesab meneceri",
+            "Redaktə edir, təsdiqləyir və öz hesabından göndərir.",
+            "Razılaşdırılanların qeydi"
+          ]
+        ]
+      },
+      "recurring": {
+        "nav": "Təkrarlanan iş",
+        "title": "Qrafiklə işləyən və iz qoyan iş.",
+        "body": "Bəzi işlər hər dəfə xahiş olunmadan görülməlidir. Təkrarlanan tapşırıqlar hər komanda üçün qurulur: onları nə başladır, harada insanı gözləyir, nə qədər xərcləyə bilər və nə vaxt xəbər verməlidir.",
+        "points": [
+          [
+            "Başladıcılar",
+            "Qrafik, yeni fayl və ya qoşulmuş alətdə dəyişiklik."
+          ],
+          [
+            "Yoxlama nöqtələri",
+            "Adı bəlli şəxsi gözləyən addımlar."
+          ],
+          [
+            "Büdcələr",
+            "Hər tapşırıq və komanda üçün istifadə limitləri, istifadə olunduqca görünür."
+          ],
+          [
+            "Xətalar",
+            "Uğursuz icra dayanır, nəyin səhv getdiyini izah edir, təkrarlana və ya dayandırıla bilər."
+          ],
+          [
+            "Bildirişlər",
+            "Hər icradan sonra deyil, diqqət tələb olunanda mesaj."
+          ]
+        ],
+        "note": "Təkrarlanan iş məhsulun inkişaf istiqamətinin bir hissəsidir; hansı tapşırıqların işləyəcəyi hər komanda ilə razılaşdırılır.",
+        "logTitle": "Nümunəvi icra tarixçəsi",
+        "columns": [
+          "Vaxt",
+          "Tapşırıq",
+          "Vəziyyət"
+        ],
+        "rows": [
+          [
+            "B.e. 07:00",
+            "Gündəlik satış icmalı",
+            "Tamamlandı"
+          ],
+          [
+            "B.e. 09:40",
+            "Yeni müqavilə: xülasə",
+            "Baxış gözləyir"
+          ],
+          [
+            "B.e. 11:15",
+            "Təchizatçı qiymətlərinin yoxlanması",
+            "Dayandı: qoşulmanın müddəti bitib"
+          ],
+          [
+            "Ç.a. 07:00",
+            "Gündəlik satış icmalı",
+            "Planlaşdırılıb"
+          ]
+        ]
+      },
+      "control": {
+        "nav": "Nəzarət",
+        "title": "Qərarı insanlar verir. İş mühiti gördüyü işi göstərir.",
+        "body": "Nəzarət tətbiq zamanı komandanızla birlikdə qurulur və sonra da dəyişdirilə bilər.",
+        "decideTitle": "Siz qərar verirsiniz",
+        "decide": [
+          "İş mühitinə kimin, hansı rolla qoşulduğu",
+          "Hər insanın və agentin hansı alətlərə və məlumatlara çıxışı olduğu",
+          "Nəyin şəxsi qaldığı, nəyin komanda ilə paylaşıldığı",
+          "Hansı hərəkətlərin icradan əvvəl təsdiq tələb etdiyi"
+        ],
+        "seeTitle": "Görür və dayandıra bilirsiniz",
+        "see": [
+          "Agentin nə etdiyi, nə vaxt və kimin icazəsi ilə",
+          "Görünüş və iş axını dəyişiklikləri, tətbiqdən əvvəl",
+          "Davam edən və təkrarlanan işlər, fasilə və dayandırma imkanı ilə",
+          "Müəyyən etdiyiniz limitlərə görə istifadə"
+        ],
+        "who": [
+          {
+            "name": "Biz: komandalar üçün",
+            "body": "Dəqiq müəyyən olunmuş rolları, şəxsi və paylaşılan konteksti olan bir neçə nəfər; proseslərinizə uyğun tətbiq, məsləhət və dəstəklə."
+          },
+          {
+            "name": "Mən: bir nəfər üçün",
+            "body": "Bir nəfər və onun öz agentləri, eyni dizayn və nəzarətlə. Hazırlanma mərhələsindədir."
+          }
+        ]
+      },
+      "faq": [
         [
-          "Məsul şəxs",
-          "Hər iş axınına konkret bir nəfər cavabdehdir."
+          "Mövcud AI abunələrimizdən istifadə edə bilərikmi?",
+          "Provayder icazə verdikdə, API açarı və ya dəstəklənən hesab qoşulması ilə. Bəzi planlar bu yolla istifadə oluna bilmir və limitləri hər provayder özü müəyyən edir. Əhatəni müəyyənləşdirməzdən əvvəl nəyin keçərli olduğunu yoxlayırıq."
         ],
         [
-          "Yoxlama",
-          "Heç nə yoxlanılmadan işə düşmür."
+          "Mövcud tarixçəmizi idxal etmək olarmı?",
+          "Dəstəklənən alətlərdən və ya təqdim etdiyiniz ixrac fayllarından. Kimsə hesaba daxil olduğu üçün iş mühiti həmin hesabın tarixçəsini oxumur. Nəyin gətiriləcəyi və onu kimin görəcəyi əvvəlcədən razılaşdırılır."
         ],
         [
-          "Sərhəd",
-          "Məlumatlar sizin qərar verdiyiniz yerdə qalır."
+          "Agentlər əslində nə edə bilir?",
+          "Onlara verilən qoşulmalar daxilində araşdırır, yoxlayır, qaralama və xülasə hazırlayır, qeydləri yeniləyir. Müştərilərə və ya digər insanlara çatan hərəkətlər, məsələn, göndərmə, siz başqa qərar verməsəniz, təsdiq gözləyir."
+        ],
+        [
+          "İnterfeys komandamız üçün həqiqətən dəyişə bilərmi?",
+          "Bəli, istəklə. Kimsə lövhəni, səhifəni və ya göstərici görünüşünü təsvir edir, iş mühiti ilkin baxış hazırlayır, icazəsi olan şəxs isə onu tətbiq edir. Komandanız tətbiqdən sonra da onu dəyişməyə davam edir."
+        ],
+        [
+          "Bu, indi əlçatandırmı?",
+          "Komandalar üçün: yazılı razılaşdırılan, imkanları və qoşulmaları işinizə uyğun müəyyən olunan fərdi tətbiq kimi. Şəxsi versiya olan Me hazırlanma mərhələsindədir."
+        ],
+        [
+          "Komanda daxilində icazələr necə işləyir?",
+          "İnsanlar öz hesabları ilə daxil olur. Rollar iş mühitini kimin dəyişdiyini, kimin təsdiqlədiyini və hər insanın, agentin nəyi görə bildiyini müəyyən edir. Şəxsi və paylaşılan kontekst tətbiq zamanı qurulur."
         ]
       ]
     },
-    "startTitle": "Kiçikdən başlayın. Nəticəyə əsasən genişləndirin.",
-    "moreApproach": "Yanaşmamız haqqında ətraflı",
-    "commitTitle": "Şərtlərimiz, yazılı şəkildə.",
-    "recordTitle": "Qurulub, təhvil verilib, istifadədədir.",
-    "seeWork": "İşlərimizə baxın",
-    "founderTitle": "Bir təsisçi. İki şəhər.",
-    "quote": "“Sİ-dən real dəyər əldə edən təşkilatlar ən böyük büdcəsi olanlar deyil. Əməkdaşları ondan necə istifadə etməyi bilən təşkilatlardır.”",
-    "quoteBy": "Amir Gulubayli, təsisçi",
-    "aboutLink": "Enamplify haqqında",
-    "insightsTitle": "Praktik qeydlər.",
-    "allInsights": "Bütün təhlillər",
-    "situationDek": "Sual budur: o, sizin üçün işləyir, yoxsa sizdən yan keçir?",
-    "outcomesDek": "Başlamazdan əvvəl sizinlə razılaşdırılır. Sonra ölçülür.",
-    "startDek": "Sabit diaqnostika, ölçülən pilot layihə, sonra qərar sizindir.",
-    "commitDek": "Əksər şirkətlərin kağıza köçürmədiyi öhdəliklər.",
-    "recordDek": "Real komandalar üçün real sistemlər və özümüzün iki məhsulu.",
-    "founderDek": "London və Bakı, eyni standartla.",
-    "insightsDek": "Sİ-nin real komandalarda necə işlədiyinə dair qısa, praktik yazılar."
+    "note": "İlk söhbətdən başlayan fərdi tətbiq.",
+    "delivery": {
+      "title": "Razılaşdırılır. Qurulur. Dəstəklənir.",
+      "sub": "İlk iş axınından bütün komandaya qədər fərdi tətbiq.",
+      "steps": [
+        [
+          "Əhatə",
+          "Nəticəni, alətləri və təsdiq mərhələlərini razılaşdırırıq."
+        ],
+        [
+          "Quruluş",
+          "İş məkanını real işiniz ətrafında qururuq."
+        ],
+        [
+          "Dəstək",
+          "Komandaya istifadədə kömək edir, quruluşu təkmilləşdiririk."
+        ]
+      ],
+      "link": "Tətbiq prosesini araşdırın"
+    }
+  },
+  "me": {
+    "heroTitle": "Gününüz planlı.",
+    "heroTitleAlt": "Layihələriniz irəlidə.",
+    "lede": "Şəxsi AI iş məkanınız: planlar, layihələr və agentlər bir uyğunlaşan məkanda.",
+    "note": "Enamplify Me hazırlanma mərhələsindədir. Şəxsi AI proqramıdır; maraq bildirmək hesab yaratmır.",
+    "cross": "Bütün komandanızı qoşmaq istəyirsiniz?",
+    "galleryTitle": "On iki gündəlik dünya.",
+    "galleryHint": "Böyük ölçüdə görmək üçün birini seçin.",
+    "findLabel": "Gündəlik dünyanızı tapın",
+    "conceptNote": "İş məkanı konsepsiyası. Uydurma məlumatlar.",
+    "controlTitle": "Agentləriniz sizin üçün işləyir.",
+    "controlIntro": "Onlar sizin müəyyən etdiyiniz hüdudlar daxilində hərəkət edir, bu hüdudları isə istənilən vaxt dəyişə bilərsiniz.",
+    "control": [
+      [
+        "Çıxış",
+        "Agentlər yalnız icazə verdiyiniz layihələri və faylları görür."
+      ],
+      [
+        "Agentlər",
+        "Hər agentin bir aydın vəzifəsi var; onu dəyişə və ya dayandıra bilərsiniz."
+      ],
+      [
+        "Dəyişikliklər",
+        "Yeni düzümlər əvvəlcə təklif olunur. Saxlayıb-saxlamamağa siz qərar verirsiniz."
+      ]
+    ],
+    "closeTitle": "Enamplify Me üçün maraq bildirin.",
+    "closeBody": "Hazırlanmaqda olan şəxsi AI proqramı. Necə istifadə edəcəyinizi deyin.",
+    "visual": {
+      "concept": "Konsepsiya",
+      "adapt": {
+        "title": "Görünüşü istəyin. Necə qurulduğunu görün.",
+        "sub": "Yazılan istək iş məkanını növbəti işə uyğun yenidən qurur.",
+        "prompt": "Saxladığım reseptlərdən üç şam yeməyi planlaşdır.",
+        "proposed": "Təklif olunan görünüş",
+        "demo": {
+          "label": "İş məkanının yenidən qurulmasının nümunə nümayişi",
+          "you": "Siz",
+          "pause": "İş məkanı nümayişini dayandır",
+          "resume": "İş məkanı nümayişini davam etdir",
+          "replay": "Dəyişiklikləri yenidən göstər",
+          "building": "İş məkanı yenidən qurulur",
+          "ready": "Önizləmə baxışa hazırdır",
+          "nav": [
+            "İcmal",
+            "Fayllar",
+            "Agentlər"
+          ],
+          "workspace": "Şəxsi iş məkanı",
+          "scenes": [
+            {
+              "label": "Günümü planla",
+              "prompt": "Günümü təqvimimə və tapşırıqlarıma uyğun planla.",
+              "title": "Mənim günüm",
+              "primaryTitle": "Bu günün fokusu",
+              "primaryItems": [
+                "Görüşə hazırlaş",
+                "Layihə üçün vaxt ayır",
+                "Fasilə üçün yer saxla"
+              ],
+              "secondaryTitle": "İstifadə olunan",
+              "secondaryItems": [
+                "Təqvimim",
+                "Tapşırıq siyahım"
+              ],
+              "result": "Dəyişdirə biləcəyiniz gün planı.",
+              "details": [
+                "Görüş qeydləri və hazırlıq tədbirin yanında qalır.",
+                "Fokuslu vaxt bloku layihəni irəli aparır.",
+                "Fasilə planın bir hissəsi olaraq qalır."
+              ],
+              "calendarSource": {
+                "name": "Şəxsi təqvim",
+                "body": "09:00 planlama. 11:00 görüş. Günortadan sonranı layihə işi üçün saxlayın."
+              },
+              "fileSources": [
+                {
+                  "name": "Bu gün.md",
+                  "body": "Görüş qeydlərini hazırla. Layihə üzərində işlə. Nahardan sonra fasilə saxla."
+                },
+                {
+                  "name": "Layihə qeydləri.md",
+                  "body": "Detalları cilalamazdan əvvəl planı yazın. Nəticəyə baxmaq üçün vaxt saxlayın."
+                }
+              ]
+            },
+            {
+              "label": "Təhsil",
+              "prompt": "Kurs qeydlərimdən təkrar lövhəsi qur.",
+              "title": "Təkrar iş məkanı",
+              "primaryTitle": "Təkrar lövhəm",
+              "primaryItems": [
+                "Əsas mövzuları oxu",
+                "Sualları məşq et",
+                "Çətin hissələrə qayıt"
+              ],
+              "secondaryTitle": "İstifadə olunan",
+              "secondaryItems": [
+                "Kurs qeydləri",
+                "Saxlanmış suallar"
+              ],
+              "result": "Materiallarınıza uyğun təkrar planı.",
+              "details": [
+                "Əsas mövzular kurs qeydlərinizdən qruplaşdırılıb.",
+                "Məşq sualları əlaqəli materialların yanında yerləşir.",
+                "Çətin mövzular növbəti təkrar üçün siyahıda qalır."
+              ],
+              "calendarSource": {
+                "name": "Təkrar təqvimi",
+                "body": "Bazar ertəsi: əsas mövzular. Çərşənbə: məşq sualları. Cümə: çətin materialların təkrarı."
+              },
+              "fileSources": [
+                {
+                  "name": "Kurs qeydləri.md",
+                  "body": "Təriflərə, işlənmiş nümunələrə və mövzular arasındakı əlaqələrə fokuslanın. Qeyri-müəyyən addımları işarələyin."
+                },
+                {
+                  "name": "Məşq sualları.md",
+                  "body": "Əsas anlayışları öz sözlərinizlə izah edin. Nümunəni işləyin, sonra əsaslandırmanızı yoxlayın."
+                }
+              ]
+            },
+            {
+              "label": "Yeməklər",
+              "prompt": "Saxladığım reseptlərdən üç şam yeməyi planlaşdır.",
+              "title": "Yemək həftəm",
+              "primaryTitle": "Üç şam yeməyi",
+              "primaryItems": [
+                "Sobada tərəvəz",
+                "Limonlu toyuq",
+                "Göbələkli makaron"
+              ],
+              "secondaryTitle": "Alış siyahısı",
+              "secondaryItems": [
+                "Tərəvəz və göyərti",
+                "Toyuq və makaron"
+              ],
+              "result": "Üç şam yeməyi və alış siyahısı bir yerdə.",
+              "details": [
+                "Saxlanmış reseptlərdəki tərəvəzlərlə sadə şam yeməyi.",
+                "Ərzaqlar alış siyahısına daxil edilib.",
+                "Yemək planı və alış siyahısı birlikdə qalır."
+              ],
+              "calendarSource": {
+                "name": "Yemək həftəsi",
+                "body": "Çərşənbə axşamı: sobada tərəvəz. Cümə axşamı: limonlu toyuq. Şənbə: göbələkli makaron."
+              },
+              "fileSources": [
+                {
+                  "name": "Saxlanmış reseptlər.md",
+                  "body": "Tərəvəzləri yumşalana qədər bişirin. Limonlu toyuğu göyərti ilə verin. Makaronu göbələklə tamamlayın."
+                },
+                {
+                  "name": "Ərzaq qeydləri.md",
+                  "body": "Alışdan əvvəl makaron, zeytun yağı və quru otları yoxlayın. Təzə tərəvəz və çatışmayan ərzaqları alın."
+                }
+              ]
+            }
+          ],
+          "paused": "Nümayiş dayandırılıb",
+          "ui": {
+            "preview": "Önizləmə",
+            "selected": "Seçilib",
+            "reviewed": "Yoxlanılıb",
+            "review": "Yoxlanmış kimi işarələ",
+            "draft": "Qaralama",
+            "detail": "Qaralama önizləməsi",
+            "sources": "Seçilmiş mənbələr",
+            "schedule": "Nümunə rutin",
+            "scheduleOn": "Hazırlıq aktivdir",
+            "scheduleOff": "Hazırlıq dayandırılıb",
+            "agent": "Hazırlıq agenti",
+            "agentNote": "Seçilmiş mənbələrdən baxış üçün qaralama hazırlayır.",
+            "filesNote": "Baxmaq üçün nümunə mənbə seçin.",
+            "fileDetail": "Nümunə mənbə seçildi. Məzmun bu nümayiş daxilində qalır.",
+            "setupApplied": "Quruluş önizləməsi tətbiq olundu",
+            "interactive": "İnteraktiv nümunə. Dəyişikliklər bu səhifədə qalır.",
+            "adaptive": {
+              "lanes": [
+                "Hazırlanacaq",
+                "Davam edir",
+                "Baxış üçün"
+              ],
+              "days": [
+                "B.e.",
+                "Ç.a.",
+                "Ç.",
+                "C.a.",
+                "C."
+              ],
+              "mealDays": [
+                "Çərşənbə axşamı",
+                "Cümə axşamı",
+                "Şənbə"
+              ],
+              "ingredients": [
+                "Tərəvəz · göyərti",
+                "Toyuq · limon",
+                "Göbələk · makaron"
+              ],
+              "questions": [
+                "Bu mövzuları hansı fikirlər birləşdirir?",
+                "Addımları izah edə bilərsiniz?",
+                "Hansı hissəyə yenidən baxmaq lazımdır?"
+              ],
+              "reveal": "İzahı göstər",
+              "hide": "Suala qayıt",
+              "move": "Baxışa keçir",
+              "document": "Həftəlik icmal",
+              "milestones": "Layihə mərhələləri",
+              "card": "Təkrar kartı",
+              "focus": "Cari fokus",
+              "task": "Seçilmiş tapşırıq",
+              "milestone": "Seçilmiş mərhələ"
+            }
+          }
+        }
+      },
+      "connect": {
+        "title": "Alətləriniz, işin ətrafında.",
+        "sub": "Çıxışı siz seçirsiniz.",
+        "core": "Yalnız sizə məxsus",
+        "groups": [
+          {
+            "name": "Kommunikasiya",
+            "items": [
+              "Təqvim",
+              "E-poçt",
+              "Xatırlatma"
+            ]
+          },
+          {
+            "name": "Fayllar",
+            "items": [
+              "Sənədlər",
+              "Qovluqlar",
+              "Disklər"
+            ]
+          },
+          {
+            "name": "Veb",
+            "items": [
+              "Saytlar",
+              "Axtarış",
+              "Məqalələr"
+            ]
+          },
+          {
+            "name": "AI modelləri",
+            "items": [
+              "Köməkçilər",
+              "Modellər",
+              "API açarları"
+            ]
+          }
+        ],
+        "note": "Yalnız nümunələrdir. Me hazırlanır."
+      },
+      "accounts": {
+        "title": "Bir neçə AI hesabı, hər birinin öz işi.",
+        "sub": "İş tapşırığa görə bölünür, limitdə ehtiyat hesaba keçir.",
+        "cols": [
+          "Hesab",
+          "İş",
+          "İstifadə",
+          "Vəziyyət"
+        ],
+        "kinds": [
+          "Şəxsi hesab",
+          "API açarı",
+          "API açarı",
+          "API açarı"
+        ],
+        "jobs": [
+          "Planlama",
+          "Yazı üçün ehtiyat",
+          "Yazı",
+          "Araşdırma"
+        ],
+        "states": [
+          "Hazırdır",
+          "Limitə çatıb"
+        ],
+        "more": "Dəstəklənən digər provayderlər",
+        "note": "Nümunəvi göstəricilər. Loqolar nümunədir; planlar və limitlər fərqlənir."
+      },
+      "context": {
+        "title": "İşlə birlikdə qalan kontekst.",
+        "sub": "Fayllar, seçilmiş söhbətlər və layihə yaddaşı, mənbələrlə.",
+        "project": "İş axtarışı",
+        "rail": [
+          "Fayllar",
+          "Söhbətlər",
+          "Layihə yaddaşı",
+          "Yalnız sizə görünür"
+        ],
+        "doc": "Müsahibə qeydləri",
+        "sources": [
+          "Vakansiya təsviri.pdf",
+          "Mənim CV-m",
+          "İdxal olunmuş söhbət"
+        ],
+        "status": "Qaralama, mənbələr bağlıdır",
+        "io": [
+          "Seçilmiş söhbətlər idxal olunub",
+          "İxrac oluna bilər"
+        ],
+        "note": "Sadəcə daxil olmaq tarixçəni idxal etmir."
+      },
+      "agents": {
+        "title": "Öz agentlər komandanız.",
+        "sub": "Mütəxəssislər paralel işləyir, sonra işi sizə ötürür.",
+        "objectiveLabel": "Məqsəd",
+        "objective": "Cüməyə qədər müraciət",
+        "lanes": [
+          [
+            "Araşdırma",
+            "Şirkət xəbərləri"
+          ],
+          [
+            "Brauzer",
+            "Vakansiya elanı"
+          ],
+          [
+            "Fayllar",
+            "CV və portfolio"
+          ],
+          [
+            "Kod",
+            "Portfolio səhifəsi"
+          ]
+        ],
+        "states": [
+          "Tamamlanıb",
+          "Tamamlanıb",
+          "İşləyir",
+          "Növbədədir"
+        ],
+        "handoff": "Vahid qaralama",
+        "result": "Müraciət məktubu baxışa hazırdır"
+      },
+      "operate": {
+        "title": "Özü başlayan, sonra sizi gözləyən iş.",
+        "sub": "Hadisə, cədvəl və ya sorğu işi başladır. Siz təsdiqləyirsiniz.",
+        "cols": [
+          "Başlanğıc",
+          "İş növbəsi",
+          "Baxış"
+        ],
+        "triggers": [
+          [
+            "Hadisə",
+            "Yeni vakansiya bildirişi"
+          ],
+          [
+            "Cədvəl",
+            "Bazar, 18:00"
+          ],
+          [
+            "Sorğu",
+            "Söhbətdə soruşun"
+          ]
+        ],
+        "runs": [
+          [
+            "Vakansiya xülasəsi",
+            "İcra olunur"
+          ],
+          [
+            "Həftəlik plan",
+            "Sizi gözləyir"
+          ],
+          [
+            "Oxu xülasəsi",
+            "Dayandırılıb"
+          ]
+        ],
+        "result": "Həftəlik plan baxışa hazırdır",
+        "approver": "Yalnız siz təsdiqləyirsiniz",
+        "controls": [
+          "Təsdiqlər",
+          "İcazələr",
+          "Büdcə",
+          "Fasilə"
+        ]
+      },
+      "place": {
+        "title": "London ilə Bakı arasında qurulur.",
+        "sub": "Təsisçinin rəhbərliyi ilə, hər iki şəhərdə işləyirik."
+      },
+      "extension": {
+        "replay": "Nümayişi yenidən oynat",
+        "cta": [
+          "İş məkanınızı formalaşdırın",
+          "AI hesablarınızı birləşdirin",
+          "Agent quruluşunu araşdırın",
+          "İş axınınızı müzakirə edək"
+        ],
+        "sandbox": {
+          "title": "İş üçün davamlı icra mühiti.",
+          "sub": "Brauzer, kod və fayllar; çıxışı siz seçirsiniz, iş sessiyalar arasında saxlanır.",
+          "task": "Mövzunu araşdır. Faylları hazırla.",
+          "views": [
+            "Brauzer",
+            "Kod",
+            "Fayllar"
+          ],
+          "browser": [
+            "Mənbələr toplandı",
+            "Detallar yoxlandı",
+            "İstinadlar saxlandı"
+          ],
+          "code": [
+            "Mənbələri oxu",
+            "Xülasəni hazırla",
+            "Qaralamanı yaz"
+          ],
+          "files": [
+            "İcmal.md",
+            "Mənbələr.csv",
+            "Qaralama baxışa hazırdır"
+          ],
+          "states": [
+            "İşi dayandır",
+            "İşi saxla",
+            "Buradan davam et"
+          ],
+          "note": "Nümunə mühitdir. Çıxış və icra hər quruluş üçün razılaşdırılır."
+        },
+        "examples": {
+          "title": "Fərqli işə fərqli iş məkanı.",
+          "sub": "Ssenari seçin. Görünüşü, işin ötürülməsini və nəticəni görün.",
+          "label": "Nümunə iş məkanları",
+          "proof": "Seçilmiş müştəri işləri",
+          "proofLink": "Layihəyə baxın",
+          "concept": "Uydurma məlumatlarla nümunə ssenari.",
+          "items": [
+            {
+              "id": "me-daily-focus",
+              "label": "Gündəlik fokus",
+              "request": "Dağınıq tapşırıqlardan aydın gün planı yaradın.",
+              "steps": [
+                "İşləri topla",
+                "Təqvimi yoxla",
+                "Plan təklif et"
+              ],
+              "result": "Dəyişdirə biləcəyiniz gün planı."
+            },
+            {
+              "id": "me-exam-student",
+              "label": "Təhsil",
+              "request": "Öz materiallarınızla təkrara hazırlaşın.",
+              "steps": [
+                "Qeydləri oxu",
+                "Mövzuları tap",
+                "Məşq hazırla"
+              ],
+              "result": "Fokuslu təkrar sessiyası."
+            },
+            {
+              "id": "me-meals",
+              "label": "Yeməklər",
+              "request": "Saxlanmış reseptlərdən üç şam yeməyi planlaşdırın.",
+              "steps": [
+                "Reseptləri oxu",
+                "Həftəni yoxla",
+                "Siyahını hazırla"
+              ],
+              "result": "Üç şam yeməyi və alış siyahısı."
+            },
+            {
+              "id": "me-travel",
+              "label": "Səyahət",
+              "request": "Səfəri bir görünüşdə toplayın.",
+              "steps": [
+                "İdeyaları topla",
+                "Seçimləri müqayisə et",
+                "Marşrut hazırla"
+              ],
+              "result": "Seçiminiz üçün səfər planı."
+            },
+            {
+              "id": "me-creative-journal",
+              "label": "Yaradıcılıq",
+              "request": "İdeyaların inkişafı üçün məkan yaradın.",
+              "steps": [
+                "İstinadları topla",
+                "İdeyaları qrupla",
+                "İcmal hazırla"
+              ],
+              "result": "Kontekstinizdən yaradıcı icmal."
+            },
+            {
+              "id": "me-career",
+              "label": "Karyera",
+              "request": "İmkanları və hazırlığı birlikdə saxlayın.",
+              "steps": [
+                "Rolları izlə",
+                "Tələbləri oxu",
+                "Qaralamaları hazırla"
+              ],
+              "result": "Baxışınız üçün müraciət qaralamaları."
+            }
+          ]
+        }
+      },
+      "setup": {
+        "title": "Bir neçə seçim. Aydın başlanğıc.",
+        "steps": [
+          "Mənbələri seçin",
+          "İşi seçin",
+          "Nəzarətə baxın"
+        ],
+        "sourceTitle": "İş məkanı hansı mənbələrlə işləsin?",
+        "sourceHint": "Ən azı bir nümunə mənbə seçin.",
+        "tools": [
+          "Təqvim",
+          "Fayllar"
+        ],
+        "jobTitle": "Əvvəlcə hansı iş görülsün?",
+        "reviewTitle": "Nümunə quruluşunuz",
+        "reviewNote": "Başqasına göndərilən hər şey baxış üçün gözləyir.",
+        "pause": "Avtomatik hazırlığı dayandır",
+        "next": "Davam et",
+        "back": "Geri",
+        "apply": "Nümayişə tətbiq et",
+        "reset": "Yenidən başla",
+        "applied": "İş məkanı nümunəsinə tətbiq olundu.",
+        "note": "İnteraktiv quruluş nümunəsidir. Hesab qoşulmur və heç nə saxlanmır.",
+        "sourcesLabel": "Mənbələr",
+        "jobLabel": "İlk iş axını",
+        "sub": "Me üçün hazırlanan istiqamətləndirilmiş quruluşu önizləyin."
+      }
+    },
+    "system": {
+      "navLabel": "Bu səhifədə",
+      "title": "Şəxsi iş mühitiniz necə işləyir.",
+      "lede": "Layihələriniz, planlarınız və agentləriniz üçün bir məkan və istəyinizlə dəyişən mərkəz. Aşağıda onun nələri saxladığını, agentlərin nə etdiyini və idarəetmənin necə sizdə qaldığını görəcəksiniz.",
+      "note": "Enamplify Me hazırlanma mərhələsindədir. Nümunələr onun dizaynını uydurma məlumatlarla göstərir; dəstəklənən qoşulmalar Me əlçatan olduqca təsdiqlənəcək.",
+      "illustrative": "Uydurma məlumatlarla nümunəvi konsepsiya.",
+      "faqNav": "Suallar",
+      "faqTitle": "Me haqqında suallar.",
+      "home": {
+        "title": "Sabit məkan, adaptiv mərkəz.",
+        "body": "Söhbətləriniz, kontekstiniz, layihələriniz, fayllarınız, hesablarınız və icazələriniz tanış yerlərində qalır. Mərkəz bu gün işinizə yarayan görünüşü göstərir, siz isə yenisini istəyə bilərsiniz.",
+        "centre": "Adaptiv mərkəz",
+        "centreNote": "İstəyə əsasən yaradılan planlar, lövhələr, izləmə cədvəlləri və icmallar",
+        "frame": [
+          [
+            "Söhbətlər",
+            "Siz və agentləriniz arasında"
+          ],
+          [
+            "Kontekst",
+            "Saxlamağı seçdikləriniz"
+          ],
+          [
+            "Layihələr",
+            "Təhsil, ev, iş, planlar"
+          ],
+          [
+            "Fayllar",
+            "Aid olduqları yerdə"
+          ],
+          [
+            "Hesablar",
+            "Dəstəklənən alətlər və AI provayderləri"
+          ],
+          [
+            "İcazələr",
+            "Hər agent nədən istifadə edə bilər"
+          ]
+        ]
+      },
+      "change": {
+        "nav": "Görünüşü dəyişmək",
+        "title": "Təsvir edin, baxın, saxlayın.",
+        "body": "Lazım olan səhifəni, lövhəni və ya izləmə görünüşünü təsvir edin. İş məkanı seçdiyiniz materiallardan önizləmə hazırlayır; onu saxlayıb-saxlamamağa özünüz qərar verirsiniz.",
+        "dialogueLabel": "Nümunəvi dialoq",
+        "turns": [
+          [
+            "Təsvir",
+            "Siz",
+            "Həftəlik menyu əlavə et: saxladığım reseptlərdən beş axşam yeməyi və çatışmayanlar üçün alış-veriş siyahısı."
+          ],
+          [
+            "İlkin baxış",
+            "İş mühiti",
+            "İlkin baxış hazırdır: saxlanmış reseptlərinizdən beş axşam yeməyi və mağaza bölmələrinə görə qruplaşdırılmış siyahı. Keçən həftə saxladığınız ərzaq qeydindən istifadə olunub. Saxlayaq?"
+          ],
+          [
+            "Saxlamaq",
+            "Siz",
+            "Saxla, cüməni isə boş burax."
+          ]
+        ],
+        "imageCaption": "Saxlanmış görünüş reseptləriniz və alış-veriş siyahınızla yanaşı yerləşir."
+      },
+      "context": {
+        "nav": "Kontekst",
+        "title": "İş mühitiniz nəyi bilir.",
+        "body": "Cavablar gətirməyi seçdiyiniz materiala əsaslanır, mənbələr göstərilir. Başqa hesaba daxil olmaq onun tarixçəsini ötürmür; nəyin gətiriləcəyinə siz qərar verirsiniz.",
+        "columns": [
+          "Məzmun",
+          "Necə daxil olur",
+          "Kim görə bilər"
+        ],
+        "rows": [
+          [
+            "Sənədlər və fayllar",
+            "Yüklənir və ya layihəyə əlavə edilir",
+            "Siz və icazə verdiyiniz agentlər"
+          ],
+          [
+            "Əvvəlki söhbətlər və qeydlər",
+            "Dəstəklənən alətlərdən və ya təqdim etdiyiniz ixrac fayllarından idxal olunur",
+            "Yalnız siz"
+          ],
+          [
+            "Qoşulmuş hesablar",
+            "Dəstəklənən qoşulma ilə, onun limitləri daxilində oxunur",
+            "Ona təyin etdiyiniz agentlər"
+          ],
+          [
+            "Saxlanılan kontekst",
+            "Yadda saxlamasını istədiyiniz üstünlüklər və qərarlar",
+            "Siz; istənilən vaxt dəyişə və ya silə bilərsiniz"
+          ]
+        ]
+      },
+      "connections": {
+        "nav": "Qoşulmalar",
+        "title": "Alətləriniz və AI hesablarınız bir yerdə.",
+        "body": "Qoşulmalar istifadəyə görə qruplaşdırılır. Hər birindən hansı agentlərin istifadə edə biləcəyini siz seçirsiniz, onun vəziyyətini və provayder imkan verdikdə istifadə həcmini görürsünüz. Provayder icazə verdikdə artıq sahib olduğunuz AI planını və ya hesabını API açarı və ya dəstəklənən hesab qoşulması ilə gətirə bilərsiniz. Əlçatanlıq və limitlər hər provayderdən asılıdır. Dəstəkləndiyi hallarda eyni provayderin bir neçə hesabını qoşun və hər birinin mövcud istifadə limitini ayrıca görün.",
+        "core": "Sizin iş mühitiniz",
+        "accessLabel": "Çıxış",
+        "statusLabel": "Vəziyyət",
+        "groups": [
+          {
+            "name": "Gündəlik",
+            "examples": "Təqvim, e-poçt və qeydlər, məsələn, Google və ya Microsoft hesabı",
+            "access": "Planlama agenti üçün təqvimi oxuma",
+            "status": "Qoşulub"
+          },
+          {
+            "name": "Öyrənmə və layihələr",
+            "examples": "Bulud yaddaşı, oxu siyahıları və kurs materialları",
+            "access": "Yalnız oxuma",
+            "status": "Təsdiqinizi gözləyir"
+          },
+          {
+            "name": "AI provayderləri",
+            "examples": "Mövcud provayder hesabı və ya API açarı, icazə verildikdə",
+            "access": "Agentləriniz arasında aylıq limitlə bölüşdürülür",
+            "status": "Qoşulub, istifadə göstərilir"
+          }
+        ],
+        "foot": "Adı çəkilən məhsullar nümunədir, Me üçün təsdiqlənmiş qoşulmalar siyahısı deyil.",
+        "exampleLabel": "Bağlantılar və statuslar uydurma məlumatlarla nümunə kimi göstərilir."
+      },
+      "agents": {
+        "nav": "Agentlər",
+        "title": "Öz agentlər komandanız.",
+        "body": "Hər agentin rolu, məqsədi və yalnız ona verdiyiniz alətləri var. Onlar işi bir-birinə ötürür və yoxlaya biləcəyiniz nəticə qaytarır; işin gedişi görünür.",
+        "imageCaption": "Qaralamalar siz hazır olana qədər aid olduqları vakansiyanın yanında qalır.",
+        "exampleTitle": "Nümunə: iş müraciətinə hazırlıq",
+        "returnsLabel": "Nəticə",
+        "steps": [
+          [
+            "Araşdırma",
+            "Araşdırma agenti",
+            "Saxlanmış vakansiyanı və təşkilatın açıq materiallarını oxuyur.",
+            "Əsas tələblər və suallar"
+          ],
+          [
+            "Doğrulama",
+            "Yoxlama agenti",
+            "Onları CV-niz və əvvəlki layihələrinizlə müqayisə edir.",
+            "Uyğunluqlar və boşluqlar, mənbələrlə"
+          ],
+          [
+            "Hazırlıq",
+            "Yazı agenti",
+            "Müraciət məktubunun qaralamasını və müraciət üçün yoxlama siyahısını hazırlayır.",
+            "İş mühitinizdə qaralama"
+          ],
+          [
+            "Nəzərdən keçirmə",
+            "Siz",
+            "Redaktə edir, qərar verir və özünüz göndərirsiniz.",
+            "Arxasında durduğunuz müraciət"
+          ]
+        ]
+      },
+      "recurring": {
+        "nav": "Rejimlər",
+        "title": "Özünü yeniləyən planlar.",
+        "body": "Bəzi köməklər xahiş etmədən gəlməlidir. Rejimi nəyin başladacağını, harada sizi gözləyəcəyini, nə qədər xərcləyə biləcəyini və nə vaxt sizə xəbər verəcəyini siz seçirsiniz.",
+        "points": [
+          [
+            "Başladıcılar",
+            "Vaxt, yeni fayl və ya qoşulmuş təqvimdə dəyişiklik."
+          ],
+          [
+            "Yoxlama nöqtələri",
+            "Razılığınızı gözləyən addımlar."
+          ],
+          [
+            "Büdcələr",
+            "Hər rejim üçün limit, istifadə olunduqca görünür."
+          ],
+          [
+            "Xətalar",
+            "Uğursuz icra dayanır və səbəbini deyir; təkrarlayın və ya dayandırın."
+          ],
+          [
+            "Bildirişlər",
+            "Hər icradan sonra deyil, sizə ehtiyac olanda qısa qeyd."
+          ]
+        ],
+        "note": "Rejimlər Me-nin necə hazırlandığını göstərir və o əlçatan olduqca təsdiqlənəcək.",
+        "logTitle": "Nümunəvi icra tarixçəsi",
+        "columns": [
+          "Vaxt",
+          "Rejim",
+          "Vəziyyət"
+        ],
+        "rows": [
+          [
+            "B. 18:00",
+            "Təqvim və tapşırıqlardan həftəlik plan",
+            "Tamamlandı"
+          ],
+          [
+            "B.e. 08:00",
+            "Təkrar cədvəlinin yenilənməsi",
+            "Sizi gözləyir"
+          ],
+          [
+            "B.e. 12:30",
+            "Oxu siyahısının xülasəsi",
+            "Dayandı: limitə çatıb"
+          ],
+          [
+            "B. 18:00",
+            "Təqvim və tapşırıqlardan həftəlik plan",
+            "Planlaşdırılıb"
+          ]
+        ]
+      },
+      "control": {
+        "nav": "Nəzarət",
+        "title": "İdarəetmə sizdədir.",
+        "body": "Bu hüdudları siz müəyyən edirsiniz və istənilən vaxt dəyişə bilərsiniz.",
+        "decideTitle": "Siz qərar verirsiniz",
+        "decide": [
+          "Hər agentin hansı layihələrə, fayllara və hesablara çıxışı olduğu",
+          "Nəyi yadda saxladığı, nəyi unutduğu",
+          "Hansı hərəkətlərin, o cümlədən başqasına göndərilən hər şeyin, təsdiqinizi tələb etdiyi",
+          "Rejimin nə vaxt işlədiyi, dayandığı və ya bitdiyi"
+        ],
+        "seeTitle": "Görür və dayandıra bilirsiniz",
+        "see": [
+          "Hər agentin nə etdiyi və nə vaxt",
+          "Yeni düzümlər, saxlamazdan əvvəl",
+          "İşləyən rejimlər, fasilə və dayandırma imkanı ilə",
+          "Müəyyən etdiyiniz limitlərə görə istifadə"
+        ],
+        "who": [
+          {
+            "name": "Biz: komandalar üçün",
+            "body": "Dəqiq müəyyən olunmuş rolları və paylaşılan konteksti olan bütöv komanda; onun proseslərinə uyğun tətbiq olunur."
+          },
+          {
+            "name": "Mən: bir nəfər üçün",
+            "body": "Yalnız siz və agentləriniz, sizə məxsus iş mühitində. Hazırlanma mərhələsindədir: marağınızı bildirmək hesab deyil, söhbət başladır."
+          }
+        ]
+      },
+      "faq": [
+        [
+          "Artıq ödədiyim AI abunələrindən istifadə edə bilərəmmi?",
+          "Provayder icazə verdikdə, API açarı və ya dəstəklənən hesab qoşulması ilə. Hər plan bu yolla istifadə oluna bilmir və limitləri hər provayder özü müəyyən edir."
+        ],
+        [
+          "Əvvəlki söhbətlərimi biləcəkmi?",
+          "Yalnız gətirdiklərinizi: dəstəklənən alətlərdən idxal və ya yüklədiyiniz ixrac faylları. Hesaba daxil olmaq Me-yə həmin hesabın tarixçəsini vermir."
+        ],
+        [
+          "Agentlər məndən soruşmadan hərəkət edəcəkmi?",
+          "Onlar verdiyiniz çıxış daxilində araşdırır, yoxlayır, qaralama hazırlayır və nizamlayır. Başqasına göndərilən hər şey təsdiqinizi gözləyir."
+        ],
+        [
+          "Görünüşünü dəyişə bilərəmmi?",
+          "Bəli. Səhifəni, lövhəni və ya izləmə cədvəlini təsvir edin; əvvəlcə ilkin baxışı görürsünüz və yalnız istəsəniz saxlayırsınız."
+        ],
+        [
+          "Me-dən nə vaxt istifadə edə bilərəm?",
+          "Me hazırlanma mərhələsindədir. Müraciət forması ilə marağınızı bildirmək söhbət başladır, hesab yaratmır."
+        ],
+        [
+          "Komandam üçün istəsəm nə olacaq?",
+          "Bu, komandalar üçün Enamplify-dır: bir neçə nəfər, dəqiq rollar, paylaşılan kontekst və proseslərinizə uyğun tətbiq."
+        ]
+      ]
+    }
   },
   "approach": {
-    "title": "Kiçikdən başlayın. Sübut edin. Sonra genişləndirin.",
-    "lede": "Hər əməkdaşlıq kiçik, sabit bir addımla başlayır. Yalnız nəticələr buna əsas verəndə irəli gedirsiniz.",
+    "title": "İş üsulunuzdan ona uyğun iş mühitinə.",
+    "lede": "Enamplify-ı komandanızın mövcud proseslərinə uyğun tətbiq edir və əhatəni yazılı razılaşdırırıq. Tətbiq ödənişli diaqnostika ilə başlayır, sonra bir və ya iki komanda üçün quraşdırma və genişləndirmə barədə qərar gəlir.",
     "stagesLabel": "Mərhələlər",
     "whatYouGet": "Nə əldə edirsiniz",
     "controlTitle": "Praktikada nəzarət.",
     "control": [
       [
         "Sizin girişiniz, sizin rollarınız",
-        "İnsanlar şirkət hesabları ilə daxil olur. Kimin qura, təsdiqləyə və istifadə edə biləcəyini rollar müəyyən edir."
+        "İnsanlar öz hesabları ilə daxil olur. Kimin iş mühitini dəyişə, təsdiqləyə və ondan istifadə edə biləcəyini rollar müəyyən edir."
       ],
       [
-        "İşə düşməzdən əvvəl yoxlanılır",
-        "Heç bir iş axını adı bəlli məsul şəxs və yoxlama mərhələsi olmadan istifadəyə verilmir."
+        "Dəyişməzdən əvvəl ilkin baxış",
+        "Yeni görünüşlər və iş axınları əvvəlcə göstərilir və müvafiq şəxs razılaşdıqda tətbiq olunur."
       ],
       [
-        "Tam qeydiyyat",
-        "Hər icra qeydə alınır: nəyin, nə vaxt və kimin səlahiyyəti ilə baş verdiyini görə bilərsiniz."
+        "Adı bəlli məsulu olan agentlər",
+        "Hər agentin müəyyən vəzifəsi və ona cavabdeh olan bir şəxs var."
       ],
       [
-        "Məlumat həssaslığa görə yönləndirilir",
-        "Həssas məlumat yalnız sizin mühitinizdə işləyən modellərə göndərilir. Heç kim bu qərarı əl ilə verməli deyil."
+        "Görünən qeydiyyat",
+        "Agentin nə etdiyini, nə vaxt və kimin səlahiyyəti ilə etdiyini görə bilərsiniz."
       ],
       [
         "Görünən xərclər",
-        "Hər komanda üçün istifadə limitləri və Sİ-nin sizə neçəyə başa gəldiyinin aydın mənzərəsi."
+        "Hər komanda üçün istifadə limitləri və süni intellektin sizə neçəyə başa gəldiyinin aydın mənzərəsi."
       ],
       [
-        "Hostinq sizin seçdiyiniz yerdə",
-        "Öz infrastrukturunuzda və ya Böyük Britaniyada, yaxud Avropa İttifaqında yerləşən serverlərdə."
+        "Əvvəlcədən razılaşdırılmış hüdudlar",
+        "Nəsə qoşulmazdan əvvəl iş mühitinin hansı məlumatdan istifadə edə biləcəyini sizinlə razılaşdırırıq."
       ]
     ],
-    "leavesTitle": "Biz gedəndən sonra sizdə qalanlar.",
+    "leavesTitle": "Təhvil prosesi işin bir hissəsidir.",
     "leaves": [
-      "Əməkdaşlarınızın hər həftə istifadə etdiyi iş axınları",
-      "Növbətiləri qura bilən insanlar",
-      "Təşkilatınızın Sİ-dən necə istifadə etdiyinə dair iş qaydaları",
-      "Ölçülmüş başlanğıc göstəricilər və nəyin dəyişdiyinə dair sübutlar"
+      "Əməkdaşlarınızın hər həftə istifadə etdiyi iş mühiti",
+      "Onu özləri dəyişə bilən insanlar",
+      "Aydın rollar, icazələr və agent vəzifələri",
+      "Ölçülmüş başlanğıc vəziyyət və nəyin dəyişdiyinə dair sübutlar"
     ],
-    "faqTitle": "Soruşmazdan əvvəl."
+    "faqTitle": "Əməkdaşlıq barədə suallar."
   },
   "work": {
-    "title": "Müştərilər üçün qurduq. Özümüz üçün idarə edirik.",
-    "lede": "Müştərilər üçün təhvil verilmiş səkkiz növ Sİ sistemi və özümüzün idarə etdiyi iki məhsul.",
+    "title": "İşə uyğun qurulmuş sistemlər.",
+    "lede": "Peşəkar xidmətlər, turizm və klinik əməliyyatlar üzrə seçilmiş layihələr və özümüzün qurub idarə etdiyimiz məhsullar.",
     "deliveredLabel": "Təhvil verilmiş sistemlər",
     "delivered": {
       "topic": "Təhvil verilib",
-      "title": "Səkkiz növ müştəri sistemi, istifadədə.",
+      "title": "Fərqli sistemlər üzrə layihə təcrübəsi.",
       "caption": "Təhvil verilmiş müştəri sistemləri",
       "columns": [
         "Sistem",
@@ -302,10 +1864,10 @@
       ]
     },
     "productsTitle": "Qurduğumuz və idarə etdiyimiz məhsullar.",
-    "casesTitle": "Real layihə nümunələri.",
-    "casesLede": "Turizm startapına, marketinq agentliyinə, PR agentliyinə və klinik sınaqlar təşkilatına işlərini avtomatlaşdırmağa necə kömək etdiyimiz.",
+    "casesTitle": "Seçilmiş müştəri layihələri.",
+    "casesLede": "Hər layihənin ehtiyacı, bizim töhfəmiz və qurulan iş axını. Məxfi layihələrdə müştərinin adı açıqlanmır.",
     "readCase": "Real layihə nümunəsini oxuyun",
-    "capabilitiesTitle": "Nə qururuq.",
+    "capabilitiesTitle": "Süni intellekti tətbiq etdiyimiz işlər.",
     "capabilities": [
       [
         "Daxili iş axınlarının avtomatlaşdırılması",
@@ -334,15 +1896,15 @@
     ]
   },
   "about": {
-    "title": "Bir təsisçi. İki şəhər. Bir standart.",
+    "title": "Quruculuq təcrübəsinə əsaslanan məsləhət.",
     "bio": [
       "Amir rəhbər komandalara Sİ-nin harada ölçülə bilən dəyər yarada biləcəyi, iş axınlarını necə dəyişməli olduğu və insanların onu uğurla mənimsəməsi üçün nəyin lazım olduğu barədə məsləhət verir. Onun işi turizm, marketinq, təhsil, maliyyə və klinik texnologiyalar sahələrində Sİ strategiyası, əməliyyat modelinin qurulması, tətbiq və bacarıqların inkişafını əhatə edir.",
       "Amir müştərilər üçün aktiv satış (outbound) sistemlərindən klinik sınaqların idarə olunması proqramına qədər Sİ sistemləri qurub, həmçinin özünün iki Sİ məhsulunu, grademy və pripitch-i yaradıb. Komandasının işi Google hakatonunda qalib gəlib."
     ],
-    "whyTitle": "Niyə varıq.",
+    "whyTitle": "İşə yanaşmamız.",
     "why": [
-      "Təşkilatların çoxuna yeni bir Sİ aləti lazım deyil. Onlara lazım olan, öz əməkdaşlarının mövcud alətlərdən təhlükəsiz şəkildə, həqiqətən vacib olan işlərdə istifadə edə bilməsidir.",
-      "Enamplify bunu adi hala çevirmək üçün yaradılıb: satın aldığınız deyil, komandanızın qurduğu Sİ."
+      "Enamplify həm məhsul, həm də peşəkar komandadır. İş mühiti komandanın kontekstini, hesablarını, alətlərini və agentlərini bir-birinə bağlı saxlayır; biz isə onu komandanın mövcud iş qaydasına uyğun tətbiq edir və iş dəyişdikcə məsləhət veririk.",
+      "Başlanğıc konkret sistemin qurulması, daha aydın plan və ya mövcud komandaya praktik dəstək ola bilər. Davam etməzdən əvvəl işin əhatəsini, məsuliyyətləri və irəliləyişin necə qiymətləndiriləcəyini razılaşdırırıq."
     ],
     "marketsTitle": "İki bazar, bir standart.",
     "markets": "Londondan Böyük Britaniya və Avropa üzrə, Bakıdan isə Azərbaycan üzrə işləyirik. Hər ikisində standart eynidir: məlumatlarınız sizin qərar verdiyiniz yerdə, bacarıq isə əməkdaşlarınızda qalır.",
@@ -365,8 +1927,8 @@
     "changedTitle": "Nə dəyişdi.",
     "relatedTitle": "Əlaqəli yazı.",
     "moreTitle": "Digər real layihə nümunələri.",
-    "closeTitle": "Komandanız üçün də eynisini istəyirsiniz?",
-    "closeBody": "Komandanızın başqasına həvalə etmək istədiyi iş haqqında otuz dəqiqəlik söhbət. Uyğun tərəfdaş olmasaq, bunu açıq deyəcəyik."
+    "closeTitle": "Bu yanaşma komandanızda necə tətbiq oluna bilər?",
+    "closeBody": "Prioritetləriniz, görüləcək iş və sizə necə kömək edə biləcəyimiz barədə 30 dəqiqəlik söhbətlə başlayaq."
   },
   "careers": {
     "title": "Bizimlə işləyin.",
@@ -430,28 +1992,31 @@
     "closeBody": "Doldurulmuş bələdçini komandanızın işi haqqında söhbətə gətirin."
   },
   "contact": {
-    "title": "Diaqnostik görüş təyin edin.",
-    "lede": "Təsisçi Amir ilə komandanız və dəyişmək istədiyiniz iş haqqında otuz dəqiqə. Satış təqdimatı da, avtomatik ardıcıl e-poçt göndərişləri də yoxdur.",
+    "title": "Görəcəyimiz işi müzakirə edək.",
+    "lede": "Prioritetləriniz və sizə necə kömək edə biləcəyimiz barədə Amir ilə 30 dəqiqəlik ilkin söhbət.",
     "coverTitle": "Nələri müzakirə edəcəyik",
     "cover": [
-      "Komandanızın vaxtı bu gün hara gedir",
-      "Sİ-dən artıq harada istifadə olunur, rəsmi və ya qeyri-rəsmi",
-      "Diaqnostikanın dəyib-dəyməyəcəyi və nələrə baxacağı"
+      "Nəyi dəyişmək istədiyiniz və işin harada ləngidiyi",
+      "Mövcud sistemləriniz, komandanız və məhdudiyyətləriniz",
+      "İş mühitinin, məsləhətin və ya xüsusi sistemin faydalı olub-olmayacağı"
     ],
     "afterTitle": "Sonra nə olur",
-    "after": "Uyğunluq olarsa, diaqnostika üçün qısa yazılı təklif alırsınız. Olmazsa, bunu açıq deyəcək və sizi faydalı bir ünvana yönləndirəcəyik.",
-    "chooseTime": "Vaxt seçin",
-    "calendarNote": "Görüş təqvimimiz yeni vərəqdə açılır.",
+    "after": "Uyğunluq varsa, işin təklif olunan əhatəsini və ödənişləri yazılı təqdim edirik. Daha geniş komanda proqramı ödənişli diaqnostika ilə başlaya bilər.",
+    "chooseTime": "30 dəqiqəlik ilkin görüş təyin edin",
+    "calendarNote": "Görüş təqvimimizdən vaxt seçin. Bu ilkin söhbət ödənişli diaqnostikadan ayrıdır.",
     "formTitle": "Yazmağı üstün tutursunuz?",
+    "offerNote": "Komandanız üçün Enamplify və ya özünüz üçün Enamplify Me ilə maraqlanırsınızsa, onu “Nə haqqında danışmaq istərdiniz?” sualında seçin. Me hazırlanma mərhələsindədir: bu barədə mesaj marağınızı qeyd edir və hesab yaratmır.",
     "name": "Adınız",
-    "email": "İş e-poçtu",
-    "organisation": "Təşkilat",
+    "email": "E-poçt",
+    "organisation": "Təşkilat (istəyə bağlı)",
     "interest": "Nə haqqında danışmaq istərdiniz?",
     "interests": [
-      "Hələ əmin deyiləm",
-      "Diaqnostik görüş",
-      "Komandanın Sİ bacarıqları",
-      "Fərdi Sİ sistemi",
+      "Hələ dəqiq bilmirəm",
+      "Komandam və ya biznesim üçün Enamplify",
+      "Enamplify Me: maraq bildirmək",
+      "İlkin görüş",
+      "Süni intellekt üzrə məsləhət və komanda bacarıqları",
+      "Xüsusi süni intellekt sisteminin qurulması",
       "Başqa mövzu"
     ],
     "message": "İş haqqında bir az məlumat",
@@ -614,5 +2179,878 @@
     "timeout": "Gözləmə müddəti bitdi. Zəhmət olmasa, təkrar göndərmək əvəzinə bizə birbaşa yazın.",
     "unconfirmed": "Müraciətin göndərildiyini təsdiqləmək mümkün olmadı.",
     "reachDirect": "Amirə birbaşa {email} ünvanına yaza bilərsiniz."
+  },
+  "popup": {
+    "ariaLabel": "Süni intellekt agentlərinin qurulması üzrə pulsuz icraçı bələdçisi",
+    "pillTag": "Pulsuz bələdçi",
+    "pillText": "Agentlərdən real nəticə alın",
+    "kicker": "Pulsuz icraçı bələdçisi",
+    "title": "Süni intellekt agentlərindən real iş alın.",
+    "lede": "Dağınıq çat hesablarından kənara çıxmaq üçün qapalı bələdçini açın:",
+    "bullets": [
+      "İxtisaslaşmış zolaqlarla hazırlıq və ötürmələri sürətləndirin",
+      "Hər xarici əməliyyatda insan təsdiqini qoruyun",
+      "4 səviyyəli sxem və çap olunan PDF vərəqi daxildir"
+    ],
+    "emailLabel": "İş e-poçtu",
+    "emailPlaceholder": "İş e-poçtu",
+    "submit": "İndi oxuyun",
+    "privacyNote": "Dərhal giriş və seçilmiş qeydlər. İstənilən vaxt çıxa bilərsiniz."
+  },
+  "briefing": {
+    "title": "Şirkət daxilində süni intellekt və agent işinin qurulması.",
+    "lede": "Fərdi çat hesabları niyə yarıda qalır və əməliyyat rəhbərləri komandaların süni intellektdən etibarlı nəticə alması üçün ortaq konteksti, ixtisaslaşmış agent zolaqlarını, təsdiq mərhələlərini və adaptiv iş mühitini necə qurur.",
+    "download": "PDF bələdçisini yükləyin",
+    "meta": "Qapalı icraçı bələdçisi · 25 dəqiqə · Əməliyyat direktorları, şöbə rəhbərləri və transformasiya liderləri üçün",
+    "gapTitle": "Şirkətlərdə süni intellekt tətbiqi niyə çat pəncərəsində ilişib qalır.",
+    "gapProse": [
+      "Əksər təşkilatlar işçilərə fərdi çat hesabları verməklə və qısa sorğu təlimi keçirməklə başlayır. Əməkdaşlar alətdən e-poçtları yenidən yazmaq və ya ayrı-ayrı qeydləri ümumiləşdirmək üçün istifadə edir, əsas əməliyyat işləri isə yenə əl ilə görülür.",
+      "Çətinlik nadir hallarda modelin özündə olur. Əsas məsələ modelin ətrafındakı əməliyyat strukturudur. Agent cari layihə brifini görmədikdə, təsdiqlənmiş şablonun hansı qovluqda olduğunu bilmədikdə, beş işi tək sorğuda görməyə çalışdıqda və ya aydın insan təsdiqi mərhələsi olmadıqda komandalar nəticəyə etibar etmir.",
+      "Agentlərdən real əməliyyat gücü almaq üçün dağınıq şəxsi söhbətlərdən kontekstin, dəqiq vəzifələrin, icazələrin və yoxlama nöqtələrinin birbaşa iş axınına qurulduğu strukturlaşdırılmış iş mühitinə keçmək lazımdır."
+    ],
+    "contrasts": [
+      [
+        "Dağınıq fərdi çatlar",
+        "Hər kəs yaddaşından parçalar kopyalayır; pəncərə bağlandıqda kontekst itir və heç kim prosesi izləyə bilmir."
+      ],
+      [
+        "Əsaslandırılmış iş konteksti",
+        "Layihələr, canlı təqvimlər, təsdiqlənmiş qovluqlar və qaydalar iş mühitinin ətrafında yerləşir ki, agentlər aktual məlumatlarla işləsin."
+      ],
+      [
+        "Tək ümumi sorğu",
+        "Bir sorğudan eyni vaxtda araşdırma aparmaq, rəqəmləri yoxlamaq, mətn yazmaq və sənədi tərtib etmək tələb olunur."
+      ],
+      [
+        "İxtisaslaşmış agent zolaqları",
+        "Dar ixtisaslı rollar mənbə toplanmasını, yoxlamanı, qaralamanı və tərtibatı paralel icra edir, sonra vahid qaralamanı məsul şəxsə təqdim edir."
+      ]
+    ],
+    "layersTitle": "Şirkət agentləri üçün dörd səviyyəli struktur.",
+    "layersDek": "Agent imkanlarına əməliyyat dizaynı məsələsi kimi yanaşın: iş mühiti nəyi saxlayır, tapşırıqlar necə bölünür, insanlar harada təsdiqləyir və hesablar necə yönləndirilir.",
+    "inPractice": "Nələri qurmaq lazımdır",
+    "layers": [
+      {
+        "name": "Ortaq kontekst və əsaslandırılmış mənbələr",
+        "role": "Təməl · İş mühitinin bildikləri",
+        "what": "Agentlər çatışmayan konteksti təxmin etməyə çalışdıqda səhv edir. Tapşırığı avtomatlaşdırmazdan əvvəl təkrarlanan məlumatları ortaq layihə məkanı ətrafında toplayın ki, hər icra eyni təsdiqlənmiş materialdan başlasın.",
+        "points": [
+          "Yalnız oxumaq rejimi ilə layihə qovluqlarını, təqvimləri, brifləri və istinad sənədlərini iş mühitinə qoşun",
+          "Yaradılan hər bir sətri gəldiyi mənbə faylı və ya görüş qeydi ilə əlaqələndirin",
+          "Təsdiqlənmiş şirkət şablonlarını və üslub qaydalarını gündəlik şəxsi qeydlərdən ayırın"
+        ]
+      },
+      {
+        "name": "İxtisaslaşmış agent zolaqları və ötürmələr",
+        "role": "İcra · İşin bölünməsi",
+        "what": "Böyük və qarışıq sorğuları dar ixtisaslı kiçik agent komandası ilə əvəz edin. Birləşdirilmiş qaralama insana çatmazdan əvvəl hər zolağın aydın girişi, bir vəzifəsi və görünən statusu olur.",
+        "points": [
+          "Təkrarlanan iş axınlarını ayrı zolaqlara bölün: mənbə çıxarışı, qayda və ya məlumat yoxlaması, qaralama və tərtibat",
+          "Müstəqil zolaqları paralel işlədin ki, hazırlıq komandanın yoxlama vaxtına qədər tamamlansın",
+          "Hər zolaqdan uydurma mətn yazmaq əvəzinə çatışmayan məlumatları və istisnaları qeyd etməyi tələb edin"
+        ]
+      },
+      {
+        "name": "İcazə sərhədləri və təsdiq mərhələləri",
+        "role": "İdarəetmə · İnsanda qalan qərarlar",
+        "what": "Rəhbərlər süni intellektin necə istifadə olunduğunu idarə heyəti, müştəri və ya tənzimləyici qarşısında əsaslandırmalıdır. Avtonom hazırlıq ilə insan təsdiqi arasındakı sərhədi interfeysdə açıq göstərin.",
+        "points": [
+          "Cədvəl və ya hadisə ilə işə düşən axınlara iş mühiti daxilində qaralamalar, lövhələr və hesabatlar hazırlamağa icazə verin",
+          "Xarici göndərişləri, müştəri yazışmalarını və sistem yeniləmələrini təyin olunmuş məsul şəxsin təsdiqində saxlayın",
+          "Hansı mənbələrdən istifadə edildiyini, nəyin dəyişdirildiyini və nəticəni kimin təsdiqlədiyini qeydiyyatda saxlayın"
+        ]
+      },
+      {
+        "name": "Hesab yönləndirilməsi və saxlanılan iş mühiti",
+        "role": "Dayanıqlıq · Gücün etibarlı qalması",
+        "what": "Bir provayder hesabında limit bitdiyinə və ya brauzer pəncərəsi bağlandığına görə əməliyyat iş axınları dayana bilməz. Tapşırıqları şüurlu şəkildə yönləndirin və iş mühitini qoruyun.",
+        "points": [
+          "Tapşırıqları mürəkkəblik və məlumat həssaslığına görə model hesabları ilə uyğunlaşdırın, limit dolduqda ehtiyat hesaba keçin",
+          "Brauzer araşdırmasını, kod yoxlamalarını və fayl hazırlanmasını dayandırılıb davam etdirilə bilən mühitdə icra edin",
+          "Görünən iş mühiti görünüşünü (hesabat rəfi, kanban lövhəsi, cədvəl və ya yoxlama cədvəli) komandanın qarşısındakı işə uyğunlaşdırın"
+        ]
+      }
+    ],
+    "playbooksTitle": "İlk növbədə qurulmalı üç şirkət iş axını.",
+    "playbooksDek": "Hər həftə ixtisaslı vaxt aparan təkrarlanan hazırlıq, yoxlama və koordinasiya işlərindən başlayın.",
+    "playbooks": [
+      [
+        "Həftəlik müştəri və idarə heyəti hesabatları",
+        "Hesabat təqvimi ilə işə düşür. Birinci zolaq kampaniya və ya əməliyyat göstəricilərini toplayır, ikinci zolaq şərhləri briflə tutuşdurur, üçüncü isə məsul rəhbərin təsdiqi üçün yekun paketi hazırlayır."
+      ],
+      [
+        "Görüş qeydlərindən sonrakı icraya keçid",
+        "Müştəri və ya rəhbərlik görüşündən sonra razılaşdırılmış addımları çıxarın, hər bəndi komanda lövhəsində sahibinə bağlayın və cari layihə qovluğuna əsasən təklif və ya izləmə mesajının qaralamasını hazırlayın."
+      ],
+      [
+        "Tənzimlənən sahələrdə adaptasiya və uyğunluq yoxlaması",
+        "Standart əməliyyat prosedurlarını və qəbul meyarlarını birbaşa iş mühitinə yerləşdirin ki, yeni əməkdaşlar və yoxlayıcılar sənədləri əsaslandırılmış qaydalara görə yoxlasın və hər istisna qeydə alınsın."
+      ]
+    ],
+    "wsTitle": "Şirkət Agent Strukturunun İş Vərəqi",
+    "wsIntro": "Qurmağa başlamazdan əvvəl ilk strukturlaşdırılmış agent iş axınının əhatə dairəsini müəyyənləşdirmək üçün əməliyyat və ya şöbə rəhbərləri ilə bu altı bəndlik diaqnostikadan istifadə edin.",
+    "fields": [
+      "Şöbə və ya funksiya",
+      "İcraçı kurator",
+      "Hədəf təkrarlanan iş axını",
+      "Təsdiqə məsul şəxs"
+    ],
+    "checks": [
+      [
+        "Kontekst və mənbə hazırlığı",
+        "Agentlərin kopyalanmış sorğu yaddaşına güvənməməsi üçün hansı canlı təqvimlər, qovluqlar, briflər və şablonlar iş mühitində yerləşməlidir?"
+      ],
+      [
+        "İxtisaslaşmış zolaqlara bölgü",
+        "Bu iş axınını tək ümumi sorğu əvəzinə dar agent vəzifələrinə (toplama, yoxlama, qaralama, tərtibat) necə böləcəyik?"
+      ],
+      [
+        "İnsan təsdiqi mərhələsi",
+        "Hazırlanmış qaralama harada dayanıb məsul şəxsi gözləyir? Hansı əməliyyatlar açıq təsdiq olmadan heç vaxt icra edilməməlidir?"
+      ],
+      [
+        "Hesab yönləndirilməsi və məlumat sərhədləri",
+        "Bu məlumatlara hansı model hesabları və icazələr tətbiq olunur və hesab limitə çatdıqda ehtiyat yol nədir?"
+      ],
+      [
+        "Adaptiv iş mühiti görünüşü",
+        "Komandanın bu işi tez nəzərdən keçirməsi üçün ekranda hansı görünüş lazımdır: hesabat rəfi, tapşırıq lövhəsi, təhvil qrafiki yoxsa yoxlama siyahısı?"
+      ],
+      [
+        "Qazanılan vaxt və keyfiyyət ölçüsü",
+        "8–12 həftə sonra hazırlıq vaxtında, yoxlama keyfiyyətində və komanda icrasında hansı müşahidə olunan dəyişiklik bu strukturun işlədiyini göstərəcək?"
+      ]
+    ],
+    "closing": "Aydın girişləri və təyin olunmuş sahibi olan bir real iş axını seçin. Geniş təşkilata yaymazdan əvvəl strukturu canlı iş üzərində sınaqdan keçirin.",
+    "closeTitle": "Bu strukturun komandanız ətrafında qurulmasını istəyirsiniz?",
+    "closeBody": "Üzərinizdən götürmək istədiyiniz iş axınını bizə yazın. Komandanıza uyğun Enamplify iş mühitini, agent strukturunu və dəstək planını hazırlayaq."
+  },
+  "homeNew": {
+    "heroTitle": "Öz əməliyyat intellektiniz,",
+    "heroTitleAlt": "və sıfırdan qurulan tam agent komandanız.",
+    "lede": "İlk gündən tam fərdiləşdirilən və uyğunlaşan sistem. Enamplify fərdi idarəetmə mühitini və paralel ixtisaslaşmış agentləri praktik tətbiq konsaltinqi ilə birləşdirərək şirkətinizin real iş tərzinə uyğun qurur.",
+    "secondaryCta": "Sistem + konsaltinq modeli",
+    "cross": "Tək işləyirsiniz? Enamplify Me ilə tanış olun.",
+    "command": {
+      "ariaLabel": "Konseptual idarəetmə və paralel agent arxitekturası",
+      "tabsLabel": "Əməliyyat tapşırığını seçin",
+      "play": "Avtomatik nümayiş dövrünü davam etdirin",
+      "pause": "Avtomatik nümayiş dövrünü dayandırın",
+      "sourcesLabel": "Qoşulmuş şirkət konteksti",
+      "colTeam": "Paralel ixtisaslaşmış komanda",
+      "colSurface": "Canlı formalaşan görünüş",
+      "colGate": "İnsan təsdiqi və yoxlanılmış nəticə",
+      "surfaceTag": "Fərdi görünüş · Tapşırığa uyğun",
+      "takeaway": "Yuxarıda vahid idarəetmə intellekti. Arxasında koordinasiyalı agent komandası. Alətlərinizə fərdi qoşulmuş şəkildə.",
+      "note": "Konseptual arxitektura. Hər iş mühiti, inteqrasiya və təsdiq mərhələsi müştəriyə uyğun mühəndislərimiz tərəfindən qurulur.",
+      "missions": [
+        {
+          "tab": "Rəhbərlik əməliyyatları",
+          "mode": "Cədvəl + danışıq əsaslı tapşırıq",
+          "directive": "“Bazar ertəsi saat 08:30-dək rəhbərlik xülasəsini hazırlayın, regional marja istisnalarını ayırın və məsul şəxslər üçün təqib addımlarını düzün.”",
+          "sources": [
+            "Rəhbərlik təqvimi",
+            "Ortaq maliyyə qovluğu",
+            "CRM və hesablaşma",
+            "Əməliyyat qaydaları"
+          ],
+          "lanes": [
+            [
+              "Araşdırma agenti",
+              "Regional şərhləri və əvvəlki iclas öhdəliklərini toplayır",
+              "Hazırdır"
+            ],
+            [
+              "Məlumat və sistem agenti",
+              "Marja sətirlərini hesablaşma qeydləri ilə uzlaşdırır",
+              "Hazırdır"
+            ],
+            [
+              "Yoxlama agenti",
+              "Rəqəmləri tutuşdurur və mənbə sətirlərini bağlayır [1][2]",
+              "İşləyir"
+            ],
+            [
+              "Qaralama agenti",
+              "Rəhbər xülasəsini və məsul şəxs kartlarını yığır",
+              "İşləyir"
+            ]
+          ],
+          "viewName": "Rəhbər xülasəsi və istisna cədvəli",
+          "modules": [
+            [
+              "Regional kənarlaşma cədvəli",
+              "190 standart sətirdən 4 əsas istisna ayrılıb [1]"
+            ],
+            [
+              "Mənbə istinadlı icmal",
+              "Hər rəqəm maliyyə faylına və görüş qeydinə bağlıdır [2]"
+            ],
+            [
+              "Gözləyən təqib növbəsi",
+              "Regional rəhbərlər üçün göndərilməmiş qaralama mesajlar"
+            ]
+          ],
+          "artifact": "Bazar ertəsi rəhbər paketi + 4 hazır təqib qaralaması",
+          "approver": "İdarəedici partnyor yoxlayır və təsdiqləyir",
+          "boundary": "Xarici mesajlar və sistem qeydləri təsdiqə qədər bağlı saxlanılır."
+        },
+        {
+          "tab": "Kommersiya miqyası",
+          "mode": "Genişhəcmli araşdırma və müraciət tapşırığı",
+          "directive": "“140 regional distribyutoru seçim meyarlarımıza görə yoxlayın, uyğunluğu sıralayın və fərdi əməkdaşlıq məktublarını hazırlayın.”",
+          "sources": [
+            "Bazar kataloqları",
+            "Partnyor bazası",
+            "Seçim meyarları",
+            "Təqdimat sənədləri"
+          ],
+          "lanes": [
+            [
+              "Brauzer agenti",
+              "Distribyutor kataloqlarını, əraziləri və qeydləri araşdırır",
+              "Hazırdır"
+            ],
+            [
+              "Qiymətləndirmə agenti",
+              "Hər namizədi 9 uyğunluq meyarı üzrə yoxlayır",
+              "Hazırdır"
+            ],
+            [
+              "Kontekst agenti",
+              "Məhsul xətlərini distribyutor portfeli ilə tutuşdurur",
+              "İşləyir"
+            ],
+            [
+              "Müraciət agenti",
+              "Hər kommersiya rəhbəri üçün fərdi ilk məktub yazır",
+              "İşləyir"
+            ]
+          ],
+          "viewName": "Partnyor qiymətləndirmə matrisi və müraciət masası",
+          "modules": [
+            [
+              "Qiymətləndirilmiş namizəd cədvəli",
+              "Şəffaf sübutlarla sıralanmış 28 prioritet partnyor [1]"
+            ],
+            [
+              "Şirkət dosyesi paneli",
+              "Ərazi kəsişməsi, rəhbərlik qeydləri və mənbə keçidləri [2]"
+            ],
+            [
+              "Yoxlamaya hazır məktublar",
+              "Regional direktorlar üzrə fərdiləşdirilmiş qaralamalar"
+            ]
+          ],
+          "artifact": "28 seçilmiş partnyor dosyesi + müraciət paketi",
+          "approver": "Kommersiya direktoru siyahını təsdiqləyir",
+          "boundary": "Avtomatik kütləvi göndəriş yoxdur: insan təsdiqi olmadan heç nə göndərilmir."
+        },
+        {
+          "tab": "Tənzimlənən icra",
+          "mode": "Hadisə ilə işə düşən uyğunluq tapşırığı",
+          "directive": "“Protokol Dəyişikliyi 2-ni bütün 14 mərkəz üzrə v1.0 ilə müqayisə edin, siyahıları yeniləyin və gecikən sənədləri işarələyin.”",
+          "sources": [
+            "Əsas tədqiqat qovluğu",
+            "Mərkəz qrafiki",
+            "Təsdiqlənmiş qaydalar",
+            "Audit jurnalı"
+          ],
+          "lanes": [
+            [
+              "Sənəd müqayisə agenti",
+              "v1.0 ilə Dəyişiklik 2 arasındakı bənd fərqlərini tapır",
+              "Hazırdır"
+            ],
+            [
+              "Qeydiyyat agenti",
+              "14 mərkəz üzrə cari hazırlığı və sənədləri yoxlayır",
+              "Hazırdır"
+            ],
+            [
+              "Uyğunluq agenti",
+              "Bölmə və səhifə istinadlarını qaydalara görə təsdiqləyir",
+              "İşləyir"
+            ],
+            [
+              "Əməliyyat agenti",
+              "Mərkəzlər üzrə 12-ci həftə yoxlama siyahılarını hazırlayır",
+              "İşləyir"
+            ]
+          ],
+          "viewName": "Çoxmərkəzli uyğunluq lövhəsi və bənd müqayisəsi",
+          "modules": [
+            [
+              "Bənd-bənd fərq görünüşü",
+              "Bölmə 4.3 üzrə qan nümunəsi vaxtı dəyişikliyini göstərir [1]"
+            ],
+            [
+              "14 mərkəz hazırlıq matrisi",
+              "Yenilənmiş razılıq forması çatışmayan 3 mərkəzi işarələyir [2]"
+            ],
+            [
+              "Qaralama mərkəz siyahıları",
+              "Dəqiq protokol səhifə istinadları ilə strukturlaşdırılmış tapşırıqlar"
+            ]
+          ],
+          "artifact": "14 mərkəz tapşırıq siyahısı + dəyişməz audit qeydi",
+          "approver": "Baş tədqiqat koordinatoru təsdiqləyir",
+          "boundary": "Tənzimlənən mərkəz yeniləmələri koordinator təsdiqinədək qaralamada qalır."
+        },
+        {
+          "tab": "Müştəri və agentlik",
+          "mode": "Çoxhesablı çatdırılma tapşırığı",
+          "directive": "“Bu həftənin media yazılarını, kampaniya nəticələrini və zəng qeydlərini müştəri paketlərinə və fərdi jurnalist təkliflərinə çevirin.”",
+          "sources": [
+            "Müştəri qovluqları",
+            "Kampaniya çıxarışları",
+            "Media və mövzu bazası",
+            "Baxış təqvimi"
+          ],
+          "lanes": [
+            [
+              "Media araşdırma agenti",
+              "Hədəf mövzular üzrə jurnalistlərin 90 günlük yazılarını izləyir",
+              "Hazırdır"
+            ],
+            [
+              "Analitika agenti",
+              "Hər müştəri üzrə kampaniya dəyişikliklərini və kənarlaşmaları toplayır",
+              "Hazırdır"
+            ],
+            [
+              "Yaddaş agenti",
+              "Zəng qeydlərindən açıq tapşırıqları və üslub tələblərini götürür",
+              "İşləyir"
+            ],
+            [
+              "Brifinq agenti",
+              "Müştəri hesabatlarını və fərdi məktub qaralamalarını qurur",
+              "İşləyir"
+            ]
+          ],
+          "viewName": "Müştəri paketləri rəfi və media analitikası lövhəsi",
+          "modules": [
+            [
+              "Həftəlik müştəri paketləri",
+              "Nəticələr, media çıxışları və növbəti həftənin prioritetləri [1]"
+            ],
+            [
+              "Jurnalist mövzu xəritəsi",
+              "Son məqalələrlə uyğunlaşdırılmış fərdi hekayə bucaqları [2]"
+            ],
+            [
+              "Təsdiq gözləyən qaralamalar",
+              "Layihə rəhbərlərinin yoxlaması üçün saxlanılan xülasə və məktublar"
+            ]
+          ],
+          "artifact": "Yoxlanılmış müştəri paketləri + fərdi təklif növbəsi",
+          "approver": "Layihə direktoru redaktə edir və təsdiqləyir",
+          "boundary": "Məsul rəhbər təsdiqləmədən heç bir müştəriyə və ya jurnalistə mesaj getmir."
+        }
+      ],
+      "cols": [
+        "Agentlər paralel işləyir",
+        "İşə uyğun qurulan görünüş",
+        "Siz təsdiqləyirsiniz"
+      ],
+      "live": {
+        "approve": "Təsdiqlə",
+        "approved": "Təsdiqləndi",
+        "ready": "Baxışa hazırdır",
+        "ask": "İşi tapşırın",
+        "suggest": [
+          "Hər bazar ertəsi 07:00-da təkrarlansın?",
+          "Yeni distribütorlar qeydiyyatdan keçdikcə əlavə edilsin?",
+          "Bənd dəyişəndə mərkəz rəhbərləri xəbərdar edilsin?",
+          "Bu mövzular hər həftə izlənilsin?"
+        ],
+        "add": "Əlavə et",
+        "added": "Əlavə edildi"
+      }
+    },
+    "halves": {
+      "title": "Yarısı fərdi əməliyyat sistemi.",
+      "titleAlt": "Yarısı praktik tətbiq konsaltinqi.",
+      "lede": "Hazır proqram təminatçıları sizə boş giriş pəncərəsi verib komandanızı tək buraxır. Ənənəvi konsaltinq şirkətləri isə slayd təqdimatı təhvil verib heç nə işə düşmədən ayrılır. Enamplify həm fərdi sistemi, həm də onu gündəlik işə qoşan mühəndis təcrübəsini vahid şəkildə təqdim edir.",
+      "items": [
+        {
+          "label": "Fərdi adaptiv sistem",
+          "title": "İş tərziniz ətrafında sıfırdan mühəndisliklə qurulur.",
+          "sub": "İlk gündən uyğunlaşan · Paralel miqyas üçün qurulmuş",
+          "body": "Şirkətinizi başqasının sərt proqram şablonuna sıxışdırmırsınız. Mühit ilk gündən öz axınlarınıza, terminlərinizə və icazələrinizə uyğun qurulur, prioritetlər dəyişdikcə adi söhbətlə yenidən formalaşır.",
+          "points": [
+            "Sabit SaaS ekranları əvəzinə fərdi lövhələr, istisna cədvəlləri, xülasələr və tətbiqlər",
+            "Brauzer, kod, fayllar və daxili sistemlər üzrə paralel işləyən tam ixtisaslaşmış agent komandası",
+            "Cədvəl və hadisələrlə özü başlayan, insan təsdiq qapılarında dayanan davamlı təşəbbüs",
+            "Tapşırığa görə yönləndirilən və ehtiyat keçidi olan öz Anthropic, OpenAI, Gemini və ya özəl modelləriniz"
+          ]
+        },
+        {
+          "label": "Tətbiq konsaltinqi",
+          "title": "Mühəndislərimizlə birlikdə diaqnostika olunur, qoşulur və böyüdülür.",
+          "sub": "Təsisçi rəhbərliyi ilə · London və Bakı",
+          "body": "Sisteminizi quran mühəndis və əməliyyat mütəxəssisləri ilə birbaşa işləyirsiniz. İxtisaslı insanların həftəsini aparan dar boğazları tapır, inteqrasiyaları idarəetmə qaydalarınıza bağlayır və miqyas böyüdükcə yanınızda qalırıq.",
+          "points": [
+            "Əvvəlcə əməliyyat diaqnostikası: kod yazmazdan öncə real dar boğazları və ölçülə bilən nəticələri xəritələyirik",
+            "Təqvim, ortaq qovluq, CRM, verilənlər bazası və təsdiq qaydalarının birbaşa qoşulması",
+            "Bir neçə həftəyə bir və ya iki əsas komanda ilə canlı iş üzərində tətbiq və tənzimləmə",
+            "Yeni şöbələr və imkanlar əlavə olunduqca davamlı mühəndis və məsləhət dəstəyi"
+          ]
+        }
+      ],
+      "contrasts": [
+        [
+          "Hazır şablon proqramlar",
+          "Hamıya eyni sabit ekranı verir; inteqrasiya, uyğunlaşma və mənimsəmə yükünü sizin üzərinizə qoyur."
+        ],
+        [
+          "Nəzəri slayd konsaltinqi",
+          "Tövsiyələri kağız üzərində yazır, lakin gündəlik əməliyyatda işləyən real sistem təhvil vermir."
+        ],
+        [
+          "Enamplify yanaşması",
+          "Fərdi idarəetmə sisteminizi və agent komandanızı qurur, alətlərinizə bağlayır və komandanızla birgə böyüdür."
+        ]
+      ],
+      "approachLink": "Diaqnostika, qurma və dəstək mərhələlərimizlə tanış olun",
+      "short": "Sistemi quran da, komandanızın ondan istifadəsini təmin edən də eyni komandadır. Sizə nə boş giriş pəncərəsi, nə də slayd təqdimatı qalır.",
+      "chips": [
+        [
+          "Fərdi lövhələr",
+          "Paralel agentlər",
+          "Planlı işlər",
+          "Öz AI hesablarınız"
+        ],
+        [
+          "Əvvəlcə diaqnostika",
+          "Praktik qoşulma",
+          "Canlı tətbiq",
+          "Davamlı dəstək"
+        ]
+      ]
+    },
+    "adapt": {
+      "title": "Sabit şablon yoxdur.",
+      "titleAlt": "Görünüşlər işə görə formalaşır.",
+      "lede": "Danışıq real iş səthləri ilə yanaşı işləyir. Həftəlik hesabat rəfi, təqib lövhəsi və ya icra qrafiki istəyin; fayllar, agentlər və icazələr yerində qalmaqla mərkəz tapşırığa uyğun yenidən qurulur."
+    },
+    "practice": {
+      "title": "Real dar boğazlar üzərində planlanır.",
+      "titleAlt": "Şirkətiniz boyu genişlənir.",
+      "lede": "Hər əməkdaşlıq dəqiq əməliyyat diaqnostikası ilə başlayır, bir neçə həftəyə fərdi mühiti gündəlik istifadəyə çıxarır və komandanızın seçdiyi templə digər istiqamətlərə yayılır.",
+      "approachLink": "Tətbiq yanaşmamızı araşdırın",
+      "governanceTitle": "Həmişə sizin nəzarətinizdə qalanlar",
+      "governanceBody": "Model və hostinq seçimi, qoşulan hər qovluq və sistem üzrə dəqiq icazələr, həmçinin vacib qərarlarda insan təsdiqi."
+    },
+    "proof": {
+      "title": "Canlı biznes əməliyyatlarında artıq işləyir.",
+      "lede": "Fərdi agent sistemləri barədə sözümüzə baxmazdan əvvəl gündəlik istifadəyə verdiyimiz real əməliyyat platformaları və iş axınları ilə tanış olun.",
+      "allWork": "Bütün müştəri işlərinə və məhsullara baxın",
+      "caseAction": "Nümunəni oxuyun",
+      "trust": "Tənzimlənən sahələrdə artıq etibar qazanmışıq.",
+      "learn": "Ətraflı"
+    },
+    "kit": {
+      "kicker": "Rəhbər xülasəsi və praktik qeydlər",
+      "title": "Zəng üçün hələ tezdir? Şirkət agent arxitekturası bələdçimizi oxuyun.",
+      "lede": "Kontekst, ixtisaslaşmış agent zolaqları və təsdiq qapılarının qurulması barədə qapalı rəhbər xülasəsini və iki səhifəlik PDF iş vərəqini açmaq, həmçinin nadir praktik qeydlərimizi almaq üçün iş e-poçtunuzu daxil edin.",
+      "emailPlaceholder": "İş e-poçt ünvanı",
+      "submit": "Xülasəni açın",
+      "note": "Qapalı xülasəni dərhal açır və Kit vasitəsilə bülletenimizə qoşur. İstənilən vaxt ayrıla bilərsiniz."
+    },
+    "closeTitle": "Komandanızın həftəsini aparan işi bizə danışın.",
+    "closeBody": "Mühəndis komandamızla birbaşa söhbətlə başlayın. Fərdi idarəetmə mühitinin və agent komandasının əməliyyatlarınıza necə uyğunlaşacağını birlikdə xəritələyək.",
+    "features": {
+      "hand": {
+        "title": "Daha bir AI işçisi deyil.",
+        "titleAlt": "Sağ əliniz.",
+        "lede": "İşçi deyiləni edir. Sağ əl isə işi bilir, qarşıdakını görür və hazır saxlayır.",
+        "left": "AI işçisi",
+        "right": "Sağ əliniz",
+        "rows": [
+          [
+            "Tapşırıq gözləyir",
+            "Görülməli işi özü görür"
+          ],
+          [
+            "Bir tapşırıqla məşğul olur",
+            "Komandanı paralel idarə edir"
+          ],
+          [
+            "Siz dayananda dayanır",
+            "Gecə də işləyir"
+          ],
+          [
+            "Öz başına hərəkət edir",
+            "Əvvəlcə sizdən soruşur"
+          ]
+        ]
+      },
+      "observe": {
+        "title": "Siz soruşmadan",
+        "titleAlt": "fərqinə varır.",
+        "sub": "Verdiyiniz icazə daxilində poçtunuzu, təqviminizi, fayllarınızı və qeydlərinizi izləyir, vacib olanı sizə çatdırır.",
+        "status": "Müşahidə edir",
+        "feed": [
+          "Müştəri cümə axşamı görüşünü dəyişməyi xahiş etdi",
+          "İdarə heyəti paketi cümə gününə hazır olmalıdır",
+          "114 nömrəli faktura sifarişə uyğun gəlmir",
+          "Müqavilənin 3-cü versiyası yükləndi"
+        ],
+        "flagTitle": "Sizin üçün qeyd edildi",
+        "flag": "114 nömrəli faktura satınalma sifarişindən yüksəkdir. Təchizatçıya sorğu qaralaması hazırdır."
+      },
+      "team": {
+        "title": "Bir tapşırıq.",
+        "titleAlt": "Bütöv bir komanda.",
+        "sub": "İxtisaslaşmış agentlər işi bölür, paralel işləyir və vahid nəticə təqdim edir."
+      },
+      "always": {
+        "title": "Siz işləməyəndə də",
+        "titleAlt": "işləyir.",
+        "sub": "İşi cədvəllər və hadisələr başladır. Qayıdanda hazır olur.",
+        "away": "Siz olmayanda"
+      },
+      "gate": {
+        "title": "Sizsiz heç nə",
+        "titleAlt": "göndərilmir.",
+        "sub": "Hazırlayır və təklif edir. Göndərən, xərcləyən və ya qeydi dəyişən hər addımı siz təsdiqləyirsiniz.",
+        "steps": [
+          "Hesabatı hazırlamaq",
+          "Müştəri qeydini yeniləmək",
+          "Müştəriyə göndərmək"
+        ],
+        "done": "Hazırdır",
+        "waiting": "Sizi gözləyir",
+        "ask": "Hesabat müştəriyə göndərilsin?",
+        "hold": "Saxla"
+      }
+    },
+    "me": {
+      "adapt": {
+        "title": "Həyatınıza uyğun qurulur.",
+        "titleAlt": "Dəyişəndə yenidən formalaşır."
+      },
+      "command": {
+        "ariaLabel": "Şəxsi iş məkanının nümayişi",
+        "tabsLabel": "Nümunə seçin",
+        "suggest": [
+          "Hər həftə cümə günü axşamı boş saxlanılsın?",
+          "Bron edənədək uçuş qiymətləri izlənilsin?",
+          "Hər səhər 08:00-da sizi yoxlasın?",
+          "Əsas ərzaqlar hər bazar günü yenidən sifariş edilsin?"
+        ],
+        "missions": [
+          {
+            "tab": "Həftəm",
+            "directive": "Həftəmi idman zalı, cümə axşamı son tarix və Samla şam yeməyi ətrafında planla.",
+            "lanes": [
+              [
+                "Təqvim agenti"
+              ],
+              [
+                "Tapşırıq agenti"
+              ],
+              [
+                "Poçt agenti"
+              ],
+              [
+                "Rifah agenti"
+              ]
+            ],
+            "viewName": "Həftəniz planlandı",
+            "modules": [
+              [
+                "Həftəyə bir baxış"
+              ],
+              [
+                "Bu günün üç əsas işi"
+              ],
+              [
+                "Xatırlatmalar quruldu"
+              ]
+            ],
+            "artifact": "Həftə planlandı, 3 toqquşma köçürüldü",
+            "approver": "Dəyişiklikləri siz təsdiqləyirsiniz"
+          },
+          {
+            "tab": "Səyahət",
+            "directive": "İki nəfərlik Lissabona uzun həftəsonu planla, 600 avroya qədər.",
+            "lanes": [
+              [
+                "Uçuş agenti"
+              ],
+              [
+                "Yaşayış agenti"
+              ],
+              [
+                "Plan agenti"
+              ],
+              [
+                "Büdcə agenti"
+              ]
+            ],
+            "viewName": "Lissabon, 3 gün",
+            "modules": [
+              [
+                "Günbəgün plan"
+              ],
+              [
+                "Büdcə"
+              ],
+              [
+                "Çanta siyahısı"
+              ]
+            ],
+            "artifact": "Səyahət planı hazırdır, cəmi €560",
+            "approver": "Siz təsdiqləməyincə heç nə bron edilmir"
+          },
+          {
+            "tab": "Dərs",
+            "directive": "Məni cümə axşamı biologiya imtahanına hazırla.",
+            "lanes": [
+              [
+                "Qeydlər agenti"
+              ],
+              [
+                "Sual agenti"
+              ],
+              [
+                "Cədvəl agenti"
+              ],
+              [
+                "Məşqçi agent"
+              ]
+            ],
+            "viewName": "İmtahana hazırlıq, 4 gün",
+            "modules": [
+              [
+                "Keçilən mövzular"
+              ],
+              [
+                "Dərs seansları"
+              ],
+              [
+                "Kartlar"
+              ]
+            ],
+            "artifact": "Dərs planı və 40 kart hazırdır",
+            "approver": "Hazır olanda siz başlayırsınız"
+          },
+          {
+            "tab": "Ev",
+            "directive": "Həftənin şam yeməklərini və alış-veriş siyahısını hazırla.",
+            "lanes": [
+              [
+                "Resept agenti"
+              ],
+              [
+                "Ərzaq agenti"
+              ],
+              [
+                "Alış-veriş agenti"
+              ],
+              [
+                "Büdcə agenti"
+              ]
+            ],
+            "viewName": "Bu həftənin şam yeməkləri",
+            "modules": [
+              [
+                "Yeddi şam yeməyi"
+              ],
+              [
+                "Alış-veriş siyahısı"
+              ],
+              [
+                "Bu həftənin xərci"
+              ]
+            ],
+            "artifact": "Yemək planı və alış-veriş siyahısı hazırdır",
+            "approver": "Sifarişi siz təsdiqləyirsiniz"
+          }
+        ],
+        "ask": "İstədiyinizi yazın"
+      },
+      "features": {
+        "hand": {
+          "title": "Daha bir çatbot deyil.",
+          "titleAlt": "Sağ əliniz.",
+          "lede": "Çatbot suala cavab verir. Sağ əl isə həftənizi bilir, qarşıdakını görür və hazır saxlayır.",
+          "left": "Çatbot",
+          "right": "Sağ əliniz",
+          "rows": [
+            [
+              "Suallara cavab verir",
+              "İşi görür"
+            ],
+            [
+              "Hər dəfə sizi unudur",
+              "Həftənizi bilir"
+            ],
+            [
+              "Sorğu gözləyir",
+              "Əvvəlcədən xatırladır"
+            ],
+            [
+              "Soruşmadan hərəkət edir",
+              "Bron və ödənişdən əvvəl soruşur"
+            ]
+          ]
+        },
+        "observe": {
+          "title": "Yadda saxlayır,",
+          "titleAlt": "siz unutsanız da.",
+          "sub": "Verdiyiniz icazə daxilində təqviminizi, poçtunuzu və ödənişlərinizi izləyir, vacib olanı sizə deyir.",
+          "status": "Nəzarətdədir",
+          "feed": [
+            "Diş həkimi cümə axşamı saat 15:00-a keçirildi",
+            "Şənbə günü ananızın ad günüdür",
+            "Avtomobil sığortası cümə günü yenilənir",
+            "Pasportun müddəti 4 aya bitir"
+          ],
+          "flagTitle": "Baxmağa dəyər",
+          "flag": "Avtomobil sığortası cümə günü yenilənir. Üç daha ucuz təklif müqayisəyə hazırdır."
+        },
+        "team": {
+          "title": "Bir xahiş.",
+          "titleAlt": "Hər şey qaydasında.",
+          "sub": "Agentləriniz işi bölür, eyni vaxtda işləyir və vahid plan gətirir.",
+          "scene": {
+            "objectiveLabel": "Xahişiniz",
+            "objective": "Lissabonda uzun həftəsonu",
+            "lanes": [
+              [
+                "Uçuşlar",
+                "2 variant"
+              ],
+              [
+                "Yaşayış",
+                "Mərkəzə yaxın"
+              ],
+              [
+                "Planlar",
+                "3 gün"
+              ],
+              [
+                "Büdcə",
+                "€600-dək"
+              ]
+            ],
+            "result": "Səyahət planı hazırdır"
+          }
+        },
+        "always": {
+          "title": "Siz yatarkən",
+          "titleAlt": "həll olunur.",
+          "sub": "Gecə ərzində səliqəyə salır, yoxlayır və planlayır. Aydın bir günə oyanırsınız.",
+          "away": "Siz yatarkən",
+          "runs": [
+            [
+              "Poçt səliqəyə salındı"
+            ],
+            [
+              "Ödənişlər yoxlandı"
+            ],
+            [
+              "Bu gün planlandı"
+            ]
+          ],
+          "result": "Səhər xülasəniz hazırdır",
+          "approver": "Bu gün üç iş sizi gözləyir"
+        },
+        "gate": {
+          "title": "Sizsiz heç nə",
+          "titleAlt": "bron edilmir.",
+          "sub": "Tapır, müqayisə edir və hazırlayır. Bron, göndəriş və ya ödənişdən əvvəl siz “hə” deyirsiniz.",
+          "steps": [
+            "Ən yaxşı uçuşları tapmaq",
+            "İki yer saxlamaq",
+            "Səyahətin ödənişi"
+          ],
+          "done": "Hazırdır",
+          "waiting": "Sizi gözləyir",
+          "ask": "İki nəfərlik 09:40 uçuşu bron edilsin?",
+          "hold": "Hələ yox"
+        }
+      }
+    }
+  },
+  "discover": {
+    "title": "İşiniz barədə danışın",
+    "count": "Addım {n} / {total}",
+    "next": "Davam et",
+    "back": "Geri",
+    "required": "Davam etmək üçün seçim edin.",
+    "detailsError": "Adınızı və düzgün e-poçt ünvanını yazın.",
+    "noscript": "Bu qısa forma JavaScript tələb edir. Həmçinin {link}.",
+    "noscriptLink": "sorğu göndərə bilərsiniz",
+    "privacy": "Cavablarınızdan görüşə hazırlaşmaq üçün istifadə edirik. {link}.",
+    "privacyLink": "Məxfilik siyasəti",
+    "steps": {
+      "work": {
+        "q": "Komandanızın üzərindən hansı işi götürək?",
+        "hint": "Uyğun olanların hamısını seçin.",
+        "options": [
+          "Hesabatlar və paketlər",
+          "Təqib və müraciətlər",
+          "Sənədlərin yoxlanması",
+          "Müştəri layihələrinin icrası",
+          "Daxili əməliyyatlar",
+          "Başqa bir şey"
+        ]
+      },
+      "size": {
+        "q": "Komandanız nə qədər böyükdür?",
+        "options": [
+          "1–10",
+          "11–50",
+          "51–200",
+          "201–2 000",
+          "2 000-dən çox"
+        ]
+      },
+      "stage": {
+        "q": "Hazırda AI ilə hansı mərhələdəsiniz?",
+        "options": [
+          "Başlamamışıq",
+          "Fərdi çat hesabları",
+          "Bir neçə pilot",
+          "Gündəlik istifadə olunan alətlər"
+        ]
+      },
+      "data": {
+        "q": "Nəyi nəzərə almalıyıq?",
+        "hint": "Uyğun olanların hamısını seçin.",
+        "options": [
+          "Tənzimlənən məlumatlar",
+          "Müştəri üçün məxfi işlər",
+          "Öz infrastrukturumuzda işləməlidir",
+          "Bunların heç biri"
+        ]
+      },
+      "timing": {
+        "q": "Nə vaxt başlamaq istəyirsiniz?",
+        "options": [
+          "Bu rübdə",
+          "3–6 ay ərzində",
+          "Hələ araşdırırıq"
+        ]
+      },
+      "details": {
+        "q": "Cavabı hara göndərək?",
+        "name": "Ad",
+        "email": "İş e-poçtu",
+        "company": "Şirkət",
+        "note": "Bilməli olduğumuz başqa nəsə (istəyə görə)"
+      },
+      "book": {
+        "q": "Təşəkkürlər. Görüş vaxtını seçin.",
+        "body": "Cavablarınız qarşımızda olacaq, ona görə söhbət birbaşa işinizdən başlayacaq.",
+        "cta": "Vaxt seçin",
+        "summary": "Cavablarınız"
+      }
+    }
   }
 }

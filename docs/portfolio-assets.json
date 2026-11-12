@@ -1,0 +1,18 @@
+{
+  "remote": {
+    "unitas.webp": "https://unitascommunications.com/wp-content/uploads/2024/11/unitas-logo.webp",
+    "concordia.png": "https://concordiaforum.com/img/concordia-logo.png",
+    "pearl-lemon.webp": "https://pearllemon.com/wp-content/uploads/2024/01/pearl-lemon-logo.-300\u00d798.webp",
+    "halalbooking.svg": "https://cdn2.halalstatic.com/assets/logo-be000e47ed8796c6977ac7f7681c86e3c18f019902b7a2ceffdbf944a67a15c7.svg",
+    "karmawolf.png": "https://static.wixstatic.com/media/130398_7c0534b2200c430b90e0f220b638f39c~mv2.png",
+    "dealsphere.png": "https://dealsphere.co.uk/wp-content/uploads/2025/04/Dealsphere_Logo.png",
+    "optimax.png": "https://optimaxsoftware.com/logos/optimax-classic.png"
+  },
+  "local": {
+    "imamconnect.svg": "C:\\RAG\\code\\ImamConnect\\public\\img\\landing-pages\\imam-logo-purple.svg",
+    "waterspring.png": "C:\\RAG\\code\\WaterspringIRM\\Color logo - black writing no background.png",
+    "lamatrader.webp": "C:\\RAG\\code\\rag-trader\\apps\\brokerui\\public\\images\\LamaTrader-logo.webp",
+    "grademy.png": "C:\\RAG\\code\\grademy.work\\public\\maskable-icon-512x512.png"
+  },
+  "note": "Original company assets. Sourced 2026-10-15. Logos identify the listed projects; no third-party client logos included."
+}

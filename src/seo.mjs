@@ -1,7 +1,7 @@
-import {esc, header, footer, photosIn} from './components.mjs';
+import {esc, header, footer, briefingGate, photosIn} from './components.mjs';
 import {locales, defaultLocale, localePath, basePath, alternatesFor} from './i18n.mjs';
 
-export const titleFor = (route, site) => route.home ? route.title : `${route.title.replace(/\.$/, '')} | ${site.name}`;
+export const titleFor = (route, site) => route.home || route.standalone ? route.title :`${route.title.replace(/\.$/, '')} | ${site.name}`;
 
 const safeJson = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const localeOf = route => locales[route.locale] || locales[defaultLocale];
@@ -15,7 +15,7 @@ export function jsonLd({base, site, route, copy}) {
   const graph = [
     {'@type': 'ProfessionalService', '@id': `${base}/#practice`, name: site.name, url: `${base}/`, description: site.definition, email: site.email, logo: `${base}/favicon.svg`, image: `${base}${socialCard(localeOf(route).code)}`, founder: {'@id': `${base}/#founder`},
       areaServed: [{'@type': 'City', name: 'London'}, {'@type': 'City', name: 'Baku'}, {'@type': 'Country', name: 'United Kingdom'}, {'@type': 'Country', name: 'Azerbaijan'}],
-      knowsAbout: ['AI enablement', 'AI training for teams', 'AI governance', 'Workflow automation'], sameAs: [site.linkedin]},
+      knowsAbout: ['Adaptive AI workspaces', 'AI implementation', 'AI advisory', 'AI agents', 'AI governance', 'Workflow automation'], sameAs: [site.linkedin]},
     {'@type': 'Person', '@id': `${base}/#founder`, name: site.founder, jobTitle: 'Founder', worksFor: {'@id': `${base}/#practice`}, sameAs: [site.linkedin]},
     {'@type': 'WebSite', '@id': `${base}/#website`, url: `${base}/`, name: site.name, inLanguage: Object.values(locales).map(l => l.lang), publisher: {'@id': `${base}/#practice`}}
   ];
@@ -49,7 +49,7 @@ const alternateLinks = (base, route) => {
   return links.join('') + `<link rel="alternate" hreflang="x-default" href="${esc(base + route.alternates[defaultLocale])}">`;
 };
 
-export function renderDocument({base, site, route: given, copy, images = {}, cssName, jsName, indexable, turnstileKey = ''}) {
+export function renderDocument({base, site, route: given, copy, images = {}, cssName, jsName, landingCssName = '', landingJsName = '', newCssName = '', newJsName = '', flowCssName = '', flowJsName = '', indexable, turnstileKey = ''}) {
   const route = given.alternates ? given : {...given, alternates: alternatesFor(given.notFound ? '/' : basePath(given.url))};
   const title = titleFor(route, site);
   const canonical = base + route.url;
@@ -64,13 +64,14 @@ export function renderDocument({base, site, route: given, copy, images = {}, css
   }
   const ctx = {locale: loc.code, site, copy, images};
   // Faces are font-display: optional, so anything the first viewport sets must be preloaded or it
-  // falls back for that visit: the latin text faces everywhere, the italic for the home H1, and on
-  // Azerbaijani pages the latin-ext subsets (ə, ğ, ı, İ, ş).
-  const home = route.key === 'home';
+  // falls back for that visit: the latin text faces everywhere, the italic for the Us and Me H1s, and
+  // on Azerbaijani pages the latin-ext subsets (ə, ğ, ı, İ, ş).
+  const home = route.key === 'home' || route.key === 'me';
+  const isNew = home;
   const subsets = loc.code === defaultLocale ? ['latin'] : ['latin', 'latin-ext'];
   const faces = ['libre-caslon-display-400', 'dm-sans-var', ...(home ? ['libre-caslon-text-400italic'] : [])];
   const fonts = subsets.flatMap(sub => faces.map(face => `${face}-${sub}`)).map(f => `<link rel="preload" href="/fonts/${f}.woff2" as="font" type="font/woff2" crossorigin>`).join('');
   const ogAlternates = Object.values(locales).filter(l => l !== loc).map(l => `<meta property="og:locale:alternate" content="${l.ogLocale}">`).join('');
   return `<!doctype html>
-<html lang="${loc.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f3eee5"><title>${esc(title)}</title><meta name="description" content="${esc(route.description)}"><meta name="robots" content="${indexable ? 'index,follow' : 'noindex,follow'}">${route.notFound ? '' : `<link rel="canonical" href="${esc(canonical)}">`}${alternateLinks(base, route)}${fonts}<link rel="stylesheet" href="/assets/${cssName}"><script src="/assets/${jsName}" defer></script>${turnstile}<meta property="og:type" content="${route.article ? 'article' : 'website'}"><meta property="og:site_name" content="${esc(site.name)}"><meta property="og:locale" content="${loc.ogLocale}">${ogAlternates}<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(route.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(base)}${socialCard(loc.code)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(c.ogImageAlt)}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" title="${esc(c.feedTitle)}" href="${localePath(loc.code, '/feed.xml')}"><script type="application/ld+json">${jsonLd({base, site, route, copy})}</script><script type="application/json" id="ui-strings">${safeJson(copy.client)}</script></head><body id="top" class="${esc(route.bodyClass || '')}">${header(ctx, route)}<main id="main" tabindex="-1">${body}</main>${footer(ctx, {photos: photosIn(body)})}</body></html>`;
+<html lang="${loc.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f3eee5"><title>${esc(title)}</title><meta name="description" content="${esc(route.description)}"><meta name="robots" content="${indexable ? 'index,follow' : 'noindex,follow'}">${route.notFound ? '' : `<link rel="canonical" href="${esc(canonical)}">`}${alternateLinks(base, route)}${fonts}<link rel="stylesheet" href="/assets/${cssName}"><script src="/assets/${jsName}" defer></script>${home && landingCssName ? `<link rel="stylesheet" href="/assets/${landingCssName}"><script src="/assets/${landingJsName}" defer></script>` : ''}${isNew && newCssName ? `<link rel="stylesheet" href="/assets/${newCssName}"><script src="/assets/${newJsName}" defer></script>` : ''}${route.key === 'discover' && flowCssName ? `<link rel="stylesheet" href="/assets/${flowCssName}"><script src="/assets/${flowJsName}" defer></script>` : ''}${turnstile}<meta property="og:type" content="${route.article ? 'article' : 'website'}"><meta property="og:site_name" content="${esc(site.name)}"><meta property="og:locale" content="${loc.ogLocale}">${ogAlternates}<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(route.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(base)}${socialCard(loc.code)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(c.ogImageAlt)}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" title="${esc(c.feedTitle)}" href="${localePath(loc.code, '/feed.xml')}"><script type="application/ld+json">${jsonLd({base, site, route, copy})}</script><script type="application/json" id="ui-strings">${safeJson(copy.client)}</script></head><body id="top" class="${esc(route.bodyClass || '')}">${header(ctx, route)}<main id="main" tabindex="-1">${body}</main>${briefingGate(ctx, route)}${footer(ctx, {photos: photosIn(body)})}</body></html>`;
 }

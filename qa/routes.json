@@ -7,8 +7,20 @@
       "en": "/",
       "az": "/az/"
     },
-    "title": "Enamplify · AI enablement for mid-sized teams",
-    "description": "AI your team builds, not AI you buy. We help mid-sized organisations make AI part of how their people work: more done, owned in-house, in control.",
+    "title": "Enamplify · An adaptive AI workspace, implemented for your team",
+    "description": "An adaptive AI workspace for your team’s conversations, projects, tools and agents, implemented around your business with advice and support.",
+    "index": true
+  },
+  {
+    "url": "/me/",
+    "key": "me",
+    "locale": "en",
+    "alternates": {
+      "en": "/me/",
+      "az": "/az/me/"
+    },
+    "title": "Enamplify Me · An adaptive AI workspace for one person",
+    "description": "Your own adaptive AI workspace and agent team for projects, learning and everyday planning. In development. Register your interest.",
     "index": true
   },
   {
@@ -19,21 +31,33 @@
       "en": "/approach/",
       "az": "/az/approach/"
     },
-    "title": "How AI enablement works: diagnose, prove, scale",
-    "description": "Start small, prove it, then scale. How Enamplify helps teams build their own AI workflows with review, governance and data kept where it belongs.",
+    "title": "How we implement Enamplify for teams",
+    "description": "How we scope, set up and support the Enamplify workspace around a team’s existing processes, from a paid diagnostic to ongoing advice.",
     "index": true
   },
   {
-    "url": "/work/",
-    "key": "work",
+    "url": "/portfolio/",
+    "key": "portfolio",
     "locale": "en",
     "alternates": {
-      "en": "/work/",
-      "az": "/az/work/"
+      "en": "/portfolio/",
+      "az": "/az/portfolio/"
     },
-    "title": "AI systems we build for clients and run ourselves",
-    "description": "AI systems delivered across clinical, finance, growth and operations, and two AI products we build and run ourselves.",
-    "index": true
+    "title": "Selected projects",
+    "description": "Selected AI systems, automation and software projects across clinical technology, communications, travel, investment, fintech and education.",
+    "index": false
+  },
+  {
+    "url": "/briefing/",
+    "key": "briefing",
+    "locale": "en",
+    "alternates": {
+      "en": "/briefing/",
+      "az": "/az/briefing/"
+    },
+    "title": "Structuring AI and agent work in a company",
+    "description": "An unlisted executive briefing on structuring context, specialist agent lanes and approval gates so company teams get reliable work from AI.",
+    "index": false
   },
   {
     "url": "/work/travel-distributor-outreach/",
@@ -92,7 +116,7 @@
       "az": "/az/about/"
     },
     "title": "About Enamplify: founder-led, London and Baku",
-    "description": "Enamplify is a founder-led AI enablement consultancy in London and Baku. Meet Amir Gulubayli and the principles behind the work.",
+    "description": "Meet Amir Gulubayli, founder of Enamplify, and our approach to AI advisory, systems delivery and practical team capability in London and Baku.",
     "index": true
   },
   {
@@ -288,6 +312,18 @@
     "index": true
   },
   {
+    "url": "/discover/",
+    "key": "discover",
+    "locale": "en",
+    "alternates": {
+      "en": "/discover/",
+      "az": "/az/discover/"
+    },
+    "title": "Start a conversation",
+    "description": "Answer a few questions about your team and the work you want moved, then pick a time to talk.",
+    "index": false
+  },
+  {
     "url": "/contact/",
     "key": "contact",
     "locale": "en",
@@ -295,8 +331,8 @@
       "en": "/contact/",
       "az": "/az/contact/"
     },
-    "title": "Book a diagnostic call",
-    "description": "Book a 30-minute diagnostic call with Amir Gulubayli, founder of Enamplify. No pitch deck: a conversation about your team and its work.",
+    "title": "Book an introductory conversation",
+    "description": "A 30-minute introduction with Enamplify founder Amir Gulubayli about your priorities and how we could help.",
     "index": true
   },
   {
@@ -367,8 +403,20 @@
       "en": "/",
       "az": "/az/"
     },
-    "title": "Enamplify · Orta ölçülü şirkətlərdə süni intellekt bacarıqları",
-    "description": "Orta ölçülü təşkilatlara süni intellekti əməkdaşlarının gündəlik işinin bir hissəsinə çevirməyə kömək edirik: daha çox iş, daxili bacarıq, tam nəzarət.",
+    "title": "Enamplify · Komandanız üçün adaptiv AI iş mühiti",
+    "description": "Söhbətlər, layihələr, alətlər və agentlər üçün adaptiv AI iş mühiti. Biznesinizə uyğun tətbiq, məsləhət və davamlı dəstək.",
+    "index": true
+  },
+  {
+    "url": "/az/me/",
+    "key": "me",
+    "locale": "az",
+    "alternates": {
+      "en": "/me/",
+      "az": "/az/me/"
+    },
+    "title": "Enamplify Me · Bir nəfər üçün adaptiv süni intellekt iş mühiti",
+    "description": "Layihələr, öyrənmə və gündəlik planlar üçün şəxsi AI iş mühiti və agentlər komandası. Hazırlanma mərhələsindədir. Marağınızı bildirin.",
     "index": true
   },
   {
@@ -379,21 +427,33 @@
       "en": "/approach/",
       "az": "/az/approach/"
     },
-    "title": "Süni intellekt bacarıqları: diaqnoz, sübut, genişləndirmə",
-    "description": "Kiçikdən başlayın, sübut edin, genişləndirin. Komandalar yoxlama və idarəetmə ilə, məlumatları lazımi yerdə saxlayaraq öz süni intellekt iş axınlarını qurur.",
+    "title": "Enamplify-ı komandalar üçün necə tətbiq edirik",
+    "description": "Enamplify iş mühitini komandanın mövcud proseslərinə uyğun necə planlaşdırır, qurur və dəstəkləyirik: ödənişli diaqnostikadan davamlı məsləhətə qədər.",
     "index": true
   },
   {
-    "url": "/az/work/",
-    "key": "work",
+    "url": "/az/portfolio/",
+    "key": "portfolio",
     "locale": "az",
     "alternates": {
-      "en": "/work/",
-      "az": "/az/work/"
+      "en": "/portfolio/",
+      "az": "/az/portfolio/"
     },
-    "title": "Qurduğumuz süni intellekt sistemləri və öz məhsullarımız",
-    "description": "Klinik, maliyyə, satış və əməliyyat sahələrində təhvil verilmiş süni intellekt sistemləri və özümüzün iki süni intellekt məhsulu.",
-    "index": true
+    "title": "Seçilmiş layihələr",
+    "description": "Klinik texnologiya, kommunikasiya, turizm, investisiya, maliyyə və təhsil sahələrində süni intellekt, avtomatlaşdırma və proqram layihələri.",
+    "index": false
+  },
+  {
+    "url": "/az/briefing/",
+    "key": "briefing",
+    "locale": "az",
+    "alternates": {
+      "en": "/briefing/",
+      "az": "/az/briefing/"
+    },
+    "title": "Şirkətdə süni intellekt və agent işinin qurulması",
+    "description": "Şirkət komandalarının süni intellekt agentlərindən etibarlı nəticə alması üçün kontekst, ixtisaslaşmış zolaqlar və təsdiq mərhələləri üzrə bələdçi.",
+    "index": false
   },
   {
     "url": "/az/work/travel-distributor-outreach/",
@@ -452,7 +512,7 @@
       "az": "/az/about/"
     },
     "title": "Təsisçinin rəhbərlik etdiyi şirkət, London və Bakı",
-    "description": "Enamplify London və Bakıda təsisçinin rəhbərlik etdiyi süni intellekt bacarıqları üzrə konsaltinq şirkətidir. Amir Gulubayli və iş prinsiplərimiz.",
+    "description": "Enamplify təsisçisi Amir Gulubayli və süni intellekt üzrə məsləhət, sistemlərin qurulması və komanda bacarıqlarına yanaşmamızla tanış olun.",
     "index": true
   },
   {
@@ -648,6 +708,18 @@
     "index": true
   },
   {
+    "url": "/az/discover/",
+    "key": "discover",
+    "locale": "az",
+    "alternates": {
+      "en": "/discover/",
+      "az": "/az/discover/"
+    },
+    "title": "Söhbətə başlayın",
+    "description": "Komandanız və ötürmək istədiyiniz iş barədə bir neçə suala cavab verin, sonra görüş vaxtı seçin.",
+    "index": false
+  },
+  {
     "url": "/az/contact/",
     "key": "contact",
     "locale": "az",
@@ -655,8 +727,8 @@
       "en": "/contact/",
       "az": "/az/contact/"
     },
-    "title": "Diaqnostik görüş təyin edin",
-    "description": "Enamplify-ın təsisçisi Amir Gulubayli ilə 30 dəqiqəlik diaqnostik görüş. Satış təqdimatı yoxdur: komandanız, onun işi və süni intellekt haqqında söhbət.",
+    "title": "İlkin görüş təyin edin",
+    "description": "Prioritetləriniz və sizə necə kömək edə biləcəyimiz barədə Enamplify təsisçisi Amir Gulubayli ilə 30 dəqiqəlik ilkin söhbət.",
     "index": true
   },
   {

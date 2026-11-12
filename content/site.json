@@ -1,9 +1,9 @@
 {
   "name": "Enamplify",
-  "descriptor": "AI enablement for mid-sized teams",
-  "definition": "Enamplify is an AI enablement consultancy, based in London and Baku, that helps mid-sized organisations train their own people to build and run AI workflows safely.",
-  "description": "AI your team builds, not AI you buy. We help mid-sized organisations make AI part of how their people work: more done, owned in-house, in control.",
-  "email": "amirg@ragmedium.com",
+  "descriptor": "An adaptive AI workspace, implemented for your team",
+  "definition": "Enamplify is an adaptive AI working environment, implemented for teams and businesses by a founder-led practice in London and Baku.",
+  "description": "An adaptive AI workspace for your team’s conversations, projects, tools and agents, implemented around your business with advice and support.",
+  "email": "amir@enamplify.com",
   "founder": "Amir Gulubayli",
   "linkedin": "https://www.linkedin.com/in/amirgulubayli/",
   "bookingUrl": "https://calendar.app.google/tANUivSNL2Y2sgTW6",
@@ -12,5 +12,5 @@
   "launchDate": "2026-09-27",
   "careersPosted": "2026-09-29",
   "cities": ["London", "Baku"],
-  "nav": [["Approach", "/approach/"], ["Work", "/work/"], ["Insights", "/insights/"], ["About", "/about/"]]
+  "nav": [["Approach", "/approach/"], ["Insights", "/insights/"], ["About", "/about/"]]
 }

@@ -1,79 +1,71 @@
-import {esc, button, textLink, exhibit, closeBand, articleCard, portrait, photo} from '../components.mjs';
-import {stackedBar, pairedBars, lineChart} from '../exhibits.mjs';
-import {trackRecord, commitmentsBlock} from './shared.mjs';
+import {esc, button, closeBand, audienceToggle, crossLink, ME_ENQUIRY, US_ENQUIRY} from '../components.mjs';
+import {fill} from '../i18n.mjs';
+import {workspaceStory} from './workspace-story.mjs';
 
-/** The illustrative week: values and tones are data; labels come from the copy, in this order. */
-const WEEK = [{value: 41, tone: 'ink'}, {value: 21, tone: 'wine'}, {value: 16, tone: 'wine'}, {value: 13, tone: 'wine'}, {value: 9, tone: 'stone'}];
-export const weekSegments = labels => WEEK.map((s, i) => ({...s, label: labels[i]}));
+/*
+ * Two landing pages, one visual-first structure. Us (/) is the default: the Enamplify workspace,
+ * implemented around an organisation. Me (/me/) is the same workspace for one person. Each opens
+ * with a prominent Us · Me switch, a short proposition and its action, then lets the original
+ * workspace concepts do the explaining: one large stage and a smoothly sliding contact sheet of every concept
+ * (twenty professional on Us, twelve personal on Me). Visual product chapters and the close follow.
+ * Both main actions use the real enquiry form; nothing here signs anyone up, and the concepts are
+ * static illustrations with fictional data, so nothing on the page pretends to operate them.
+ */
 
-const outcomes = ctx => {
-  const {moreDone: d, ownedInHouse: o, inControl: k} = ctx.copy.home;
-  return [
-    exhibit({n: 2, topic: d.topic, title: d.title, cls: 'exhibit--outcome',
-      chart: pairedBars({unit: d.unit, max: 16, rows: [{label: d.before, value: 14, tone: 'ink'}, {label: d.after, value: 6, tone: 'wine'}]}),
-      note: d.note}, ctx),
-    exhibit({n: 3, topic: o.topic, title: o.title, cls: 'exhibit--outcome',
-      chart: lineChart({xLabels: [o.start, o.end], max: 12, summary: ctx.copy.common.lineSummary, series: [
-        {label: o.team, short: o.teamShort, tone: 'wine', values: [0, 1, 3, 5, 8, 10, 12]},
-        {label: o.us, short: o.usShort, tone: 'ink', values: [3, 4, 4, 3, 2, 1, 1]}]}),
-      note: o.note}, ctx),
-    exhibit({n: 4, topic: k.topic, title: k.title, cls: 'exhibit--outcome',
-      chart: `<dl class="control-lines">${k.lines.map(([t, p]) => `<div><dt>${esc(t)}</dt><dd>${esc(p)}</dd></div>`).join('')}</dl>`}, ctx)
-  ].join('');
-};
+const FEATURED = {us: 'legal-lawyer', me: 'me-home-life'};
+const file = (id, w) => `/images/workspaces/${id}-${w}.webp`;
+const srcset = id => [480, 960, 1536].map(w => `${file(id, w)} ${w}w`).join(', ');
+// Keep the large concept and its thin preview rail on one aligned reading width.
+const STAGE_SIZES = '(min-width: 1144px) 1080px, (min-width: 720px) calc(100vw - 64px), calc(100vw - 40px)';
+const capital = (s, locale) => s.charAt(0).toLocaleUpperCase(locale) + s.slice(1);
+
+/** A concept's localised text plus the derived caption, shelf label, alt text and search terms. */
+function view(x, ctx) {
+  const g = ctx.copy.common.gallery;
+  return {...x,
+    caption: capital(fill(g.stageFor, {role: x.role}), ctx.locale),
+    label: capital(x.role.replace(/^an? /, ''), ctx.locale),
+    alt: fill(g.alt, {role: x.role, title: x.title, tabs: x.tabs.join(', ')}),
+    terms: [x.role, x.category, x.title, ...x.tabs, x.id.replace(/-/g, ' ')].join(' ')};
+}
+
+/** First viewport: the offering switch, proposition, one line, action, optional note, cross-link. */
+const hero = (c, ctx, {current, action, note = '', cross}) => `<section class="hero wrap" aria-labelledby="hero-title">${audienceToggle(ctx, current, {isPage: true, cls: 'audience--hero'})}<h1 id="hero-title">${esc(c.heroTitle)} <span class="h1-alt">${esc(c.heroTitleAlt)}</span></h1><p class="lede">${esc(c.lede)}</p><div class="actions">${button(action[0], action[1])}${note ? `<p class="note">${esc(note)}</p>` : ''}</div>${crossLink(cross[0], cross[1])}</section>`;
+
+/**
+ * The large stage and the shelf. Each shelf link opens that concept's full image natively (the
+ * no-script path); with scripts a plain click shows it on the stage instead, marks it current and
+ * announces it. Search is revealed only when scripts can run it. Thumbnails are lazy 480px files;
+ * only the featured stage image loads eagerly.
+ */
+function studio(c, ctx, collection) {
+  const g = ctx.copy.common.gallery;
+  const list = ctx.concepts.filter(x => x.collection === collection).map(x => view(x, ctx));
+  const lead = list.find(x => x.id === FEATURED[collection]) ?? list[0];
+  const controls = `<button class="preview-playback" type="button" data-playback aria-pressed="false" aria-label="${esc(g.play)}" title="${esc(g.play)}" hidden><svg class="icon" data-play-icon viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l8 5-8 5z"/></svg><svg class="icon" data-pause-icon viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" hidden><path d="M5 3v10M11 3v10"/></svg></button>`;
+  const stage = `<figure class="stage" data-stage><div class="stage__frame"><img src="${file(lead.id, 960)}" srcset="${srcset(lead.id)}" sizes="${STAGE_SIZES}" width="1536" height="1024" alt="${esc(lead.alt)}" loading="eager" fetchpriority="high" decoding="async"></div><p class="stage__error" data-error role="status" hidden>${esc(g.loadError)}</p><figcaption class="stage__cap"><span data-caption aria-live="off"><span class="stage__for" data-cap>${esc(lead.label)}</span></span><span class="stage__note">${esc(c.conceptNote)}</span>${controls}</figcaption></figure>`;
+  const shelf = `<ul class="shelf">${list.map(v => `<li><a href="${file(v.id, 1536)}" data-concept data-id="${v.id}" data-alt="${esc(v.alt)}" data-label="${esc(v.label)}"${v === lead ? ' aria-current="true"' : ''}><img src="${file(v.id, 480)}" width="480" height="320" alt="" loading="lazy" decoding="async"><span>${esc(v.label)}</span></a></li>`).join('')}</ul>`;
+  return `<section class="studio wrap" aria-label="${esc(g.railLabel)}" data-carousel data-play="${esc(g.play)}" data-pause="${esc(g.pause)}">${stage}<div class="preview-rail">${shelf}</div></section>`;
+}
 
 export function home(ctx) {
-  const {site, articles, copy} = ctx;
+  const {copy} = ctx;
   const c = copy.home;
   const L = ctx.href;
-  const diptych = {sizes: '(min-width: 1536px) 360px, (min-width: 1000px) 23vw, 46vw', eager: true};
-  return `<section class="hero wrap" aria-labelledby="hero-title">
-<div class="hero__copy"><h1 id="hero-title">${esc(c.heroTitle)} <span class="h1-alt">${esc(c.heroTitleAlt)}</span></h1>
-<p class="lede">${esc(c.lede)}</p>
-<div class="actions">${button(copy.common.bookDiagnostic, L('/contact/'))}${textLink(c.howWeWork, L('/approach/'))}</div>
-<p class="note">${esc(c.note)}</p></div>
-<div class="diptych">${photo('hero-london', ctx, diptych)}${photo('hero-baku', ctx, diptych)}</div>
-</section>
+  const delivery = c.delivery;
+  return `${hero(c, ctx, {current: 'us', action: [copy.common.usCta, L(US_ENQUIRY)], note: c.note, cross: [c.cross, L('/me/')]})}
+${studio(c, ctx, 'us')}
+${workspaceStory(ctx, 'us')}
+<section class="delivery wrap" aria-labelledby="delivery-title"><div><h2 id="delivery-title">${esc(delivery.title)}</h2><p class="lede">${esc(delivery.sub)}</p></div><ol>${delivery.steps.map(([title, body]) => `<li><h3>${esc(title)}</h3><p>${esc(body)}</p></li>`).join('')}</ol><a class="link-arrow" href="${L('/approach/')}">${esc(delivery.link)}</a></section>
+${closeBand(ctx, {title: c.closeTitle, body: c.closeBody, action: [copy.common.usCta, US_ENQUIRY], cross: [c.cross, '/me/']})}`;
+}
 
-<section class="section section--light" aria-labelledby="situation-title"><div class="wrap">
-<h2 id="situation-title" class="section__title">${esc(c.situationTitle)}</h2><p class="section__dek">${esc(c.situationDek)}</p>
-<div class="situation">${exhibit({n: 1, topic: c.week.topic, title: c.week.title, cls: 'exhibit--lead', chart: stackedBar(weekSegments(c.week.segments)), note: c.week.note}, ctx)}
-<ol class="points">${c.situation.map(([t, p]) => `<li><h3>${esc(t)}</h3><p>${esc(p)}</p></li>`).join('')}</ol></div>
-<p class="marked">${esc(c.marked)}</p>
-</div></section>
-
-<section class="section section--wash" aria-labelledby="outcomes-title"><div class="wrap">
-<h2 id="outcomes-title" class="section__title">${esc(c.outcomesTitle)}</h2><p class="section__dek">${esc(c.outcomesDek)}</p>
-<div class="outcomes">${outcomes(ctx)}</div>
-</div></section>
-
-<section class="section wrap" aria-labelledby="start-title">
-<div class="split"><div><h2 id="start-title" class="section__title">${esc(c.startTitle)}</h2><p class="section__dek">${esc(c.startDek)}</p></div>
-<div><ol class="stages">${copy.common.stages.map(s => `<li><span class="stages__n">${s.n}</span><div><h3>${esc(s.name)} <span class="stages__time">${esc(s.time)}</span></h3><p>${esc(s.short)}</p></div></li>`).join('')}</ol>
-${textLink(c.moreApproach, L('/approach/'))}</div></div>
-</section>
-
-<section class="section section--light" aria-labelledby="commit-title"><div class="wrap">
-<h2 id="commit-title" class="section__title">${esc(c.commitTitle)}</h2><p class="section__dek">${esc(c.commitDek)}</p>
-${commitmentsBlock(ctx)}
-</div></section>
-
-<section class="section section--wash" aria-labelledby="record-title"><div class="wrap">
-<h2 id="record-title" class="section__title">${esc(c.recordTitle)}</h2><p class="section__dek">${esc(c.recordDek)}</p>
-${trackRecord(ctx, {n: 5, cls: 'exhibit--record'})}
-${textLink(c.seeWork, L('/work/'))}
-</div></section>
-
-<section class="section wrap founder" aria-labelledby="founder-title">
-${portrait(ctx, {caption: false})}
-<div><h2 id="founder-title" class="section__title">${esc(c.founderTitle)}</h2><p class="section__dek">${esc(c.founderDek)}</p>
-<blockquote class="quote"><p>${esc(c.quote)}</p><footer>${esc(c.quoteBy)}</footer></blockquote>
-${textLink(c.aboutLink, L('/about/'))}</div>
-</section>
-
-<section class="section section--light" aria-labelledby="insights-title"><div class="wrap">
-<div class="section__row"><div><h2 id="insights-title" class="section__title">${esc(c.insightsTitle)}</h2><p class="section__dek">${esc(c.insightsDek)}</p></div>${textLink(c.allInsights, L('/insights/'))}</div>
-<div class="cards">${articles.slice(0, 3).map(a => articleCard(a, ctx)).join('')}</div>
-</div></section>
-${closeBand(ctx)}`;
+export function me(ctx) {
+  const {copy} = ctx;
+  const c = copy.me;
+  const L = ctx.href;
+  return `${hero(c, ctx, {current: 'me', action: [copy.common.meCta, L(ME_ENQUIRY)], note: c.note, cross: [c.cross, L('/')]})}
+${studio(c, ctx, 'me')}
+${workspaceStory(ctx, 'me')}
+${closeBand(ctx, {title: c.closeTitle, body: c.closeBody, action: [copy.common.meCta, ME_ENQUIRY], cross: [c.cross, '/']})}`;
 }

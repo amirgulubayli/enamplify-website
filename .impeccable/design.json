@@ -1,178 +1,577 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-27T00:00:00Z",
+  "generatedAt": "2026-11-08T02:01:12.890014Z",
   "title": "Design System: Enamplify",
   "extensions": {
     "colorMeta": {
-      "signal": { "role": "primary", "displayName": "Signal Blue", "canonical": "#1f5eff", "tonalRamp": ["#0a1f5c", "#0f2f8a", "#1746c8", "#1f5eff", "#4d80ff", "#85a8ff", "#bccfff", "#e9efff"] },
-      "signal-deep": { "role": "primary", "displayName": "Signal Deep", "canonical": "#1746c8", "tonalRamp": ["#0a1f5c", "#0f2f8a", "#1746c8", "#1f5eff", "#4d80ff", "#85a8ff", "#bccfff", "#e9efff"] },
-      "signal-wash": { "role": "primary", "displayName": "Signal Wash", "canonical": "#e9efff", "tonalRamp": ["#0a1f5c", "#0f2f8a", "#1746c8", "#1f5eff", "#4d80ff", "#85a8ff", "#bccfff", "#e9efff"] },
-      "navy": { "role": "neutral", "displayName": "Board Navy", "canonical": "#0a1f33", "tonalRamp": ["#050f1a", "#0a1f33", "#16324f", "#25486b", "#3d6189", "#6a88a8", "#a6b8cb", "#e1e8ef"] },
-      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1a2633", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
-      "muted": { "role": "neutral", "displayName": "Slate", "canonical": "#556474", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
-      "control": { "role": "neutral", "displayName": "Control Grey", "canonical": "#7b8896", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
-      "rule-strong": { "role": "neutral", "displayName": "Strong Hairline", "canonical": "#a8b4c0", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
-      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#d8dee5", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
-      "close-text": { "role": "neutral", "displayName": "Close Text", "canonical": "#d6dde6", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d6dde6", "#f4f6f8"] },
-      "wash": { "role": "neutral", "displayName": "Report Wash", "canonical": "#f4f6f8", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#f4f6f8"] },
-      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#111820", "#1a2633", "#334150", "#556474", "#7b8896", "#a8b4c0", "#d8dee5", "#ffffff"] },
-      "error": { "role": "error", "displayName": "Error Red", "canonical": "#b42318", "tonalRamp": ["#3d0b07", "#6b140d", "#8f1b12", "#b42318", "#d9493d", "#ec8177", "#f6b8b2", "#fdeceb"] }
+      "paper": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#f3eee5",
+        "tonalRamp": [
+          "oklch(15.00% 0.0131 82.40)",
+          "oklch(26.43% 0.0131 82.40)",
+          "oklch(37.86% 0.0131 82.40)",
+          "oklch(49.29% 0.0131 82.40)",
+          "oklch(60.71% 0.0131 82.40)",
+          "oklch(72.14% 0.0131 82.40)",
+          "oklch(83.57% 0.0131 82.40)",
+          "oklch(95.00% 0.0131 82.40)"
+        ]
+      },
+      "paper-light": {
+        "role": "neutral",
+        "displayName": "Light Paper",
+        "canonical": "#faf7f1",
+        "tonalRamp": [
+          "oklch(15.00% 0.0086 84.57)",
+          "oklch(26.43% 0.0086 84.57)",
+          "oklch(37.86% 0.0086 84.57)",
+          "oklch(49.29% 0.0086 84.57)",
+          "oklch(60.71% 0.0086 84.57)",
+          "oklch(72.14% 0.0086 84.57)",
+          "oklch(83.57% 0.0086 84.57)",
+          "oklch(95.00% 0.0086 84.57)"
+        ]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Deep Paper",
+        "canonical": "#e9e2d7",
+        "tonalRamp": [
+          "oklch(15.00% 0.0166 79.35)",
+          "oklch(26.43% 0.0166 79.35)",
+          "oklch(37.86% 0.0166 79.35)",
+          "oklch(49.29% 0.0166 79.35)",
+          "oklch(60.71% 0.0166 79.35)",
+          "oklch(72.14% 0.0166 79.35)",
+          "oklch(83.57% 0.0166 79.35)",
+          "oklch(95.00% 0.0166 79.35)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#242321",
+        "tonalRamp": [
+          "oklch(15.00% 0.0040 84.58)",
+          "oklch(26.43% 0.0040 84.58)",
+          "oklch(37.86% 0.0040 84.58)",
+          "oklch(49.29% 0.0040 84.58)",
+          "oklch(60.71% 0.0040 84.58)",
+          "oklch(72.14% 0.0040 84.58)",
+          "oklch(83.57% 0.0040 84.58)",
+          "oklch(95.00% 0.0040 84.58)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#4a433d",
+        "tonalRamp": [
+          "oklch(15.00% 0.0138 63.03)",
+          "oklch(26.43% 0.0138 63.03)",
+          "oklch(37.86% 0.0138 63.03)",
+          "oklch(49.29% 0.0138 63.03)",
+          "oklch(60.71% 0.0138 63.03)",
+          "oklch(72.14% 0.0138 63.03)",
+          "oklch(83.57% 0.0138 63.03)",
+          "oklch(95.00% 0.0138 63.03)"
+        ]
+      },
+      "wine": {
+        "role": "primary",
+        "displayName": "Oxblood Wine",
+        "canonical": "#502d36",
+        "tonalRamp": [
+          "oklch(15.00% 0.0529 3.62)",
+          "oklch(26.43% 0.0529 3.62)",
+          "oklch(37.86% 0.0529 3.62)",
+          "oklch(49.29% 0.0529 3.62)",
+          "oklch(60.71% 0.0529 3.62)",
+          "oklch(72.14% 0.0529 3.62)",
+          "oklch(83.57% 0.0529 3.62)",
+          "oklch(95.00% 0.0529 3.62)"
+        ]
+      },
+      "wine-deep": {
+        "role": "primary",
+        "displayName": "Deep Wine",
+        "canonical": "#3c2229",
+        "tonalRamp": [
+          "oklch(15.00% 0.0412 2.54)",
+          "oklch(26.43% 0.0412 2.54)",
+          "oklch(37.86% 0.0412 2.54)",
+          "oklch(49.29% 0.0412 2.54)",
+          "oklch(60.71% 0.0412 2.54)",
+          "oklch(72.14% 0.0412 2.54)",
+          "oklch(83.57% 0.0412 2.54)",
+          "oklch(95.00% 0.0412 2.54)"
+        ]
+      },
+      "wine-mist": {
+        "role": "primary",
+        "displayName": "Wine Mist",
+        "canonical": "#e3d3d0",
+        "tonalRamp": [
+          "oklch(15.00% 0.0183 30.28)",
+          "oklch(26.43% 0.0183 30.28)",
+          "oklch(37.86% 0.0183 30.28)",
+          "oklch(49.29% 0.0183 30.28)",
+          "oklch(60.71% 0.0183 30.28)",
+          "oklch(72.14% 0.0183 30.28)",
+          "oklch(83.57% 0.0183 30.28)",
+          "oklch(95.00% 0.0183 30.28)"
+        ]
+      },
+      "bronze": {
+        "role": "secondary",
+        "displayName": "Bronze",
+        "canonical": "#9b8269",
+        "tonalRamp": [
+          "oklch(15.00% 0.0472 66.78)",
+          "oklch(26.43% 0.0472 66.78)",
+          "oklch(37.86% 0.0472 66.78)",
+          "oklch(49.29% 0.0472 66.78)",
+          "oklch(60.71% 0.0472 66.78)",
+          "oklch(72.14% 0.0472 66.78)",
+          "oklch(83.57% 0.0472 66.78)",
+          "oklch(95.00% 0.0472 66.78)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d6ccbf",
+        "tonalRamp": [
+          "oklch(15.00% 0.0210 74.63)",
+          "oklch(26.43% 0.0210 74.63)",
+          "oklch(37.86% 0.0210 74.63)",
+          "oklch(49.29% 0.0210 74.63)",
+          "oklch(60.71% 0.0210 74.63)",
+          "oklch(72.14% 0.0210 74.63)",
+          "oklch(83.57% 0.0210 74.63)",
+          "oklch(95.00% 0.0210 74.63)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Warm Grey",
+        "canonical": "#696058",
+        "tonalRamp": [
+          "oklch(15.00% 0.0170 64.09)",
+          "oklch(26.43% 0.0170 64.09)",
+          "oklch(37.86% 0.0170 64.09)",
+          "oklch(49.29% 0.0170 64.09)",
+          "oklch(60.71% 0.0170 64.09)",
+          "oklch(72.14% 0.0170 64.09)",
+          "oklch(83.57% 0.0170 64.09)",
+          "oklch(95.00% 0.0170 64.09)"
+        ]
+      },
+      "control": {
+        "role": "neutral",
+        "displayName": "Control",
+        "canonical": "#857869",
+        "tonalRamp": [
+          "oklch(15.00% 0.0275 71.22)",
+          "oklch(26.43% 0.0275 71.22)",
+          "oklch(37.86% 0.0275 71.22)",
+          "oklch(49.29% 0.0275 71.22)",
+          "oklch(60.71% 0.0275 71.22)",
+          "oklch(72.14% 0.0275 71.22)",
+          "oklch(83.57% 0.0275 71.22)",
+          "oklch(95.00% 0.0275 71.22)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "#a1261c",
+        "tonalRamp": [
+          "oklch(15.00% 0.1609 29.30)",
+          "oklch(26.43% 0.1609 29.30)",
+          "oklch(37.86% 0.1609 29.30)",
+          "oklch(49.29% 0.1609 29.30)",
+          "oklch(60.71% 0.1609 29.30)",
+          "oklch(72.14% 0.1609 29.30)",
+          "oklch(83.57% 0.1609 29.30)",
+          "oklch(95.00% 0.1609 29.30)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The one H1 per page, max 18ch; the hero may set its second clause on its own line in Slate." },
-      "display-article": { "displayName": "Article display", "purpose": "Article and guide H1, max 24ch." },
-      "headline": { "displayName": "Headline", "purpose": "Section H2s, written as sentences, max 24ch." },
-      "title": { "displayName": "Title", "purpose": "H3s in numbered lists, stages, cards and commitments." },
-      "statement": { "displayName": "Statement", "purpose": "Marked pull statement, founder quote, large ticks and prose blockquotes, always under a 2px navy top rule." },
-      "exhibit-caption": { "displayName": "Exhibit caption", "purpose": "Run-in exhibit caption; the 'Exhibit N · Topic.' label is set at 700." },
-      "lede": { "displayName": "Lede", "purpose": "Page and hero ledes, max 42ch." },
-      "body": { "displayName": "Body", "purpose": "Running text; prose max 66ch." },
-      "label": { "displayName": "Label", "purpose": "Buttons and arrow links." },
-      "small": { "displayName": "Small", "purpose": "Notes and ledger text." },
-      "caption": { "displayName": "Caption", "purpose": "Card meta, source lines, axis labels, breadcrumbs, legal row." },
-      "figures": { "displayName": "Figures", "purpose": "Legend values, bar values, ledgers, axes and stage numbers only." }
+      "display": {
+        "displayName": "display",
+        "purpose": "Page H1, generally 16ch."
+      },
+      "display-hero": {
+        "displayName": "display hero",
+        "purpose": "Compact centred landing H1, 26ch with a Wine italic second line. Azerbaijani uses its evidenced smaller clamp and 28ch measure."
+      },
+      "display-article": {
+        "displayName": "display article",
+        "purpose": "Article and guide H1, 22ch."
+      },
+      "headline": {
+        "displayName": "headline",
+        "purpose": "Section H2, generally 22ch."
+      },
+      "title": {
+        "displayName": "title",
+        "purpose": "Regular Caslon H3."
+      },
+      "italic": {
+        "displayName": "italic",
+        "purpose": "Libre Caslon Text set in italic for meaningful emphasis and exhibit labels."
+      },
+      "exhibit-caption": {
+        "displayName": "exhibit caption",
+        "purpose": "Run-in wine italic label and regular Caslon title."
+      },
+      "lede": {
+        "displayName": "lede",
+        "purpose": "Introductory text, 44ch generally; visual-chapter subheads use 36ch. The compact landing hero uses 1.0625rem/1.5 at 72ch."
+      },
+      "body": {
+        "displayName": "body",
+        "purpose": "Running text; prose held to 66ch."
+      },
+      "label": {
+        "displayName": "label",
+        "purpose": "Primary, secondary and inverse button labels."
+      },
+      "small": {
+        "displayName": "small",
+        "purpose": "Notes, navigation and supporting detail."
+      },
+      "caption": {
+        "displayName": "caption",
+        "purpose": "Metadata, thumbnail labels, visual tags and status labels, captions and legal detail."
+      },
+      "headline-visual": {
+        "displayName": "Visual chapter headline",
+        "purpose": "Repeated compact Caslon headings for graphic and photographic chapters, held to 15ch."
+      },
+      "stage-role": {
+        "displayName": "Stage role",
+        "purpose": "Single Wine italic role beneath the uncropped concept image; the fictional-concept note remains local metadata."
+      }
     },
     "shadows": [],
     "motion": [
-      { "name": "ease", "value": "cubic-bezier(.2,.7,.2,1)", "purpose": "The single easing curve for exhibit reveals and the arrow nudge." },
-      { "name": "state-change", "value": "200ms background-color, color, border-color", "purpose": "Button and link hover states." },
-      { "name": "arrow-nudge", "value": "transform: translateX(3px) over 200ms", "purpose": "Arrow icon in buttons and arrow links on hover." },
-      { "name": "bar-grow", "value": "transform scaleX(0 to 1) over 1s, origin left", "purpose": "Below-fold exhibit bars, once on entering view." },
-      { "name": "line-draw", "value": "stroke-dashoffset 1 to 0 over 1.4s", "purpose": "Below-fold exhibit lines, once on entering view." },
-      { "name": "reduced-motion", "value": "all transitions and animations off; marks render complete", "purpose": "prefers-reduced-motion: reduce, and print." }
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.2,.7,.2,1)",
+        "purpose": "Button arrow nudges and finite explanatory figure sequences."
+      },
+      {
+        "name": "state-change",
+        "value": "200ms background-color, color, border-color",
+        "purpose": "Button and navigation state changes."
+      },
+      {
+        "name": "arrow-nudge",
+        "value": "translateX(3px) over 200ms",
+        "purpose": "Button and arrow-link hover."
+      },
+      {
+        "name": "stage-settle",
+        "value": "420ms opacity 0.45 to 1 and clip-path inset(0 3% 0 0) to inset(0); cubic-bezier(.16,1,.3,1)",
+        "purpose": "Feedback after a selected concept image loads; omitted for reduced motion."
+      },
+      {
+        "name": "preview-rail-selection",
+        "value": "Native horizontal scrollTo, behavior instant; no scroll snap",
+        "purpose": "Centre the initial or deliberately selected thumbnail within the contact sheet without moving the page vertically. Modified thumbnail clicks retain the native full-image destination."
+      },
+      {
+        "name": "preview-playback",
+        "value": "24px/second native scrollLeft, reverse at boundaries; 6500ms main-image selection interval",
+        "purpose": "Continuous contact-sheet motion and automatic preview selection run only onscreen in a visible document, outside rail hover and studio focus. Explicit pause, manual selection and touch persistently pause. One authored SVG playback icon has a localized accessible label/title and synchronized pressed state. Automatic changes turn live caption announcements off; deliberate selections announce politely. Image failure shows a localized status and clears on another selection. Explicit Play clears temporary hover/focus suspension and resumes immediately while its button retains focus; a subsequent hover or focus entry suspends again."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "Transitions and animations disabled; scroll-behavior auto",
+        "purpose": "Preview playback starts paused; readers may explicitly request play. Concept selection and horizontal navigation have no animated transition."
+      },
+      {
+        "name": "visual-demonstrations",
+        "value": "Six replayable figures: connections, accounts, context, agents, sandbox and operations; sandbox completes within 4400ms.",
+        "purpose": "Each of the six replayable figures starts on first entry, rests in a complete state and has a localized replay control hidden without scripts and under reduced motion. Sequences pause offscreen and in a hidden document. Agent bars fill in parallel before merged-output emphasis. Sandbox orders browser, code, retained files, reviewable output and pause/retain/resume emphasis. Complete static states remain without scripts and under reduced motion; no decorative repeating graph motion or generic section reveals."
+      }
     ],
     "breakpoints": [
-      { "name": "form-row", "value": "600px" },
-      { "name": "gutter-wide", "value": "720px" },
-      { "name": "two-up", "value": "760px" },
-      { "name": "split", "value": "900px" },
-      { "name": "hero", "value": "1000px" },
-      { "name": "desktop-nav", "value": "1001px" },
-      { "name": "three-up", "value": "1100px" }
-    ]
+      {
+        "name": "form-rows-connection-groups-and-routing-spacing",
+        "value": "600px"
+      },
+      {
+        "name": "medium-gutter-header-offering-sandbox-panes-examples-and-proof",
+        "value": "720px"
+      },
+      {
+        "name": "inner-page-card-pairs",
+        "value": "760px"
+      },
+      {
+        "name": "supporting-splits-and-visual-chapter-grid",
+        "value": "900px"
+      },
+      {
+        "name": "inner-page-heading-article-and-contact-splits",
+        "value": "1000px"
+      },
+      {
+        "name": "desktop-navigation",
+        "value": "1001px"
+      },
+      {
+        "name": "inner-page-card-triples-and-connection-constellation",
+        "value": "1100px"
+      },
+      {
+        "name": "wide-gutter-and-header",
+        "value": "1200px"
+      }
+    ],
+    "landingStory": {
+      "scope": "Us and Me landing pages, English and Azerbaijani; inner-page rules remain unchanged.",
+      "chapters": [
+        "adapt",
+        "setup",
+        "examples",
+        "agents",
+        "operate",
+        "connect",
+        "accounts",
+        "context",
+        "sandbox",
+        "place"
+      ],
+      "contextualActions": "Four existing enquiry links follow adaptation, accounts, sandbox and examples; the real localized form has the correct offering preselected. Sandbox uses the shared inverse button on Wine; the others use the existing primary button. Me registers interest while in development.",
+      "sandbox": "Full Wine field with Light Paper headings, copy and controls; large browser/code/files icons and connecting paths without console or pane borders. Stacked below 720px and three equal columns above, followed by pause/retain/resume. A Light Paper result with Wine text is illustrative and reviewable; scoped access and retained files are not universal capability guarantees.",
+      "examples": "Six illustrative scenarios per offering, with uncropped concepts, request, inline wrapping work steps and result. Underlined text tabs have 44px minimum height, 24px horizontal gaps and Wine selected text/underline. Script enhancement provides selected-panel semantics, roving focus and Left/Right/Home/End keys. Without scripts the first complete scenario remains visible and the tablist stays hidden. Image/narrative split is 7:3 from 720px. Three editorial Us links lead to existing delivered-work case studies, separately from fictional results.",
+      "composition": "A stable authored HTML workspace shell with a rebuilding centre introduces outcomes before supporting capabilities. Other capability explanations retain curved connection paths and unframed tool groups, Anthropic-at-limit to OpenAI fallback routing plus two other accounts, a source-linked context document without admin sidebar, unboxed parallel agents and continuous open operations flow. Square product images and actual buttons remain; frames do not scaffold the open diagrams.",
+      "offeringProgression": {
+        "us": [
+          "adapt",
+          "setup",
+          "examples",
+          "agents",
+          "operate",
+          "connect",
+          "accounts",
+          "context",
+          "sandbox",
+          "place"
+        ],
+        "me": [
+          "adapt",
+          "setup",
+          "examples",
+          "connect",
+          "accounts",
+          "context",
+          "agents",
+          "sandbox",
+          "operate",
+          "place"
+        ],
+        "commercialClarity": "Us explicitly offers scoped custom implementation and support, with a short open Scope/Build/Support section before enquiry. Me is personal software in development; interest does not create an account."
+      },
+      "workspaceDemo": {
+        "structure": "Stable white product shell with DM Sans UI headings/content, a Caslon wordmark and working Workspace/Files/Agents navigation. Six separately composed HTML work surfaces change topology for the job rather than rename shared rows. Navigation becomes a compact row below 600px. Files/Agents reset inherited minimum heights at 899px and below for content-proportional panes.",
+        "timing": "Request types over 2000–2800ms; centre resets at 25%; primary/context/result root pieces append at 35%/70%/100%. Each root contains task-specific structure. Spatial widget transitions last 650ms using bounded offsets from previous layout positions. Read for 2600ms, then advance; one finite three-scene run.",
+        "controls": "Localized pause/resume freezes typing and widget animations and shows the paused state. Replay starts from the first scene. Native underlined choice buttons animate only the selected scene and synchronize pressed state. Offscreen and hidden-document states halt typing and widget motion. Item, file, pane, task-move, flashcard, grocery, task-review and routine interactions stop automatic scene playback, complete the current scene if necessary and finish pending widget animations. Item selection updates detail; task checkboxes update actual checked/total ratio; routine controls and written state synchronize across Workspace/Agents. Kanban controls move tasks into review and mark them reviewed; flashcard controls reveal/hide the selected explanation; grocery checkboxes update local completion styling.",
+        "fallbacks": "Reduced motion reveals a complete selected scene immediately and hides playback. Without scripts, the first complete result is visible, playback/scene selectors are hidden and visible portal controls disabled. Full request text is available without character-by-character announcements.",
+        "truthfulness": "Authored illustrative scenes with fictional notes; local choices only, no free-form model request, model call or account connection. Us illustrates reporting/follow-up/delivery; Me illustrates day planning/study/meals.",
+        "modes": {
+          "us": {
+            "reports": "Document shelf plus broad paper reading surface.",
+            "kanban": "Three task lanes with working move-to-review controls.",
+            "roadmap": "Milestone rail on Wine; vertical on phones."
+          },
+          "me": {
+            "planner": "Weekday strip, time axis and calendar blocks.",
+            "study": "Topic checklist beside a revealable flashcard.",
+            "meals": "Recipe week with working grocery checklist."
+          },
+          "responsive": "Report shelves, kanban lanes and recipes stack on phones. Outer navigation and product theme remain familiar."
+        },
+        "stageGeometry": "Measure all three complete authored templates at the current width and reserve the maximum workspace height during rebuilding. Files and Agents remain content-proportional."
+      },
+      "assetAndCopyBounds": {
+        "landingCss": "42KB",
+        "landingJs": "22KB",
+        "combinedCss": "76KB",
+        "combinedJs": "32KB",
+        "visibleMainWords": 750,
+        "staticHtmlWordsIncludingTemplatesAndHiddenPanels": 1100,
+        "scope": "Landing bundles include authored demo, portal polish and setup CSS/JS; omitted from inner pages; global assets unchanged. Visible main includes product UI and setup."
+      },
+      "productSurface": {
+        "scope": [
+          ".live-app",
+          ".portal-setup"
+        ],
+        "localCustomProperties": {
+          "--portal-surface": "#fff",
+          "--portal-soft": "#f7f5f1",
+          "--portal-stroke": "#e7e1d8"
+        },
+        "typography": "DM Sans UI headings and content, semibold 600 titles/labels, regular descriptions; Caslon product wordmark and marketing headings retained. No global font migration.",
+        "corners": "20px outer, 16px below 600px; 9px navigation/setup actions, 10px shared item/file rows, 12px shared agent/option panels. Task-specific work surfaces vary internal shape within the local product treatment. Global square token remains unchanged.",
+        "elevation": {
+          "workspace": "0 24px 70px rgb(36 35 33 / .1)",
+          "setup": "0 24px 70px rgb(36 35 33 / .08)"
+        },
+        "boundary": "Wine/Ink accents and existing fonts; local softer product treatment only. Editorial marketing and inner pages retain square, flat treatment; no gradients or blur."
+      },
+      "sourceIdentity": "File previews use independent named source metadata and distinct source excerpts, never task-result descriptions. Source-kind filtering retains each resource name.",
+      "setup": {
+        "steps": [
+          "Example Calendar/Files sources; at least one required",
+          "First authored workflow",
+          "Review controls and optional pause of automatic preparation"
+        ],
+        "controls": "Native Continue/Back/Apply/Start again; current-step semantics and legend focus. Apply changes only local scene, named sources and routine state and focuses the workspace. Editing applied settings clears stale success until reapplied.",
+        "fallback": "Without scripts, first step with disabled choices and hidden navigation actions.",
+        "boundary": "No account connection, submission, external action, browser storage or persistence. Us previews joint implementation; Me previews personal setup in development."
+      }
+    }
   },
   "components": [
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Signal blue, square, with a trailing arrow. One per view, for booking a diagnostic call.",
-      "html": "<a class=\"ds-btn ds-btn--primary\" href=\"#\">Book a diagnostic call<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 20px;font:600 .9375rem/1 var(--text,'Public Sans',Arial,sans-serif);text-decoration:none;border:1px solid transparent;border-radius:0;transition:background-color .2s,color .2s,border-color .2s}.ds-icon{transition:transform .2s cubic-bezier(.2,.7,.2,1)}.ds-btn:hover .ds-icon{transform:translateX(3px)}.ds-btn:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}.ds-btn--primary{background:var(--signal,#1f5eff);color:#fff}.ds-btn--primary:hover{background:var(--signal-deep,#1746c8)}"
+      "description": "Square editorial primary button with a visible keyboard focus state.",
+      "html": "<a class=\"ds-button\" href=\"#\">Wire up your team<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;gap:18px;min-height:52px;padding:14px 24px;font:500 .9375rem/1 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);letter-spacing:.005em;text-decoration:none;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.ds-button .ds-icon{transition:transform .2s var(--ease,cubic-bezier(.2,.7,.2,1))}.ds-button:hover .ds-icon{transform:translateX(3px)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}.ds-button{background:var(--wine,#502d36);color:var(--paper-light,#faf7f1)}.ds-button:hover{background:var(--wine-deep,#3c2229)}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Square editorial secondary button with a visible keyboard focus state.",
+      "html": "<a class=\"ds-button\" href=\"#\">Review the approach<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;gap:18px;min-height:52px;padding:14px 24px;font:500 .9375rem/1 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);letter-spacing:.005em;text-decoration:none;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.ds-button .ds-icon{transition:transform .2s var(--ease,cubic-bezier(.2,.7,.2,1))}.ds-button:hover .ds-icon{transform:translateX(3px)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}.ds-button{background:var(--wine-deep,#3c2229);color:var(--paper-light,#faf7f1)}.ds-button:hover{background:var(--ink,#242321)}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
       "name": "Quiet Button",
       "kind": "button",
       "refersTo": "button-quiet",
-      "description": "Navy-outlined 40px button used in the header.",
-      "html": "<a class=\"ds-btn-quiet\" href=\"#\">Book a call</a>",
-      "css": ".ds-btn-quiet{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;font:600 .9375rem/1 var(--text,'Public Sans',Arial,sans-serif);color:var(--navy,#0a1f33);border:1px solid var(--navy,#0a1f33);border-radius:0;text-decoration:none;transition:background-color .2s,color .2s}.ds-btn-quiet:hover{background:var(--navy,#0a1f33);color:#fff}.ds-btn-quiet:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+      "description": "Square editorial quiet button with a visible keyboard focus state.",
+      "html": "<a class=\"ds-button\" href=\"#\">Book a conversation<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;gap:18px;min-height:52px;padding:14px 24px;font:500 .9375rem/1 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);letter-spacing:.005em;text-decoration:none;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.ds-button .ds-icon{transition:transform .2s var(--ease,cubic-bezier(.2,.7,.2,1))}.ds-button:hover .ds-icon{transform:translateX(3px)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}.ds-button{min-height:42px;padding:10px 18px;gap:12px;font-size:.875rem;background:transparent;border-color:var(--wine,#502d36);color:var(--wine,#502d36)}.ds-button:hover{background:var(--wine,#502d36);color:var(--paper-light,#faf7f1)}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
       "name": "Inverse Button",
       "kind": "button",
       "refersTo": "button-inverse",
-      "description": "White button used only inside the navy close band.",
-      "html": "<div class=\"ds-close-demo\"><a class=\"ds-btn-inverse\" href=\"#\">Book a diagnostic call</a></div>",
-      "css": ".ds-close-demo{background:var(--navy,#0a1f33);padding:32px}.ds-btn-inverse{display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;font:600 .9375rem/1 var(--text,'Public Sans',Arial,sans-serif);background:#fff;color:var(--navy,#0a1f33);border-radius:0;text-decoration:none;transition:background-color .2s}.ds-btn-inverse:hover{background:var(--signal-wash,#e9efff)}.ds-btn-inverse:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
-    },
-    {
-      "name": "Arrow Link",
-      "kind": "custom",
-      "refersTo": "link-arrow",
-      "description": "Text-link partner to a button: Signal Deep label, currentColor underline, arrow nudge.",
-      "html": "<a class=\"ds-link-arrow\" href=\"#\">How we work<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
-      "css": ".ds-link-arrow{display:inline-flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid currentColor;font:600 .9375rem var(--text,'Public Sans',Arial,sans-serif);color:var(--signal-deep,#1746c8);text-decoration:none}.ds-link-arrow .ds-icon{transition:transform .2s cubic-bezier(.2,.7,.2,1)}.ds-link-arrow:hover .ds-icon{transform:translateX(3px)}.ds-link-arrow:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+      "description": "Square editorial inverse button with a visible keyboard focus state.",
+      "html": "<div class=\"ds-close\"><a class=\"ds-button\" href=\"#\">Get me wired up<svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a></div>",
+      "css": ".ds-button{display:inline-flex;align-items:center;gap:18px;min-height:52px;padding:14px 24px;font:500 .9375rem/1 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);letter-spacing:.005em;text-decoration:none;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.ds-button .ds-icon{transition:transform .2s var(--ease,cubic-bezier(.2,.7,.2,1))}.ds-button:hover .ds-icon{transform:translateX(3px)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}.ds-button{background:var(--paper,#f3eee5);color:var(--wine,#502d36)}.ds-button:hover{background:var(--paper-light,#faf7f1)}.ds-close{background:var(--wine,#502d36);padding:32px}.ds-close .ds-button:focus-visible{outline-color:var(--paper,#f3eee5)}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
       "name": "Text Field",
       "kind": "input",
       "refersTo": "input",
-      "description": "Square white field with a Control Grey border; label above in navy.",
-      "html": "<label class=\"ds-label\">Work email<input class=\"ds-input\" type=\"email\" placeholder=\"name@company.com\"></label>",
-      "css": ".ds-label{display:grid;gap:8px;font:500 .9375rem var(--text,'Public Sans',Arial,sans-serif);color:var(--navy,#0a1f33)}.ds-input{width:100%;padding:12px 14px;font:400 1rem/1.4 var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633);background:#fff;border:1px solid var(--control,#7b8896);border-radius:0}.ds-input:focus{outline:2px solid var(--signal,#1f5eff);outline-offset:0;border-color:var(--signal,#1f5eff)}.ds-input[aria-invalid=true]{border-color:#b42318}"
+      "description": "Light Paper enquiry field with a square Control border, label above, Wine focus and Error Red invalid state.",
+      "html": "<label class=\"ds-label\">Email<input class=\"ds-input\" type=\"email\" placeholder=\"name@example.com\"></label>",
+      "css": ".ds-label{display:grid;gap:8px;font:500 .9375rem/1.65 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);color:var(--ink,#242321)}.ds-input{width:100%;padding:13px 14px;font:400 1rem/1.4 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);color:var(--ink,#242321);background:var(--paper-light,#faf7f1);border:1px solid var(--control,#857869);border-radius:0}.ds-input::placeholder{color:var(--muted,#696058)}.ds-input:focus{outline:2px solid var(--wine,#502d36);outline-offset:0;border-color:var(--wine,#502d36)}.ds-input[aria-invalid=true]{border-color:var(--error,#a1261c)}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
       "name": "Header Navigation",
       "kind": "nav",
-      "refersTo": "nav",
-      "description": "Wordmark, four text links with navy underline on hover or current, quiet button.",
-      "html": "<nav class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">Enamplify</a><span class=\"ds-nav__links\"><a href=\"#\" aria-current=\"page\">Approach</a><a href=\"#\">Work</a><a href=\"#\">Insights</a><a href=\"#\">About</a></span></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:32px;min-height:72px;padding:0 20px;background:#fff;border-bottom:1px solid var(--rule,#d8dee5)}.ds-wordmark{font:700 1.375rem var(--display,'Schibsted Grotesk',Arial,sans-serif);letter-spacing:-.02em;color:var(--navy,#0a1f33);text-decoration:none}.ds-nav__links{display:flex;gap:28px;margin-left:auto}.ds-nav__links a{font:400 .9375rem var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}.ds-nav__links a:hover,.ds-nav__links a[aria-current]{border-bottom-color:var(--navy,#0a1f33);color:var(--navy,#0a1f33)}.ds-nav a:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}"
+      "description": "Parchment header with Caslon wordmark and fine Wine current and hover rules.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a class=\"ds-wordmark\" href=\"#\">Enamplify</a><span class=\"ds-nav-links\"><a href=\"#\" aria-current=\"page\">Approach</a><a href=\"#\">Work</a><a href=\"#\">Insights</a></span></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:32px;min-height:64px;background:var(--paper,#f3eee5);border-bottom:1px solid var(--line,#d6ccbf);color:var(--ink,#242321)}.ds-wordmark{font:400 2.125rem/1 var(--display,'Libre Caslon Display','Times New Roman','Noto Serif',serif);letter-spacing:-.03em;text-decoration:none;-webkit-text-stroke:.012em currentColor;padding-bottom:.08em}.ds-nav-links{display:flex;gap:32px;margin-left:auto}.ds-nav-links a{font:400 .875rem/1.65 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);padding:6px 0;color:var(--ink,#242321);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}.ds-nav-links a:hover,.ds-nav-links a[aria-current]{color:var(--wine,#502d36);border-bottom-color:var(--wine,#502d36)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
-      "name": "Exhibit",
-      "kind": "custom",
-      "refersTo": "exhibit",
-      "description": "Numbered figure: run-in label and action title, chart in navy/signal/rule tones, note, source line labelling illustrative data.",
-      "html": "<figure class=\"ds-exhibit\"><figcaption class=\"ds-exhibit__cap\"><span class=\"ds-exhibit__label\">Exhibit 1 · The week.</span> Half an operations week goes on work AI can take on.</figcaption><svg class=\"ds-stack\" viewBox=\"0 0 100 14\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><rect fill=\"#0a1f33\" x=\"0\" width=\"40.4\" height=\"14\"/><rect fill=\"#1f5eff\" x=\"41\" width=\"49.4\" height=\"14\"/><rect fill=\"#a8b4c0\" x=\"91\" width=\"9\" height=\"14\"/></svg><ul class=\"ds-legend\"><li><span class=\"ds-swatch\" data-t=\"navy\"></span>Judgement and client work<b>41%</b></li><li><span class=\"ds-swatch\" data-t=\"signal\"></span>Reporting, finding, handoffs<b>50%</b></li><li><span class=\"ds-swatch\" data-t=\"rule\"></span>Other<b>9%</b></li></ul><p class=\"ds-exhibit__source\">Source: Illustrative composite for explanation.</p></figure>",
-      "css": ".ds-exhibit{margin:0;border-top:2px solid var(--navy,#0a1f33);padding-top:16px;max-width:480px}.ds-exhibit__cap{margin-bottom:24px;font:400 1.1875rem/1.35 var(--display,'Schibsted Grotesk',Arial,sans-serif);color:var(--navy,#0a1f33)}.ds-exhibit__label{font-weight:700}.ds-stack{display:block;width:100%;height:56px}.ds-legend{display:grid;gap:8px;margin:20px 0 0;padding:0;list-style:none}.ds-legend li{display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;font:400 .9375rem var(--text,'Public Sans',Arial,sans-serif)}.ds-legend b{font-weight:600;color:var(--navy,#0a1f33);font-variant-numeric:tabular-nums lining-nums}.ds-swatch{width:12px;height:12px;background:#0a1f33}.ds-swatch[data-t=signal]{background:#1f5eff}.ds-swatch[data-t=rule]{background:#a8b4c0}.ds-exhibit__source{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--rule,#d8dee5);font:400 .8125rem var(--text,'Public Sans',Arial,sans-serif);color:var(--muted,#556474)}"
-    },
-    {
-      "name": "Ledger",
-      "kind": "custom",
-      "refersTo": "ledger",
-      "description": "Hairline table with tabular figures, Slate column heads and navy row heads.",
-      "html": "<table class=\"ds-ledger\"><thead><tr><th>Workflow</th><th>Owner</th><th>Reviewed</th></tr></thead><tbody><tr><th>Monthly board report</th><td>Finance</td><td>Yes</td></tr><tr><th>Client enquiry triage</th><td>Operations</td><td>Yes</td></tr></tbody></table>",
-      "css": ".ds-ledger{width:100%;border-collapse:collapse;font:400 .875rem var(--text,'Public Sans',Arial,sans-serif);font-variant-numeric:tabular-nums lining-nums}.ds-ledger th,.ds-ledger td{padding:10px 12px 10px 0;text-align:left;border-bottom:1px solid var(--rule,#d8dee5);vertical-align:top}.ds-ledger thead th{font-weight:600;color:var(--muted,#556474);border-bottom-color:var(--rule-strong,#a8b4c0)}.ds-ledger tbody th{font-weight:600;color:var(--navy,#0a1f33)}"
+      "name": "Us / Me Offering Switch",
+      "kind": "nav",
+      "refersTo": "audience",
+      "description": "Compact native-link offering primitive. Enlarged landing variants sit beside the wordmark from 720px and centred above the proposition on phones, with exactly one visible outside the menu.",
+      "html": "<nav class=\"ds-audience\" aria-label=\"Choose an offering\"><a href=\"#\" aria-current=\"page\">Us</a><a href=\"#\">Me</a></nav>",
+      "css": ".ds-audience{display:inline-flex;padding:3px;border:1px solid var(--line,#d6ccbf);background:var(--paper-light,#faf7f1);font:400 .8125rem/1 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif);white-space:nowrap}.ds-audience a{display:block;padding:8px 13px;color:var(--ink-soft,#4a433d);text-decoration:none}.ds-audience a:hover{color:var(--wine,#502d36)}.ds-audience a[aria-current]{background:var(--wine,#502d36);color:var(--paper-light,#faf7f1)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
       "name": "Article Card",
       "kind": "card",
       "refersTo": "card",
-      "description": "Navy top rule, title first, meta below it, whole card clickable.",
-      "html": "<article class=\"ds-card\"><h3 class=\"ds-card__title\"><a href=\"#\">Why AI pilots stall in month two</a></h3><p class=\"ds-card__meta\">Operations · 6 min read</p><p class=\"ds-card__body\">Ownership, review and handoffs were never designed.</p></article>",
-      "css": ".ds-card{position:relative;padding:24px 0;border-top:2px solid var(--navy,#0a1f33);max-width:360px;font:400 1.0625rem/1.6 var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633)}.ds-card__title{margin:0 0 10px;font:600 1.1875rem/1.3 var(--display,'Schibsted Grotesk',Arial,sans-serif);color:var(--navy,#0a1f33)}.ds-card__title a{color:inherit;text-decoration:none}.ds-card__title a::after{content:'';position:absolute;inset:0}.ds-card:hover .ds-card__title a{color:var(--signal-deep,#1746c8)}.ds-card__title a:focus-visible{outline:2px solid var(--signal,#1f5eff);outline-offset:3px}.ds-card__meta{margin:0 0 10px;font-size:.8125rem;color:var(--muted,#556474)}.ds-card__body{margin:0}"
+      "description": "Ink top rule, regular Caslon title, metadata below and a whole-card title link.",
+      "html": "<article class=\"ds-card\"><h3><a href=\"#\">A useful place to start</a></h3><p class=\"ds-meta\">Operations · 6 min read</p><p>Begin with the work, the people and the decisions that need review.</p></article>",
+      "css": ".ds-card{position:relative;padding-top:20px;border-top:1px solid var(--ink,#242321);max-width:360px;color:var(--ink-soft,#4a433d);font:400 1.0625rem/1.65 var(--text,'DM Sans','Segoe UI','Helvetica Neue',Arial,'Noto Sans',sans-serif)}.ds-card h3{margin:0 0 12px;font:400 1.625rem/1.18 var(--display,'Libre Caslon Display','Times New Roman','Noto Serif',serif);letter-spacing:-.008em;color:var(--ink,#242321)}.ds-card h3 a{color:inherit;text-decoration:none;transition:color .2s}.ds-card h3 a::after{content:'';position:absolute;inset:0}.ds-card:hover h3 a{color:var(--wine,#502d36)}.ds-card p{margin:0}.ds-card .ds-meta{margin-bottom:12px;font-size:.8125rem;color:var(--muted,#696058)}.ds-button:focus-visible,.ds-link:focus-visible,.ds-nav a:focus-visible,.ds-audience a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
     },
     {
-      "name": "Commitment Ticks",
+      "name": "Visual Tag",
+      "kind": "chip",
+      "refersTo": "visual-tag",
+      "description": "Square Hairline label for illustrative content or state; Wine identifies a proposed view, source-linked draft or reviewable output. Labels are examples, not live application controls.",
+      "html": "<span class=\"ds-tag\">Illustrative concept</span> <span class=\"ds-tag ds-tag--wine\">Proposed view</span>",
+      "css": ".ds-tag{display:inline-block;padding:4px 10px;border:1px solid var(--line,#d6ccbf);border-radius:0;background:var(--paper-light,#faf7f1);font:400 .8125rem/1.4 var(--text,\"DM Sans\",\"Segoe UI\",\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif);color:var(--ink-soft,#4a433d)}.ds-tag--wine{border-color:var(--wine,#502d36);background:var(--wine,#502d36);color:var(--paper-light,#faf7f1)}"
+    },
+    {
+      "name": "Preview Playback",
       "kind": "custom",
-      "refersTo": "ticks",
-      "description": "Hairline rows with a CSS-drawn navy check, or a Slate dash for refusals.",
-      "html": "<ul class=\"ds-ticks\"><li>Agree how success is measured before we start.</li><li class=\"ds-no\">Lock you into our tools.</li></ul>",
-      "css": ".ds-ticks{margin:0;padding:0;list-style:none;font:400 1.0625rem/1.6 var(--text,'Public Sans',Arial,sans-serif);color:var(--ink,#1a2633)}.ds-ticks li{position:relative;padding:12px 0 12px 32px;border-bottom:1px solid var(--rule,#d8dee5)}.ds-ticks li::before{content:'';position:absolute;left:2px;top:19px;width:14px;height:8px;border-left:2px solid var(--navy,#0a1f33);border-bottom:2px solid var(--navy,#0a1f33);transform:rotate(-45deg)}.ds-ticks li.ds-no::before{top:22px;height:0;border-left:0;border-bottom-color:var(--muted,#556474);transform:none}"
+      "description": "The gallery’s one quiet 40px square control. Production enhancement synchronizes its localized label, title, pressed state and authored play/pause paths.",
+      "html": "<button class=\"ds-playback\" type=\"button\" aria-pressed=\"true\" aria-label=\"Pause workspace previews\" title=\"Pause workspace previews\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 3v10M11 3v10\"/></svg></button>",
+      "css": ".ds-playback{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:10px;border:1px solid var(--line,#d6ccbf);border-radius:0;background:transparent;color:var(--wine,#502d36);cursor:pointer}.ds-playback:hover{border-color:var(--wine,#502d36);background:var(--paper-light,#faf7f1)}.ds-playback:focus-visible{outline:2px solid var(--wine,#502d36);outline-offset:3px}"
     }
   ],
   "narrative": {
-    "northStar": "The Board Pack",
-    "overview": "Every outcome is shown as a numbered exhibit, the way a COO already reads a board pack. The page is white paper set in deep navy ink, with hairline rules doing the structural work that shadows, cards and gradients do elsewhere. Exhibits carry a run-in label, an action title that states the finding, a chart drawn in two or three flat tones, and a source line. One electric blue is reserved for the thing the reader should look at: the highlighted data, the link, the primary button, the focus ring.\n\nDensity is that of a well-set report: generous section rhythm (64 to 128px), content held to readable measures (42ch ledes, 66ch prose), grids that collapse to a single column on phones without losing the rule structure. Nothing floats, nothing glows, nothing is rounded. The system refuses the category default of a dark gradient hero with a product screenshot and three feature cards, and it refuses the cream-serif editorial look it replaced.\n\nMotion is a single idea: exhibit marks below the first viewport draw themselves once as they arrive. Everything else changes state in 200ms colour shifts.",
+    "northStar": "Oxblood Editorial",
+    "overview": "The original consultancy identity remains the visual authority: warm parchment, dark ink, oxblood wine, Caslon headings and quiet sans-serif reading text. The adaptive AI workspace is presented through original concepts and concise visual explanations. Us and Me inhabit this same world; audience and product content change without introducing a separate consumer identity. The interactive workspace and guided setup have an explicitly scoped, softer product treatment inside the editorial page.\n\nGenerous space and hairlines organise the page. Serif display type carries a short proposition; wine italic gives a phrase emphasis; original workspace concepts explain the product at a readable scale. Warm architectural photographs place London and Baku beneath the product on the landing pages and support the practice's context on inner pages. Original concepts, authored HTML demonstrations and open diagrams carry the landing story; longer reading belongs to the site's established article and service surfaces.",
     "keyCharacteristics": [
-      "White paper, navy ink, one reserved signal blue.",
-      "Numbered exhibits with run-in label, action title, chart, note and source line.",
-      "Structure from 1px hairlines and 2px navy top rules; no shadows, no gradients, no radius.",
-      "Schibsted Grotesk display over Public Sans text, self-hosted, tabular figures only where numbers are compared.",
-      "Sentence case everywhere; no preheaders, kickers, eyebrows or uppercase.",
-      "At most one navy close band per page, before the footer."
+      "Parchment surfaces, ink text and oxblood emphasis.",
+      "Libre Caslon Display headings, Libre Caslon Text italic and DM Sans reading text.",
+      "Square marketing edges, fine rules, tonal bands and generous section rhythm, with softer interactive product surfaces.",
+      "Shared components and responsive structure for Us and Me, in English and Azerbaijani.",
+      "Large, uncropped workspace concepts, brief illustrative notes and a native thumbnail contact sheet.",
+      "Continuous horizontal preview motion with one playback control, initially paused for reduced motion, and a complete static reading surface."
     ],
     "rules": [
-      { "name": "The Signal Reservation Rule", "body": "Signal blue appears only on data marks the reader should compare against, links, the primary button and focus. It is never a background band, a decorative rule, an icon tint or a heading colour. In a chart, blue is the answer and navy or grey is the context.", "section": "colors" },
-      { "name": "The One Navy Band Rule", "body": "A page carries at most one full-bleed navy surface: the close band before the footer. Persuasion and reading pages end with it; the contact page (already the destination), legal pages and the 404 omit it. Other sections alternate paper and wash.", "section": "colors" },
-      { "name": "The Figures Rule", "body": "Tabular lining figures are switched on only for elements whose numbers are compared in columns: legend values, bar values, ledgers, chart axes and stage numbers. Body text keeps proportional lining figures.", "section": "typography" },
-      { "name": "The Sentence Case Rule", "body": "Every heading, button, label, caption and nav item is sentence case. No `text-transform: uppercase`, no letterspaced small-caps labels, no preheader or kicker line above a heading. Context that would be a kicker goes after the title (card meta) or runs in (exhibit label).", "section": "typography" },
-      { "name": "The Hairline Rule", "body": "If a group needs separating, draw a rule above it. Never lift it with a shadow or box it with a border on all four sides; the only fully bordered elements are form controls, the quiet button and the error box.", "section": "elevation" },
-      { "name": "The Top-Rule Rule", "body": "Emphasis rules run across the top of a block, full width. Coloured side stripes on the left edge of cards, quotes or callouts are not part of this world.", "section": "elevation" }
+      {
+        "name": "The Wine Emphasis Rule",
+        "body": "Wine carries emphasis, actions and control states across both offerings. Keep secondary copy in Soft Ink or Muted Warm Grey on paper; use Wine Mist for closing-band support and Light Paper for sandbox headings, copy and controls.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Headings, actions and labels use sentence case. Do not introduce decorative preheaders, kickers, uppercase transforms or small-caps label systems.",
+        "section": "typography"
+      },
+      {
+        "name": "The Figures Rule",
+        "body": "Use tabular lining figures where the source compares or sequences numbers: ledger cells, stage numbers and durations. Small stage counters are wine.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Separate and organise the editorial marketing surfaces with fine rules and tonal surfaces. Do not replace this quiet structure with floating panels or shadow elevation; the interactive workspace and guided setup use only their documented local soft elevation.",
+        "section": "elevation"
+      }
     ],
     "dos": [
-      "Do show every claimed outcome as a numbered exhibit with a run-in \"Exhibit N · Topic.\" label, an action title, a chart, and a source line.",
-      "Do label invented, composite or example data as illustrative in the source line.",
-      "Do keep Signal Blue to data marks, links, the primary button and focus; use navy and Strong Hairline for context series.",
-      "Do separate groups with 1px hairlines and open emphasised blocks with a 2px navy top rule.",
-      "Do end persuasion and reading pages with exactly one navy close band; omit it on contact, legal and 404 pages.",
-      "Do set every heading, button and label in sentence case, with headings written as sentences.",
-      "Do switch on tabular figures only for legend values, bar values, ledgers, axes and stage numbers.",
-      "Do put card meta below the card title.",
-      "Do keep all styling in the stylesheet; the site runs under a CSP with no inline styles.",
-      "Do let only below-the-fold exhibit marks animate, once, and render everything complete under reduced motion and in print."
+      "Do retain the original parchment, oxblood and Caslon identity across Us and Me.",
+      "Do use wine italic for meaningful phrase emphasis and fine rules for structure.",
+      "Do keep headings and actions in sentence case, with card metadata below the title.",
+      "Do label illustrative product concepts and examples honestly; show only verified proof as results.",
+      "Do keep small process counters in Wine and reserve Bronze for quiet detail.",
+      "Do preserve keyboard focus, native offering links, locale continuity and reduced-motion states.",
+      "Do give automatic previews a visible playback control, pause on interaction and start paused for reduced motion.",
+      "Do keep styling in the stylesheet under the site's existing no-inline-style policy."
     ],
     "donts": [
-      "Don't use shadows, gradients, blurs or rounded corners anywhere.",
-      "Don't put a preheader, kicker or eyebrow line above a heading.",
-      "Don't use `text-transform: uppercase` or letterspaced label type.",
-      "Don't use em dashes in copy; use a full stop, comma or colon.",
-      "Don't draw coloured side-stripe borders on cards, quotes or callouts.",
-      "Don't add a second navy band, or use Signal Blue as a section or panel background.",
-      "Don't use stock photography, product screenshots or icon glyph sets; icons are the two 16px stroke arrows.",
-      "Don't write `style` attributes or inline `<style>` blocks."
+      "Don't introduce a separate visual identity for Me or reinstate the superseded navy-and-blue Board Pack palette.",
+      "Don't add shadows or rounded panels to editorial marketing surfaces; use only the documented local treatment inside the interactive workspace and guided setup. Keep gradients and blur out of both.",
+      "Don't put decorative preheaders, kickers or eyebrows above headings, or introduce uppercase label styling.",
+      "Don't use coloured side-stripe callouts in place of the established ruled structure.",
+      "Don't turn illustrative concepts into release claims or invent metrics, testimonials or client proof.",
+      "Don't use icon fonts or glyph icon sets; use the evidenced local SVG icons, inline SVG arrows and CSS affordances, retaining visible labels and asset licenses.",
+      "Don't use em dashes in visitor copy or write inline style attributes and style blocks."
     ]
   }
 }

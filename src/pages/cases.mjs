@@ -6,7 +6,7 @@ export function caseStudy(c, ctx) {
   const {cases, articles, copy} = ctx;
   const t = copy.case;
   const related = articles.find(a => a.slug === c.related);
-  return `${breadcrumb([[copy.routes.work.crumb, '/work/'], [c.title]], ctx)}
+  return `${breadcrumb([[c.title]], ctx)}
 <header class="page-head page-head--article wrap"><h1>${esc(c.title)}</h1><p class="lede">${esc(c.summary)}</p>
 <dl class="facts" aria-label="${esc(t.facts)}">${[[t.sector, c.sector], [t.client, c.client], [t.scope, c.scope]].map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl></header>
 <section class="section wrap" aria-labelledby="situation-title"><div class="split">

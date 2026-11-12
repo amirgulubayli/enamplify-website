@@ -11,9 +11,14 @@
     {"source": "/solutions/:slug/", "destination": "/approach/", "permanent": true},
     {"source": "/for/:slug/", "destination": "/", "permanent": true},
     {"source": "/start/:slug/", "destination": "/contact/", "permanent": true},
-    {"source": "/work/pripitch/", "destination": "/work/", "permanent": true},
-    {"source": "/work/grademy/", "destination": "/work/", "permanent": true},
-    {"source": "/work/rag-x/", "destination": "/work/", "permanent": true},
+    {"source": "/new/me/", "destination": "/me/", "permanent": true},
+    {"source": "/new/", "destination": "/", "permanent": true},
+    {"source": "/az/new/me/", "destination": "/az/me/", "permanent": true},
+    {"source": "/az/new/", "destination": "/az/", "permanent": true},
+    {"source": "/work/", "destination": "/", "permanent": true},
+    {"source": "/work/pripitch/", "destination": "/", "permanent": true},
+    {"source": "/work/grademy/", "destination": "/", "permanent": true},
+    {"source": "/work/rag-x/", "destination": "/", "permanent": true},
     {"source": "/perspectives/", "destination": "/insights/", "permanent": true},
     {"source": "/perspectives/:slug/", "destination": "/insights/:slug/", "permanent": true},
     {"source": "/resources/", "destination": "/insights/", "permanent": true},
@@ -24,6 +29,9 @@
   "functions": {
     "api/enquiry.js": {
       "maxDuration": 20
+    },
+    "api/subscribe.js": {
+      "maxDuration": 15
     }
   },
   "headers": [

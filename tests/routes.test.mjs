@@ -10,7 +10,7 @@ const azRoutes = routeTable({...(await loadContent('az')), enquiryMode: 'email'}
 const urls = routes.map(r => r.url);
 
 test('route set matches the spec sitemap', () => {
-  const expected = ['/', '/approach/', '/work/', '/about/', '/insights/', '/careers/', '/contact/',
+  const expected = ['/', '/me/', '/approach/', '/portfolio/', '/briefing/', '/about/', '/insights/', '/careers/', '/discover/', '/contact/',
     ...c.cases.map(x => `/work/${x.slug}/`), ...c.articles.map(a => `/insights/${a.slug}/`), ...c.guides.map(g => `/insights/guides/${g.slug}/`),
     '/privacy/', '/cookies/', '/terms/', '/accessibility/', '/404/'];
   assert.deepEqual([...urls].sort(), [...expected].sort());
@@ -19,7 +19,7 @@ test('every route has a title, a description and rendered HTML', () => {
   for (const r of [...routes, ...azRoutes]) {
     assert.ok(r.title && r.description && r.html, r.url);
     assert.ok(r.description.length <= 160, `${r.url} description ${r.description.length}`);
-    assert.ok((r.home ? r.title : `${r.title} | Enamplify`).length <= 70, `${r.url} title`);
+    assert.ok((r.home || r.standalone ? r.title : `${r.title} | Enamplify`).length <= 70, `${r.url} title`);
   }
 });
 test('inner pages carry breadcrumbs; approach carries FAQs', () => {
@@ -28,14 +28,14 @@ test('inner pages carry breadcrumbs; approach carries FAQs', () => {
 });
 test('case studies and careers are reachable and marked up', () => {
   assert.equal(c.cases.length, 4);
-  const work = routes.find(r => r.url === '/work/');
-  for (const x of c.cases) assert.ok(work.html.includes(`href="/work/${x.slug}/"`), x.slug);
+  assert.ok(!routes.some(r => r.url === '/work/'), 'the work index is retired');
+  for (const x of c.cases) assert.ok(routes.some(r => r.url === `/work/${x.slug}/`), x.slug);
   const careers = routes.find(r => r.url === '/careers/');
   assert.ok(careers.html.includes(`href="${c.site.bookingUrl}"`), 'intern role applies through the booking calendar');
   assert.equal(careers.job.posted, c.site.careersPosted);
 });
-test('only the 404 page is excluded from indexing', () => {
-  assert.deepEqual(routes.filter(r => r.index === false).map(r => r.url), ['/404/']);
+test('the unlisted new concept, portfolio, briefing and 404 page are excluded from indexing', () => {
+  assert.deepEqual(routes.filter(r => r.index === false).map(r => r.url), ['/portfolio/', '/briefing/', '/discover/', '/404/']);
 });
 test('every retired section redirects, and vercel.json matches', async () => {
   for (const old of ['/solutions/', '/for/', '/start/', '/perspectives/', '/resources/', '/credits/', '/thank-you/', '/work/'])

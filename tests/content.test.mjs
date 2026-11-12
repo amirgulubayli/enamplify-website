@@ -6,8 +6,9 @@ const c = await loadContent();
 
 test('site config carries booking, definition and nav', () => {
   assert.match(c.site.bookingUrl, /^https:\/\//);
-  assert.ok(c.site.definition.startsWith('Enamplify is an AI enablement consultancy'));
-  assert.deepEqual(c.site.nav.map(([, h]) => h), ['/approach/', '/work/', '/insights/', '/about/']);
+  assert.ok(c.site.definition.startsWith('Enamplify is an adaptive AI working environment'));
+  assert.ok(/founder-led/.test(c.site.definition) && /London and Baku/.test(c.site.definition), 'the practice and its two cities stay in the definition');
+  assert.deepEqual(c.site.nav.map(([, h]) => h), ['/approach/', '/insights/', '/about/']);
 });
 test('articles are rendered, timed and newest first', () => {
   assert.equal(c.articles.length, 11);
