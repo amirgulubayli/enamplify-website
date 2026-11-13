@@ -23,9 +23,12 @@
       if (!answers.name || !/^\S+@[^\s@]+\.[^\s@]+$/.test(answers.email)) { error.textContent = error.dataset.details; return false; }
       return true;
     }
+    // A question is answered by a choice, by the visitor's own words, or by both.
     const picked = [...step.querySelectorAll('input:checked')].map(el => el.value);
-    if (!picked.length) { error.textContent = error.dataset.choice; return false; }
-    answers[key] = step.hasAttribute('data-multi') ? picked : picked[0];
+    const own = step.querySelector('[data-flow-own]').value.trim();
+    if (!picked.length && !own) { error.textContent = error.dataset.choice; return false; }
+    answers[key] = step.hasAttribute('data-multi') ? picked : picked[0] || '';
+    answers[`${key}Own`] = own;
     return true;
   }
 
@@ -34,6 +37,8 @@
     list.textContent = '';
     for (const step of steps) {
       const labels = [...step.querySelectorAll('input:checked')].map(el => el.parentElement.textContent.trim());
+      const own = step.querySelector('[data-flow-own]')?.value.trim();
+      if (own) labels.push(own);
       if (!labels.length) continue;
       const li = document.createElement('li'), b = document.createElement('strong');
       b.textContent = step.querySelector('legend').textContent;
@@ -42,7 +47,8 @@
     }
   }
 
-  function show(n, focus = true) {
+  // Each question is its own history entry, so the browser's Back button returns to the last one.
+  function show(n, {focus = true, push = true} = {}) {
     i = n;
     const last = n === steps.length - 1;
     steps.forEach((s, k) => { s.hidden = k !== n; });
@@ -52,7 +58,8 @@
     count.textContent = root.dataset.count.replace('{n}', n + 1).replace('{total}', steps.length);
     bar.style.transform = `scaleX(${(n + 1) / steps.length})`;
     if (last) summary();
-    if (focus) (steps[n].querySelector('h2') || steps[n].querySelector('input'))?.focus({preventScroll: true});
+    if (focus) { (steps[n].querySelector('h2') || steps[n].querySelector('input'))?.focus({preventScroll: true}); root.scrollIntoView({block: 'start'}); }
+    try { history[push ? 'pushState' : 'replaceState']({flow: n}, '', `#${steps[n].dataset.step}`); } catch { /* history unavailable */ }
     send('view');
   }
 
@@ -62,12 +69,14 @@
     show(i + 1);
   });
   back.addEventListener('click', () => show(i - 1));
+  addEventListener('popstate', e => { const n = e.state?.flow; if (Number.isInteger(n) && n < steps.length) show(n, {push: false}); });
   // A single-choice question moves on as soon as it is answered.
   form.addEventListener('change', e => { if (e.target.type === 'radio') setTimeout(() => next.click(), 220); });
   form.addEventListener('submit', e => { e.preventDefault(); next.click(); });
+  form.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches('input:not([type=radio]):not([type=checkbox])')) { e.preventDefault(); next.click(); } });
   q('[data-flow-book]').addEventListener('click', () => send('book'));
 
   form.hidden = false;
   q('[data-flow-top]').hidden = false;
-  show(0, false);
+  show(0, {focus: false, push: false});
 })();

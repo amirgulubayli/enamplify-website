@@ -14,7 +14,7 @@
     "me": "Mən",
     "meHint": "Enamplify Me, bir nəfər üçün",
     "usCta": "Komandanızı qoşun",
-    "meCta": "Məni qoşun",
+    "meCta": "Gözləmə siyahısına qoşulun",
     "teamsLink": "Komandalar üçün Enamplify",
     "meLink": "Şəxsi istifadə üçün Enamplify Me",
     "gallery": {
@@ -124,8 +124,8 @@
       "title": "Enamplify · Komandanız üçün adaptiv AI iş mühiti"
     },
     "me": {
-      "title": "Enamplify Me · Bir nəfər üçün adaptiv süni intellekt iş mühiti",
-      "description": "Layihələr, öyrənmə və gündəlik planlar üçün şəxsi AI iş mühiti və agentlər komandası. Hazırlanma mərhələsindədir. Marağınızı bildirin.",
+      "title": "Enamplify Me · İstənilən iş üçün şəxsi Jarvis-iniz",
+      "description": "İş, təhsil, ev və başqa hər şey üçün öz agentlər komandası olan şəxsi sağ əliniz. Hazırlanma mərhələsindədir. Gözləmə siyahısına qoşulun.",
       "crumb": "Enamplify Me: şəxsi iş mühiti"
     },
     "approach": {
@@ -1003,10 +1003,17 @@
     }
   },
   "me": {
-    "heroTitle": "Gününüz planlı.",
-    "heroTitleAlt": "Layihələriniz irəlidə.",
-    "lede": "Şəxsi AI iş məkanınız: planlar, layihələr və agentlər bir uyğunlaşan məkanda.",
-    "note": "Enamplify Me hazırlanma mərhələsindədir. Şəxsi AI proqramıdır; maraq bildirmək hesab yaratmır.",
+    "heroTitle": "Öz Jarvis-iniz.",
+    "heroTitleAlt": "İstənilən iş üçün.",
+    "lede": "Həftənizi bilən, layihələrinizi irəli aparan və bütün cihazlarınızda işləyən şəxsi sağ əliniz. İş, təhsil, ev və ya sizi maraqlandıran hər şey üçün.",
+    "note": "Enamplify Me hazırlanma mərhələsindədir. Fərdi AI proqram təminatıdır; maraq bildirmək hesab yaratmır.",
+    "waitlist": {
+      "emailLabel": "E-poçt ünvanı",
+      "emailPlaceholder": "siz@example.com",
+      "submit": "Siyahıya qoşulun",
+      "done": "Siyahıdasınız. Enamplify Me açılanda sizə e-poçt göndərəcəyik.",
+      "fail": "Hazırda sizi əlavə edə bilmədik. Bir azdan yenidən cəhd edin."
+    },
     "cross": "Bütün komandanızı qoşmaq istəyirsiniz?",
     "galleryTitle": "On iki gündəlik dünya.",
     "galleryHint": "Böyük ölçüdə görmək üçün birini seçin.",
@@ -1028,8 +1035,8 @@
         "Yeni düzümlər əvvəlcə təklif olunur. Saxlayıb-saxlamamağa siz qərar verirsiniz."
       ]
     ],
-    "closeTitle": "Enamplify Me üçün maraq bildirin.",
-    "closeBody": "Hazırlanmaqda olan şəxsi AI proqramı. Necə istifadə edəcəyinizi deyin.",
+    "closeTitle": "Öz Jarvis-iniz üçün ilk sırada olun.",
+    "closeBody": "Enamplify Me hazırlanma mərhələsindədir. E-poçtunuzu yazın, açılanda sizə xəbər verək.",
     "visual": {
       "concept": "Konsepsiya",
       "adapt": {
@@ -2982,7 +2989,7 @@
     "count": "Addım {n} / {total}",
     "next": "Davam et",
     "back": "Geri",
-    "required": "Davam etmək üçün seçim edin.",
+    "required": "Davam etmək üçün seçim edin və ya öz cavabınızı yazın.",
     "detailsError": "Adınızı və düzgün e-poçt ünvanını yazın.",
     "noscript": "Bu qısa forma JavaScript tələb edir. Həmçinin {link}.",
     "noscriptLink": "sorğu göndərə bilərsiniz",
@@ -2997,8 +3004,11 @@
           "Təqib və müraciətlər",
           "Sənədlərin yoxlanması",
           "Müştəri layihələrinin icrası",
-          "Daxili əməliyyatlar",
-          "Başqa bir şey"
+          "Daxili əməliyyatlar"
+        ],
+        "point": [
+          "Bir işdən başlayırıq.",
+          "Bir və ya iki komanda ilə, həftəni ən çox aparan işdən başlayırıq, sonra sizin tempinizlə genişləndiririk."
         ]
       },
       "size": {
@@ -3009,6 +3019,10 @@
           "51–200",
           "201–2 000",
           "2 000-dən çox"
+        ],
+        "point": [
+          "Sizə uyğun ölçü.",
+          "İlk tətbiq şirkətin ölçüsündən asılı olmayaraq bir və ya iki komandanı əhatə edir."
         ]
       },
       "stage": {
@@ -3018,6 +3032,10 @@
           "Fərdi çat hesabları",
           "Bir neçə pilot",
           "Gündəlik istifadə olunan alətlər"
+        ],
+        "point": [
+          "İstənilən başlanğıc uyğundur.",
+          "İnsanlar artıq ayrı-ayrı çat hesablarından istifadə edirsə, bunu agentlərin konkret vəzifələri olan vahid iş məkanına gətiririk."
         ]
       },
       "data": {
@@ -3028,6 +3046,10 @@
           "Müştəri üçün məxfi işlər",
           "Öz infrastrukturumuzda işləməlidir",
           "Bunların heç biri"
+        ],
+        "point": [
+          "Nəzarət sizdə qalır.",
+          "Alətləri və hostinqi siz seçirsiniz, hər xarici addımı isə insan təsdiqləyir."
         ]
       },
       "timing": {
@@ -3036,6 +3058,10 @@
           "Bu rübdə",
           "3–6 ay ərzində",
           "Hələ araşdırırıq"
+        ],
+        "point": [
+          "Qısa ilk addım.",
+          "Diaqnostika iki-üç həftə çəkir, sabit haqla aparılır və davam etsəniz, bu haqq hesaba sayılır. Tətbiq səkkiz-on iki həftə çəkir."
         ]
       },
       "details": {
@@ -3043,7 +3069,11 @@
         "name": "Ad",
         "email": "İş e-poçtu",
         "company": "Şirkət",
-        "note": "Bilməli olduğumuz başqa nəsə (istəyə görə)"
+        "note": "Bilməli olduğumuz başqa nəsə (istəyə görə)",
+        "point": [
+          "Sonra nə olacaq.",
+          "Növbəti ekranda 30 dəqiqəlik vaxt seçirsiniz. Görüş pulsuzdur və ödənişli diaqnostikadan ayrıdır."
+        ]
       },
       "book": {
         "q": "Təşəkkürlər. Görüş vaxtını seçin.",
@@ -3051,6 +3081,8 @@
         "cta": "Vaxt seçin",
         "summary": "Cavablarınız"
       }
-    }
+    },
+    "own": "Və ya öz sözlərinizlə yazın",
+    "ownPlaceholder": "Cavabınızı yazın"
   }
 }

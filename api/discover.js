@@ -5,7 +5,7 @@
  * event is accepted and dropped: the flow itself never depends on tracking.
  */
 const EVENTS = ['view', 'answer', 'book'];
-const FIELDS = ['work', 'size', 'stage', 'data', 'timing', 'name', 'email', 'company', 'note'];
+const FIELDS = ['work', 'size', 'stage', 'data', 'timing', 'workOwn', 'sizeOwn', 'stageOwn', 'dataOwn', 'timingOwn', 'name', 'email', 'company', 'note'];
 const text = (v, max) => typeof v === 'string' ? v.replace(/[\u0000-\u0008\u000b-\u001f]/g, '').trim().slice(0, max) : '';
 
 export function validateEvent(input) {

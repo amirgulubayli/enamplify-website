@@ -119,3 +119,28 @@
   }), {threshold: .35});
   scenes.forEach(el => io.observe(el));
 })();
+
+// Me waitlist. A form confirms only once the endpoint says the address reached the list.
+(() => {
+  const forms = [...document.querySelectorAll('[data-waitlist-form]')];
+  forms.forEach(f => {
+    const q = s => f.querySelector(s), email = q('[name=email]'), msg = q('[data-waitlist-msg]'), btn = q('button');
+    const say = (text, bad) => { msg.textContent = text; msg.hidden = false; msg.classList.toggle('is-error', bad); };
+    email.oninput = () => { email.removeAttribute('aria-invalid'); msg.hidden = true; };
+    f.onsubmit = async e => {
+      e.preventDefault();
+      if (q('[name=website]').value) return;
+      const val = email.value.trim();
+      if (!/^\S+@[^\s@]+\.[^\s@]+$/.test(val)) { say(f.dataset.errEmail, true); email.setAttribute('aria-invalid', 'true'); email.focus(); return; }
+      btn.disabled = true;
+      let ok = false;
+      try {
+        const res = await fetch('/api/subscribe/', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({email: val, locale: document.documentElement.lang, source: location.pathname, list: 'me-waitlist'}), signal: AbortSignal.timeout(10000)});
+        const d = res.ok && await res.json();
+        ok = d && d.ok && d.configured;
+      } catch {}
+      if (!ok) { btn.disabled = false; return say(f.dataset.fail, true); }
+      forms.forEach(g => { g.querySelector('.waitlist__row').hidden = true; const m = g.querySelector('[data-waitlist-msg]'); m.textContent = g.dataset.done; m.className = 'waitlist__msg'; m.hidden = false; });
+    };
+  });
+})();

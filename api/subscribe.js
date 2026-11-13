@@ -1,3 +1,5 @@
+const WAITLIST_TAG = 'Enamplify Me waitlist';
+
 export function validateSubscription(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return {error: 'A valid subscription request is required.'};
   if (input.website) return {error: 'The request could not be accepted.'};
@@ -11,12 +13,19 @@ export function validateSubscription(input) {
   if (/[\r\n]/.test(locale) || /[\r\n]/.test(source)) {
     return {error: 'Invalid request metadata.'};
   }
-  return {data: {email, locale, source}};
+  // The only named list is the Enamplify Me waitlist; anything else is refused rather than guessed.
+  const list = get('list', 40);
+  if (list && list !== 'me-waitlist') return {error: 'Unknown list.'};
+  return {data: {email, locale, source, list}};
 }
 
 /**
  * Subscribes an email to Kit (ConvertKit) API v4 when KIT_API_KEY is configured,
- * and optionally attaches the subscriber to KIT_FORM_ID and/or KIT_TAG_ID.
+ * and optionally attaches the subscriber to KIT_FORM_ID and/or KIT_TAG_ID. A request for the
+ * "me-waitlist" list is filed under KIT_ME_WAITLIST_TAG_ID, or under the tag named "Enamplify Me
+ * waitlist" when that is unset (and KIT_ME_WAITLIST_FORM_ID) instead,
+ * so waitlist addresses stay apart from the newsletter. For the waitlist the tag must be confirmed:
+ * an address Kit accepted but could not tag is reported as a failure, not as a place on the list.
  */
 export async function processSubscription({method, headers, body}, {env = process.env, fetcher = fetch} = {}) {
   if (method !== 'POST') return {status: 405, body: {error: 'Use POST.'}};
@@ -58,6 +67,37 @@ export async function processSubscription({method, headers, body}, {env = proces
     });
     if (!createRes.ok) {
       return {status: 502, body: {error: 'Subscription could not be confirmed.'}};
+    }
+    if (data.list === 'me-waitlist') {
+      if (env.KIT_ME_WAITLIST_FORM_ID) {
+        await fetcher(`https://api.kit.com/v4/forms/${encodeURIComponent(env.KIT_ME_WAITLIST_FORM_ID)}/subscribers`, {
+          method: 'POST',
+          headers: kitHeaders,
+          body: JSON.stringify({email_address: data.email}),
+          signal: AbortSignal.timeout(5000)
+        }).catch(() => {});
+      }
+      // With no tag id configured, find or create the tag by name: Kit returns the existing tag
+      // when the name is already taken, so this never makes a duplicate.
+      let tagId = env.KIT_ME_WAITLIST_TAG_ID;
+      if (!tagId) {
+        const made = await fetcher('https://api.kit.com/v4/tags', {
+          method: 'POST',
+          headers: kitHeaders,
+          body: JSON.stringify({name: WAITLIST_TAG}),
+          signal: AbortSignal.timeout(5000)
+        });
+        tagId = made.ok ? (await made.json())?.tag?.id : undefined;
+      }
+      if (!tagId) return {status: 202, body: {ok: true, configured: false}};
+      const tagRes = await fetcher(`https://api.kit.com/v4/tags/${encodeURIComponent(tagId)}/subscribers`, {
+        method: 'POST',
+        headers: kitHeaders,
+        body: JSON.stringify({email_address: data.email}),
+        signal: AbortSignal.timeout(5000)
+      });
+      if (!tagRes.ok) return {status: 502, body: {error: 'Subscription could not be confirmed.'}};
+      return {status: 202, body: {ok: true, configured: true}};
     }
     if (env.KIT_FORM_ID) {
       await fetcher(`https://api.kit.com/v4/forms/${encodeURIComponent(env.KIT_FORM_ID)}/subscribers`, {

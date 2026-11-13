@@ -1,4 +1,4 @@
-import {esc, pageHead, closeBand, photo, US_ENQUIRY} from '../components.mjs';
+import {esc, pageHead, closeBand, photo, US_START} from '../components.mjs';
 
 export function approach(ctx) {
   const {faqs, copy} = ctx;
@@ -19,5 +19,5 @@ ${photo('band-approach', ctx, {sizes: '100vw', cls: 'band band--approach'})}
 <div class="split"><h2 id="faq-title" class="section__title">${esc(c.faqTitle)}</h2>
 <div class="faq">${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div></div>
 </section>
-${closeBand(ctx, {action: [copy.common.usCta, US_ENQUIRY], cross: [copy.home.cross, '/me/']})}`;
+${closeBand(ctx, {action: [copy.common.usCta, US_START], cross: [copy.home.cross, '/me/']})}`;
 }

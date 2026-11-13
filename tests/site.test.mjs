@@ -225,7 +225,7 @@ test('home explains the product and its implementation without a savings calcula
   for (const [i, h] of all.entries()) assert.ok(!/<p class="card__meta">[^<]*<\/p>\s*<(?:h1|h2|h3)/.test(h), routes[i].url);
 });
 
-test('Us and Me: a native link toggle, actions into the real enquiry form, reciprocal cross-links, in both languages', async () => {
+test('Us and Me: a native link toggle, Us actions into the discovery questions, Me actions into the waitlist, reciprocal cross-links, in both languages', async () => {
   const pages = [['/', '/me/', 'Enamplify%20for%20a%20team', ''], ['/me/', '/', 'Enamplify%20Me', ''], ['/az/', '/az/me/', 'Enamplify%20for%20a%20team', '/az'], ['/az/me/', '/az/', 'Enamplify%20Me', '/az']];
   for (const [url, other, interest, prefix] of pages) {
     const h = await read(url);
@@ -235,19 +235,28 @@ test('Us and Me: a native link toggle, actions into the real enquiry form, recip
       assert.ok(t.includes(`href="${prefix}/"`) && t.includes(`href="${prefix}/me/"`), `${url} toggle stays in its language`);
       assert.match(t, new RegExp(`<a href="${url}" class="is-on" aria-current="page">`), `${url} marks itself`);
     }
-    const enquiry = `href="${prefix}/contact/?interest=${interest}#enquiry"`;
+
     const hero = h.match(/<section class="hero[\s\S]*?<\/section>/)[0];
     const close = h.match(/<section class="close"[\s\S]*?<\/section>/)[0];
     for (const [name, part, variant] of [['hero', hero, 'primary'], ['close', close, 'inverse']]) {
-      assert.ok(part.includes(`class="btn btn--${variant}" ${enquiry}`), `${url} ${name} action uses the enquiry form`);
+      const isMe = interest === 'Enamplify%20Me';
+      if (isMe) assert.ok(/<form class="waitlist"[^>]* data-waitlist-form/.test(part) && !part.includes('#enquiry'), `${url} ${name} action is the waitlist form`);
+      else assert.ok(part.includes(`class="btn btn--${variant}" href="${prefix}/discover/"`) && !part.includes('#enquiry'), `${url} ${name} action starts the discovery questions`);
       const cross = part.match(/<p class="cross"><a href="([^"]+)">/);
       assert.ok(cross && cross[1] === other, `${url} ${name} cross-links to ${other}`);
-      assert.ok(part.indexOf('class="cross"') > part.indexOf('#enquiry"'), `${url} ${name} cross-link sits under the action`);
+      assert.ok(part.indexOf('class="cross"') > part.indexOf(isMe ? 'data-waitlist-form' : '/discover/"'), `${url} ${name} cross-link sits under the action`);
     }
   }
   const me = await read('/me/'), azMe = await read('/az/me/');
-  assert.ok(me.includes('Get me wired up') && me.includes('Looking to wire up your whole team?'));
+  assert.ok(me.includes('Join the waitlist') && !me.includes('Get me wired up') && me.includes('Looking to wire up your whole team?'));
+  assert.ok(me.includes('Your own Jarvis.') && me.includes('For anything.'), 'Me leads with a personal Jarvis for anything');
+  for (const [h, prefix] of [[me, ''], [azMe, '/az']]) {
+    assert.equal([...h.matchAll(/data-waitlist-form/g)].length, 2, 'Me carries the waitlist form in the hero and the close');
+    assert.equal([...h.matchAll(/ id="waitlist"/g)].length, 1, 'one waitlist anchor');
+    assert.ok(h.includes(`class="btn btn--quiet site-header__cta" href="${prefix}/me/#waitlist"`), 'the Me header action leads to the waitlist');
+  }
   assert.ok(me.includes('Enamplify Me is in development.') && /does not create an account/i.test(me), 'Me is honest about its status');
+  assert.ok(me.includes('Personal AI software; registering interest does not create an account.'));
   assert.ok(azMe.includes('hazırlanma mərhələsindədir'));
   assert.ok((await read('/')).includes('Wire up your team'));
   assert.ok(/<title>Enamplify Me · [^<|]+<\/title>/.test(me), 'Me carries its own full title');
@@ -286,7 +295,7 @@ test('unlisted executive briefing and conversion popup work in both languages', 
     assert.ok(h.includes('href="/downloads/company-ai-agent-structuring.pdf" download'), url);
     assert.ok(h.includes('class="section wrap worksheet"'), url);
     assert.ok(!h.includes('data-briefing-gate'), 'the hidden briefing page does not show the gate popup to itself');
-    assert.ok(h.includes(`href="${prefix}/contact/?interest=Enamplify%20for%20a%20team#enquiry"`));
+    assert.ok(h.includes(`class="btn btn--inverse" href="${prefix}/discover/"`));
   }
   for (const [url, target] of [['/', '/briefing/'], ['/me/', '/briefing/'], ['/approach/', '/briefing/'], ['/az/', '/az/briefing/'], ['/az/me/', '/az/briefing/']]) {
     const h = await read(url);
@@ -321,15 +330,29 @@ test('Us homepage: live workspace, the right-hand distinction, four animated fea
   }
 });
 
-test('Me page: four life boards, the right-hand case in everyday terms, and interest registration only', async () => {
+test('Me page: four life boards, the right-hand case in everyday terms, and waitlist signup only', async () => {
   for (const [url, prefix] of [['/me/', ''], ['/az/me/', '/az']]) {
     const h = await read(url);
     assert.equal([...h.matchAll(/ data-lv-tab>/g)].length, 4, `${url} has 4 life examples`);
     assert.equal([...h.matchAll(/data-lv-board/g)].length, 4, `${url} builds a board per example`);
     for (const piece of ['lv-week', 'lv-donut', 'lv-topics', 'lv-plates']) assert.ok(h.includes(piece), `${url} has ${piece}`);
     assert.ok(h.includes('class="hn-hand"') && [...h.matchAll(/data-fx="10000"/g)].length === 4, `${url} has the right-hand case and four scenes`);
-    assert.ok(h.includes('Enamplify%20Me') && !h.includes('Enamplify%20for%20a%20team'), `${url} only registers interest in Me`);
+    assert.ok(!h.includes('Enamplify%20Me') && !h.includes('Enamplify%20for%20a%20team') && h.includes('data-waitlist-form'), `${url} takes waitlist signups only, no enquiry links`);
     assert.ok(h.includes(`href="${prefix}/"`), `${url} switches back to Us`);
     assert.ok(!h.includes('visual--sandbox') && !h.includes('id="two-halves"'), `${url} leaves out the business chapters`);
+  }
+});
+
+test('discovery flow: one question per step, each with choices, an own-answer field and a reinforcing point, ending at the calendar', async () => {
+  for (const url of ['/discover/', '/az/discover/']) {
+    const h = await read(url);
+    const steps = h.match(/<fieldset class="flow__step" data-step="(?!details)[\s\S]*?<\/fieldset>/g) || [];
+    assert.equal(steps.length, 5, `${url} asks five choice questions`);
+    for (const s of steps) {
+      assert.ok(s.includes(' hidden>') && (s.match(/class="flow__opt"/g) || []).length >= 3, `${url} shows choices one question at a time`);
+      assert.equal((s.match(/data-flow-own/g) || []).length, 1, `${url} takes the visitor's own answer`);
+      assert.equal((s.match(/class="flow__point"/g) || []).length, 1, `${url} adds one point per question`);
+    }
+    assert.ok(h.indexOf('data-step="details"') < h.indexOf('data-step="book"') && h.includes('https://calendar.app.google/'), `${url} ends at the booking calendar`);
   }
 });

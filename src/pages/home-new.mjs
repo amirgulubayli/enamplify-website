@@ -1,4 +1,4 @@
-import {esc, arrow, button, textLink, photo, closeBand, kitBand, audienceToggle, crossLink, US_ENQUIRY, ME_ENQUIRY} from '../components.mjs';
+import {esc, arrow, button, textLink, photo, closeBand, kitBand, waitlistForm, audienceToggle, crossLink, US_START} from '../components.mjs';
 import {workspaceDemo} from './workspace-demo.mjs';
 
 /*
@@ -165,7 +165,7 @@ function machineryChapters(ctx) {
   const browser = `<div class="v-browser">${list(b.browser, (t, i) => `<li>${ico(i === 0 ? 'search' : 'check', 24)}<span>${esc(t)}</span></li>`)}</div>`;
   const code = `<ol class="v-code">${b.code.map(t => `<li><code>${esc(t)}</code></li>`).join('')}</ol>`;
   const files = list(b.files, (t, i) => `<li${i === 2 ? ' class="v-sandbox__result"' : ''}>${ico(i === 2 ? 'folder-check' : 'file-text', 24)}<span>${esc(t)}</span></li>`, 'v-sandbox__files');
-  const sandbox = chapter('sandbox', b, `<figure class="v-sandbox" data-demo><div class="v-sandbox__frame"><p class="v-sandbox__task"><span>${esc(b.task)}</span>${tag(v.concept)}</p><div class="v-sandbox__panes">${pane('globe', b.views[0], browser, 'v-sandbox__browser')}${pane('terminal', b.views[1], code, 'v-sandbox__code')}${pane('files', b.views[2], files, 'v-sandbox__output')}</div><ol class="v-retain">${b.states.map((t, i) => `<li>${ico(['pause', 'hard-drive', 'play'][i], 24)}<span>${esc(t)}</span></li>`).join('')}</ol></div><figcaption class="v-note">${esc(b.note)}${replay}</figcaption></figure>`, `<div class="v-action">${button(e.cta[2], ctx.href(US_ENQUIRY), 'inverse', 'data-enquiry')}</div>`);
+  const sandbox = chapter('sandbox', b, `<figure class="v-sandbox" data-demo><div class="v-sandbox__frame"><p class="v-sandbox__task"><span>${esc(b.task)}</span>${tag(v.concept)}</p><div class="v-sandbox__panes">${pane('globe', b.views[0], browser, 'v-sandbox__browser')}${pane('terminal', b.views[1], code, 'v-sandbox__code')}${pane('files', b.views[2], files, 'v-sandbox__output')}</div><ol class="v-retain">${b.states.map((t, i) => `<li>${ico(['pause', 'hard-drive', 'play'][i], 24)}<span>${esc(t)}</span></li>`).join('')}</ol></div><figcaption class="v-note">${esc(b.note)}${replay}</figcaption></figure>`, `<div class="v-action">${button(e.cta[2], ctx.href(US_START), 'inverse', 'data-enquiry')}</div>`);
 
   return `${connect}\n${accounts}\n${sandbox}`;
 }
@@ -208,7 +208,7 @@ export function homeNew(ctx) {
   const v = copy.home.visual;
   const L = ctx.href;
 
-  return `<section class="hero hn-hero wrap" aria-labelledby="hero-title">${audienceToggle(ctx, 'us', {isPage: true, cls: 'audience--hero'})}<h1 id="hero-title">${esc(hero.heroTitle)} <span class="h1-alt">${esc(hero.heroTitleAlt)}</span></h1><p class="lede">${esc(hero.lede)}</p><div class="actions">${button(copy.common.usCta, L(US_ENQUIRY))}</div>${crossLink(c.cross, L('/me/'))}</section>
+  return `<section class="hero hn-hero wrap" aria-labelledby="hero-title">${audienceToggle(ctx, 'us', {isPage: true, cls: 'audience--hero'})}<h1 id="hero-title">${esc(hero.heroTitle)} <span class="h1-alt">${esc(hero.heroTitleAlt)}</span></h1><p class="lede">${esc(hero.lede)}</p><div class="actions">${button(copy.common.usCta, L(US_START))}</div>${crossLink(c.cross, L('/me/'))}</section>
 ${liveWorkspace(c.command, ctx, {lanes: LANE_ICONS, boards: BOARD_ICONS, photo: 'band-insights', live: c.command.live, suggest: c.command.live.suggest, working: c.command.missions[0].lanes[2][2], play: c.command.play, pause: c.command.pause})}
 ${handSection(f.hand)}
 ${feature('observe', f.observe, observeScene(f.observe, v.concept))}
@@ -221,13 +221,14 @@ ${halvesSection(c)}
 ${practiceSection(c, ctx)}
 ${proofSection(c, ctx)}
 ${kitBand(ctx, 'new-kit')}
-${closeBand(ctx, {title: c.closeTitle, body: c.closeBody, action: [copy.common.usCta, US_ENQUIRY], cross: [c.cross, '/me/']})}`;
+${closeBand(ctx, {title: c.closeTitle, body: c.closeBody, action: [copy.common.usCta, US_START], cross: [c.cross, '/me/']})}`;
 }
 
 /*
  * Me: the same page for one person. The demo plans a week, a trip, exam prep and the week's
  * dinners, each on its own board; the chapters make the same right-hand case in everyday terms.
- * Me is in development, so the hero carries that note and every action registers interest.
+ * Me is in development and not on sale, so the page is a waitlist: the hero and the closing band
+ * each carry the signup form, and the hero says plainly that joining creates no account.
  */
 const ME_LANES = [['calendar-days', 'check', 'mail', 'bell-ring'], ['globe', 'hard-drive', 'search', 'chart-no-axes-combined'], ['file-text', 'brain-circuit', 'clock-3', 'users'], ['search', 'folder-open', 'folder-check', 'chart-no-axes-combined']];
 const ME_BOARDS = [['calendar-days', 'check', 'bell-ring'], ['globe', 'chart-no-axes-combined', 'folder-check'], ['brain-circuit', 'clock-3', 'file-text'], ['calendar-days', 'folder-check', 'chart-no-axes-combined']];
@@ -250,7 +251,7 @@ export function meNew(ctx) {
   const live = {...us.command.live, ask: m.command.ask};
   const kit = {lanes: ME_LANES, boards: ME_BOARDS, scenes: meScenes, photo: 'band-work', live, suggest: m.command.suggest, working: us.command.missions[0].lanes[2][2], play: us.command.play, pause: us.command.pause};
 
-  return `<section class="hero hn-hero wrap" aria-labelledby="hero-title">${audienceToggle(ctx, 'me', {isPage: true, cls: 'audience--hero'})}<h1 id="hero-title">${esc(hero.heroTitle)} <span class="h1-alt">${esc(hero.heroTitleAlt)}</span></h1><p class="lede">${esc(hero.lede)}</p><div class="actions">${button(copy.common.meCta, L(ME_ENQUIRY))}<p class="note">${esc(hero.note)}</p></div>${crossLink(hero.cross, L('/'))}</section>
+  return `<section class="hero hn-hero wrap" aria-labelledby="hero-title">${audienceToggle(ctx, 'me', {isPage: true, cls: 'audience--hero'})}<h1 id="hero-title">${esc(hero.heroTitle)} <span class="h1-alt">${esc(hero.heroTitleAlt)}</span></h1><p class="lede">${esc(hero.lede)}</p><div class="hn-waitlist">${waitlistForm(ctx, 'waitlist-hero', {anchor: true})}<p class="note">${esc(hero.note)}</p></div>${crossLink(hero.cross, L('/'))}</section>
 ${liveWorkspace(m.command, ctx, kit)}
 ${handSection(f.hand)}
 ${feature('observe', f.observe, observeScene(f.observe, v.concept, ['clock-3', 'calendar-days', 'shield-check', 'globe']))}
@@ -258,5 +259,5 @@ ${feature('team', f.team, teamScene(f.team.scene, v.concept, ['globe', 'hard-dri
 ${feature('always', f.always, alwaysScene(f.always, f.always, v.concept))}
 ${feature('gate', f.gate, gateScene(f.gate, live, v.concept, ['search', 'users', 'lock-keyhole']), true)}
 <section class="visual visual--adapt hn-adapt" aria-labelledby="hn-adapt-title"><div class="wrap visual__grid"><div class="visual__head"><h2 id="hn-adapt-title">${esc(m.adapt.title)} <em>${esc(m.adapt.titleAlt)}</em></h2><p class="lede">${esc(v.adapt.sub)}</p></div>${workspaceDemo(ctx, v)}</div></section>
-${closeBand(ctx, {title: hero.closeTitle, body: hero.closeBody, action: [copy.common.meCta, ME_ENQUIRY], cross: [hero.cross, '/']})}`;
+<section class="close" aria-labelledby="close-title"><div class="wrap close__inner"><h2 id="close-title">${esc(hero.closeTitle)}</h2><div class="close__body"><p>${esc(hero.closeBody)}</p>${waitlistForm(ctx, 'waitlist-close')}${crossLink(hero.cross, L('/'))}</div></div></section>`;
 }

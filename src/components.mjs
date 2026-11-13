@@ -23,7 +23,11 @@ export const exhibit = ({n, topic, title, chart, note = '', cls = ''}, ctx) => `
  * run (the values match INTEREST_VALUES in pages/contact.mjs). Without scripts the form says which to choose.
  */
 export const ME_ENQUIRY = '/contact/?interest=Enamplify%20Me#enquiry';
+/** Me is not open yet: every Me action on the Me page leads to the waitlist form in its hero. */
+export const ME_WAITLIST = '/me/#waitlist';
 export const US_ENQUIRY = '/contact/?interest=Enamplify%20for%20a%20team#enquiry';
+/** The main Us action: the discovery questions, one at a time, ending at the booking calendar. */
+export const US_START = '/discover/';
 
 /** The reciprocal line under a main action: Us invites individuals to Me, Me invites teams to Us. */
 export const crossLink = (text, href) => `<p class="cross"><a href="${esc(href)}">${esc(text)}${arrow}</a></p>`;
@@ -108,7 +112,7 @@ export function header(ctx, route) {
   const nav = site.nav.map(([t, h]) => [t, L(ctx, h)]);
   // On Me the header action is Me's own; everywhere else it is the conversation about a team.
   const isMe = route.key === 'me';
-  const contact = isMe ? L(ctx, ME_ENQUIRY) : L(ctx, '/contact/');
+  const contact = isMe ? L(ctx, ME_WAITLIST) : L(ctx, '/contact/');
   const ctaText = isMe ? c.meCta : c.bookCall;
   const links = nav.map(([t, h]) => `<a href="${esc(h)}"${navAttr(path, h)}>${esc(t)}</a>`).join('');
   const bookAttr = navAttr(path, contact);
@@ -131,6 +135,16 @@ export function briefingGate(ctx, route) {
   if (!p || !route?.key || route.notFound || route.contact || ['briefing', 'portfolio', 'careers', 'discover'].includes(route.key) || route.key.startsWith('legal:')) return '';
   const targetUrl = L(ctx, '/briefing/');
   return `<aside class="briefing-gate" aria-label="${esc(p.ariaLabel)}" data-briefing-gate data-briefing-url="${esc(targetUrl)}"><button class="briefing-pill" type="button" data-briefing-open aria-expanded="false" aria-controls="briefing-dialog" hidden><span class="briefing-pill__tag">${esc(p.pillTag)}</span><span class="briefing-pill__text">${esc(p.pillText)}</span></button><div id="briefing-dialog" class="briefing-popup" role="dialog" aria-modal="false" aria-labelledby="briefing-popup-title" hidden><div class="briefing-popup__head"><p class="briefing-popup__kicker">${esc(p.kicker)}</p><button class="briefing-popup__close" type="button" data-briefing-close aria-label="${esc(ctx.copy.client.close)}">×</button></div><h2 id="briefing-popup-title" class="briefing-popup__title">${esc(p.title)}</h2><ul class="ticks briefing-popup__ticks">${p.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul><form class="briefing-popup__form" action="${esc(targetUrl)}" method="get" data-briefing-form novalidate><div class="briefing-popup__row"><label for="briefing-email"><span class="sr-only">${esc(p.emailLabel)}</span><input id="briefing-email" name="email" type="email" autocomplete="email" placeholder="${esc(p.emailPlaceholder)}" required maxlength="254"></label><button class="btn btn--primary" type="submit">${esc(p.submit)}${arrow}</button></div><div class="hp-field" aria-hidden="true"><label for="briefing-website">${esc(ctx.copy.contact.honeypot)}<input id="briefing-website" name="website" tabindex="-1" autocomplete="off"></label></div><p class="briefing-popup__err" data-briefing-error role="alert" hidden></p></form></div></aside>`;
+}
+
+/**
+ * Waitlist signup for Enamplify Me. Posts the address to /api/subscribe/ with list "me-waitlist",
+ * which the endpoint files under the waitlist tag in Kit. The form confirms in place; nothing
+ * is claimed until the endpoint has answered.
+ */
+export function waitlistForm(ctx, idPrefix, {anchor = false} = {}) {
+  const w = ctx.copy.me.waitlist;
+  return `<form class="waitlist"${anchor ? ' id="waitlist"' : ''} data-waitlist-form data-done="${esc(w.done)}" data-fail="${esc(w.fail)}" data-err-email="${esc(ctx.copy.client.errEmail)}" novalidate><div class="briefing-popup__row waitlist__row"><label for="${esc(idPrefix)}-email"><span class="sr-only">${esc(w.emailLabel)}</span><input id="${esc(idPrefix)}-email" name="email" type="email" autocomplete="email" placeholder="${esc(w.emailPlaceholder)}" required maxlength="254"></label><button class="btn btn--primary" type="submit">${esc(w.submit)}${arrow}</button></div><div class="hp-field" aria-hidden="true"><label for="${esc(idPrefix)}-website">${esc(ctx.copy.contact.honeypot)}<input id="${esc(idPrefix)}-website" name="website" tabindex="-1" autocomplete="off"></label></div><p class="waitlist__msg" data-waitlist-msg role="status" hidden></p></form>`;
 }
 
 /** Inline Kit newsletter and unlisted executive briefing signup band. */

@@ -15,6 +15,10 @@
 .flow__opt:has(input:checked){border-color:var(--wine);background:var(--wine-mist)}
 .flow__opt:has(input:focus-visible){outline:2px solid var(--wine);outline-offset:2px}
 .flow__opt .v-ico{flex:none}
+.flow__own{display:grid;gap:8px;margin-top:18px;font-size:.9375rem;font-weight:500;color:var(--ink-soft)}
+.flow__own input{width:100%;min-height:52px;padding:13px 14px;border:1px solid var(--control);border-radius:0;background:var(--paper-light);font:inherit;font-weight:400;color:var(--ink)}
+.flow__point{margin:clamp(24px,3.5vw,36px) 0 0;padding:16px 18px;border-left:3px solid var(--wine);background:var(--wine-mist);color:var(--ink-soft);line-height:1.5}
+.flow__point strong{font-weight:600;color:var(--ink)}
 .flow__fields{display:grid;gap:18px;margin-top:clamp(24px,3.5vw,40px)}
 .flow__fields label{display:grid;gap:8px;font-size:.9375rem;font-weight:500}
 .flow__fields input,.flow__fields textarea{width:100%;padding:13px 14px;border:1px solid var(--control);border-radius:0;background:var(--paper-light);font:inherit;font-weight:400;color:var(--ink)}

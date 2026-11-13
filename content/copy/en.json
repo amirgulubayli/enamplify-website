@@ -14,7 +14,7 @@
     "me": "Me",
     "meHint": "Enamplify Me, for one person",
     "usCta": "Wire up your team",
-    "meCta": "Get me wired up",
+    "meCta": "Join the waitlist",
     "teamsLink": "Enamplify for teams",
     "meLink": "Enamplify Me",
     "gallery": {
@@ -124,8 +124,8 @@
       "title": "Enamplify · An adaptive AI workspace, implemented for your team"
     },
     "me": {
-      "title": "Enamplify Me · An adaptive AI workspace for one person",
-      "description": "Your own adaptive AI workspace and agent team for projects, learning and everyday planning. In development. Register your interest.",
+      "title": "Enamplify Me · Your own personal Jarvis, for anything",
+      "description": "A personal right hand with its own team of agents, for work, study, home and anything else. In development. Join the waitlist.",
       "crumb": "Enamplify Me"
     },
     "approach": {
@@ -1003,10 +1003,17 @@
     }
   },
   "me": {
-    "heroTitle": "Your day, organised.",
-    "heroTitleAlt": "Your projects, moving.",
-    "lede": "Your personal AI workspace: plans, projects and agents in one adaptable place.",
+    "heroTitle": "Your own Jarvis.",
+    "heroTitleAlt": "For anything.",
+    "lede": "A personal right hand that knows your week, runs your projects and works on every device you own. For work, study, home or whatever you are obsessed with.",
     "note": "Enamplify Me is in development. Personal AI software; registering interest does not create an account.",
+    "waitlist": {
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "submit": "Join the waitlist",
+      "done": "You are on the list. We will email you when Enamplify Me opens.",
+      "fail": "We could not add you just now. Please try again in a moment."
+    },
     "cross": "Looking to wire up your whole team?",
     "galleryTitle": "Twelve everyday worlds.",
     "galleryHint": "Choose one to see it large.",
@@ -1028,8 +1035,8 @@
         "New layouts are proposed first. You decide whether to keep them."
       ]
     ],
-    "closeTitle": "Register interest in Enamplify Me.",
-    "closeBody": "Personal AI software, in development. Tell us how you would use it.",
+    "closeTitle": "Be first in line for your own Jarvis.",
+    "closeBody": "Enamplify Me is in development. Leave your email and we will tell you when it opens.",
     "visual": {
       "concept": "Concept",
       "adapt": {
@@ -2982,7 +2989,7 @@
     "count": "Step {n} of {total}",
     "next": "Continue",
     "back": "Back",
-    "required": "Please choose an option to continue.",
+    "required": "Please choose an option or type your own answer to continue.",
     "detailsError": "Please add your name and a valid email.",
     "noscript": "This short form needs JavaScript. You can also {link}.",
     "noscriptLink": "send an enquiry",
@@ -2997,8 +3004,11 @@
           "Follow-ups and outreach",
           "Document review",
           "Client delivery",
-          "Internal operations",
-          "Something else"
+          "Internal operations"
+        ],
+        "point": [
+          "Start with one piece of work.",
+          "We begin with one or two teams and the work that eats their week, then extend at your pace."
         ]
       },
       "size": {
@@ -3009,6 +3019,10 @@
           "51 to 200",
           "201 to 2,000",
           "More than 2,000"
+        ],
+        "point": [
+          "Sized to you.",
+          "The first implementation covers one or two teams, whatever the size of the company."
         ]
       },
       "stage": {
@@ -3018,6 +3032,10 @@
           "Individual chat logins",
           "A few pilots",
           "Tools in daily use"
+        ],
+        "point": [
+          "Any starting point works.",
+          "If people already use separate chat logins, we bring that into one workspace where agents have named jobs."
         ]
       },
       "data": {
@@ -3028,6 +3046,10 @@
           "Client-confidential work",
           "Must run on our own infrastructure",
           "None of these"
+        ],
+        "point": [
+          "You stay in control.",
+          "You choose the tools and the hosting, and a person signs off every external action."
         ]
       },
       "timing": {
@@ -3036,6 +3058,10 @@
           "This quarter",
           "In 3 to 6 months",
           "Just exploring"
+        ],
+        "point": [
+          "A short first step.",
+          "A diagnostic takes two to three weeks at a fixed fee, credited if you continue. Implementation takes eight to twelve weeks."
         ]
       },
       "details": {
@@ -3043,7 +3069,11 @@
         "name": "Name",
         "email": "Work email",
         "company": "Company",
-        "note": "Anything else we should know (optional)"
+        "note": "Anything else we should know (optional)",
+        "point": [
+          "What happens next.",
+          "You pick a 30-minute slot on the next screen. The call is free and separate from a paid diagnostic."
+        ]
       },
       "book": {
         "q": "Thanks. Pick a time to talk.",
@@ -3051,6 +3081,8 @@
         "cta": "Choose a time",
         "summary": "Your answers"
       }
-    }
+    },
+    "own": "Or put it in your own words",
+    "ownPlaceholder": "Type your answer"
   }
 }

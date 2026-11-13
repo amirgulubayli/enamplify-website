@@ -72,11 +72,13 @@ test('the service stores keyed events, guards the dashboard and emails answers o
   try {
     assert.equal((await post(event(), 'wrong')).status, 401);
     assert.equal((await post(event())).status, 202);
-    const book = event({event: 'book', step: 'book', index: 6, answers: {name: 'Ada', email: 'ada@example.com', work: ['reporting']}});
+    assert.equal(validateEvent(event({answers: {workOwn: ' Month-end close ', stage: ''}})).data.answers.workOwn, 'Month-end close');
+    const book = event({event: 'book', step: 'book', index: 6, answers: {name: 'Ada', email: 'ada@example.com', work: ['reporting'], workOwn: 'Month-end close'}});
     assert.equal((await post(book)).status, 202);
     assert.equal((await post(book)).status, 202);
     assert.equal(mails.length, 1, 'one email per session');
     assert.equal(mails[0].reply_to, 'ada@example.com');
+    assert.ok(mails[0].text.includes('Wants off the plate: reporting · Month-end close'));
     assert.equal((await fs.readFile(file, 'utf8')).trim().split('\n').length, 3);
     assert.equal((await fetch(`${base}/admin`)).status, 401);
     const admin = await fetch(`${base}/admin`, {headers: {authorization: `Basic ${Buffer.from('admin:pw').toString('base64')}`}});

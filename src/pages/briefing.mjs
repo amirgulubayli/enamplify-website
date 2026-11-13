@@ -1,4 +1,4 @@
-import {esc, arrowNE, button, breadcrumb, closeBand, US_ENQUIRY} from '../components.mjs';
+import {esc, arrowNE, button, breadcrumb, closeBand, US_START} from '../components.mjs';
 import {fill} from '../i18n.mjs';
 
 const PDF_PATH = '/downloads/company-ai-agent-structuring.pdf';
@@ -40,5 +40,5 @@ export function briefing(ctx) {
   <ol class="worksheet__checks">${b.checks.map(([t, p], i) => `<li><h3>${esc(t)}</h3><p>${esc(p)}</p><label class="sr-only" for="note-${i}">${esc(fill(g.notesFor, {title: t}))}</label><textarea id="note-${i}" rows="3"></textarea></li>`).join('')}</ol>
   <div class="worksheet__close"><h3>${esc(g.nextDecision)}</h3><p>${esc(b.closing)}</p><label>${esc(g.whatNext)}<textarea rows="3"></textarea></label><div class="actions"><button class="btn btn--primary" type="button" data-print>${esc(g.printNotes)}</button><button class="link-arrow" type="button" data-clear-notes>${esc(g.clearNotes)}</button></div></div>
 </section>
-${closeBand(ctx, {title: b.closeTitle, body: b.closeBody, action: [copy.common.usCta, US_ENQUIRY], cross: [copy.home.cross, '/me/']})}`;
+${closeBand(ctx, {title: b.closeTitle, body: b.closeBody, action: [copy.common.usCta, US_START], cross: [copy.home.cross, '/me/']})}`;
 }

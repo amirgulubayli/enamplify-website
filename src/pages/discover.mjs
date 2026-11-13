@@ -2,12 +2,13 @@ import {esc, arrow, breadcrumb} from '../components.mjs';
 
 /*
  * The discovery flow: a few questions about the work, the visitor's details, then the booking
- * link. One question shows at a time (assets/discover.js); each step is reported to
- * /api/discover so drop-off and answers can be reviewed. Option values are stable English keys;
- * only the labels are translated. Without scripts the page points to the enquiry form instead.
+ * link. One question shows at a time (assets/discover.js), each with its choices, a field for the
+ * visitor's own answer and one point about how we work. Each step is reported to /api/discover so
+ * drop-off and answers can be reviewed. Option values are stable English keys; only the labels
+ * are translated. Without scripts the page points to the enquiry form instead.
  */
 export const DISCOVER_STEPS = [
-  {key: 'work', multi: true, values: ['reporting', 'followups', 'documents', 'delivery', 'operations', 'other'], icons: ['chart-no-axes-combined', 'mail', 'file-text', 'folder-check', 'workflow', 'brain-circuit']},
+  {key: 'work', multi: true, values: ['reporting', 'followups', 'documents', 'delivery', 'operations'], icons: ['chart-no-axes-combined', 'mail', 'file-text', 'folder-check', 'workflow']},
   {key: 'size', values: ['1-10', '11-50', '51-200', '201-2000', '2000+'], icons: ['contact-round', 'users', 'users', 'network', 'globe']},
   {key: 'stage', values: ['none', 'chat', 'pilots', 'daily'], icons: ['pause', 'bot', 'play', 'cpu']},
   {key: 'data', multi: true, values: ['regulated', 'confidential', 'onprem', 'none'], icons: ['shield-check', 'lock-keyhole', 'server', 'check']},
@@ -15,6 +16,7 @@ export const DISCOVER_STEPS = [
 ];
 
 const ico = name => `<img class="v-ico" src="/images/icons/${name}.svg" width="22" height="22" alt="" decoding="async">`;
+const point = p => p ? `<p class="flow__point"><strong>${esc(p[0])}</strong> ${esc(p[1])}</p>` : '';
 
 export function discover(ctx) {
   const {site, copy} = ctx;
@@ -22,7 +24,8 @@ export function discover(ctx) {
   const choice = s => {
     const q = d.steps[s.key];
     const options = s.values.map((v, i) => `<label class="flow__opt"><input type="${s.multi ? 'checkbox' : 'radio'}" name="${s.key}" value="${esc(v)}">${ico(s.icons[i])}<span>${esc(q.options[i])}</span></label>`).join('');
-    return `<fieldset class="flow__step" data-step="${s.key}"${s.multi ? ' data-multi' : ''} hidden><legend>${esc(q.q)}</legend>${q.hint ? `<p class="flow__hint">${esc(q.hint)}</p>` : ''}<div class="flow__opts">${options}</div></fieldset>`;
+    const own = `<label class="flow__own" for="flow-${s.key}-own">${esc(d.own)}<input id="flow-${s.key}-own" name="${s.key}Own" maxlength="200" autocomplete="off" placeholder="${esc(d.ownPlaceholder)}" data-flow-own></label>`;
+    return `<fieldset class="flow__step" data-step="${s.key}"${s.multi ? ' data-multi' : ''} hidden><legend>${esc(q.q)}</legend>${q.hint ? `<p class="flow__hint">${esc(q.hint)}</p>` : ''}<div class="flow__opts">${options}</div>${own}${point(q.point)}</fieldset>`;
   };
   const f = d.steps.details, b = d.steps.book;
   const privacy = `<a href="${ctx.href('/privacy/')}">${esc(d.privacyLink)}</a>`;
@@ -32,7 +35,7 @@ export function discover(ctx) {
 <label for="flow-company">${esc(f.company)}<input id="flow-company" name="company" autocomplete="organization" maxlength="160"></label>
 <label for="flow-note">${esc(f.note)}<textarea id="flow-note" name="note" rows="3" maxlength="2000"></textarea></label>
 <div class="hp-field" aria-hidden="true"><label for="flow-website">${esc(copy.contact.honeypot)}<input id="flow-website" name="website" tabindex="-1" autocomplete="off"></label></div>
-</div><p class="small">${esc(d.privacy).replace('{link}', privacy)}</p></fieldset>`;
+</div><p class="small">${esc(d.privacy).replace('{link}', privacy)}</p>${point(f.point)}</fieldset>`;
   const book = `<div class="flow__step flow__book" data-step="book" hidden><h2 tabindex="-1">${esc(b.q)}</h2><p class="lede">${esc(b.body)}</p><a class="btn btn--primary" href="${esc(site.bookingUrl)}" target="_blank" rel="noopener noreferrer" data-flow-book>${esc(b.cta)}${arrow}</a><h3>${esc(b.summary)}</h3><ul class="flow__summary" data-flow-summary></ul></div>`;
 
   return `${breadcrumb([[copy.routes.discover.crumb]], ctx)}

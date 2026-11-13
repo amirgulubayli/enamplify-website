@@ -388,3 +388,19 @@
 .lv-plates i{aspect-ratio:1;border:4px solid var(--paper-deep);border-radius:50%;background:var(--paper)}
 .lv-plates i:nth-child(3n){border-color:var(--wine);background:var(--wine-mist)}
 .lv-tabs button[aria-selected="true"]:hover{color:var(--paper-light)}
+
+/* Me waitlist: the signup form in the hero and again in the closing band. */
+.hn-waitlist{display:grid;justify-items:center;gap:12px;margin-top:24px}
+.waitlist{width:min(100%,480px);display:grid;gap:8px;text-align:left;scroll-margin-top:120px}
+.waitlist__row input{width:100%;min-height:48px;font-size:1rem;border:1px solid var(--line)}
+.waitlist__row .btn{min-height:48px;font-size:.9375rem}
+.waitlist__msg{margin:0;font-size:.9375rem;line-height:1.5;color:var(--ink)}
+.waitlist__msg.is-error{color:var(--error)}
+.hn-waitlist .note{max-width:52ch;margin:0;text-align:center}
+.is-me .close .waitlist{margin-bottom:8px}
+.is-me .close .waitlist__row input{border-color:transparent}
+.is-me .close .waitlist__row .btn{background:var(--paper);color:var(--wine)}
+.is-me .close .waitlist__row .btn:hover{background:var(--paper-light)}
+.is-me .close .waitlist__msg{color:var(--paper)}
+.is-me .close .waitlist__msg.is-error{color:var(--wine-mist)}
+.is-me .close .close__body p:first-child{margin-bottom:24px}

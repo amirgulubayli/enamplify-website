@@ -30,3 +30,22 @@ test('Kit newsletter subscription validates email, blocks honeypot, and calls Ki
   assert.equal(calls[1].url,'https://api.kit.com/v4/forms/12345/subscribers');
   assert.equal(calls[2].url,'https://api.kit.com/v4/tags/67890/subscribers');
 });
+
+test('Me waitlist: filed under its own Kit tag, and confirmed only when the tag is',async()=>{
+  assert.equal(validateSubscription({email:'a@b.com',list:'me-waitlist'}).data.list,'me-waitlist');
+  assert.ok(validateSubscription({email:'a@b.com',list:'other'}).error);
+  const run=async(env,tagOk=true)=>{const calls=[];const res=await processSubscription({method:'POST',headers:{'content-type':'application/json'},body:{email:'me@person.com',locale:'en',source:'/me/',list:'me-waitlist'}},{env,fetcher:async(url)=>{calls.push(url);return {ok:url.includes('/tags/')?tagOk:true,json:async()=>({})}}});return {res,calls}};
+  const full=await run({KIT_API_KEY:'kit_v4_test',KIT_FORM_ID:'12345',KIT_TAG_ID:'67890',KIT_ME_WAITLIST_TAG_ID:'555'});
+  assert.equal(full.res.status,202);
+  assert.deepEqual(full.res.body,{ok:true,configured:true});
+  assert.deepEqual(full.calls,['https://api.kit.com/v4/subscribers','https://api.kit.com/v4/tags/555/subscribers'],'waitlist uses its own tag, not the newsletter form or tag');
+  const untagged=await run({KIT_API_KEY:'kit_v4_test',KIT_TAG_ID:'67890'});
+  assert.deepEqual(untagged.res.body,{ok:true,configured:false},'no waitlist tag set: not reported as on the list');
+  assert.equal((await run({KIT_API_KEY:'kit_v4_test',KIT_ME_WAITLIST_TAG_ID:'555'},false)).res.status,502,'a failed tag is a failure');
+  assert.deepEqual((await run({})).res.body,{ok:true,configured:false});
+  const calls=[];
+  const named=await processSubscription({method:'POST',headers:{'content-type':'application/json'},body:{email:'me@person.com',list:'me-waitlist'}},{env:{KIT_API_KEY:'kit_v4_test'},fetcher:async(url,init)=>{calls.push([url,init.body]);return {ok:true,json:async()=>({tag:{id:9}})}}});
+  assert.deepEqual(named.body,{ok:true,configured:true});
+  assert.deepEqual(calls.map(c=>c[0]),['https://api.kit.com/v4/subscribers','https://api.kit.com/v4/tags','https://api.kit.com/v4/tags/9/subscribers'],'no tag id set: the tag is found or made by name');
+  assert.equal(JSON.parse(calls[1][1]).name,'Enamplify Me waitlist');
+});
