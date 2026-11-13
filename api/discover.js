@@ -25,6 +25,15 @@ export function validateEvent(input) {
   return {data: {sid, event, step, index, total, answers, locale: text(input.locale, 12) || 'en'}};
 }
 
+const LABELS = [['work', 'Wants off the plate'], ['size', 'Team size'], ['stage', 'AI today'], ['data', 'Plan around'], ['timing', 'Timing']];
+
+/** The plain-text email for one completed set of answers: choices first, then the visitor's own words. */
+export function leadEmail(a) {
+  const show = v => Array.isArray(v) ? v.join(', ') : v;
+  const lines = [['Name', a.name], ['Email', a.email], ['Company', a.company], ...LABELS.map(([k, label]) => [label, [show(a[k]), a[`${k}Own`]].filter(v => v?.length).join(' · ')]), ['Note', a.note]].filter(([, v]) => v?.length);
+  return {subject: `Discovery answers: ${a.name || 'someone'}${a.company ? `, ${a.company}` : ''}`, text: `${lines.map(([k, v]) => `${k}: ${v}`).join('\n')}\n\nThey have reached the booking step. Check the calendar for a slot.`};
+}
+
 export async function processDiscovery({method, headers, body}, {env = process.env, fetcher = fetch, now = Date.now()} = {}) {
   if (method !== 'POST') return {status: 405, body: {error: 'Use POST.'}};
   if (env.CONTACT_ALLOWED_ORIGIN) {
@@ -33,7 +42,21 @@ export async function processDiscovery({method, headers, body}, {env = process.e
   }
   const {data, error} = validateEvent(body);
   if (error) return {status: 400, body: {error}};
-  if (!env.DISCOVERY_UPSTREAM || !env.DISCOVERY_KEY) return {status: 202, body: {stored: false}};
+  // Once the visitor has left their details, email the answers straight from here when mail is
+  // configured, so a lead is never lost for want of the tracking service. One email per session.
+  let mailed = false;
+  if (data.event === 'answer' && data.step === 'details' && data.answers.email && env.RESEND_API_KEY && env.CONTACT_FROM && env.CONTACT_TO) {
+    try {
+      const res = await fetcher('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': `discovery-${data.sid}`},
+        body: JSON.stringify({from: env.CONTACT_FROM, to: [env.CONTACT_TO], reply_to: data.answers.email, ...leadEmail(data.answers)}),
+        signal: AbortSignal.timeout(5000)
+      });
+      mailed = res.ok;
+    } catch { /* the visitor still reaches the calendar */ }
+  }
+  if (!env.DISCOVERY_UPSTREAM || !env.DISCOVERY_KEY) return {status: 202, body: {stored: false, ...(mailed && {mailed})}};
   try {
     const res = await fetcher(`${env.DISCOVERY_UPSTREAM.replace(/\/$/, '')}/events`, {
       method: 'POST',

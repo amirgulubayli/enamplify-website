@@ -41,6 +41,24 @@ test('the proxy accepts and drops without an upstream, and forwards with the sha
   assert.deepEqual(down, {status: 202, body: {stored: false}}, 'a tracking outage never fails the visitor');
 });
 
+test('with mail configured, the answers are emailed once the visitor leaves their details, without the tracking service', async () => {
+  const env = {RESEND_API_KEY: 'r', CONTACT_FROM: 'Enamplify <a@b.co>', CONTACT_TO: 'c@d.co'};
+  const sent = [];
+  const fetcher = async (url, init) => { sent.push({url, init}); return {ok: true}; };
+  const details = {method: 'POST', headers: {}, body: event({step: 'details', index: 5, answers: {name: 'Ada', email: 'ada@example.com', company: 'Lovelace Ltd', work: ['reporting'], workOwn: 'Month-end close', size: '11-50'}})};
+  assert.deepEqual(await processDiscovery(details, {env, fetcher}), {status: 202, body: {stored: false, mailed: true}});
+  assert.equal(sent.length, 1);
+  const mail = JSON.parse(sent[0].init.body);
+  assert.equal(sent[0].url, 'https://api.resend.com/emails');
+  assert.equal(sent[0].init.headers['Idempotency-Key'], 'discovery-abcd1234-ef', 'one email per session');
+  assert.deepEqual([mail.to, mail.reply_to, mail.subject], [['c@d.co'], 'ada@example.com', 'Discovery answers: Ada, Lovelace Ltd']);
+  assert.ok(mail.text.includes('Wants off the plate: reporting · Month-end close') && mail.text.includes('Team size: 11-50'));
+  await processDiscovery({method: 'POST', headers: {}, body: event()}, {env, fetcher});
+  assert.equal(sent.length, 1, 'earlier steps send nothing');
+  const failing = await processDiscovery(details, {env, fetcher: async () => { throw new Error('down'); }});
+  assert.deepEqual(failing, {status: 202, body: {stored: false}}, 'a mail outage never fails the visitor');
+});
+
 test('sessions are summarised into a funnel with drop-off, and the dashboard escapes what visitors typed', () => {
   const events = [
     {sid: 'a', at: '2026-11-12T10:00:00Z', event: 'view', step: 'work', index: 0, answers: {}, locale: 'en'},
